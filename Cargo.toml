@@ -1,0 +1,11 @@
+   [package]
+   name = "etamil"
+   version = "0.1.0"
+   edition = "2018"
+
+   [dependencies]
+   inkwell = { version = "0.1", features = ["llvm14-0"] }
+
+   [[bin]]
+   name = "etamil"
+   path = "src/bin/main.rs"
