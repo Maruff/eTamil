@@ -54,8 +54,8 @@ Create a file named `example.tml` and add the following code:
 en a = 10
 en b = 20
 itu a + b
-col message = "வணக்கம், உலகம்!"
-itu message
+col uRY = "வணக்கம், உலகம்!"
+itu uRY
 ```
 
 ### Running Your Program
