@@ -88,7 +88,7 @@ cargo run -- example.tml
 
 ## Contributing
 
-We welcome contributions from the community for developing more features and documentation Tamil! Here’s how you can contribute:
+We welcome contributions from the community for developing more features and documentation in Tamil! Here’s how you can contribute:
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
