@@ -32,7 +32,7 @@ The purpose of eTamil is to be an Indian DSL for Accountants, Auditors, and FinT
 
 1. Clone the eTamil repository:
     ```sh
-    git clone https://github.com/yourusername/eTamil.git
+    git clone https://github.com/Maruff/eTamil.git
     cd eTamil
     ```
 
