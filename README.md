@@ -110,4 +110,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ---
 
 We hope you enjoy using eTamil! Your feedback and contributions are highly appreciated.
-Thank you
+Thank you.
