@@ -1,6 +1,6 @@
 ---
 layout: default
-title: இ தமிழ் (eTamil)
+title: இ தமிழ்
 ---
 
 # An Indian DSL for Accounts & FinTech
