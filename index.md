@@ -3,7 +3,7 @@ layout: default
 title: eTamil
 ---
 
-# An Indian Programming Language for Accounts & FinTech
+# An Indian DSL for Accounts & FinTech
 
 <p align="center">
   <a href="https://github.com/Maruff/eTamil/stargazers">
