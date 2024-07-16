@@ -1,5 +1,8 @@
 
 # eTamil Programming Language
+![GitHub Repo stars](https://img.shields.io/github/stars/your-username/eTamil.in?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/your-username/eTamil.in?style=social)
+![GitHub forks](https://img.shields.io/github/forks/your-username/eTamil.in?style=social)
 
 **eTamil** is a domain-specific language (DSL) tailored for Indian accountants, auditors, and FinTech professionals. Designed to incorporate features specific to the Tamil language, it aims to promote coding literacy in the Tamil-speaking community by offering a programming syntax that resonates with the native language.
 
