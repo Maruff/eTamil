@@ -1,4 +1,4 @@
-Sure, here's a step-by-step procedure to build a website and assign a theme using GitHub:
+Step-by-step procedure to build a website and assign a theme using GitHub:
 
 ### Prerequisites
 1. **GitHub Account**: Make sure you have a GitHub account.
