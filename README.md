@@ -3,7 +3,17 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/Maruff/eTamil?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/Maruff/eTamil?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Maruff/eTamil?style=social)
-
+<p align="center">
+  <a href="https://github.com/Maruff/eTamil/stargazers">
+    <img src="https://img.shields.io/github/stars/Maruff/eTamil.svg?style=social&label=Star" alt="Star on GitHub">
+  </a>
+  <a href="https://github.com/Maruff/eTamil/watchers">
+    <img src="https://img.shields.io/github/watchers/Maruff/eTamil.svg?style=social&label=Watch" alt="Watch on GitHub">
+  </a>
+  <a href="https://github.com/Maruff/eTamil/network/members">
+    <img src="https://img.shields.io/github/forks/Maruff/eTamil.svg?style=social&label=Fork" alt="Fork on GitHub">
+  </a>
+</p>
 **eTamil** is a domain-specific language (DSL) tailored for Indian accountants, auditors, and FinTech professionals. Designed to incorporate features specific to the Tamil language, it aims to promote coding literacy in the Tamil-speaking community by offering a programming syntax that resonates with the native language.
 
 ## Purpose
