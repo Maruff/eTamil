@@ -1,8 +1,6 @@
 
 # eTamil Programming Language
-![GitHub Repo stars](https://img.shields.io/github/stars/Maruff/eTamil?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/Maruff/eTamil?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Maruff/eTamil?style=social)
+
 <p align="center">
   <a href="https://github.com/Maruff/eTamil/stargazers">
     <img src="https://img.shields.io/github/stars/Maruff/eTamil.svg?style=social&label=Star" alt="Star on GitHub">
