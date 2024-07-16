@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Welcome to eTamil
+# Welcome to eTamil.in
 
 <p align="center">
   <a href="https://github.com/Maruff/eTamil/stargazers">
