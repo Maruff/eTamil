@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Home
+title: eTamil
 ---
 
-# eTamil Programming Language
+# An Indian Programming Language for Accounts & FinTech
 
 <p align="center">
   <a href="https://github.com/Maruff/eTamil/stargazers">
