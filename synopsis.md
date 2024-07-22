@@ -75,20 +75,24 @@ The development of eTamil represents a significant step towards making programmi
 - Fowler, M. (2010). Domain-Specific Languages. Addison-Wesley Professional.
 - Hudak, P. (1996). "Building Domain-Specific Embedded Languages." ACM Computing Surveys, 28(4es)
 - Pugh, D. (2010). The Essence of Multivariate Thinking: Basic Themes and Methods. Sage Publications.
+  
 **Financial Standards and Practices (Regulatory & Compliance):**
 - Institute of Chartered Accountants of India (ICAI). Indian Accounting Standards.
 - International Financial Reporting Standards (IFRS).
 - Reserve Bank of India (RBI). RBI Regulations and Guidelines.
 - Indian Taxation Laws and Customs Regulations.
+  
 **Indian Languages, Script Evolution, and Usage Trends:**
 - Narasimhan, R. (2006). Language Technology: A Reader. CDAC
 - Bali, K., Choudhury, M., & Vyas, Y. (2012). "Characterizing the Indian Language Landscape." 
 - Bhatia, T. K., & Ritchie, W. C. (2008). The Handbook of Bilingualism. Wiley-Blackwell.
 - Das, A., & Gambäck, B. (2014). "Code-Mixing in Social Media Text: The Last Language Identification Frontier?" Computational Linguistics.
+  
 **Compiler Design and Implementation:**
 - Aho, A. V., Lam, M. S., Sethi, R., & Ullman, J. D. (2006). Compilers: Principles, Techniques, and Tools (2nd ed.). Addison-Wesley.
 - Appel, A. W. (2004). Modern Compiler Implementation in Java. Cambridge University Press.
 - Klabnik, S., & Nichols, C. (2018). The Rust Programming Language. No Starch Press.
+  
 **Use of LLVM in DSL Development:**
 - Lattner, C., & Adve, V. (2004). "LLVM: A Compilation Framework for Lifelong Program Analysis & Transformation." Proceedings of the International Symposium on Code Generation and Optimization.
 - Blockchain and Financial Technologies:
