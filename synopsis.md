@@ -1,6 +1,6 @@
 # PhD Synopsis
 
-## Title: Development of eTamil: A Domain-Specific Language Tailored for Indian Accountants, Auditors, and FinTech Professionals
+## Development of eTamil: A Domain-Specific Language Tailored for Indian Accountants, Auditors, and FinTech Professionals
 
 ### Abstract
 
