@@ -4,16 +4,16 @@
 
 ### Abstract
 
-This research proposes the development of eTamil, a domain-specific language (DSL) designed to address the unique needs of Indian accountants, auditors, and FinTech professionals. Leveraging the Tamil language's syntax and semantics, eTamil aims to facilitate domain-specific computations and data processing tasks. The language introduces specialized keywords and constructs to simplify complex financial operations, ensuring accessibility and efficiency for native Tamil speakers. The study will focus on the design, implementation, and evaluation of eTamil, demonstrating its effectiveness through practical applications and case studies.
+This research proposes the development of eTamil, a domain-specific language (DSL) designed to address the unique needs of Indian accountants, auditors, and FinTech professionals. Leveraging the Tamil language's syntax and semantics, eTamil aims to facilitate finance-specific computations and data processing tasks. The language introduces specialized keywords and constructs to simplify complex financial operations, ensuring accessibility and efficiency for dravidian language speakers, particularly the Tamil speakers. The study will focus on the design, implementation, and evaluation of eTamil, demonstrating its effectiveness through practical applications and case studies.
 
 ### Introduction
 
-The proliferation of digital financial services necessitates the creation of tools that are both technically robust and culturally contextualized. Traditional programming languages often pose a barrier to non-programmers due to their complexity and lack of domain-specific constructs. eTamil seeks to bridge this gap by offering a language that integrates seamlessly with the workflow of Indian financial professionals, leveraging their linguistic familiarity to enhance productivity and accuracy.
+The proliferation of digital financial services necessitates the creation of tools that are both technically robust, regionally relevant, and culturally contextualized. Traditional programming languages often pose a barrier to Indian programmers on finance specific development due to the complexity and lack of domain-specific constructs. eTamil seeks to bridge this gap by offering a language that integrates seamlessly with the workflow of Indian financial professionals and fintech developers, leveraging their linguistic familiarity to enhance productivity and accuracy.
 
 ### Objectives
 
 1. **Design and Development**: To design the syntax and semantics of eTamil, incorporating Tamil language constructs and financial terminologies.
-2. **Implementation**: To implement a compiler/interpreter for eTamil, ensuring compatibility with existing financial systems and data formats.
+2. **Implementation**: To implement a compiler for eTamil, ensuring compatibility with existing financial systems and data formats.
 3. **Evaluation**: To evaluate the effectiveness of eTamil through case studies, user feedback, and performance metrics.
 4. **Documentation**: To provide comprehensive documentation and tutorials for end-users, facilitating widespread adoption.
 
@@ -22,23 +22,23 @@ The proliferation of digital financial services necessitates the creation of too
 The literature review will cover the following areas:
 - **Domain-Specific Languages (DSLs)**: Overview of DSLs, their advantages, and successful implementations in various fields.
 - **Programming Languages for Finance**: Examination of existing programming languages and tools used in financial analysis and accounting.
-- **Language Design Principles**: Study of linguistic and cognitive principles relevant to designing programming languages for non-programmers.
+- **Language Design Principles**: Study of linguistic and cognitive principles relevant to designing programming languages for Indian programmers.
 - **Cultural Context in Software Development**: Exploration of the role of cultural and linguistic context in the adoption and effectiveness of software tools.
 
 ### Research Methodology
 
 1. **Requirement Analysis**: Conduct surveys and interviews with Indian accountants, auditors, and FinTech professionals to gather requirements and identify pain points.
-2. **Language Design**: Develop the grammar and syntax of eTamil, integrating mathematical operations and domain-specific keywords (e.g., "itu" for print, "en" for integer).
-3. **Compiler/Interpreter Development**: Implement a compiler/interpreter that translates eTamil code into executable instructions, ensuring error handling and optimization.
+2. **Language Design**: Develop the grammar and syntax of eTamil, integrating mathematical operations and domain-specific keywords (e.g., "itu" for put, "en" for integer).
+3. **Compiler Development**: Implement a compiler that translates eTamil code into executable instructions, ensuring error handling and optimization.
 4. **Case Studies**: Apply eTamil to real-world financial scenarios, documenting its impact on efficiency and accuracy.
-5. **User Feedback**: Collect and analyze feedback from users to refine language features and improve usability.
-6. **Performance Evaluation**: Measure the performance of eTamil in terms of execution speed, resource utilization, and error rates.
+5. **User Feedback**: Collect and analyze feedback from users to refine language constructs, technical features and improve usability.
+6. **Performance Evaluation**: Measure the performance of eTamil in terms of compilation, execution speed, resource utilization, and error rates.
 
 ### Expected Outcomes
 
-- A fully functional domain-specific language tailored to the needs of Indian financial professionals.
+- A fully functional domain-specific language tailored to the needs of Indian financial professionals and fintech developers.
 - Improved efficiency and accuracy in financial computations and reporting.
-- Increased accessibility of programming tools for Tamil-speaking users.
+- Increased accessibility of programming tools for Tamil-speaking users and Tamil like language speakers.
 - Comprehensive documentation and case studies demonstrating the practical benefits of eTamil.
 
 ### Timeline
