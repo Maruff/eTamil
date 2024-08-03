@@ -96,6 +96,17 @@ Developing an accounting application that accurately calculates Indian Goods and
 
 3. **GST Returns:**
    - Businesses need to file regular GST returns. Your application should track GST collected and paid to facilitate return filing.
+  
+   
+    <!-- MathJax -->
+
+    <script type="text/javascript"
+
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+    </script>
+
+
 
 ### **Summary**
 
