@@ -11,34 +11,37 @@ Developing an accounting application that accurately calculates Indian Goods and
 
 1. **Total GST Calculation:**
    
-> Total GST = CGST + SGST (for intra-state supplies)
-> 
-> Total GST = IGST (for inter-state supplies)
+      $`Total GST = CGST + SGST  `$ (for intra-state supplies)
+
+      $`Total GST = IGST  `$ (for inter-state supplies)
 
 
-3. **GST Amount Calculation:**
+2. **GST Amount Calculation:**
    - **For intra-state supply:**
 
-$$\   CGST Amount} = $\sqrt {Taxable Value x CGST Rate} {100}
+      $`   CGST Amount = \frac{Taxable Value * CGST Rate}{100}`$
 
-     \text{SGST Amount} = \frac{\text{Taxable Value} \times \text{SGST Rate}}{100}
-     \]
+      $`   SGST Amount = \frac{Taxable Value \times SGST Rate}{100}`$
+ 
 
    - **For inter-state supply:**
-     \[
+   
+      $`
      \text{IGST Amount} = \frac{\text{Taxable Value} \times \text{IGST Rate}}{100}
-     \]
+      `$
 
-4. **Invoice Total Calculation:**
+3. **Invoice Total Calculation:**
    - **For intra-state supply:**
-     \[
+
+      $`
      \text{Invoice Total} = \text{Taxable Value} + \text{CGST Amount} + \text{SGST Amount}
-     \]
+`$
 
    - **For inter-state supply:**
-     \[
+
+      $`
      \text{Invoice Total} = \text{Taxable Value} + \text{IGST Amount}
-     \]
+`$
 
 ### **3. Example Calculations**
 
@@ -46,35 +49,42 @@ $$\   CGST Amount} = $\sqrt {Taxable Value x CGST Rate} {100}
    - **Taxable Value:** ₹10,000
    - **CGST Rate:** 9%
    - **SGST Rate:** 9%
-   \[
+   
+      $`
    \text{CGST Amount} = \frac{10,000 \times 9}{100} = ₹900
-   \]
-   \[
-   \text{SGST Amount} = \frac{10,000 \times 9}{100} = ₹900
-   \]
-   \[
-   \text{Total GST} = ₹900 + ₹900 = ₹1,800
-   \]
-   \[
-   \text{Invoice Total} = ₹10,000 + ₹900 + ₹900 = ₹11,800
-   \]
+   `$
 
-2. **Inter-state Supply Example:**
+      $`
+   \text{SGST Amount} = \frac{10,000 \times 9}{100} = ₹900
+   `$
+
+      $`
+   \text{Total GST} = ₹900 + ₹900 = ₹1,800
+   `$
+
+      $`
+   \text{Invoice Total} = ₹10,000 + ₹900 + ₹900 = ₹11,800
+   `$
+
+3. **Inter-state Supply Example:**
    - **Taxable Value:** ₹10,000
    - **IGST Rate:** 18%
-   \[
+
+      $`
    \text{IGST Amount} = \frac{10,000 \times 18}{100} = ₹1,800
-   \]
-   \[
+   `$
+
+      $`
    \text{Invoice Total} = ₹10,000 + ₹1,800 = ₹11,800
-   \]
+   `$
 
 ### **4. Input Tax Credit (ITC)**
+   Businesses can claim ITC for the GST paid on purchases
 
-Businesses can claim ITC for the GST paid on purchases:
-\[
-\text{Net GST Payable} = \text{Output GST} - \text{Input GST}
-\]
+   $` 
+      \text{Net GST Payable} = \text{Output GST} - \text{Input GST} 
+      `$
+              
 
 ### **5. Additional Considerations**
 
