@@ -12,6 +12,7 @@ Developing an accounting application that accurately calculates Indian Goods and
 ### **2. GST Calculation Formulas**
 
 1. **Total GST Calculation:**
+   
     \[
    \text{Total GST} = \text{CGST} + \text{SGST} \quad (\text{for intra-state supplies})
    \]
