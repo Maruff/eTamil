@@ -11,18 +11,16 @@ Developing an accounting application that accurately calculates Indian Goods and
 
 1. **Total GST Calculation:**
    
- $\center Total GST = CGST + SGST (for intra-state supplies)
- 
-   \[
-   \text{Total GST} = \text{IGST} \quad (\text{for inter-state supplies})
-   \]
+> Total GST = CGST + SGST (for intra-state supplies)
+> 
+> Total GST = IGST (for inter-state supplies)
+
 
 3. **GST Amount Calculation:**
    - **For intra-state supply:**
-     \[
-     \text{CGST Amount} = \frac{\text{Taxable Value} \times \text{CGST Rate}}{100}
-     \]
-     \[
+
+>   CGST Amount} = $\frac{Taxable Value x CGST Rate}} {100}
+
      \text{SGST Amount} = \frac{\text{Taxable Value} \times \text{SGST Rate}}{100}
      \]
 
