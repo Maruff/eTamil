@@ -7,5 +7,6 @@ relative_links:
 include:
   - index.md
   - Readme.md
+  - /docs/gst-basics.md
 theme: jekyll-theme-cayman
 description: eTamil Programming Language
