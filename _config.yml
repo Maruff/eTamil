@@ -1,3 +1,4 @@
 title: இ தமிழ்
 description: eTamil Programming Language
-theme: cayman # jekyll-theme-minima # You can choose a different theme from the Jekyll themes cayman, docsy, minimal, naringu
+# theme: jekyll-theme-minima # You can choose a different theme from the Jekyll themes cayman, docsy, minimal, naringu
+remote_theme: jekyll/cayman
