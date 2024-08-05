@@ -24,7 +24,8 @@ Developing an accounting application that accurately calculates Indian Goods and
 3. **GST Amount Calculation:**
    - **For intra-state supply:**
       $E = mc^2$
-      $   CGST Amount = \frac{Taxable Value * CGST Rate}{100}$
+
+      $CGST Amount = \frac{Taxable Value * CGST Rate}{100}$
 
       $`   SGST Amount = \frac{Taxable Value \times SGST Rate}{100}`$
  
