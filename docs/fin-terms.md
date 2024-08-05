@@ -152,91 +152,91 @@ Here’s a list of accounting and finance terminologies that involve calculation
 
 1. **Net Income**
    - **Formula**: 
-     \[
+     $`
      \text{Net Income} = \text{Revenue} - \text{Expenses}
-     \]
+     `$
 
 2. **Earnings Per Share (EPS)**
    - **Formula**:
-     \[
+     $`
      \text{EPS} = \frac{\text{Net Income} - \text{Dividends on Preferred Stock}}{\text{Weighted Average Shares Outstanding}}
-     \]
+     `$
 
 3. **Return on Assets (ROA)**
    - **Formula**:
-     \[
+     $`
      \text{ROA} = \frac{\text{Net Income}}{\text{Total Assets}}
-     \]
+     `$
 
 4. **Return on Equity (ROE)**
    - **Formula**:
-     \[
+     $`
      \text{ROE} = \frac{\text{Net Income}}{\text{Shareholder's Equity}}
-     \]
+     `$
 
 5. **Current Ratio**
    - **Formula**:
-     \[
+     $`
      \text{Current Ratio} = \frac{\text{Current Assets}}{\text{Current Liabilities}}
-     \]
+     `$
 
 ### **Cost Accounting**
 
 1. **Cost of Goods Sold (COGS)**
    - **Formula**:
-     \[
+     $`
      \text{COGS} = \text{Beginning Inventory} + \text{Purchases} - \text{Ending Inventory}
-     \]
+     `$
 
 2. **Break-Even Point (Units)**
    - **Formula**:
-     \[
+     $`
      \text{Break-Even Point (Units)} = \frac{\text{Fixed Costs}}{\text{Selling Price per Unit} - \text{Variable Cost per Unit}}
-     \]
+     `$
 
 3. **Contribution Margin**
    - **Formula**:
-     \[
+     $`
      \text{Contribution Margin} = \text{Sales} - \text{Variable Costs}
-     \]
+     `$
 
 4. **Activity-Based Costing (ABC) Rate**
    - **Formula**:
-     \[
+     $`
      \text{ABC Rate} = \frac{\text{Overhead Costs}}{\text{Cost Driver Activity}}
-     \]
+     `$
 
 5. **Variance Analysis**
    - **Formula**:
-     \[
+     $`
      \text{Variance} = \text{Actual Cost} - \text{Standard Cost}
-     \]
+     `$
 
 ### **Management Accounting**
 
 1. **Budget Variance**
    - **Formula**:
-     \[
+     $`
      \text{Budget Variance} = \text{Actual Budget} - \text{Flexible Budget}
-     \]
+     `$
 
 2. **Cost-Volume-Profit (CVP) Analysis**
    - **Formula**:
-     \[
+     $`
      \text{Profit} = (\text{Selling Price} - \text{Variable Cost}) \times \text{Quantity} - \text{Fixed Costs}
-     \]
+     `$
 
 3. **Return on Investment (ROI)**
    - **Formula**:
-     \[
+     $`
      \text{ROI} = \frac{\text{Net Profit}}{\text{Investment Cost}}
-     \]
+     `$
 
 4. **Economic Value Added (EVA)**
    - **Formula**:
-     \[
+     $`
      \text{EVA} = \text{Net Operating Profit After Taxes (NOPAT)} - (\text{Capital} \times \text{Cost of Capital})
-     \]
+     `$
 
 5. **Internal Rate of Return (IRR)**
    - **Formula**: (Typically calculated using financial calculators or software)
@@ -246,9 +246,9 @@ Here’s a list of accounting and finance terminologies that involve calculation
 
 1. **Compound Interest**
    - **Formula**:
-     \[
+     $`
      A = P \left(1 + \frac{r}{n}\right)^{nt}
-     \]
+     `$
      Where:
      - \(A\) = Amount of money accumulated after n years, including interest.
      - \(P\) = Principal amount.
@@ -258,9 +258,9 @@ Here’s a list of accounting and finance terminologies that involve calculation
 
 2. **Net Present Value (NPV)**
    - **Formula**:
-     \[
+     $`
      \text{NPV} = \sum \frac{C_t}{(1 + r)^t} - C_0
-     \]
+     `$
      Where:
      - \(C_t\) = Cash flow at time \(t\).
      - \(r\) = Discount rate.
@@ -269,9 +269,9 @@ Here’s a list of accounting and finance terminologies that involve calculation
 
 3. **Future Value (FV)**
    - **Formula**:
-     \[
+     $`
      FV = PV \times (1 + r)^n
-     \]
+     `$
      Where:
      - \(PV\) = Present value.
      - \(r\) = Interest rate per period.
@@ -279,35 +279,35 @@ Here’s a list of accounting and finance terminologies that involve calculation
 
 4. **Price-to-Earnings (P/E) Ratio**
    - **Formula**:
-     \[
+     $`
      \text{P/E Ratio} = \frac{\text{Market Price per Share}}{\text{Earnings per Share}}
-     \]
+     `$
 
 5. **Dividend Yield**
    - **Formula**:
-     \[
+     $`
      \text{Dividend Yield} = \frac{\text{Dividend per Share}}{\text{Price per Share}}
-     \]
+     `$
 
 ### **Treasury Management**
 
 1. **Cash Conversion Cycle**
    - **Formula**:
-     \[
+     $`
      \text{Cash Conversion Cycle} = \text{Days Sales Outstanding} + \text{Days Inventory Outstanding} - \text{Days Payable Outstanding}
-     \]
+     `$
 
 2. **Net Working Capital**
    - **Formula**:
-     \[
+     $`
      \text{Net Working Capital} = \text{Current Assets} - \text{Current Liabilities}
-     \]
+     `$
 
 3. **Weighted Average Cost of Capital (WACC)**
    - **Formula**:
-     \[
+     $`
      \text{WACC} = \frac{E}{V} \times Re + \frac{D}{V} \times Rd \times (1 - Tc)
-     \]
+     `$
      Where:
      - \(E\) = Market value of equity.
      - \(D\) = Market value of debt.
@@ -320,9 +320,9 @@ Here’s a list of accounting and finance terminologies that involve calculation
 
 1. **Loan Amortization**
    - **Formula**:
-     \[
+     $`
      M = \frac{P \times r}{1 - (1 + r)^{-n}}
-     \]
+     `$
      Where:
      - \(M\) = Monthly payment.
      - \(P\) = Principal loan amount.
@@ -331,60 +331,60 @@ Here’s a list of accounting and finance terminologies that involve calculation
 
 2. **Credit Utilization Ratio**
    - **Formula**:
-     \[
+     $`
      \text{Credit Utilization Ratio} = \frac{\text{Credit Card Balances}}{\text{Credit Card Limits}}
-     \]
+     `$
 
 3. **Net Interest Margin (NIM)**
    - **Formula**:
-     \[
+     $`
      \text{NIM} = \frac{\text{Interest Income} - \text{Interest Expense}}{\text{Average Earning Assets}}
-     \]
+     `$
 
 ### **Insurance**
 
 1. **Loss Ratio**
    - **Formula**:
-     \[
+     $`
      \text{Loss Ratio} = \frac{\text{Claims Paid} + \text{Claims Reserves}}{\text{Premium Earned}}
-     \]
+     `$
 
 2. **Expense Ratio**
    - **Formula**:
-     \[
+     $`
      \text{Expense Ratio} = \frac{\text{Underwriting Expenses}}{\text{Net Premiums Written}}
-     \]
+     `$
 
 3. **Combined Ratio**
    - **Formula**:
-     \[
+     $`
      \text{Combined Ratio} = \text{Loss Ratio} + \text{Expense Ratio}
-     \]
+     `$
 
 ### **Direct and Indirect Taxes**
 
 1. **Tax Payable**
    - **Formula**:
-     \[
+     $`
      \text{Tax Payable} = \text{Taxable Income} \times \text{Tax Rate}
-     \]
+     `$
 
 2. **Effective Tax Rate**
    - **Formula**:
-     \[
+     $`
      \text{Effective Tax Rate} = \frac{\text{Total Tax Expense}}{\text{Pre-Tax Income}}
-     \]
+     `$
 
 3. **GST Payable**
    - **Formula**:
-     \[
+     $`
      \text{GST Payable} = \text{Output GST} - \text{Input GST}
-     \]
+     `$
 
 4. **Customs Duty**
    - **Formula**:
-     \[
+     $`
      \text{Customs Duty} = \text{Value of Goods} \times \text{Duty Rate}
-     \]
+     `$
 
 These formulas and terminologies are crucial for various financial calculations and analyses within their respective fields.
