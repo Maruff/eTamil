@@ -9,8 +9,8 @@ Here is a list of Indian accounting and finance departments, related fields, and
    - **Institute of Cost Accountants of India (ICMAI)**: [www.icmai.in](https://www.icmai.in)
 
 3. **Management Accounting**
-   - **Institute of Chartered Accountants of India (ICAI)**: [www.icai.org](https://www.icai.org)
-
+   - **Institute of Cost Accountants of India (ICMAI)**: [www.icmai.in](https://www.icmai.in)
+     
 ### **Audit Departments**
 
 1. **Internal Audit**
