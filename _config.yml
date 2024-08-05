@@ -1,3 +1,11 @@
 title: இ தமிழ்
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - index.md
+  - Readme.md
 theme: jekyll-theme-cayman
 description: eTamil Programming Language
