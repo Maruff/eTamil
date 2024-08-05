@@ -1,6 +1,6 @@
 title: இ தமிழ்
 description: eTamil Programming Language
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-  - jekyll-remote-theme
-# theme: jekyll-theme-cayman
+# remote_theme: pages-themes/cayman@v0.2.0
+# plugins:
+#   - jekyll-remote-theme
+theme: jekyll-theme-cayman
