@@ -1,5 +1,6 @@
 title: இ தமிழ்
 description: Basics of Indian GST
+
 Developing an accounting application that accurately calculates Indian Goods and Services Tax (GST) requires understanding the various components and formulas involved in GST calculation. Here are the key formulas and components you need to consider:
 
 ### **1. GST Basics**
