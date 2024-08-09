@@ -1,4 +1,4 @@
-# Usage of Latin Alphabets in Messaging and Social Media for Tamil
+# Usage of Latin Scripts
 
 The use of Latin alphabets in messaging and social media has become increasingly common among Tamil speakers. This practice, often referred to as "Romanization" or "Tanglish" (Tamil + English), involves writing Tamil words using the Latin script. Here, we explore the reasons, patterns, and implications of using Latin alphabets for Tamil in digital communication.
 
