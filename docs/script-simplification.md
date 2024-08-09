@@ -1,4 +1,4 @@
-# Necessity, Scope, and Feasibility of Tamil Script Simplification
+# Script Simplification
 
 ## Introduction
 
