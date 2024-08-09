@@ -1,4 +1,4 @@
-# Evolution of Tamil Alphabets
+# Evolution of Tamil Scripts
 
 The Tamil script has a long and rich history that traces back several centuries. Here is a detailed look at the evolution of Tamil alphabets from ancient times to the modern script used today.
 
