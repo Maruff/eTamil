@@ -3,7 +3,7 @@ layout: default
 title: இ தமிழ் Research Schedule
 ---
 
-### **Year 1 (July 2024 - June 2025)**
+ **Year 1 (July 2024 - June 2025)**
 - **July - September 2024:**
   - Conduct **requirement analysis** and gather initial data.
   - Begin **literature review** focusing on domain-specific languages (DSLs) and their applications in FinTech.
