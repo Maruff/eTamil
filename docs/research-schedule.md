@@ -5,7 +5,7 @@
   - Begin **literature review** focusing on domain-specific languages (DSLs) and their applications in FinTech.
   - Initial **design of eTamil**, defining core features and syntax.
 - **October - December 2024:**
-  - **Submit the Title & Synopsis** for approval.
+  - **Submit the Title & Abstract** for approval.
   - Enroll and complete necessary **coursework** related to research methodology and language development.
   - Start the **development of the eTamil compiler**, focusing on basic syntax parsing.
 - **January - March 2025:**
