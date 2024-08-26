@@ -4,6 +4,33 @@
 **A Systematic Literature Review on Technological Developments in Indian Accounting & FinTech Systems**  
 
 ---
+Let's start with the **Abstract** and **Introduction** sections.
+
+### **Abstract** (Draft)
+
+This systematic literature review explores recent technological advancements in the Indian accounting and FinTech sectors, with a focus on the development and application of Domain-Specific Languages (DSLs) and frameworks. The review aims to identify existing research gaps and the need for innovative solutions tailored to the unique requirements of the Indian financial industry. By examining the current state of DSLs in accounting and FinTech, and evaluating their adaptability to the Indian context, this study highlights the potential of developing an Indian DSL, such as eTamil, specifically designed for accounts and FinTech operations. The findings underscore the necessity for targeted research and development to bridge the identified gaps, ultimately contributing to the advancement of the Indian financial ecosystem.
+
+---
+
+### **1. Introduction** (Draft)
+
+#### **1.1 Background and Motivation**
+The Indian financial sector, encompassing banking, insurance, and various FinTech services, has experienced rapid growth and transformation in recent years. With the proliferation of digital technologies and the increasing complexity of financial operations, there is a pressing need for specialized tools that can streamline processes, enhance security, and improve overall efficiency. Domain-Specific Languages (DSLs) have emerged as a critical technological innovation in this regard, offering tailored solutions for specific industries and applications.
+
+In the global context, DSLs have been successfully implemented in various financial systems, enabling more efficient and accurate financial operations. However, the Indian financial sector presents unique challenges that are not fully addressed by existing DSLs. These challenges include diverse linguistic and cultural considerations, regulatory complexities, and the need for financial inclusion across a vast and varied population. A DSL designed specifically for the Indian context could address these challenges by providing a more localized and efficient solution.
+
+#### **1.2 Problem Statement**
+Despite the advancements in financial technology and the development of DSLs for various financial applications, there is a notable absence of a comprehensive DSL tailored to the needs of the Indian financial sector. Existing DSLs and frameworks often fall short in addressing the unique requirements of Indian banking, insurance, and FinTech services. The lack of a specialized tool that can cater to the linguistic diversity and regulatory complexities of India poses a significant barrier to further advancements in this sector.
+
+This gap in the current technological landscape highlights the need for a dedicated Indian DSL, such as eTamil, which could significantly enhance the efficiency and accuracy of financial operations in India. By developing a DSL that is specifically designed for Indian accounts and FinTech systems, there is an opportunity to overcome the challenges posed by existing solutions and to create a more robust and adaptable financial ecosystem in India.
+
+#### **1.3 Objectives of the Survey**
+The primary objective of this literature review is to systematically examine existing research on DSLs and frameworks within the context of the Indian financial sector. Specifically, this review aims to:
+- Identify and analyze the current DSLs used in accounts and FinTech globally.
+- Explore the frameworks developed for accounting and financial operations, with a focus on their applicability to the Indian market.
+- Investigate how Indian languages are integrated into programming languages and financial operations.
+- Identify gaps in the existing research and technological solutions that underscore the need for an Indian DSL, such as eTamil, for accounts and FinTech.
+
 
 #### **Abstract** (150-200 words)
 - Brief overview of the paper’s objective.
