@@ -102,6 +102,24 @@ cargo run -- example.tml
 - **Multiplication**: `*`
 - **Division**: `/`
 
+### Code Structure
+
+eTamil/
+├── Cargo.toml
+├── src/
+│   ├── lexer.rs
+│   ├── parser.rs
+│   ├── ast.rs
+│   ├── semantic_analyzer.rs
+│   ├── code_generator.rs
+│   └── main.rs
+├── tests/
+│   ├── lexer_tests.rs
+│   ├── parser_tests.rs
+│   ├── semantic_analyzer_tests.rs
+│   └── code_generator_tests.rs
+
+
 ## Contributing
 
 We welcome contributions from the community for developing more features and documentation in Tamil! Here’s how you can contribute:
