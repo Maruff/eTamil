@@ -103,7 +103,7 @@ cargo run -- example.tml
 - **Division**: `/`
 
 ### Code Structure
-
+```
 eTamil/
 ├── Cargo.toml
 ├── src/
@@ -118,7 +118,7 @@ eTamil/
 │   ├── parser_tests.rs
 │   ├── semantic_analyzer_tests.rs
 │   └── code_generator_tests.rs
-
+```
 
 ## Contributing
 
