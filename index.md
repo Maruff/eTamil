@@ -18,7 +18,7 @@ title: இ தமிழ்
 </p>
 **eTamil** is a domain-specific language (DSL) tailored for Indian accountants, auditors, and FinTech professionals. Designed to incorporate features specific to the Tamil language, it aims to promote coding literacy in the Tamil-speaking community by offering a programming syntax that resonates with the native language.
 
-<div><iframe src="https://wll.qa/public/valymozi/embed?theme=light" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe></div>
+<div><iframe src="http://ineo.in/public/valymozi/embed?theme=light" frameborder="0" allowtransparency="true" style="width: 100%; min-height: 150px; border: 0;"></iframe></div>
 
 ## Purpose
 
