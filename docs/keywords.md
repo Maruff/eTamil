@@ -50,8 +50,8 @@
 | 14  |  varumAZam  |  வருமானம்  |  income  |
 | 15  |  varuvAy  |  வருவாய்  |  revenue  |
 | 16  |  niRuvaZam  |  நிறுவனம்  |  entity  |
-| 17  |  coqqu  |  சொத்து  |  asset  |
-| 18  |  poRuppu  |  பொறுப்பு  |  liability  |
+| 17  |  
+| 18  |  
 | 19  |  pawku  |  பங்கு  |  capital / equity  |
 | 20  |  Ittal  |  ஈட்டல்  |  profit / earning  |
 | 21  |  celavu  |  செலவு  |  expense  |
@@ -61,12 +61,26 @@
 |------|-------------|------------|--------------|
 |  1  |  kaNakku pattiyal  |  கணக்குப் பட்டியல்  |  Chart of Accounts  |
 |  2  |  iruppAyvu  |  இருப்பாய்வு  |  Trial Balance  |
-|  3  |  iruppunilYk kuRippu  |  இருப்புநிலைக் குறிப்பு  |  Balance Sheet  |
+|  3  |  iruppunilY kuRippu  |  இருப்புநிலைக் குறிப்பு  |  Balance Sheet  |
 |  4  |  varumAZa aRikkY  |  வருமான அறிக்கை  |  Income Statement / P&L  |
 |  5  |  paNappuzakka aRikkY  |  பணப்புழக்க அறிக்கை  |  Cash flow Statement  |
 |  6  |  pawku aRikkY  |  பங்கு அறிக்கை  |  Statement of Equity  |
 |  7  |  niqi vikiqam  |  நிதி விகிதம்  |  Financial Ratio  |
 |  8  |  vawki carikkattu  |  வங்கி சரிக்கட்டு  |  Bank Reconciliation  |
-|  9  |  cillaRYp paNam  |  சில்லறைப் பணம்  |  Petty Cash  |
+|  9  |  cillaRY paNam  |  சில்லறைப் பணம்  |  Petty Cash  |
 |  10  |  celuqqaRkuriya kaNakkukaL  |  செலுத்தற்குரிய கணக்குகள்  |  Accounts Payable  |
-|  11  |  
+|  11  |  peRuqaRkuriya kaNakkukaL  |  பெறுதற்குரிய கணக்குகள்  |  Accounts Receivable  |
+|  12  |  coqqu  |  சொத்து  |  Asset  |
+|  13  |  natappu coqqu  |  நடப்புச் சொத்து  |  Current Asset  |
+|  14  |  muqalItu  |  முதலீடுகள்  |  Investments  |
+|  15  |  NilY coqqu  |  நிலைச் சொத்துக்கள்  |  Fixed Assets  |
+|  16  |  aruva coqqu  |  அருவச் சொத்துக்கள்  |  Intangible Assets  |
+|  17  |  piRa coqqu  |  பிற சொத்துக்கள்  |  Other Assets  |
+|  18  |  poRuppu  |  பொறுப்புகள்  |  liabilities  |
+|  19  |  natappu poRuppu  |  நடப்புப் பொறுப்புகள்  |  Current liabilities  |
+|  20  |  nILpayaZ poRuppu  |  நீள்பயன் பொறுப்புகள்  |  Long-term / NonCurrent liabilities  |
+|  21  |  nILpayaZ varavu  |  நீள்பயன் வரவுகள்  |  Deferred credits  |
+|  22  |  muqlIttu pawku  |  முதலீட்டு பங்கு  |  Share Capital / Stockholders’ equity  |
+|  23  |  peRRa muqlItu  |  பெற்ற முதலீடுகள்  |  Paid-in capital  |
+|  24  |  qakkavYqqa Ittal  |  தக்கவைத்த ஈட்டல்  |  Retained Earnings  |
+|  25  |  karuvUla pawku  |  கருவூலப் பங்கு  |  Treasury stock  |
