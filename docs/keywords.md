@@ -1,3 +1,5 @@
+**eTamil keywords**
+
 | SNo  | eTamil  | Tamil  | English  |
 |------|-------------|------------|--------------|
 | 1  | peRu  | பெறு  | get / input  |
@@ -28,6 +30,7 @@
 | 26  | mARi  | மாறி  | variable  |
 | 27  | qaranilY  | தரநிலை  | standard  |
 
+**Accounting Terminologies**
 
 | SNo  | eTamil  | Tamil  | English  |
 |------|-------------|------------|--------------|
@@ -44,12 +47,26 @@
 | 11  |  kuRippu  |  குறிப்பு  |  note  |
 | 12  |  iruppu  |  இருப்பு  |  balance  |
 | 13  |  aRikkY  |  அறிக்கை  |  statement  |
-| 14  |  varumAzam  |  வருமானம்  |  income  |
+| 14  |  varumAZam  |  வருமானம்  |  income  |
 | 15  |  varuvAy  |  வருவாய்  |  revenue  |
-| 16  |  niRuvazam  |  நிறுவனம்  |  entity  |
+| 16  |  niRuvaZam  |  நிறுவனம்  |  entity  |
 | 17  |  coqqu  |  சொத்து  |  asset  |
 | 18  |  poRuppu  |  பொறுப்பு  |  liability  |
-| 19  |  muqal  |  முதல்  |  capital / equity  |
+| 19  |  pawku  |  பங்கு  |  capital / equity  |
 | 20  |  Ittal  |  ஈட்டல்  |  profit / earning  |
 | 21  |  celavu  |  செலவு  |  expense  |
-| 22  |  
+
+**Financial Statements & Chart of Accounts**
+| SNo  | eTamil  | Tamil  | English  |
+|------|-------------|------------|--------------|
+|  1  |  kaNakku pattiyal  |  கணக்குப் பட்டியல்  |  Chart of Accounts  |
+|  2  |  iruppAyvu  |  இருப்பாய்வு  |  Trial Balance  |
+|  3  |  iruppunilYk kuRippu  |  இருப்புநிலைக் குறிப்பு  |  Balance Sheet  |
+|  4  |  varumAZa aRikkY  |  வருமான அறிக்கை  |  Income Statement / P&L  |
+|  5  |  paNappuzakka aRikkY  |  பணப்புழக்க அறிக்கை  |  Cash flow Statement  |
+|  6  |  pawku aRikkY  |  பங்கு அறிக்கை  |  Statement of Equity  |
+|  7  |  niqi vikiqam  |  நிதி விகிதம்  |  Financial Ratio  |
+|  8  |  vawki carikkattu  |  வங்கி சரிக்கட்டு  |  Bank Reconciliation  |
+|  9  |  cillaRYp paNam  |  சில்லறைப் பணம்  |  Petty Cash  |
+|  10  |  celuqqaRkuriya kaNakkukaL  |  செலுத்தற்குரிய கணக்குகள்  |  Accounts Payable  |
+|  11  |  
