@@ -36,12 +36,20 @@
 |  3  |  paRRu  |  பற்று  |  debit  |
 |  4  |  varavu  |  வரவு  |  credit  |
 |  5  |  aRikkY  |  அறிக்கை  |  statement  |
-|  6  |  kuRippEtu  |  குறிப்பேடு  |  joural  |
-|  7  |  pEREtu  |  பேரேடு  |  journal  |
+|  6  |  kuRippEtu  |  குறிப்பேடு  |  journal  |
+|  7  |  pEREtu  |  பேரேடு  |  ledger  |
 |  8  |  paNam  |  பணம்  |  cash  |
 |  9  |  natavatikkY  |  நடவடிக்கை  |  transaction  |
-|  9  | parivarqqanY  |  பரிவர்த்தனை  |  transaction  |
 | 10  |  vawki  |  வங்கி  |  bank  |
 | 11  |  kuRippu  |  குறிப்பு  |  note  |
 | 12  |  iruppu  |  இருப்பு  |  balance  |
 | 13  |  aRikkY  |  அறிக்கை  |  statement  |
+| 14  |  varumAzam  |  வருமானம்  |  income  |
+| 15  |  varuvAy  |  வருவாய்  |  revenue  |
+| 16  |  niRuvazam  |  நிறுவனம்  |  entity  |
+| 17  |  coqqu  |  சொத்து  |  asset  |
+| 18  |  poRuppu  |  பொறுப்பு  |  liability  |
+| 19  |  muqal  |  முதல்  |  capital / equity  |
+| 20  |  Ittal  |  ஈட்டல்  |  profit / earning  |
+| 21  |  celavu  |  செலவு  |  expense  |
+| 22  |  
