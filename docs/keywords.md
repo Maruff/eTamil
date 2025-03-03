@@ -26,8 +26,22 @@
 | 24  | ceyal  | செயல்  | action / function  |
 | 25  | mARili  | மாறிலி  | constant  |
 | 26  | mARi  | மாறி  | variable  |
+| 27  | qaranilY  | தரநிலை  | standard  |
 
 
 | SNo  | eTamil  | Tamil  | English  |
 |------|-------------|------------|--------------|
-| 1  |  kaNakku  | கணக்கு  | Account  |
+|  1  |  kaNakku  | கணக்கு  | Account  |
+|  2  |  kaNakkiyal  |  கணக்கியல்  |  Accounting  |
+|  3  |  paRRu  |  பற்று  |  debit  |
+|  4  |  varavu  |  வரவு  |  credit  |
+|  5  |  aRikkY  |  அறிக்கை  |  statement  |
+|  6  |  kuRippEtu  |  குறிப்பேடு  |  joural  |
+|  7  |  pEREtu  |  பேரேடு  |  journal  |
+|  8  |  paNam  |  பணம்  |  cash  |
+|  9  |  natavatikkY  |  நடவடிக்கை  |  transaction  |
+|  9  | parivarqqanY  |  பரிவர்த்தனை  |  transaction  |
+| 10  |  vawki  |  வங்கி  |  bank  |
+| 11  |  kuRippu  |  குறிப்பு  |  note  |
+| 12  |  iruppu  |  இருப்பு  |  balance  |
+| 13  |  aRikkY  |  அறிக்கை  |  statement  |
