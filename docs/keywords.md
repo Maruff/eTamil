@@ -84,3 +84,4 @@
 |  23  |  peRRa muqlItu  |  பெற்ற முதலீடுகள்  |  Paid-in capital  |
 |  24  |  qakkavYqqa Ittal  |  தக்கவைத்த ஈட்டல்  |  Retained Earnings  |
 |  25  |  karuvUla pawku  |  கருவூலப் பங்கு  |  Treasury stock  |
+|  26  |  
