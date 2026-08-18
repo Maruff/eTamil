@@ -1,0 +1,324 @@
+---
+layout: home
+title: "eTamil — a Tamil programming language for Indian finance"
+description: >-
+  eTamil is an industry-ready programming language whose vocabulary is Tamil, built
+  for Indian accounting, tax and fintech. Exact decimal money, a ready accounting and
+  taxation framework, a bytecode VM, an HTTP server and SQL drivers. Written in Rust.
+permalink: /
+---
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <img class="hero-logo" src="{{ '/assets/img/etamil-logo-on-dark.svg' | relative_url }}"
+           width="360" height="99" alt="eTamil.in — a FinTech DSL"
+           fetchpriority="high" decoding="async">
+      <p class="eyebrow"><span lang="ta">இ தமிழ்</span> · version {{ site.brand.version }} · AGPL-3.0</p>
+      <h1>Build industrial software <span class="accent">in Tamil.</span></h1>
+      <p class="lede">
+        eTamil is a programming language whose vocabulary is Tamil, aimed at Indian
+        accounting, taxation and fintech. Not a teaching language — a backend
+        language built to carry real industrial applications, with an accounting
+        and taxation framework no general-purpose language ships with.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ '/install/' | relative_url }}">Get started</a>
+        <a class="btn btn-ghost" href="{{ '/language/' | relative_url }}">Tour the language</a>
+        <a class="btn btn-ghost" href="{{ site.brand.compiler_repo }}" rel="noopener">Source on GitHub</a>
+      </div>
+      <p class="hero-note">
+        Rust 1.85+ · Linux, macOS and Windows · run a file with <code>etamil --vm hello.etamil</code>
+      </p>
+    </div>
+
+    <div class="demo">
+      <div class="demo-bar">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="name">vari.etamil — income tax</span>
+      </div>
+      <div class="highlight"><pre><code><span class="c">// வருமான வரி — income tax</span>
+<span class="k">எண்</span> வருவாய்;
+<span class="k">அச்சு</span> <span class="s">"Enter income: "</span>;
+<span class="k">உள்ளிடு</span> வருவாய்;
+வரி = <span class="m">20%</span>;
+
+(வருவாய் <span class="o">&gt;</span> <span class="m">800000</span>) <span class="k">எனில்</span> {
+    <span class="k">அச்சு</span> <span class="s">"High Tax Bracket"</span>;
+    <span class="k">அச்சு</span> (வருவாய் <span class="o">-</span> <span class="m">800000</span>) <span class="o">*</span> வரி;
+}
+<span class="k">இன்றேல்</span> {
+    <span class="k">அச்சு</span> <span class="s">"Low Tax Bracket (No Tax)"</span>;
+}</code></pre></div>
+    </div>
+
+    <ul class="stat-row full" style="grid-column: 1 / -1;">
+      <li class="stat"><b>201</b><span>keyword tokens</span></li>
+      <li class="stat"><b>3</b><span>spellings per keyword</span></li>
+      <li class="stat"><b>227</b><span>tests, Linux + Windows</span></li>
+      <li class="stat"><b>0.1+0.2</b><span>is exactly 0.3</span></li>
+      <li class="stat"><b>Rust</b><span>with an optional LLVM backend</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">The core idea</p>
+    <h2>Three spellings. One language.</h2>
+    <p class="lede">
+      Every keyword accepts Tamil script, a romanized spelling you can type on a plain
+      keyboard, and — where one exists — an English alias. All three produce the same
+      token, so a team can write in whichever form suits it.
+    </p>
+
+    <div class="grid-2">
+      <div class="demo">
+        <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">Tamil script</span></div>
+        <div class="highlight"><pre><code><span class="k">எண்</span> வருவாய் = <span class="m">100000</span>;
+<span class="k">அச்சு</span> வருவாய் <span class="o">*</span> <span class="m">18%</span>;</code></pre></div>
+      </div>
+      <div class="demo">
+        <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">romanized (ezuqqu)</span></div>
+        <div class="highlight"><pre><code><span class="k">eN</span> varuvAy = <span class="m">100000</span>;
+<span class="k">accu</span> varuvAy <span class="o">*</span> <span class="m">18%</span>;</code></pre></div>
+      </div>
+    </div>
+
+    <p>
+      The romanization is its own scheme, <em>ezuqqu</em>, not ISO&nbsp;15919 — designed so that
+      every Tamil letter maps to exactly one ASCII character you can type without a
+      Tamil keyboard. It keeps the three Tamil nasals apart, which English collapses
+      into one <code>n</code>: <code>ண</code> is <code>N</code>, <code>ந</code> is <code>n</code>,
+      and <code>ன</code> is <code>Z</code>.
+    </p>
+    <p><a href="{{ '/language/' | relative_url }}#romanization">How the romanization works →</a></p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">Why it exists</p>
+    <h2>Money is exact, because tax code is not forgiving.</h2>
+    <p class="lede">
+      Every number in eTamil is a fixed-point decimal, from the lexer through to the VM.
+      There is no <code>f64</code> anywhere in the value type, so the arithmetic a
+      GST or income-tax program actually performs comes out right.
+    </p>
+
+    <div class="demo" style="max-width: 720px;">
+      <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">exact decimals</span></div>
+      <div class="highlight"><pre><code><span class="k">அச்சு</span> <span class="m">0.1</span> <span class="o">+</span> <span class="m">0.2</span>;      <span class="c">// 0.3        — not 0.30000000000000004</span>
+<span class="k">அச்சு</span> <span class="m">99.99</span> <span class="o">*</span> <span class="m">3</span>;      <span class="c">// 299.97     — not 299.96999999999997</span>
+<span class="k">அச்சு</span> <span class="m">18%</span>;            <span class="c">// 0.18       exactly</span></code></pre></div>
+    </div>
+
+    <p>
+      Equality is exact too. The earlier <code>f64</code> value type compared numbers equal
+      within <code>1e-10</code>, which made two amounts a fraction of a paisa apart
+      indistinguishable — a real hazard in reconciliation. Division keeps full precision
+      rather than rounding at each step, because Indian tax computation rounds once at the
+      end and rounding intermediates compounds the error.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Not a teaching language</p>
+    <h2>Built for industry, not for the classroom.</h2>
+    <p class="lede">
+      Tamil programming languages have existed for years, and nearly all of them were
+      built to teach. eTamil is built to ship. It compiles to bytecode and runs on its
+      own VM, it is written in Rust, and it is designed to hold its own against the
+      backend languages it would otherwise sit beside — Python, Java and Node.js.
+    </p>
+
+    <div class="grid-2">
+      <div>
+        <h3>What makes it industrial</h3>
+        <ul>
+          <li><strong>A real toolchain.</strong> Bytecode VM, an optional LLVM backend,
+              227 tests running on Linux and Windows in CI.</li>
+          <li><strong>A real backend.</strong> Concurrent HTTP server, SQL drivers,
+              JSON, bcrypt and JWT — not a REPL with a print statement.</li>
+          <li><strong>Exact money.</strong> Fixed-point decimals throughout, so
+              reconciliation and tax arithmetic are correct by construction.</li>
+          <li><strong>Errors that refuse.</strong> Anything unimplemented fails with an
+              explicit message rather than quietly returning something plausible.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>What makes it unique</h3>
+        <p>
+          No general-purpose language ships with a chart of accounts. eTamil comes with
+          a <strong>ready framework for accounting and taxation</strong> — double-entry
+          posting that refuses to go out of balance, GST with CGST/SGST/IGST splitting,
+          the trial balance and the three statements.
+        </p>
+        <p>
+          That framework is the foundation. <strong>Banking, insurance, customs and
+          blockchain</strong> modules are planned on top of it, extending the same
+          vocabulary across the rest of the Indian financial stack.
+        </p>
+        <p><a href="{{ '/status/' | relative_url }}">See what is built and what is planned →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">What runs today</p>
+    <h2>Explore the language.</h2>
+    <p class="lede">
+      Functions, collections, error handling, modules, SQL databases, a concurrent HTTP
+      server, and an accounting framework written in the language itself.
+    </p>
+
+    <ul class="cards">
+      <li class="card">
+        <span class="glyph" lang="ta" aria-hidden="true">௹</span>
+        <h3><a href="{{ '/finance/' | relative_url }}">Finance &amp; accounting</a></h3>
+        <p>Double-entry ledger, GST with CGST/SGST/IGST splitting, trial balance and the
+           three statements — plus Indian digit grouping for rupees.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⌘</span>
+        <h3><a href="{{ '/language/' | relative_url }}">The language</a></h3>
+        <p>Functions, arrays and records, iteration, results as values, modules, and a
+           type checker that holds you to what you declared.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⇄</span>
+        <h3><a href="{{ '/backend/' | relative_url }}">Servers &amp; databases</a></h3>
+        <p>An HTTP server with routing and path parameters, SQLite and PostgreSQL drivers
+           with parameterised queries only, bcrypt and JWT.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">◆</span>
+        <h3><a href="{{ '/keywords/' | relative_url }}">Keyword reference</a></h3>
+        <p>201 tokens across roughly 500 spellings — financial vocabulary, control flow,
+           SQL clauses and the standard library, all three forms listed.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">▲</span>
+        <h3><a href="{{ '/status/' | relative_url }}">Status &amp; roadmap</a></h3>
+        <p>An honest table of what works, what is partial, and what deliberately fails
+           with an explicit message rather than quietly doing nothing.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">§</span>
+        <h3><a href="{{ '/research/' | relative_url }}">The research</a></h3>
+        <p>The peer-reviewed paper behind the language, the literature survey, and the
+           domain notes on GST, Ind AS and IFRS that shaped its vocabulary.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">The proof</p>
+    <h2>The standard library is written in eTamil.</h2>
+    <p class="lede">
+      Not in Rust. That is the point: if the standard library needed a systems language,
+      the DSL would not be sufficient for the frameworks built on top of it. The host
+      provides only what a language cannot express — decimal arithmetic, text measurement,
+      file and socket access — and everything above that is readable and editable by the
+      people who use it.
+    </p>
+
+    <div class="grid-2">
+      <div>
+        <h3>Rupees, grouped the Indian way</h3>
+        <div class="demo">
+          <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">nUlakam/paNam.qmz</span></div>
+          <div class="highlight"><pre><code><span class="k">இறக்கு</span> <span class="s">"nUlakam/paNam.qmz"</span>;
+
+<span class="k">அச்சு</span> <span class="nf">ரூபாய்</span>(<span class="m">12345678.5</span>);
+<span class="c">// ₹1,23,45,678.50 — lakh and crore, not thousands</span></code></pre></div>
+        </div>
+      </div>
+      <div>
+        <h3>A ledger that refuses to go out of balance</h3>
+        <div class="demo">
+          <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">nUlakam/kaNakkiyal/pErEtu.qmz</span></div>
+          <div class="highlight"><pre><code><span class="k">இறக்கு</span> <span class="s">"nUlakam/kaNakkiyal/pErEtu.qmz"</span>;
+
+த = <span class="nf">பரிவர்த்தனை_ஆக்கு</span>(<span class="s">"JV1"</span>, <span class="s">"2026-04-01"</span>, <span class="s">"மூலதனம்"</span>, [
+    <span class="nf">பற்று_வரிசை</span>(<span class="s">"1000"</span>, <span class="m">500000</span>),
+    <span class="nf">வரவு_வரிசை</span>(<span class="s">"3000"</span>, <span class="m">500000</span>)
+]);
+பேரேடு = <span class="nf">மதிப்பு</span>(<span class="nf">பதிவிடு</span>(பேரேடு, த));</code></pre></div>
+        </div>
+      </div>
+    </div>
+    <p><a href="{{ '/finance/' | relative_url }}">See the accounting framework →</a></p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">Coming next</p>
+    <h2>The rest of the Indian financial stack.</h2>
+    <p class="lede">
+      Accounting, taxation and finance are in the language today. The same
+      vocabulary-first approach extends to the domains beside them — each one a
+      framework written in eTamil, on the ledger that already exists.
+    </p>
+
+    <ul class="cards">
+      <li class="card">
+        <span class="glyph" aria-hidden="true">◫</span>
+        <h3>Banking</h3>
+        <p>NEFT, UPI and RBI compliance — payment abstractions, transaction limits and
+           KYC/AML checks as language-level constructs rather than hand-written rules.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">◍</span>
+        <h3>Insurance</h3>
+        <p>Policy, premium and claim structures, with the same exact-decimal arithmetic
+           the accounting framework already depends on.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⛴</span>
+        <h3>Customs &amp; trade</h3>
+        <p>E-way bills and Customs Act obligations — code validation, duty calculation
+           and declaration generation.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⛓</span>
+        <h3>Blockchain</h3>
+        <p>Hyperledger-backed audit trails, so a posting can be made tamper-evident
+           without leaving the language.</p>
+      </li>
+    </ul>
+
+    <p>
+      These are planned, not built. The <a href="{{ '/status/' | relative_url }}">status page</a>
+      keeps a feature-by-feature line between the two, and anything unimplemented fails
+      with an explicit message rather than quietly doing nothing.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="band">
+      <p class="eyebrow">Research</p>
+      <h2>Backed by published work.</h2>
+      <p>
+        eTamil is the subject of doctoral research at B.S. Abdur Rahman Crescent Institute
+        of Science and Technology, Chennai. The paper — <em>Developing an Indian DSL
+        (Programming Language) for Accounts, Commerce, Finance, and Fintech
+        Professionals</em>, by Mohammed Maruff and Dr. S. P. Valli — reviews 28 academic
+        and industrial sources from 2003–2025 and sets out why India needs a financial DSL
+        of its own.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="{{ '/research/' | relative_url }}">Read the research</a>
+      </p>
+    </div>
+  </div>
+</section>

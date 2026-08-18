@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 176" width="640" height="176" role="img" aria-label="eTamil.in — a FinTech DSL">
+  <title>eTamil.in — a FinTech DSL</title>
+
+  <rect width="640" height="176" rx="14" ry="14" fill="#0A2340"/>
+
+  <g transform="translate(8 8) scale(0.3125)">
+    <rect width="512" height="512" rx="92" ry="92" fill="#0A2A4E"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="172" cy="262" rx="40" ry="48"/>
+      <circle cx="134" cy="380" r="44"/>
+      <circle cx="240" cy="380" r="44"/>
+      <path d="M 172 214 L 172 168 C 172 128 204 96 244 96 L 296 96"/>
+    </g>
+    <circle cx="318" cy="116" r="22" fill="#2E90FA"/>
+    <rect x="301" y="158" width="34" height="266" rx="17" ry="17" fill="#2E90FA"/>
+  </g>
+
+  <text x="196" y="94" fill="#2E90FA"
+        font-family="Segoe UI Black, Segoe UI, Arial Black, Helvetica, sans-serif"
+        font-size="76" font-weight="900" letter-spacing="-2">eTamil.in</text>
+  <text x="199" y="140" fill="#FFFFFF"
+        font-family="Segoe UI Semibold, Segoe UI, Arial, Helvetica, sans-serif"
+        font-size="27" font-weight="700" letter-spacing="8.5">A FINTECH DSL</text>
+</svg>

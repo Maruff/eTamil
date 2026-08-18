@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Indian GAAP"
+section: Research notes
+permalink: /docs/gaap-india/
+description: >-
+  Generally accepted accounting principles as applied in India, and the standards that govern them.
+---
+
 **Key Differences Between US GAAP and Indian GAAP**
 
 1. **Framework and Standard Setting Bodies:**

@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Literature review for eTamil"
+section: Research notes
+permalink: /docs/literature/
+description: >-
+  Prior research on domain-specific languages, localization in programming, and financial computing, and the gaps that justify eTamil.
+---
+
 **Literature Review for eTamil Development**
 
 **Abstract**

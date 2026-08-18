@@ -1,56 +1,34 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
 
-    {% if site.google_analytics %}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-      </script>
-    {% endif %}
-    <meta charset="UTF-8">
+  <header class="site-header">
+    <div class="wrap header-inner">{% include nav.html %}</div>
+  </header>
 
-{% seo %}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <main id="content">
+    {{ content }}
+  </main>
 
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$']]
-            }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-  </head>
-  <body>
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: "eTamil" }}</h1>
-      <a href="{{ site.github.url }}" class="btn">Home</a>
-      <a href="{{ site.github.url }}/synopsis" class="btn">Abstract</a>
-      <a href="{{ site.github.url }}/docs/research-schedule" class="btn">Schedule</a>
-      <a href="{{ site.github.url }}/docs/gov-bodies" class="btn">Dept</a>
-      <a href="{{ site.github.url }}/docs/fin-terms" class="btn">Terms</a>
-      <a href="{{ site.github.url }}/docs/gst-basics" class="btn">GST</a>
-      <a href="{{ site.github.url }}/docs/gaap-ifrs" class="btn">IFRS</a>
-      <a href="{{ site.github.url }}/docs/ind-as-ifrs" class="btn">Ind AS</a>
-      <a href="{{ site.github.url }}/docs/script-evolution" class="btn">Scripts</a>
-      <a href="{{ site.github.url }}/docs/latin-tamil" class="btn">Latin</a>
-      <a href="{{ site.github.url }}/docs/script-simplification" class="btn">Simplify</a>
-    </header>
+  <footer class="site-footer">
+    {% include footer.html %}
+  </footer>
 
-    <main id="content" class="main-content" role="main">
-      {{ content }}
-      <footer class="site-footer">
-        <span class="site-footer-owner">View <a href="{{ site.github.repository_url }}">this website</a> on github.</span>
-      </footer>
-    </main>
-  </body>
+  <script>
+    (function () {
+      var b = document.querySelector('.nav-toggle');
+      var n = document.getElementById('site-nav');
+      if (!b || !n) return;
+      b.addEventListener('click', function () {
+        var open = b.getAttribute('aria-expanded') === 'true';
+        b.setAttribute('aria-expanded', String(!open));
+        n.classList.toggle('open', !open);
+      });
+    })();
+  </script>
+</body>
 </html>

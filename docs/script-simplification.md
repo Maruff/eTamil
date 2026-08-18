@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Tamil script simplification"
+section: Research notes
+permalink: /docs/script-simplification/
+description: >-
+  Proposals for an optimal Tamil script set that is simple to learn, type and display.
+---
+
 # Script Simplification
 
 ## Introduction

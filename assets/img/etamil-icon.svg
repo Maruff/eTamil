@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="eTamil">
+  <title>eTamil</title>
+  <rect width="512" height="512" rx="92" ry="92" fill="#0A2A4E"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="172" cy="262" rx="40" ry="48"/>
+    <circle cx="134" cy="380" r="44"/>
+    <circle cx="240" cy="380" r="44"/>
+    <path d="M 172 214 L 172 168 C 172 128 204 96 244 96 L 296 96"/>
+  </g>
+  <circle cx="318" cy="116" r="22" fill="#2E90FA"/>
+  <rect x="301.0" y="158" width="34" height="266" rx="17.0" ry="17.0" fill="#2E90FA"/>
+</svg>

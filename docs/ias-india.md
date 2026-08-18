@@ -1,3 +1,12 @@
+---
+layout: page
+title: "IAS in India"
+section: Research notes
+permalink: /docs/ias-india/
+description: >-
+  International Accounting Standards as adopted in Indian practice.
+---
+
 **Comparison Between IAS and Ind AS**
 
 The International Accounting Standards (IAS) and the Indian Accounting Standards (Ind AS) both provide guidelines for preparing financial statements, but they have some key differences. Below is a detailed comparison between IAS and Ind AS:

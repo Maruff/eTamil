@@ -1,0 +1,39 @@
+<div class="wrap footer-grid">
+  <div class="footer-brand">
+    <img src="{{ '/assets/img/etamil-icon.svg' | relative_url }}" width="44" height="44"
+         alt="" aria-hidden="true">
+    <p>
+      <strong>eTamil.in</strong><br>
+      A programming language whose vocabulary is Tamil,<br>
+      aimed at Indian finance, tax and accounting.
+    </p>
+  </div>
+
+  <div>
+    <h2>Language</h2>
+    <ul>
+      <li><a href="{{ '/language/' | relative_url }}">Language tour</a></li>
+      <li><a href="{{ '/keywords/' | relative_url }}">Keyword reference</a></li>
+      <li><a href="{{ '/finance/'  | relative_url }}">Finance &amp; accounting</a></li>
+      <li><a href="{{ '/backend/'  | relative_url }}">Backend &amp; databases</a></li>
+      <li><a href="{{ '/install/'  | relative_url }}">Install</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Project</h2>
+    <ul>
+      <li><a href="{{ '/status/'   | relative_url }}">Status &amp; roadmap</a></li>
+      <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
+      <li><a href="{{ '/about/'    | relative_url }}">About the author</a></li>
+      <li><a href="{{ site.brand.compiler_repo }}" rel="noopener">Compiler on GitHub</a></li>
+      <li><a href="{{ site.brand.site_repo }}" rel="noopener">This site on GitHub</a></li>
+      <li><a href="{{ site.brand.compiler_repo }}/blob/main/LICENSE" rel="noopener license">Licence — AGPL-3.0</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrap footer-base">
+  <p>© {{ 'now' | date: "%Y" }} Esan Maruff · eTamil {{ site.brand.version }} · <a href="{{ site.brand.compiler_repo }}/blob/main/LICENSE" rel="license">AGPL-3.0</a> · Made in Chennai, Tamil Nadu</p>
+  <p lang="ta">தமிழில் நிரல் எழுதுங்கள்.</p>
+</div>

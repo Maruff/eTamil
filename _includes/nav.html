@@ -1,0 +1,27 @@
+{%- assign p = page.url -%}
+<a class="brand" href="{{ '/' | relative_url }}" aria-label="eTamil.in — home">
+  <img class="brand-mark" src="{{ '/assets/img/etamil-icon.svg' | relative_url }}"
+       width="36" height="36" alt="" aria-hidden="true">
+  <span class="brand-text">
+    <strong>eTamil<span class="tld">.in</span></strong>
+    <small>A FinTech DSL</small>
+  </span>
+</a>
+
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+  <span class="bars" aria-hidden="true"></span>
+  <span class="sr-only">Menu</span>
+</button>
+
+<nav id="site-nav" class="nav" aria-label="Primary">
+  <ul>
+    <li><a href="{{ '/language/'  | relative_url }}"{% if p contains '/language/'  %} aria-current="page"{% endif %}>Language</a></li>
+    <li><a href="{{ '/finance/'   | relative_url }}"{% if p contains '/finance/'   %} aria-current="page"{% endif %}>Finance</a></li>
+    <li><a href="{{ '/backend/'   | relative_url }}"{% if p contains '/backend/'   %} aria-current="page"{% endif %}>Backend</a></li>
+    <li><a href="{{ '/keywords/'  | relative_url }}"{% if p contains '/keywords/'  %} aria-current="page"{% endif %}>Keywords</a></li>
+    <li><a href="{{ '/install/'   | relative_url }}"{% if p contains '/install/'   %} aria-current="page"{% endif %}>Install</a></li>
+    <li><a href="{{ '/research/'  | relative_url }}"{% if p contains '/research' or p contains '/docs/' or p contains '/article/' %} aria-current="page"{% endif %}>Research</a></li>
+    <li><a href="{{ '/about/'     | relative_url }}"{% if p contains '/about/'     %} aria-current="page"{% endif %}>About</a></li>
+    <li class="nav-cta"><a href="{{ site.brand.compiler_repo }}" rel="noopener">GitHub</a></li>
+  </ul>
+</nav>

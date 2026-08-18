@@ -1,3 +1,12 @@
+---
+layout: page
+title: "GAAP and IFRS compared"
+section: Research notes
+permalink: /docs/gaap-ifrs/
+description: >-
+  Where generally accepted accounting principles and International Financial Reporting Standards agree, and where they diverge.
+---
+
 **Purpose of GAAP, IAS, and IFRS**
 
 **1. Generally Accepted Accounting Principles (GAAP):**

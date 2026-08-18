@@ -1,3 +1,12 @@
+---
+layout: page
+title: "IAS and IFRS"
+section: Research notes
+permalink: /docs/ias-ifrs/
+description: >-
+  The relationship between the older International Accounting Standards and the current IFRS framework.
+---
+
 No, it is not necessary to adopt IAS (International Accounting Standards) in the presence of IFRS (International Financial Reporting Standards). Here are the key reasons why:
 
 ### **Evolution from IAS to IFRS:**

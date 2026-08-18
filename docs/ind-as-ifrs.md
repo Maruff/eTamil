@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Ind AS and IFRS"
+section: Research notes
+permalink: /docs/ind-as-ifrs/
+description: >-
+  Indian Accounting Standards set against their IFRS counterparts, and where the carve-outs sit.
+---
+
 The relationship between Ind AS (Indian Accounting Standards) and IFRS (International Financial Reporting Standards) involves a similar context of convergence and alignment. Here's a detailed explanation:
 
 ### **Ind AS and IFRS Relationship:**
