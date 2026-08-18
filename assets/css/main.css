@@ -95,9 +95,11 @@ body {
 
 .brand { display: flex; align-items: center; text-decoration: none; margin-right: auto; line-height: 0; }
 /* The lockup carries its own #002140 field, identical to the header, so it sits
-   flush with no plate showing. Height-driven so both languages line up. */
-.brand-logo { display: block; width: auto; height: 42px; }
-@media (max-width: 600px) { .brand-logo { height: 34px; } }
+   flush with no plate showing. Height-driven so both languages line up.
+   Kept at 29px: the lockup has a tagline line, and below roughly 24px that line
+   stops resolving on a normal display. */
+.brand-logo { display: block; width: auto; height: 29px; }
+@media (max-width: 600px) { .brand-logo { height: 24px; } }
 
 .nav ul { display: flex; align-items: center; gap: .15rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
 .nav a {
