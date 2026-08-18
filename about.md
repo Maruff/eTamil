@@ -28,7 +28,7 @@ description: >-
   <div>
     <h2 class="who" style="border:0;padding:0;margin-top:0">Esan Maruff</h2>
     <p class="role">
-      <span lang="ta">இசன் மறுஃப்</span> · also published as Mohammed Maruff<br>
+      <span lang="ta">இசன் மாருப்</span> · also published as Mohammed Maruff<br>
       PhD Scholar, Department of Computer Applications<br>
       School of Computer Information and Mathematical Sciences<br>
       B.S. Abdur Rahman Crescent Institute of Science and Technology<br>
