@@ -138,8 +138,12 @@ body {
 }
 @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; gap: 2rem; } }
 
+/* The rendered size lives here, not on the img's width/height attributes — a CSS
+   width always beats those, so editing the attributes alone changes nothing. They
+   are still worth keeping accurate (240x68 is the artwork's 1200x340 ratio),
+   because the browser uses them to reserve space before the image loads. */
 .hero-logo {
-  display: block; width: clamp(260px, 38vw, 400px); height: auto;
+  display: block; width: clamp(180px, 26vw, 240px); height: auto;
   margin: 0 0 1.7rem;
   border-radius: 6px;
 }
