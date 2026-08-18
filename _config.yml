@@ -60,7 +60,7 @@ defaults:
     values:
       layout: page
       lang: ta
-      image: /assets/img/og-image.png
+      image: /assets/img/og-image-ta.png
   - scope: { path: "docs" }
     values:
       layout: page

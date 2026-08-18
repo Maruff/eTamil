@@ -93,12 +93,11 @@ body {
   min-height: 66px; flex-wrap: wrap;
 }
 
-.brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; color: #fff; margin-right: auto; }
-.brand-mark { display: block; border-radius: 8px; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.1; }
-.brand-text strong { font-size: 1.16rem; font-weight: 800; letter-spacing: -.02em; }
-.brand-text .tld { color: var(--azure-hi); }
-.brand-text small { font-size: .625rem; letter-spacing: .16em; text-transform: uppercase; color: #9DBDE2; font-weight: 700; }
+.brand { display: flex; align-items: center; text-decoration: none; margin-right: auto; line-height: 0; }
+/* The lockup carries its own #002140 field, identical to the header, so it sits
+   flush with no plate showing. Height-driven so both languages line up. */
+.brand-logo { display: block; width: auto; height: 42px; }
+@media (max-width: 600px) { .brand-logo { height: 34px; } }
 
 .nav ul { display: flex; align-items: center; gap: .15rem; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
 .nav a {

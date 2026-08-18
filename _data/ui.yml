@@ -12,6 +12,11 @@ en:
   other_name_en: Tamil
   dir: ltr
 
+  logo: /assets/img/etamil-logo.jpg
+  logo_webp: /assets/img/etamil-logo.webp
+  logo_alt: "eTamil.in — a FinTech DSL"
+  og_image: /assets/img/og-image.png
+
   skip: Skip to content
   menu: Menu
   primary_nav: Primary
@@ -46,7 +51,7 @@ en:
     blurb: |
       A programming language whose vocabulary is Tamil,<br>
       aimed at Indian finance, tax and accounting.
-    made_in: Made in Chennai, Tamil Nadu
+    made_in: Made in Tamil Nadu
     closing: "தமிழில் நிரல் எழுதுங்கள்."
 
   only_in_english: >-
@@ -60,6 +65,11 @@ ta:
   other_name: English
   other_name_en: English
   dir: ltr
+
+  logo: /assets/img/etamil-logo-ta.jpg
+  logo_webp: /assets/img/etamil-logo-ta.webp
+  logo_alt: "இ-தமிழ் — நிதிநுட்ப கணி மொழி"
+  og_image: /assets/img/og-image-ta.png
 
   skip: உள்ளடக்கத்திற்குச் செல்
   menu: பட்டி
@@ -95,7 +105,7 @@ ta:
     blurb: |
       தமிழ்ச் சொற்களைச் சொல்லகராதியாகக் கொண்ட நிரலாக்க மொழி,<br>
       இந்திய நிதி, வரி, கணக்கியலுக்கானது.
-    made_in: சென்னை, தமிழ்நாட்டில் உருவாக்கப்பட்டது
+    made_in: தமிழ்நாட்டில் உருவாக்கப்பட்டது
     closing: "தமிழில் நிரல் எழுதுங்கள்."
 
   only_in_english: >-

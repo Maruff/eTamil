@@ -3,13 +3,12 @@
 {%- if lang == 'ta' -%}{%- assign home = '/ta/' -%}{%- assign p = '/ta' -%}
 {%- else -%}{%- assign home = '/' -%}{%- assign p = '' -%}{%- endif -%}
 
-<a class="brand" href="{{ home | relative_url }}" aria-label="{{ t.home_aria }}">
-  <img class="brand-mark" src="{{ '/assets/img/etamil-icon-72.png' | relative_url }}"
-       width="36" height="36" alt="" aria-hidden="true">
-  <span class="brand-text">
-    <strong>eTamil<span class="tld">.in</span></strong>
-    <small>A FinTech DSL</small>
-  </span>
+<a class="brand" href="{{ home | relative_url }}">
+  <picture>
+    <source srcset="{{ t.logo_webp | relative_url }}" type="image/webp">
+    <img class="brand-logo" src="{{ t.logo | relative_url }}" width="1200" height="340"
+         alt="{{ t.logo_alt }}" fetchpriority="high" decoding="async">
+  </picture>
 </a>
 
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
