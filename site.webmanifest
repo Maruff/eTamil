@@ -1,0 +1,20 @@
+---
+permalink: /site.webmanifest
+sitemap: false
+layout: null
+---
+{
+  "name": "eTamil — a FinTech DSL",
+  "short_name": "eTamil",
+  "description": "A programming language whose vocabulary is Tamil, built for Indian finance, tax and accounting.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04162B",
+  "theme_color": "#0A2A4E",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/assets/img/etamil-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/img/etamil-icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/img/etamil-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

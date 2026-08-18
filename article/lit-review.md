@@ -1,3 +1,12 @@
+---
+layout: page
+title: "A systematic literature review on Indian accounting and FinTech systems"
+section: Research notes
+permalink: /article/lit-review/
+description: >-
+  A systematic review of technological developments in Indian accounting and FinTech systems, and the case for a domain-specific language.
+---
+
 ### Draft for Literature Survey Paper
 
 **Title:**  

@@ -1,3 +1,12 @@
+---
+layout: page
+title: "US and Indian accounting practice"
+section: Research notes
+permalink: /docs/usa-india/
+description: >-
+  A comparison of accounting practice and regulation across the two jurisdictions.
+---
+
 **Challenges of Adopting IFRS in the US & India**
 
 **Challenges in the US:**

@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Indian financial regulators"
+section: Research notes
+permalink: /docs/gov-bodies/
+description: >-
+  The government bodies an Indian financial application has to answer to — RBI, GST Council, NPCI, ICAI, SEBI and MCA.
+---
+
 Here is a list of Indian accounting and finance departments, related fields, and their corresponding government bodies along with their official websites:
 
 ### **Accounting Departments**

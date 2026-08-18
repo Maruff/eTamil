@@ -1,0 +1,75 @@
+{%- comment -%}
+  jekyll-seo-tag already emits WebPage/Person JSON-LD. These add the two
+  entities it cannot know about: the software itself, and the paper.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": "eTamil.in",
+      "description": {{ site.description | strip_newlines | jsonify }},
+      "inLanguage": ["en-IN", "ta-IN"],
+      "publisher": { "@id": "{{ site.url }}/#author" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#author",
+      "name": "Esan Maruff",
+      "alternateName": "Mohammed Maruff",
+      "jobTitle": "PhD Scholar, Department of Computer Applications",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "B.S. Abdur Rahman Crescent Institute of Science and Technology",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Vandalur, Chennai",
+          "postalCode": "600048",
+          "addressRegion": "Tamil Nadu",
+          "addressCountry": "IN"
+        }
+      },
+      "url": "{{ site.url }}/about/",
+      "sameAs": ["https://github.com/Maruff"]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "{{ site.url }}/#software",
+      "name": "eTamil",
+      "alternateName": "இ தமிழ்",
+      "description": "A domain-specific programming language with Tamil vocabulary for Indian accounting, taxation and fintech. Exact fixed-point decimal arithmetic, GST and double-entry accounting, a bytecode VM, an HTTP server and SQL drivers.",
+      "url": "{{ site.url }}/",
+      "codeRepository": "{{ site.brand.compiler_repo }}",
+      "programmingLanguage": [
+        { "@type": "ComputerLanguage", "name": "eTamil" },
+        { "@type": "ComputerLanguage", "name": "Rust" }
+      ],
+      "runtimePlatform": ["Rust 1.85+", "LLVM"],
+      "operatingSystem": ["Linux", "macOS", "Windows"],
+      "applicationCategory": "DeveloperApplication",
+      "license": "{{ site.brand.license_url }}",
+      "softwareVersion": "{{ site.brand.version }}",
+      "inLanguage": ["ta", "en"],
+      "author": { "@id": "{{ site.url }}/#author" },
+      "keywords": "Tamil programming language, domain-specific language, DSL, Indian fintech, GST, ITR, accounting, double-entry, Rust, LLVM"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "{{ site.url }}/#paper",
+      "headline": "Developing an Indian DSL (Programming Language) for Accounts, Commerce, Finance, and Fintech Professionals",
+      "about": { "@id": "{{ site.url }}/#software" },
+      "author": [
+        { "@id": "{{ site.url }}/#author" },
+        { "@type": "Person", "name": "S. P. Valli", "jobTitle": "Associate Professor, Department of Computer Science and Engineering" }
+      ],
+      "datePublished": "2025-10-10",
+      "inLanguage": "en",
+      "url": "{{ site.url }}/research/",
+      "keywords": "Domain-Specific Language, eTamil, Fintech, India, Tamil, GST, ITR, RBI, UPI, ULI, Rust, LLVM, Blockchain"
+    }
+  ]
+}
+</script>

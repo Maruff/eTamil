@@ -1,6 +1,10 @@
 ---
-title: இ தமிழ்
-description: Basics of Indian GST
+layout: page
+title: "GST basics"
+section: Research notes
+permalink: /docs/gst-basics/
+description: >-
+  The components and formulas involved in calculating Indian Goods and Services Tax — CGST, SGST, IGST, input tax credit and reverse charge.
 ---
 
 Developing an accounting application that accurately calculates Indian Goods and Services Tax (GST) requires understanding the various components and formulas involved in GST calculation. Here are the key formulas and components you need to consider:

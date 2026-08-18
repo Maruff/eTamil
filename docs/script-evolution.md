@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Tamil script evolution"
+section: Research notes
+permalink: /docs/script-evolution/
+description: >-
+  How the Tamil script reached its present form, and what that means for a programming language built on it.
+---
+
 # Evolution of Tamil Scripts
 
 The Tamil script has a long and rich history that traces back several centuries. Here is a detailed look at the evolution of Tamil alphabets from ancient times to the modern script used today.

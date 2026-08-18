@@ -1,3 +1,12 @@
+---
+layout: page
+title: "Financial and accounting terminology"
+section: Research notes
+permalink: /docs/fin-terms/
+description: >-
+  A reference list of accounting terminology by department and field — financial accounting, cost accounting, auditing, taxation and banking — gathered while designing eTamil's vocabulary.
+---
+
 Here’s a list of accounting terminologies specific to various departments and fields:
 
 ### **Financial Accounting**

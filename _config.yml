@@ -1,12 +1,70 @@
-title: இ தமிழ்
+title: eTamil
+tagline: A FinTech DSL
+description: >-
+  eTamil is a programming language whose vocabulary is Tamil, built for Indian
+  finance, tax and accounting. Exact decimal money, GST and double-entry
+  accounting in the standard library, a bytecode VM, an HTTP server and SQL
+  drivers — written in Rust.
+url: https://etamil.in
+baseurl: ""
+lang: en-IN
+
+author:
+  name: Esan Maruff
+  email: etamilindia@gmail.com
+
+# Read by the theme, not by jekyll-seo-tag.
+brand:
+  name: eTamil.in
+  version: "0.2.0"
+  license: AGPL-3.0-or-later
+  license_url: https://www.gnu.org/licenses/agpl-3.0.html
+  compiler_repo: https://github.com/Maruff/etamil_compiler
+  site_repo: https://github.com/Maruff/eTamil
+  paper_url: https://github.com/Maruff/etamil_compiler/blob/main/eTamil%20-%20An%20Indian%20FinTech%20DSL.pdf
+
+# Read by jekyll-seo-tag.
+logo: /assets/img/etamil-icon-512.png
+twitter:
+  card: summary_large_image
+social:
+  name: Esan Maruff
+  links:
+    - https://github.com/Maruff
+
 plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-relative-links
+
 relative_links:
   enabled: true
   collections: true
-include:
-  - index.md
-  - Readme.md
-  - /docs/gst-basics.md
-theme: jekyll-theme-cayman
-description: eTamil Programming Language
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+defaults:
+  - scope: { path: "" }
+    values:
+      layout: page
+      image: /assets/img/og-image.png
+  - scope: { path: "docs" }
+    values:
+      layout: page
+      section: Research notes
+      image: /assets/img/og-image.png
+  - scope: { path: "article" }
+    values:
+      layout: page
+      section: Research notes
+      image: /assets/img/og-image.png
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,6 +1,10 @@
 ---
-layout: default
-title: இ தமிழ் Research Schedule
+layout: page
+title: "Research schedule"
+section: Research notes
+permalink: /docs/research-schedule/
+description: >-
+  The three-year doctoral plan behind eTamil: design and compiler, domain modules and case studies, then blockchain integration and evaluation.
 ---
 
  **Year 1 (July 2024 - June 2025)**
