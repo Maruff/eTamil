@@ -11,6 +11,9 @@ description: >-
   Commerce, Finance, and Fintech Professionals" by Mohammed Maruff and
   Dr. S. P. Valli, reviewing 28 sources on domain-specific languages, Indian
   financial regulation, multilingual programming, compiler design and blockchain.
+lang: en
+key: research
+alt_url: /ta/research/
 ---
 
 eTamil is the subject of doctoral research in the Department of Computer

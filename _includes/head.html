@@ -1,3 +1,4 @@
+{%- assign lang = page.lang | default: 'en' -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#002140">
@@ -5,11 +6,71 @@
 
 {% seo %}
 
+{%- comment -%}
+  Reciprocal hreflang. Only emitted where a real translation exists, so a page
+  that is English-only never claims a Tamil counterpart. x-default points at
+  English, which is what an unmatched locale should land on.
+{%- endcomment -%}
+{%- if page.alt_url %}
+{%- assign self_url = page.permalink | default: page.url -%}
+{%- if lang == 'ta' %}
+<link rel="alternate" hreflang="ta" href="{{ self_url | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ page.alt_url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ page.alt_url | absolute_url }}">
+{%- else %}
+<link rel="alternate" hreflang="en" href="{{ self_url | absolute_url }}">
+<link rel="alternate" hreflang="ta" href="{{ page.alt_url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ self_url | absolute_url }}">
+{%- endif %}
+{%- endif %}
+
 <link rel="icon" href="{{ '/assets/img/favicon.ico' | relative_url }}" sizes="any">
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/etamil-icon-192.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
+
+{%- comment -%}
+  Language preference. Runs before paint so a Tamil reader does not see the
+  English page flash first. It only ever acts when a translation of *this* page
+  exists, it never overrides a choice the reader has made, and it redirects at
+  most once per page load. Crawlers are served hreflang above and are unaffected
+  by whether they run this.
+{%- endcomment -%}
+{%- if page.alt_url %}
+<script>
+(function () {
+  try {
+    var LANG = {{ lang | jsonify }}, ALT = {{ page.alt_url | jsonify }},
+        ALT_LANG = LANG === 'ta' ? 'en' : 'ta',
+        KEY = 'etamil-lang';
+
+    // An explicit ?lang= in the URL is a decision: record it and stop.
+    var q = new URLSearchParams(location.search).get('lang');
+    if (q === 'en' || q === 'ta') {
+      localStorage.setItem(KEY, q);
+      if (q !== LANG) { location.replace(ALT); }
+      return;
+    }
+
+    var saved = localStorage.getItem(KEY);
+    if (saved) {
+      if (saved === ALT_LANG) { location.replace(ALT); }
+      return;                       // a stored choice always wins
+    }
+
+    // No stored choice: follow the browser/system preference. Tamil only wins
+    // if it outranks English in the ordered list.
+    var prefs = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < prefs.length; i++) {
+      var code = String(prefs[i]).toLowerCase().split('-')[0];
+      if (code === 'ta') { if (LANG !== 'ta') { location.replace(ALT); } return; }
+      if (code === 'en') { return; }
+    }
+  } catch (e) { /* preference is a nicety; never block the page for it */ }
+})();
+</script>
+{%- endif %}
 
 {% include jsonld.html %}

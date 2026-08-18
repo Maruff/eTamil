@@ -10,6 +10,9 @@ description: >-
   A complete tour of the eTamil programming language: Tamil, romanized and English
   keyword spellings, fixed-point decimal arithmetic, control flow, functions,
   arrays and records, results, modules, type checking and the ezuqqu romanization scheme.
+lang: en
+key: language
+alt_url: /ta/language/
 ---
 
 eTamil lets you write programs in Tamil. It is not an English language with

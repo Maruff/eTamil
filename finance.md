@@ -10,6 +10,9 @@ description: >-
   eTamil's accounting framework: a double-entry ledger that refuses unbalanced
   transactions, GST invoice calculation with CGST, SGST and IGST, trial balance,
   income statement, balance sheet and cash flow, plus lakh-crore rupee formatting.
+lang: en
+key: finance
+alt_url: /ta/finance/
 ---
 
 The financial vocabulary is not a library bolted on top — it is in the language.

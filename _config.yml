@@ -54,6 +54,12 @@ defaults:
   - scope: { path: "" }
     values:
       layout: page
+      lang: en
+      image: /assets/img/og-image.png
+  - scope: { path: "ta" }
+    values:
+      layout: page
+      lang: ta
       image: /assets/img/og-image.png
   - scope: { path: "docs" }
     values:

@@ -1,0 +1,103 @@
+# Interface strings for both languages.
+#
+# Page prose lives in the pages themselves — this file is only the chrome: nav,
+# footer, buttons, and the handful of labels the layouts emit. Keyed by the
+# page's `lang`, so a template never branches on language itself.
+
+en:
+  code: en
+  name: English
+  other_code: ta
+  other_name: தமிழ்
+  other_name_en: Tamil
+  dir: ltr
+
+  skip: Skip to content
+  menu: Menu
+  primary_nav: Primary
+  lang_switch_label: Language
+  lang_switch_to: View this page in Tamil
+  home_aria: "eTamil.in — home"
+
+  nav:
+    language: Language
+    finance: Finance
+    backend: Backend
+    keywords: Keywords
+    install: Install
+    research: Research
+    about: About
+    github: GitHub
+
+  footer:
+    language_heading: Language
+    project_heading: Project
+    tour: Language tour
+    keywords: Keyword reference
+    finance: Finance &amp; accounting
+    backend: Backend &amp; databases
+    install: Install
+    status: Status &amp; roadmap
+    research: Research
+    about: About the author
+    compiler_repo: Compiler on GitHub
+    site_repo: This site on GitHub
+    licence: Licence — AGPL-3.0
+    blurb: |
+      A programming language whose vocabulary is Tamil,<br>
+      aimed at Indian finance, tax and accounting.
+    made_in: Made in Chennai, Tamil Nadu
+    closing: "தமிழில் நிரல் எழுதுங்கள்."
+
+  only_in_english: >-
+    This page has not been translated yet. It is available in English only.
+  read_in_english: Read it in English
+
+ta:
+  code: ta
+  name: தமிழ்
+  other_code: en
+  other_name: English
+  other_name_en: English
+  dir: ltr
+
+  skip: உள்ளடக்கத்திற்குச் செல்
+  menu: பட்டி
+  primary_nav: முதன்மை
+  lang_switch_label: மொழி
+  lang_switch_to: இப்பக்கத்தை ஆங்கிலத்தில் காண்க
+  home_aria: "eTamil.in — முகப்பு"
+
+  nav:
+    language: மொழி
+    finance: நிதி
+    backend: பின்தளம்
+    keywords: திறவுச்சொற்கள்
+    install: நிறுவல்
+    research: ஆய்வு
+    about: பற்றி
+    github: GitHub
+
+  footer:
+    language_heading: மொழி
+    project_heading: திட்டம்
+    tour: மொழி அறிமுகம்
+    keywords: திறவுச்சொல் பட்டியல்
+    finance: நிதியும் கணக்கியலும்
+    backend: பின்தளமும் தரவுத்தளங்களும்
+    install: நிறுவல்
+    status: நிலையும் திட்டவரைபடமும்
+    research: ஆய்வு
+    about: ஆசிரியர் பற்றி
+    compiler_repo: GitHub-இல் தொகுப்பி
+    site_repo: GitHub-இல் இந்த தளம்
+    licence: உரிமம் — AGPL-3.0
+    blurb: |
+      தமிழ்ச் சொற்களைச் சொல்லகராதியாகக் கொண்ட நிரலாக்க மொழி,<br>
+      இந்திய நிதி, வரி, கணக்கியலுக்கானது.
+    made_in: சென்னை, தமிழ்நாட்டில் உருவாக்கப்பட்டது
+    closing: "தமிழில் நிரல் எழுதுங்கள்."
+
+  only_in_english: >-
+    இப்பக்கம் இன்னும் மொழிபெயர்க்கப்படவில்லை. ஆங்கிலத்தில் மட்டுமே கிடைக்கிறது.
+  read_in_english: ஆங்கிலத்தில் படிக்க

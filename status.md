@@ -10,6 +10,9 @@ description: >-
   The current state of the eTamil compiler — a feature-by-feature status table for
   the lexer, VM, decimals, collections, modules, databases, HTTP server, LLVM
   backend and type checking, plus what remains on the roadmap.
+lang: en
+key: status
+alt_url: /ta/status/
 ---
 
 eTamil runs backend programs today: functions, collections, error handling,

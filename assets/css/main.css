@@ -331,8 +331,32 @@ td code, th code { white-space: nowrap; }
 .footer-base { border-top: 1px solid rgba(255, 255, 255, .1); padding-block: 1.2rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; font-size: .84rem; color: #7FA3C9; }
 .footer-base p { margin: 0; }
 
+/* -------------------------------------------------------------- language */
+
+/* The switcher sits apart from the section links — it changes the whole site,
+   not the page you are on. */
+.nav-lang a {
+  border: 1px solid rgba(255, 255, 255, .28);
+  margin-left: .4rem;
+  font-weight: 700;
+}
+.nav-lang a:hover { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .5); }
+@media (max-width: 900px) {
+  .nav-lang a { margin-left: 0; text-align: center; margin-block: .35rem; }
+}
+
 /* --------------------------------------------------------------- utility */
 
-:lang(ta) { line-height: 1.85; }
+/* Tamil letters stack vowel signs above and below the base, so lines need more
+   room than Latin at the same size, and headings need looser leading. */
+:lang(ta), html.ta body { line-height: 1.9; }
+html.ta h1, html.ta h2, html.ta h3,
+:lang(ta) h1, :lang(ta) h2, :lang(ta) h3 { line-height: 1.4; letter-spacing: 0; }
+html.ta .hero h1 { line-height: 1.25; }
+html.ta .brand-text, html.ta .demo-bar, html.ta pre, html.ta code { line-height: 1.65; }
+html.ta pre { line-height: 1.85; }
+html.ta .prose > * { max-width: 68ch; }   /* Tamil runs wider per character */
+html.ta .eyebrow { letter-spacing: .08em; }
+html.ta .stat b { line-height: 1.3; }
 img { max-width: 100%; height: auto; }
 .center { text-align: center; }

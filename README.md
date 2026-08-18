@@ -10,6 +10,7 @@ The custom domain is set in [`CNAME`](CNAME).
 
 ```
 _config.yml           site settings, brand vars, SEO defaults
+_data/ui.yml          nav/footer/button strings, keyed by language
 _layouts/             default (chrome) -> page (prose) / home (landing)
 _includes/            head, nav, footer, jsonld
 assets/css/main.css   the whole stylesheet — no framework, no build step
@@ -25,6 +26,8 @@ status.md             what works, what is planned
 research.md           the paper, plus an index of the research notes
 about.md              author, licence
 404.html  robots.txt  site.webmanifest
+
+ta/                   the Tamil site — same pages, same permalinks under /ta/
 
 docs/                 research notes (GST, Ind AS, IFRS, Tamil script)
 article/lit-review.md systematic literature review
@@ -85,6 +88,54 @@ The palette is sampled from the logo, not chosen: navy `#002140` and cyan
 brand cyan is only 2.5:1 on white.
 
 The About page portrait comes from `author.photo` in `_config.yml`.
+
+## Two languages
+
+English lives at `/`, Tamil at `/ta/`. Separate URLs rather than a client-side
+swap, so each language is independently indexable and can carry its own title and
+description. `jekyll-polyglot` is not on the GitHub Pages plugin whitelist, so this
+is hand-rolled — but it is only three moving parts.
+
+**Front matter pairs the pages.** Every translated page carries three keys:
+
+```yaml
+lang: ta            # en or ta
+key: finance        # same on both halves of a pair; drives nav highlighting
+alt_url: /finance/  # the other language's URL
+```
+
+`alt_url` is the switch that turns i18n on for a page. With it, the page gets
+reciprocal `hreflang`, a visible language switcher, and the preference script.
+Without it — as on every page under `docs/` — the page is English-only and claims
+no translation, which is the honest signal to a crawler.
+
+**Chrome strings come from `_data/ui.yml`,** looked up as `site.data.ui[lang]`. No
+template branches on language; add a string to both blocks and it appears in both.
+
+**Preference detection** is a small inline script in `head.html`, emitted only when
+`alt_url` exists. The order of precedence is `?lang=` → a stored choice →
+`navigator.languages`. A Tamil-preferring browser landing on an English page is
+sent to the Tamil one; anything else stays. It never overrides a choice the reader
+made, and a URL typed directly is always respected — reaching `/ta/` with an
+English browser keeps you on Tamil. Crawlers rely on `hreflang`, not this script.
+
+### Adding a page
+
+1. Write the English page with `lang: en`, `key: <name>`, `alt_url: /ta/<name>/`.
+2. Write `ta/<name>.md` with `lang: ta`, the same `key`, `alt_url: /<name>/`.
+3. If it belongs in the nav, add the label to both blocks of `_data/ui.yml` and a
+   row to `_includes/nav.html`.
+
+Translating one of the `docs/` notes means adding `ta/docs/<name>.md` and then
+setting `alt_url` on both — until then, leave `alt_url` off so the site does not
+advertise a translation that is not there.
+
+### Tamil typography
+
+Tamil stacks vowel signs above and below the base letter, so it needs more leading
+than Latin at the same size. `html.ta` raises the body line-height to 1.9, loosens
+headings, and narrows the prose measure to 68ch, since Tamil runs wider per
+character. Those rules are at the bottom of `main.css`.
 
 ## SEO
 

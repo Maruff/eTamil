@@ -1,10 +1,12 @@
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.ui[lang] -%}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<html lang="{{ lang }}"{% if lang == 'ta' %} class="ta"{% endif %}>
 <head>
   {% include head.html %}
 </head>
 <body>
-  <a class="skip" href="#content">Skip to content</a>
+  <a class="skip" href="#content">{{ t.skip }}</a>
 
   <header class="site-header">
     <div class="wrap header-inner">{% include nav.html %}</div>
@@ -22,12 +24,23 @@
     (function () {
       var b = document.querySelector('.nav-toggle');
       var n = document.getElementById('site-nav');
-      if (!b || !n) return;
-      b.addEventListener('click', function () {
-        var open = b.getAttribute('aria-expanded') === 'true';
-        b.setAttribute('aria-expanded', String(!open));
-        n.classList.toggle('open', !open);
-      });
+      if (b && n) {
+        b.addEventListener('click', function () {
+          var open = b.getAttribute('aria-expanded') === 'true';
+          b.setAttribute('aria-expanded', String(!open));
+          n.classList.toggle('open', !open);
+        });
+      }
+
+      // Clicking the switcher is an explicit choice — remember it, so the
+      // preference script does not send the reader back on the next page.
+      var s = document.querySelector('[data-lang-switch]');
+      if (s) {
+        s.addEventListener('click', function () {
+          try { localStorage.setItem('etamil-lang', s.getAttribute('data-lang-switch')); }
+          catch (e) { /* private mode: the click still navigates */ }
+        });
+      }
     })();
   </script>
 </body>

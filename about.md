@@ -12,6 +12,9 @@ description: >-
   B.S. Abdur Rahman Crescent Institute of Science and Technology, Chennai,
   UGC NET qualified, and the engineer who led development of the world's first
   camel-racing robot jockey at RAQBI in Qatar.
+lang: en
+key: about
+alt_url: /ta/about/
 ---
 
 <div class="profile" markdown="0">

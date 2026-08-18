@@ -10,6 +10,9 @@ description: >-
   How to install the eTamil compiler — prerequisites, building from source with
   Cargo on Linux, macOS and Windows, optional PostgreSQL, MySQL and LLVM features,
   and your first program.
+lang: en
+key: install
+alt_url: /ta/install/
 ---
 
 ## Prerequisites

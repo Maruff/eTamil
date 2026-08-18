@@ -1,0 +1,334 @@
+---
+layout: home
+title: "eTamil — இந்திய நிதித் துறைக்கான தமிழ் நிரலாக்க மொழி"
+description: >-
+  eTamil என்பது தமிழ்ச் சொற்களைச் சொல்லகராதியாகக் கொண்ட, தொழில்துறைக்குத் தயாரான
+  நிரலாக்க மொழி. இந்தியக் கணக்கியல், வரி, ஃபின்டெக் ஆகியவற்றுக்காக உருவாக்கப்பட்டது.
+  துல்லியமான தசமப் பணக் கணக்கு, தயார் நிலையிலான கணக்கியல் மற்றும் வரிக் கட்டமைப்பு,
+  பைட்கோட் VM, HTTP சேவையகம், SQL இயக்கிகள். Rust மொழியில் எழுதப்பட்டது.
+permalink: /ta/
+lang: ta
+key: home
+alt_url: /
+---
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <picture>
+        <source srcset="{{ '/assets/img/etamil-logo.webp' | relative_url }}" type="image/webp">
+        <img class="hero-logo" src="{{ '/assets/img/etamil-logo.jpg' | relative_url }}"
+             width="1200" height="340" alt="eTamil.in — ஒரு ஃபின்டெக் DSL"
+             fetchpriority="high" decoding="async">
+      </picture>
+      <p class="eyebrow">இ தமிழ் · பதிப்பு {{ site.brand.version }} · AGPL-3.0</p>
+      <h1>தொழில்துறை மென்பொருளை <span class="accent">தமிழில் எழுதுங்கள்.</span></h1>
+      <p class="lede">
+        eTamil என்பது தமிழ்ச் சொற்களைச் சொல்லகராதியாகக் கொண்ட நிரலாக்க மொழி; இந்தியக்
+        கணக்கியல், வரிவிதிப்பு, ஃபின்டெக் ஆகியவற்றை நோக்கமாகக் கொண்டது. இது கற்பிக்கும்
+        மொழி அல்ல — உண்மையான தொழில்துறைப் பயன்பாடுகளைத் தாங்கும் பின்தள மொழி; பொதுநோக்கு
+        மொழிகள் எதுவும் வழங்காத கணக்கியல், வரிக் கட்டமைப்புடன்.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ '/ta/install/' | relative_url }}">தொடங்குங்கள்</a>
+        <a class="btn btn-ghost" href="{{ '/ta/language/' | relative_url }}">மொழியை அறிக</a>
+        <a class="btn btn-ghost" href="{{ site.brand.compiler_repo }}" rel="noopener">GitHub-இல் மூலக்குறியீடு</a>
+      </div>
+      <p class="hero-note">
+        Rust 1.85+ · Linux, macOS, Windows · ஒரு கோப்பை இயக்க <code>etamil --vm hello.etamil</code>
+      </p>
+    </div>
+
+    <div class="demo">
+      <div class="demo-bar">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="name">vari.etamil — வருமான வரி</span>
+      </div>
+      <div class="highlight"><pre><code><span class="c">// வருமான வரி</span>
+<span class="k">எண்</span> வருவாய்;
+<span class="k">அச்சு</span> <span class="s">"வருமானத்தை உள்ளிடுக: "</span>;
+<span class="k">உள்ளிடு</span> வருவாய்;
+வரி = <span class="m">20%</span>;
+
+(வருவாய் <span class="o">&gt;</span> <span class="m">800000</span>) <span class="k">எனில்</span> {
+    <span class="k">அச்சு</span> <span class="s">"உயர் வரி வரம்பு"</span>;
+    <span class="k">அச்சு</span> (வருவாய் <span class="o">-</span> <span class="m">800000</span>) <span class="o">*</span> வரி;
+}
+<span class="k">இன்றேல்</span> {
+    <span class="k">அச்சு</span> <span class="s">"தாழ் வரி வரம்பு (வரி இல்லை)"</span>;
+}</code></pre></div>
+    </div>
+
+    <ul class="stat-row full" style="grid-column: 1 / -1;">
+      <li class="stat"><b>201</b><span>திறவுச்சொல் டோக்கன்கள்</span></li>
+      <li class="stat"><b>3</b><span>ஒரு சொல்லுக்கு எழுத்து வடிவங்கள்</span></li>
+      <li class="stat"><b>227</b><span>சோதனைகள், Linux + Windows</span></li>
+      <li class="stat"><b>0.1+0.2</b><span>சரியாக 0.3</span></li>
+      <li class="stat"><b>Rust</b><span>விருப்ப LLVM பின்தளத்துடன்</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">அடிப்படைக் கருத்து</p>
+    <h2>மூன்று எழுத்து வடிவங்கள். ஒரே மொழி.</h2>
+    <p class="lede">
+      ஒவ்வொரு திறவுச்சொல்லும் தமிழ் எழுத்து, சாதாரண விசைப்பலகையில் தட்டச்சு செய்யக்கூடிய
+      ஆங்கில எழுத்துப்பெயர்ப்பு, மற்றும் இருக்கும் இடங்களில் ஆங்கிலப் பெயர் — ஆகிய
+      வடிவங்களை ஏற்கிறது. மூன்றும் ஒரே டோக்கனை உருவாக்குகின்றன; எனவே ஒரு குழு தனக்கு
+      வசதியான வடிவத்தில் எழுதலாம்.
+    </p>
+
+    <div class="grid-2">
+      <div class="demo">
+        <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">தமிழ் எழுத்து</span></div>
+        <div class="highlight"><pre><code><span class="k">எண்</span> வருவாய் = <span class="m">100000</span>;
+<span class="k">அச்சு</span> வருவாய் <span class="o">*</span> <span class="m">18%</span>;</code></pre></div>
+      </div>
+      <div class="demo">
+        <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">எழுத்துப்பெயர்ப்பு (ezuqqu)</span></div>
+        <div class="highlight"><pre><code><span class="k">eN</span> varuvAy = <span class="m">100000</span>;
+<span class="k">accu</span> varuvAy <span class="o">*</span> <span class="m">18%</span>;</code></pre></div>
+      </div>
+    </div>
+
+    <p>
+      இந்த எழுத்துப்பெயர்ப்பு <em>ezuqqu</em> என்ற தனி முறை; ISO&nbsp;15919 அல்ல. ஒவ்வொரு
+      தமிழ் எழுத்துக்கும் சரியாக ஒரு ASCII எழுத்து — தமிழ் விசைப்பலகை இல்லாமலேயே
+      தட்டச்சு செய்யலாம். ஆங்கிலம் ஒரே <code>n</code> ஆகச் சுருக்கும் மூன்று தமிழ்
+      மூக்கொலிகளையும் இது தனித்தனியே வைக்கிறது: <code>ண</code> என்பது <code>N</code>,
+      <code>ந</code> என்பது <code>n</code>, <code>ன</code> என்பது <code>Z</code>.
+    </p>
+    <p><a href="{{ '/ta/language/' | relative_url }}#romanization">எழுத்துப்பெயர்ப்பு முறை எப்படி இயங்குகிறது →</a></p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">ஏன் இது இருக்கிறது</p>
+    <h2>பணம் துல்லியமானது — வரிச் சட்டம் தவறுகளை மன்னிப்பதில்லை.</h2>
+    <p class="lede">
+      eTamil-இல் ஒவ்வொரு எண்ணும் நிலைப்புள்ளி தசமம் (fixed-point decimal); லெக்சரில்
+      தொடங்கி VM வரை. மதிப்பு வகையில் எங்கும் <code>f64</code> இல்லை. எனவே ஒரு GST அல்லது
+      வருமான வரி நிரல் செய்யும் கணக்கு சரியாகவே வருகிறது.
+    </p>
+
+    <div class="demo" style="max-width: 720px;">
+      <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">துல்லியமான தசமங்கள்</span></div>
+      <div class="highlight"><pre><code><span class="k">அச்சு</span> <span class="m">0.1</span> <span class="o">+</span> <span class="m">0.2</span>;      <span class="c">// 0.3        — 0.30000000000000004 அல்ல</span>
+<span class="k">அச்சு</span> <span class="m">99.99</span> <span class="o">*</span> <span class="m">3</span>;      <span class="c">// 299.97     — 299.96999999999997 அல்ல</span>
+<span class="k">அச்சு</span> <span class="m">18%</span>;            <span class="c">// 0.18       சரியாக</span></code></pre></div>
+    </div>
+
+    <p>
+      சமநிலைச் சோதனையும் துல்லியமானது. முந்தைய <code>f64</code> மதிப்பு வகை
+      <code>1e-10</code> வரம்புக்குள் எண்களைச் சமமாகக் கருதியது; அதனால் ஒரு பைசாவின்
+      பகுதியளவு வேறுபட்ட இரு தொகைகளை வேறுபடுத்த முடியாமல் போனது — சரிகட்டலில் (reconciliation)
+      இது உண்மையான ஆபத்து. வகுத்தல் ஒவ்வொரு படியிலும் முழுமைப்படுத்தாமல் முழுத் துல்லியத்தைத்
+      தக்கவைக்கிறது; ஏனெனில் இந்திய வரிக் கணக்கீடு இறுதியில் ஒருமுறை மட்டுமே முழுமைப்படுத்துகிறது,
+      இடைநிலை முழுமைப்படுத்தல் பிழையைப் பெருக்கும்.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">கற்பிக்கும் மொழி அல்ல</p>
+    <h2>வகுப்பறைக்கு அல்ல — தொழில்துறைக்கு.</h2>
+    <p class="lede">
+      தமிழ் நிரலாக்க மொழிகள் பல ஆண்டுகளாக உள்ளன; அவற்றுள் கிட்டத்தட்ட அனைத்தும் கற்பிக்கவே
+      உருவாக்கப்பட்டன. eTamil வழங்குவதற்காக உருவாக்கப்பட்டது. இது பைட்கோடாகத் தொகுக்கப்பட்டு
+      தன் சொந்த VM-இல் இயங்குகிறது, Rust மொழியில் எழுதப்பட்டுள்ளது, மேலும் Python, Java,
+      Node.js போன்ற பின்தள மொழிகளுக்கு இணையாக நிற்கும் வகையில் வடிவமைக்கப்பட்டுள்ளது.
+    </p>
+
+    <div class="grid-2">
+      <div>
+        <h3>எது இதைத் தொழில்துறைத் தரமாக்குகிறது</h3>
+        <ul>
+          <li><strong>உண்மையான கருவித்தொகுப்பு.</strong> பைட்கோட் VM, விருப்ப LLVM பின்தளம்,
+              Linux மற்றும் Windows-இல் CI-யில் இயங்கும் 227 சோதனைகள்.</li>
+          <li><strong>உண்மையான பின்தளம்.</strong> ஒருங்கிணைந்த HTTP சேவையகம், SQL இயக்கிகள்,
+              JSON, bcrypt, JWT — அச்சுக் கட்டளை கொண்ட REPL மட்டும் அல்ல.</li>
+          <li><strong>துல்லியமான பணம்.</strong> எங்கும் நிலைப்புள்ளி தசமங்கள்; எனவே சரிகட்டலும்
+              வரிக் கணக்கும் அமைப்பாலேயே சரியானவை.</li>
+          <li><strong>மறுக்கும் பிழைகள்.</strong> செயல்படுத்தப்படாத எதுவும் அமைதியாக ஏதோ ஒன்றைத்
+              திருப்பாமல், தெளிவான பிழைச் செய்தியுடன் நிற்கிறது.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>எது இதைத் தனித்துவமாக்குகிறது</h3>
+        <p>
+          எந்தப் பொதுநோக்கு மொழியும் கணக்குப் பட்டியலுடன் (chart of accounts) வருவதில்லை.
+          eTamil <strong>கணக்கியல் மற்றும் வரிவிதிப்புக்கான தயார் கட்டமைப்புடன்</strong>
+          வருகிறது — சமநிலை தவறினால் மறுக்கும் இரட்டைப் பதிவு, CGST/SGST/IGST பிரிப்புடன்
+          கூடிய GST, இருப்பாய்வு மற்றும் மூன்று நிதி அறிக்கைகள்.
+        </p>
+        <p>
+          அந்தக் கட்டமைப்பே அடித்தளம். அதன் மேல் <strong>வங்கி, காப்பீடு, சுங்கம், பிளாக்செயின்</strong>
+          தொகுதிகள் திட்டமிடப்பட்டுள்ளன; அதே சொல்லகராதியை இந்திய நிதி அமைப்பின் மீதமுள்ள
+          பகுதிகளுக்கும் விரிவுபடுத்தும்.
+        </p>
+        <p><a href="{{ '/ta/status/' | relative_url }}">எது கட்டப்பட்டுள்ளது, எது திட்டமிடப்பட்டுள்ளது →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">இன்று இயங்குபவை</p>
+    <h2>மொழியை ஆராயுங்கள்.</h2>
+    <p class="lede">
+      செயல்கள், தொகுப்புகள், பிழைக் கையாளுதல், தொகுதிகள், SQL தரவுத்தளங்கள், ஒருங்கிணைந்த
+      HTTP சேவையகம், மற்றும் இதே மொழியில் எழுதப்பட்ட கணக்கியல் கட்டமைப்பு.
+    </p>
+
+    <ul class="cards">
+      <li class="card">
+        <span class="glyph" aria-hidden="true">௹</span>
+        <h3><a href="{{ '/ta/finance/' | relative_url }}">நிதியும் கணக்கியலும்</a></h3>
+        <p>இரட்டைப் பதிவுப் பேரேடு, CGST/SGST/IGST பிரிப்புடன் GST, இருப்பாய்வு, மூன்று
+           அறிக்கைகள் — மேலும் ரூபாய்க்கான இந்திய இலக்கப் பிரிப்பு.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⌘</span>
+        <h3><a href="{{ '/ta/language/' | relative_url }}">மொழி</a></h3>
+        <p>செயல்கள், அணிகள், பதிவேடுகள், சுழற்சி, மதிப்பாக இருக்கும் தோல்வி, தொகுதிகள்,
+           நீங்கள் அறிவித்ததைக் கடைப்பிடிக்கும் வகைச் சரிபார்ப்பு.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⇄</span>
+        <h3><a href="{{ '/ta/backend/' | relative_url }}">சேவையகமும் தரவுத்தளங்களும்</a></h3>
+        <p>பாதை அளபுருக்களுடன் கூடிய HTTP வழிச்செலுத்தல், அளபுரு வினாக்கள் மட்டுமே
+           அனுமதிக்கும் SQLite மற்றும் PostgreSQL இயக்கிகள், bcrypt, JWT.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">◆</span>
+        <h3><a href="{{ '/ta/keywords/' | relative_url }}">திறவுச்சொல் பட்டியல்</a></h3>
+        <p>சுமார் 500 எழுத்து வடிவங்களில் 201 டோக்கன்கள் — நிதிச் சொல்லகராதி, கட்டுப்பாட்டு
+           ஓட்டம், SQL உட்பிரிவுகள், நிலையான நூலகம்; மூன்று வடிவங்களும்.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">▲</span>
+        <h3><a href="{{ '/ta/status/' | relative_url }}">நிலையும் திட்டவரைபடமும்</a></h3>
+        <p>எது இயங்குகிறது, எது பகுதியளவு, எது வேண்டுமென்றே தெளிவான பிழையுடன் நிற்கிறது
+           என்பதற்கான நேர்மையான அட்டவணை.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">§</span>
+        <h3><a href="{{ '/ta/research/' | relative_url }}">ஆய்வு</a></h3>
+        <p>மொழியின் பின்னணியிலுள்ள ஆய்வுக் கட்டுரை, இலக்கிய ஆய்வு, மேலும் அதன் சொல்லகராதியை
+           வடிவமைத்த GST, Ind AS, IFRS குறிப்புகள்.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">சான்று</p>
+    <h2>நிலையான நூலகம் eTamil-இலேயே எழுதப்பட்டுள்ளது.</h2>
+    <p class="lede">
+      Rust-இல் அல்ல. அதுவே கருத்து: நிலையான நூலகத்துக்கே ஒரு அமைப்பு மொழி தேவைப்பட்டால்,
+      அதன் மேல் கட்டப்படும் கட்டமைப்புகளுக்கு இந்த DSL போதுமானதாக இருக்காது. மொழியால்
+      வெளிப்படுத்த முடியாதவற்றை மட்டுமே ஹோஸ்ட் வழங்குகிறது — தசமக் கணிதம், உரை அளவீடு,
+      கோப்பு மற்றும் சாக்கெட் அணுகல் — அதற்கு மேலுள்ள அனைத்தும் பயன்படுத்துபவர்களால்
+      படிக்கவும் திருத்தவும் கூடியவை.
+    </p>
+
+    <div class="grid-2">
+      <div>
+        <h3>ரூபாய், இந்திய முறையில் பிரிக்கப்பட்டது</h3>
+        <div class="demo">
+          <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">nUlakam/paNam.qmz</span></div>
+          <div class="highlight"><pre><code><span class="k">இறக்கு</span> <span class="s">"nUlakam/paNam.qmz"</span>;
+
+<span class="k">அச்சு</span> <span class="nf">ரூபாய்</span>(<span class="m">12345678.5</span>);
+<span class="c">// ₹1,23,45,678.50 — லட்சம், கோடி; ஆயிரம் அல்ல</span></code></pre></div>
+        </div>
+      </div>
+      <div>
+        <h3>சமநிலை தவற மறுக்கும் பேரேடு</h3>
+        <div class="demo">
+          <div class="demo-bar"><span class="dot" aria-hidden="true"></span><span class="name">nUlakam/kaNakkiyal/pErEtu.qmz</span></div>
+          <div class="highlight"><pre><code><span class="k">இறக்கு</span> <span class="s">"nUlakam/kaNakkiyal/pErEtu.qmz"</span>;
+
+த = <span class="nf">பரிவர்த்தனை_ஆக்கு</span>(<span class="s">"JV1"</span>, <span class="s">"2026-04-01"</span>, <span class="s">"மூலதனம்"</span>, [
+    <span class="nf">பற்று_வரிசை</span>(<span class="s">"1000"</span>, <span class="m">500000</span>),
+    <span class="nf">வரவு_வரிசை</span>(<span class="s">"3000"</span>, <span class="m">500000</span>)
+]);
+பேரேடு = <span class="nf">மதிப்பு</span>(<span class="nf">பதிவிடு</span>(பேரேடு, த));</code></pre></div>
+        </div>
+      </div>
+    </div>
+    <p><a href="{{ '/ta/finance/' | relative_url }}">கணக்கியல் கட்டமைப்பைக் காண்க →</a></p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow">அடுத்து வருபவை</p>
+    <h2>இந்திய நிதி அமைப்பின் மீதமுள்ள பகுதிகள்.</h2>
+    <p class="lede">
+      கணக்கியல், வரிவிதிப்பு, நிதி ஆகியவை இன்று மொழியில் உள்ளன. அதே சொல்லகராதி முறை
+      அருகிலுள்ள துறைகளுக்கும் விரிகிறது — ஒவ்வொன்றும் ஏற்கெனவே உள்ள பேரேட்டின் மேல்,
+      eTamil-இலேயே எழுதப்படும் கட்டமைப்பு.
+    </p>
+
+    <ul class="cards">
+      <li class="card">
+        <span class="glyph" aria-hidden="true">◫</span>
+        <h3>வங்கி</h3>
+        <p>NEFT, UPI, RBI இணக்கம் — கைமுறை விதிகளாக அல்லாமல், மொழி மட்டத்திலான
+           கட்டமைப்புகளாகப் பணப் பரிமாற்றம், பரிவர்த்தனை வரம்புகள், KYC/AML சோதனைகள்.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">◍</span>
+        <h3>காப்பீடு</h3>
+        <p>பாலிசி, பிரீமியம், உரிமைகோரல் அமைப்புகள்; கணக்கியல் கட்டமைப்பு ஏற்கெனவே
+           சார்ந்திருக்கும் அதே துல்லியமான தசமக் கணிதத்தில்.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⛴</span>
+        <h3>சுங்கமும் வர்த்தகமும்</h3>
+        <p>மின்-வழி பில்கள், சுங்கச் சட்டக் கடமைகள் — குறியீடு சரிபார்ப்பு, வரிக் கணக்கீடு,
+           அறிவிப்புகள் உருவாக்கம்.</p>
+      </li>
+      <li class="card">
+        <span class="glyph" aria-hidden="true">⛓</span>
+        <h3>பிளாக்செயின்</h3>
+        <p>Hyperledger அடிப்படையிலான தணிக்கைத் தடங்கள்; மொழியை விட்டு வெளியேறாமல் ஒரு
+           பதிவைத் திருத்த முடியாததாக்கலாம்.</p>
+      </li>
+    </ul>
+
+    <p>
+      இவை திட்டமிடப்பட்டவை; கட்டப்பட்டவை அல்ல.
+      <a href="{{ '/ta/status/' | relative_url }}">நிலைப் பக்கம்</a> இரண்டுக்கும் இடையே
+      தெளிவான கோட்டை வைத்திருக்கிறது; செயல்படுத்தப்படாத எதுவும் அமைதியாக ஏதோ ஒன்றைச்
+      செய்யாமல், தெளிவான பிழைச் செய்தியுடன் நிற்கிறது.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="band">
+      <p class="eyebrow">ஆய்வு</p>
+      <h2>வெளியிடப்பட்ட ஆய்வின் அடிப்படையில்.</h2>
+      <p>
+        eTamil, சென்னை பி.எஸ். அப்துர் ரஹ்மான் கிரசன்ட் அறிவியல் மற்றும் தொழில்நுட்பக்
+        கழகத்தில் நடைபெறும் முனைவர் பட்ட ஆய்வின் பொருள். முகமது மாருப் மற்றும்
+        முனைவர் எஸ். பி. வள்ளி எழுதிய <em>Developing an Indian DSL (Programming Language)
+        for Accounts, Commerce, Finance, and Fintech Professionals</em> என்ற கட்டுரை,
+        2003–2025 காலகட்டத்தின் 28 கல்வி மற்றும் தொழில்துறை ஆதாரங்களை ஆய்வு செய்து,
+        இந்தியாவுக்குத் தனக்கென ஒரு நிதி DSL ஏன் தேவை என்பதை முன்வைக்கிறது.
+      </p>
+      <p>
+        <a class="btn btn-primary" href="{{ '/ta/research/' | relative_url }}">ஆய்வைப் படிக்க</a>
+      </p>
+    </div>
+  </div>
+</section>

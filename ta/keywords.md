@@ -1,56 +1,59 @@
 ---
 layout: page
-title: eTamil keyword reference
-section: Language
-permalink: /keywords/
-summary: >-
-  Every keyword in the language — Tamil script, the romanized ezuqqu spelling, and
-  the English alias where one exists. All forms are interchangeable in source.
-description: >-
-  The complete eTamil keyword reference: 201 tokens across roughly 500 spellings,
-  grouped as the lexer groups them, covering financial and accounting vocabulary,
-  control flow, collections, SQL clauses, HTTP and the standard library.
-lang: en
+title: eTamil திறவுச்சொல் பட்டியல்
+section: மொழி
+permalink: /ta/keywords/
+lang: ta
 key: keywords
-alt_url: /ta/keywords/
+alt_url: /keywords/
+summary: >-
+  மொழியின் ஒவ்வொரு திறவுச்சொல்லும் — தமிழ் எழுத்து, ezuqqu எழுத்துப்பெயர்ப்பு, மற்றும்
+  இருக்கும் இடங்களில் ஆங்கிலப் பெயர். மூலக்குறியீட்டில் அனைத்து வடிவங்களும்
+  பரிமாறிக்கொள்ளக்கூடியவை.
+description: >-
+  முழுமையான eTamil திறவுச்சொல் பட்டியல்: லெக்சர் தொகுக்கும் முறையிலேயே சுமார் 500
+  எழுத்து வடிவங்களில் 201 டோக்கன்கள்; நிதி மற்றும் கணக்கியல் சொல்லகராதி, கட்டுப்பாட்டு
+  ஓட்டம், தொகுப்புகள், SQL உட்பிரிவுகள், HTTP, நிலையான நூலகம் ஆகியவற்றை உள்ளடக்கியது.
 ---
 
-Every keyword in eTamil, grouped as the lexer groups them.
+eTamil-இன் ஒவ்வொரு திறவுச்சொல்லும், லெக்சர் தொகுக்கும் முறையிலேயே.
 
-Each row lists the forms that produce the same token: **Tamil script**, the
-**romanized** (*ezuqqu*) spelling, and where one exists an **English alias**. All
-forms are interchangeable in source code — `எண்`, `eN` and `int` are the same token.
+ஒவ்வொரு வரிசையும் ஒரே டோக்கனை உருவாக்கும் வடிவங்களைப் பட்டியலிடுகிறது: **தமிழ் எழுத்து**,
+**எழுத்துப்பெயர்ப்பு** (*ezuqqu*), மற்றும் இருக்கும் இடங்களில் **ஆங்கிலப் பெயர்**.
+மூலக்குறியீட்டில் அனைத்து வடிவங்களும் பரிமாறிக்கொள்ளக்கூடியவை — `எண்`, `eN`, `int`
+ஆகியவை ஒரே டோக்கன்.
 
-The three Tamil nasals stay distinct in romanized form: **ண = `N`, ந = `n`,
-ன = `Z`**. See [the romanization scheme]({{ '/language/' | relative_url }}#romanization)
-for the full letter mapping.
+எழுத்துப்பெயர்ப்பு வடிவத்தில் மூன்று தமிழ் மூக்கொலிகளும் தனித்தனியே இருக்கின்றன:
+**ண = `N`, ந = `n`, ன = `Z`**. முழு எழுத்து வரைபடத்துக்கு
+[எழுத்துப்பெயர்ப்பு முறையைப்]({{ '/ta/language/' | relative_url }}#romanization) பார்க்கவும்.
 
 <div class="note" markdown="1">
-**The Token column** is the name the compiler uses internally. You will rarely need
-it: since names are stored exactly as you type them, `வங்கி = 5` creates a variable
-called `வங்கி` and `{வரி: 100}` produces the field `வரி`. The token name still
-matters in two places, where what is named belongs to the host rather than to you —
-the database type in `தளம்_இணை`, and the HTTP method in `வழி`.
+**டோக்கன் நெடுவரிசை** என்பது தொகுப்பி உள்ளகமாகப் பயன்படுத்தும் பெயர். உங்களுக்கு அது
+அரிதாகவே தேவைப்படும்: பெயர்கள் நீங்கள் தட்டச்சு செய்தபடியே சேமிக்கப்படுவதால், `வங்கி = 5`
+என்பது `வங்கி` என்ற மாறியையும், `{வரி: 100}` என்பது `வரி` என்ற புலத்தையும் உருவாக்குகிறது.
+பெயரிடப்படுவது உங்களுக்கு அல்ல, ஹோஸ்டுக்குச் சொந்தமான இரு இடங்களில் மட்டும் டோக்கன் பெயர்
+முக்கியம் — `தளம்_இணை` இல் தரவுத்தள வகை, மற்றும் `வழி` இல் HTTP முறை.
 
-Note the consequence: `{வரி: 1}` and `{vari: 1}` are **different** fields. Pick one
-spelling per program.
+விளைவைக் கவனியுங்கள்: `{வரி: 1}` மற்றும் `{vari: 1}` **வெவ்வேறு** புலங்கள். ஒரு நிரலுக்கு
+ஒரு வடிவத்தைத் தேர்ந்தெடுங்கள்.
 </div>
 
 <div class="note" markdown="1">
-**Hard-reserved words.** Type keywords and SQL clause keywords cannot be used as
-names at all: `எண்`, `சொல்`, `அணி`, `வரிசை`, `விதி`, `இடம்`, `உள்`, `வெளி`, `குழு`, `சேர்`.
-Financial keywords are *not* reserved — `தொகை` is a perfectly good name for an amount.
+**கடுமையாக ஒதுக்கப்பட்ட சொற்கள்.** வகைத் திறவுச்சொற்களையும் SQL உட்பிரிவுத்
+திறவுச்சொற்களையும் பெயர்களாகப் பயன்படுத்தவே முடியாது: `எண்`, `சொல்`, `அணி`, `வரிசை`,
+`விதி`, `இடம்`, `உள்`, `வெளி`, `குழு`, `சேர்`. நிதித் திறவுச்சொற்கள் ஒதுக்கப்படவில்லை —
+`தொகை` ஒரு தொகைக்கு நல்ல பெயரே.
 </div>
 
-<p class="lede">Generated from the lexer in
+<p class="lede">
 <a href="{{ site.brand.compiler_repo }}/blob/main/etamil_compiler/src/lexer.rs">
-<code>etamil_compiler/src/lexer.rs</code></a>.</p>
+<code>etamil_compiler/src/lexer.rs</code></a> இல் உள்ள லெக்சரிலிருந்து உருவாக்கப்பட்டது.</p>
 
-## Core Financial & Accounting
+## மைய நிதி மற்றும் கணக்கியல்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | வரவு | `varavu` | — | `Credit` |
 | பற்று | `paRRu` | — | `Debit` |
@@ -102,11 +105,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Transactions & Documents
+## பரிவர்த்தனைகளும் ஆவணங்களும்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | விற்பனை | `viRpaZY` | — | `Sales` |
 | கொள்முதல் | `koLmuqal` | — | `Purchase` |
@@ -119,11 +122,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Money Movement
+## பணப் பரிமாற்றம்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | வைப்பு | `vYppu` | — | `Deposit` |
 | எடுப்பு | `etuppu` | — | `Withdrawal` |
@@ -135,11 +138,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Income & Costs
+## வருமானமும் செலவுகளும்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | ஊதியம் | `Uqiyam` | — | `Salary` |
 | வாடகை | `vAtakY` | — | `Rent` |
@@ -153,11 +156,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Accounts, Reporting & Audit
+## கணக்குகள், அறிக்கை மற்றும் தணிக்கை
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | கணக்கு | `kaNakku` | — | `Account` |
 | தணிக்கை | `qaNikkY` | — | `Audit` |
@@ -168,11 +171,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Indian Taxation
+## இந்திய வரிவிதிப்பு
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | வரிப்பிடித்தம் | `varippitiqqam` | `_TDS` | `TDS` |
 | உள்ளீட்டுவரி | `uLLIttuvari` | `_ITC` | `InputTaxCredit` |
@@ -186,11 +189,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Variables & Data Types
+## மாறிகளும் தரவு வகைகளும்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | எண் | `eN` | — | `IntegerType` |
 | பின்னம் | `piZZam` | — | `FloatType` |
@@ -209,11 +212,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Control Flow
+## கட்டுப்பாட்டு ஓட்டம்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | எனில் | `eZil` | — | `If` |
 | இன்றேல் | `iZREl` | — | `Else` |
@@ -223,43 +226,43 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Functions
+## செயல்கள்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | செயல் | `ceyal` | `_fn` | `Function` |
 | திரும்பு | `qirumpu` | `_return` | `Return` |
 
 </div>
 
-## Iteration
+## சுழற்சி
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | ஒவ்வொரு | `ovvoru` | `_each` | `ForEach` |
 | இல் | `il` | `_in` | `In` |
 
 </div>
 
-## Modules
+## தொகுதிகள்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | இறக்கு | `iRakku` | `_import` | `Import` |
 
 </div>
 
-## File I/O Operations
+## கோப்பு உள்ளீடு/வெளியீடு
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | கோப்பு | `kOppu` | `_file` | `File` |
 | தரவுரை | `qaravurY` | `_CSV` | `CSV` |
@@ -277,11 +280,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Database Connectivity Operations
+## தரவுத்தள இணைப்புச் செயல்பாடுகள்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | தரவுதளம் | `qaravuqaLam` | `_database` | `Database` |
 | தளம்_இணை | `qaLam_iNY` | `_dbConnect` | `DBConnect` |
@@ -295,11 +298,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Database Types
+## தரவுத்தள வகைகள்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | கவி_மொழி | `kavi_mozi` | `_SQL` | `SQL` |
 | தேடு_மொழி | `qEtu_mozi` | `_NoSQL` | `NoSQL` |
@@ -312,11 +315,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Database Operations
+## தரவுத்தளச் செயல்பாடுகள்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | அட்டை | `attY` | `_table` | `Table` |
 | தொகுப்பு | `toguippu` | `_collection` | `Collection` |
@@ -332,11 +335,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Database Clauses & Keywords
+## தரவுத்தள உட்பிரிவுகளும் திறவுச்சொற்களும்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | தேர்வெடு | `qErvetu` | `_select` | `Select` |
 | இதனில் | `iqaZil` | `_from` | `From` |
@@ -354,11 +357,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## REST API & HTTP
+## REST API மற்றும் HTTP
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | தள_இடை | `qaLa_itY` | `_api` | `API` |
 | இறுதி_புள்ளி | `iraqi_pulli` | `_endpoint` | `Endpoint` |
@@ -393,11 +396,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Encryption & Security
+## மறையாக்கமும் பாதுகாப்பும்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | மறை | `maRY` | `_encrypt` | `Encrypt` |
 | வெளிப்படு | `veLippatu` | `_decrypt` | `Decrypt` |
@@ -406,11 +409,11 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Logical Operators
+## தருக்கச் செயற்குறிகள்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 | மற்றும் | `maRRum` | `_and` | `And` |
 | அல்லது | `allaqu` | `_or` | `Or` |
@@ -418,34 +421,34 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Literals & Identifiers
+## மாறிலிகளும் அடையாளங்காட்டிகளும்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 
 </div>
 
-## Comparison Operators
+## ஒப்பீட்டுச் செயற்குறிகள்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 
 </div>
 
-## Operators & Symbols
+## செயற்குறிகளும் குறியீடுகளும்
 
 <div class="table-scroll" markdown="1">
 
-| Tamil | Romanized | English alias | Token |
+| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
 |---|---|---|---|
 
 </div>
 
-## Operators
+## செயற்குறிகள்
 
 <div class="table-scroll" markdown="1">
 
@@ -477,7 +480,7 @@ Financial keywords are *not* reserved — `தொகை` is a perfectly good nam
 
 </div>
 
-## Literals
+## மாறிலிகள்
 
 <div class="table-scroll" markdown="1">
 

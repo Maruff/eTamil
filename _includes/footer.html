@@ -1,39 +1,42 @@
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.ui[lang] -%}
+{%- if lang == 'ta' -%}{%- assign p = '/ta' -%}{%- else -%}{%- assign p = '' -%}{%- endif -%}
+
 <div class="wrap footer-grid">
   <div class="footer-brand">
     <img src="{{ '/assets/img/etamil-icon-72.png' | relative_url }}" width="44" height="44"
          alt="" aria-hidden="true">
     <p>
       <strong>eTamil.in</strong><br>
-      A programming language whose vocabulary is Tamil,<br>
-      aimed at Indian finance, tax and accounting.
+      {{ t.footer.blurb }}
     </p>
   </div>
 
   <div>
-    <h2>Language</h2>
+    <h2>{{ t.footer.language_heading }}</h2>
     <ul>
-      <li><a href="{{ '/language/' | relative_url }}">Language tour</a></li>
-      <li><a href="{{ '/keywords/' | relative_url }}">Keyword reference</a></li>
-      <li><a href="{{ '/finance/'  | relative_url }}">Finance &amp; accounting</a></li>
-      <li><a href="{{ '/backend/'  | relative_url }}">Backend &amp; databases</a></li>
-      <li><a href="{{ '/install/'  | relative_url }}">Install</a></li>
+      <li><a href="{{ p | append: '/language/' | relative_url }}">{{ t.footer.tour }}</a></li>
+      <li><a href="{{ p | append: '/keywords/' | relative_url }}">{{ t.footer.keywords }}</a></li>
+      <li><a href="{{ p | append: '/finance/'  | relative_url }}">{{ t.footer.finance }}</a></li>
+      <li><a href="{{ p | append: '/backend/'  | relative_url }}">{{ t.footer.backend }}</a></li>
+      <li><a href="{{ p | append: '/install/'  | relative_url }}">{{ t.footer.install }}</a></li>
     </ul>
   </div>
 
   <div>
-    <h2>Project</h2>
+    <h2>{{ t.footer.project_heading }}</h2>
     <ul>
-      <li><a href="{{ '/status/'   | relative_url }}">Status &amp; roadmap</a></li>
-      <li><a href="{{ '/research/' | relative_url }}">Research</a></li>
-      <li><a href="{{ '/about/'    | relative_url }}">About the author</a></li>
-      <li><a href="{{ site.brand.compiler_repo }}" rel="noopener">Compiler on GitHub</a></li>
-      <li><a href="{{ site.brand.site_repo }}" rel="noopener">This site on GitHub</a></li>
-      <li><a href="{{ site.brand.compiler_repo }}/blob/main/LICENSE" rel="noopener license">Licence — AGPL-3.0</a></li>
+      <li><a href="{{ p | append: '/status/'   | relative_url }}">{{ t.footer.status }}</a></li>
+      <li><a href="{{ p | append: '/research/' | relative_url }}">{{ t.footer.research }}</a></li>
+      <li><a href="{{ p | append: '/about/'    | relative_url }}">{{ t.footer.about }}</a></li>
+      <li><a href="{{ site.brand.compiler_repo }}" rel="noopener">{{ t.footer.compiler_repo }}</a></li>
+      <li><a href="{{ site.brand.site_repo }}" rel="noopener">{{ t.footer.site_repo }}</a></li>
+      <li><a href="{{ site.brand.compiler_repo }}/blob/main/LICENSE" rel="noopener license">{{ t.footer.licence }}</a></li>
     </ul>
   </div>
 </div>
 
 <div class="wrap footer-base">
-  <p>© {{ 'now' | date: "%Y" }} Esan Maruff · eTamil {{ site.brand.version }} · <a href="{{ site.brand.compiler_repo }}/blob/main/LICENSE" rel="license">AGPL-3.0</a> · Made in Chennai, Tamil Nadu</p>
-  <p lang="ta">தமிழில் நிரல் எழுதுங்கள்.</p>
+  <p>© {{ 'now' | date: "%Y" }} Esan Maruff · eTamil {{ site.brand.version }} · <a href="{{ site.brand.compiler_repo }}/blob/main/LICENSE" rel="license">AGPL-3.0</a> · {{ t.footer.made_in }}</p>
+  <p lang="ta">{{ t.footer.closing }}</p>
 </div>

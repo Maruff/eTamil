@@ -1,5 +1,9 @@
-{%- assign p = page.url -%}
-<a class="brand" href="{{ '/' | relative_url }}" aria-label="eTamil.in — home">
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.ui[lang] -%}
+{%- if lang == 'ta' -%}{%- assign home = '/ta/' -%}{%- assign p = '/ta' -%}
+{%- else -%}{%- assign home = '/' -%}{%- assign p = '' -%}{%- endif -%}
+
+<a class="brand" href="{{ home | relative_url }}" aria-label="{{ t.home_aria }}">
   <img class="brand-mark" src="{{ '/assets/img/etamil-icon-72.png' | relative_url }}"
        width="36" height="36" alt="" aria-hidden="true">
   <span class="brand-text">
@@ -10,18 +14,26 @@
 
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
   <span class="bars" aria-hidden="true"></span>
-  <span class="sr-only">Menu</span>
+  <span class="sr-only">{{ t.menu }}</span>
 </button>
 
-<nav id="site-nav" class="nav" aria-label="Primary">
+<nav id="site-nav" class="nav" aria-label="{{ t.primary_nav }}">
   <ul>
-    <li><a href="{{ '/language/'  | relative_url }}"{% if p contains '/language/'  %} aria-current="page"{% endif %}>Language</a></li>
-    <li><a href="{{ '/finance/'   | relative_url }}"{% if p contains '/finance/'   %} aria-current="page"{% endif %}>Finance</a></li>
-    <li><a href="{{ '/backend/'   | relative_url }}"{% if p contains '/backend/'   %} aria-current="page"{% endif %}>Backend</a></li>
-    <li><a href="{{ '/keywords/'  | relative_url }}"{% if p contains '/keywords/'  %} aria-current="page"{% endif %}>Keywords</a></li>
-    <li><a href="{{ '/install/'   | relative_url }}"{% if p contains '/install/'   %} aria-current="page"{% endif %}>Install</a></li>
-    <li><a href="{{ '/research/'  | relative_url }}"{% if p contains '/research' or p contains '/docs/' or p contains '/article/' %} aria-current="page"{% endif %}>Research</a></li>
-    <li><a href="{{ '/about/'     | relative_url }}"{% if p contains '/about/'     %} aria-current="page"{% endif %}>About</a></li>
-    <li class="nav-cta"><a href="{{ site.brand.compiler_repo }}" rel="noopener">GitHub</a></li>
+    <li><a href="{{ p | append: '/language/' | relative_url }}"{% if page.key == 'language' %} aria-current="page"{% endif %}>{{ t.nav.language }}</a></li>
+    <li><a href="{{ p | append: '/finance/'  | relative_url }}"{% if page.key == 'finance'  %} aria-current="page"{% endif %}>{{ t.nav.finance }}</a></li>
+    <li><a href="{{ p | append: '/backend/'  | relative_url }}"{% if page.key == 'backend'  %} aria-current="page"{% endif %}>{{ t.nav.backend }}</a></li>
+    <li><a href="{{ p | append: '/keywords/' | relative_url }}"{% if page.key == 'keywords' %} aria-current="page"{% endif %}>{{ t.nav.keywords }}</a></li>
+    <li><a href="{{ p | append: '/install/'  | relative_url }}"{% if page.key == 'install'  %} aria-current="page"{% endif %}>{{ t.nav.install }}</a></li>
+    <li><a href="{{ p | append: '/research/' | relative_url }}"{% if page.key == 'research' %} aria-current="page"{% endif %}>{{ t.nav.research }}</a></li>
+    <li><a href="{{ p | append: '/about/'    | relative_url }}"{% if page.key == 'about'    %} aria-current="page"{% endif %}>{{ t.nav.about }}</a></li>
+{%- if page.alt_url %}
+    <li class="nav-lang">
+      <a href="{{ page.alt_url | relative_url }}" lang="{{ t.other_code }}" hreflang="{{ t.other_code }}"
+         rel="alternate" data-lang-switch="{{ t.other_code }}" title="{{ t.lang_switch_to }}">
+        <span aria-hidden="true">⇄</span>&nbsp;{{ t.other_name }}
+      </a>
+    </li>
+{%- endif %}
+    <li class="nav-cta"><a href="{{ site.brand.compiler_repo }}" rel="noopener">{{ t.nav.github }}</a></li>
   </ul>
 </nav>
