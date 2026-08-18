@@ -12,6 +12,8 @@ lang: en-IN
 author:
   name: Esan Maruff
   email: etamilindia@gmail.com
+  photo: /assets/img/esan-maruff.webp
+  linkedin: https://www.linkedin.com/in/bmaruff/
 
 # Read by the theme, not by jekyll-seo-tag.
 brand:
@@ -31,6 +33,7 @@ social:
   name: Esan Maruff
   links:
     - https://github.com/Maruff
+    - https://www.linkedin.com/in/bmaruff/
 
 plugins:
   - jekyll-seo-tag

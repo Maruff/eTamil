@@ -65,17 +65,26 @@ To swap in a different original, replace the file and keep the name:
 
 | File | Used for |
 |---|---|
-| `etamil-icon.svg` | header, footer, favicon (vector) |
-| `etamil.webp` | the icon as a raster |
+| `etamil.webp` | the icon, exactly as supplied (340×340) |
+| `etamil-icon-72.png` | header and footer mark, corners alpha-clipped |
 | `etamil-icon-192.png`, `etamil-icon-512.png` | web app manifest |
 | `apple-touch-icon.png` | iOS home screen |
-| `favicon.ico` | browser tab fallback |
+| `favicon.ico` | browser tab (16/32/48) |
+| `etamil-logo.jpg` / `.webp` / `.png` | the full lockup, artwork untouched (1200×340) |
 | `og-image.png` | link previews on social and chat (1200×630) |
-| `etamil-logo.svg` | full lockup on a navy plate — safe on any background |
-| `etamil-logo-on-dark.svg` | full lockup, transparent — for navy surfaces (the hero) |
+| `esan-maruff.jpg` / `.webp` / `-336.webp` | author portrait |
 
-An author portrait is optional. Add the image and point `author.photo` at it in
-`_config.yml`; without it the About page falls back to a monogram.
+The originals live in `Pictures/Personal/` — `eTamil.webp`, `eTamil_full.jpg` and
+`Esan-Maruff-600px.jpg`. `scratchpad/real_assets.py` regenerates the whole set from
+them; it only converts format and resamples, and never redraws. The icon mask uses
+a 2.4% corner radius because the supplied plate is near-square — a larger radius
+clips the artwork.
+
+The palette is sampled from the logo, not chosen: navy `#002140` and cyan
+`#00AFF0` are its two colours. `--link` is a darkened cyan (`#00688F`) because the
+brand cyan is only 2.5:1 on white.
+
+The About page portrait comes from `author.photo` in `_config.yml`.
 
 ## SEO
 

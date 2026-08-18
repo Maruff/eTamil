@@ -11,9 +11,12 @@ permalink: /
 <section class="hero">
   <div class="wrap hero-inner">
     <div>
-      <img class="hero-logo" src="{{ '/assets/img/etamil-logo-on-dark.svg' | relative_url }}"
-           width="360" height="99" alt="eTamil.in — a FinTech DSL"
-           fetchpriority="high" decoding="async">
+      <picture>
+        <source srcset="{{ '/assets/img/etamil-logo.webp' | relative_url }}" type="image/webp">
+        <img class="hero-logo" src="{{ '/assets/img/etamil-logo.jpg' | relative_url }}"
+             width="1200" height="340" alt="eTamil.in — a FinTech DSL"
+             fetchpriority="high" decoding="async">
+      </picture>
       <p class="eyebrow"><span lang="ta">இ தமிழ்</span> · version {{ site.brand.version }} · AGPL-3.0</p>
       <h1>Build industrial software <span class="accent">in Tamil.</span></h1>
       <p class="lede">

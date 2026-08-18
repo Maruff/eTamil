@@ -118,8 +118,14 @@ and TDS templates and the Hyperledger integration do not. The
 ```
 Maruff, M. and Valli, S. P. "Developing an Indian DSL (Programming Language)
 for Accounts, Commerce, Finance, and Fintech Professionals."
-B.S. Abdur Rahman Crescent Institute of Science and Technology, Chennai, 2025.
+ICTETL 2025, 16 pp. B.S. Abdur Rahman Crescent Institute of Science and
+Technology, Chennai.
 ```
+
+## Related books by the author
+
+- *From Caves to Code: The Enduring Journey of Tamil Script* — eTamil India, 2025, 118 pages
+- *Theory of Computation and Compilers, Vol. 1: An Introduction to Theory of Computation* — 2024, 104 pages
 
 ## Research notes
 

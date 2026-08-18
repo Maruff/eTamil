@@ -1,14 +1,16 @@
-/* eTamil.in — palette taken from the mark: deep navy plate, azure accent.
-   Light is the default so long-form research pages stay readable; the navy
-   carries the chrome. Dark mode mirrors it. Code is always on navy. */
+/* eTamil.in — palette sampled from the logo artwork itself: navy #002140 and
+   cyan #00AFF0 are the two colours in eTamil_full.jpg, so the logo sits on the
+   chrome without a seam. --link is a darkened cyan, because the brand cyan is
+   only 2.5:1 on white; on navy the brand cyan is used as-is at 6.5:1.
+   Light is the default so long-form research pages stay readable. */
 
 :root {
-  --navy-deep: #04162B;
-  --navy:      #0A2A4E;
-  --navy-soft: #123C6B;
-  --azure:     #2E90FA;
-  --azure-lo:  #1268CC;
-  --azure-hi:  #6FB4FF;
+  --navy-deep: #001628;
+  --navy:      #002140;
+  --navy-soft: #0B3A63;
+  --azure:     #00AFF0;
+  --azure-lo:  #00688F;
+  --azure-hi:  #4FC8FF;
 
   --bg:        #FFFFFF;
   --bg-soft:   #F4F8FC;
@@ -16,9 +18,9 @@
   --text:      #10233C;
   --muted:     #4C6382;
   --line:      #D7E3F0;
-  --link:      #0F62C4;
-  --code-bg:   #0B2340;
-  --code-line: #1B4272;
+  --link:      #00688F;
+  --code-bg:   #002140;
+  --code-line: #10416B;
   --code-text: #DCE9F8;
 
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
@@ -28,20 +30,20 @@
 
   --wrap: 1140px;
   --radius: 12px;
-  --shadow: 0 1px 2px rgba(10, 42, 78, .06), 0 8px 24px rgba(10, 42, 78, .07);
+  --shadow: 0 1px 2px rgba(0, 33, 64, .06), 0 8px 24px rgba(0, 33, 64, .08);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:        #06182D;
-    --bg-soft:   #0A2340;
-    --bg-sunken: #0E2B4C;
+    --bg:        #04182B;
+    --bg-soft:   #002140;
+    --bg-sunken: #06294A;
     --text:      #E6EFF9;
     --muted:     #9DB6D2;
-    --line:      #17395E;
-    --link:      #7CBBFF;
-    --code-bg:   #04152A;
-    --code-line: #16365C;
+    --line:      #10416B;
+    --link:      #4FC8FF;
+    --code-bg:   #00182F;
+    --code-line: #0E3557;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .35);
   }
 }
@@ -70,7 +72,7 @@ body {
 
 .skip {
   position: absolute; left: -9999px; top: 0; z-index: 100;
-  background: var(--azure); color: #04203C; padding: .7rem 1.1rem; border-radius: 0 0 8px 0;
+  background: var(--azure); color: #002140; padding: .7rem 1.1rem; border-radius: 0 0 8px 0;
   font-weight: 700;
 }
 .skip:focus { left: 0; }
@@ -104,9 +106,9 @@ body {
   color: #D3E3F5; text-decoration: none; font-size: .93rem; font-weight: 600;
 }
 .nav a:hover { background: rgba(255, 255, 255, .09); color: #fff; }
-.nav a[aria-current="page"] { color: #fff; background: rgba(46, 144, 250, .22); }
-.nav-cta a { background: var(--azure); color: #04203C; margin-left: .35rem; }
-.nav-cta a:hover { background: var(--azure-hi); color: #04203C; }
+.nav a[aria-current="page"] { color: #fff; background: rgba(0, 175, 240, .24); }
+.nav-cta a { background: var(--azure); color: #002140; margin-left: .35rem; }
+.nav-cta a:hover { background: var(--azure-hi); color: #002140; }
 
 .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: .5rem; }
 .bars, .bars::before, .bars::after {
@@ -126,7 +128,7 @@ body {
 
 /* ------------------------------------------------------------------ hero */
 
-.hero { background: linear-gradient(170deg, var(--navy-deep), var(--navy) 62%, #10375F); color: #fff; }
+.hero { background: linear-gradient(180deg, var(--navy) 0%, #00263F 45%, var(--navy-deep) 100%); color: #fff; }
 .hero-inner {
   padding: clamp(3rem, 8vw, 5.5rem) 20px clamp(3rem, 7vw, 4.5rem);
   display: grid; gap: 3rem;
@@ -136,8 +138,9 @@ body {
 @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; gap: 2rem; } }
 
 .hero-logo {
-  display: block; width: clamp(240px, 34vw, 360px); height: auto;
-  margin: 0 0 1.6rem -8px;
+  display: block; width: clamp(260px, 38vw, 400px); height: auto;
+  margin: 0 0 1.7rem;
+  border-radius: 6px;
 }
 .hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.3rem); line-height: 1.1; letter-spacing: -.03em; margin: 0 0 1rem; font-weight: 800; color: #fff; }
 .hero h1 .accent { color: var(--azure-hi); }
@@ -149,8 +152,8 @@ body {
   display: inline-block; padding: .72rem 1.3rem; border-radius: 9px;
   font-weight: 700; font-size: .97rem; text-decoration: none; border: 1px solid transparent;
 }
-.btn-primary { background: var(--azure); color: #04203C; }
-.btn-primary:hover { background: var(--azure-hi); }
+.btn-primary { background: var(--azure); color: #002140; }
+.btn-primary:hover { background: var(--azure-hi); color: #002140; }
 .btn-ghost { border-color: rgba(255, 255, 255, .32); color: #fff; }
 .btn-ghost:hover { background: rgba(255, 255, 255, .1); }
 
@@ -292,7 +295,7 @@ td code, th code { white-space: nowrap; }
 
 /* ------------------------------------------------------------- code demo */
 
-.demo { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .16); box-shadow: 0 18px 50px rgba(0, 0, 0, .35); background: #04152A; }
+.demo { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .16); box-shadow: 0 18px 50px rgba(0, 0, 0, .35); background: #00182F; }
 .demo-bar { display: flex; align-items: center; gap: .5rem; padding: .55rem .9rem; background: rgba(255, 255, 255, .06); border-bottom: 1px solid rgba(255, 255, 255, .1); font-size: .76rem; color: #9DBDE2; font-family: var(--mono); }
 .demo-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: #35507A; }
 .demo-bar .name { margin-left: .4rem; }
@@ -308,7 +311,7 @@ td code, th code { white-space: nowrap; }
 
 .profile { display: grid; grid-template-columns: 168px 1fr; gap: 1.8rem; align-items: start; margin-bottom: 2rem; }
 @media (max-width: 620px) { .profile { grid-template-columns: 1fr; } }
-.profile img { width: 168px; height: 210px; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-sunken); }
+.profile img { display: block; width: 168px; height: 224px; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-sunken); }
 .profile .who { margin: 0 0 .2rem; font-size: 1.4rem; }
 .profile .role { color: var(--muted); margin: 0 0 1rem; }
 
