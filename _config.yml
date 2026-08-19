@@ -28,6 +28,10 @@ brand:
   # these links keep working after every release without editing this file.
   download_windows: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-windows-x64.zip
   download_linux: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-linux-x64.tar.gz
+  # macOS is two genuinely different binaries; one "x64" link would be wrong
+  # for whichever half of the users it did not match.
+  download_macos_arm64: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-macos-arm64.tar.gz
+  download_macos_x64: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-macos-x64.tar.gz
   paper_url: https://github.com/Maruff/etamil_compiler/blob/main/eTamil%20-%20An%20Indian%20FinTech%20DSL.pdf
 
 # Read by jekyll-seo-tag.

@@ -4,11 +4,11 @@ title: Install eTamil
 section: Getting started
 permalink: /install/
 summary: >-
-  Download the installer for Windows or Linux, or build from source with Cargo,
-  then run your first Tamil program.
+  Download the installer for Windows, Linux or macOS, or build from source with
+  Cargo, then run your first Tamil program.
 description: >-
-  How to install the eTamil compiler — a prebuilt package for Windows and Linux
-  that needs neither Rust nor a C toolchain, building from source with Cargo,
+  How to install the eTamil compiler — a prebuilt package for Windows, Linux and
+  macOS that needs neither Rust nor a C toolchain, building from source with Cargo,
   optional PostgreSQL, MySQL and LLVM features, and your first program.
 lang: en
 key: install
@@ -24,6 +24,8 @@ puts `etamil` on your `PATH`.
 <div class="hero-actions" markdown="0">
   <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Windows x64 &middot; .zip</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_linux }}" rel="noopener">Linux x64 &middot; .tar.gz</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_macos_arm64 }}" rel="noopener">macOS Apple Silicon &middot; .tar.gz</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_macos_x64 }}" rel="noopener">macOS Intel &middot; .tar.gz</a>
 </div>
 
 **Windows (PowerShell)**
@@ -40,6 +42,20 @@ tar -xzf etamil-linux-x64.tar.gz
 ./etamil-linux-x64/install.sh
 ```
 
+**macOS** — `arm64` for Apple Silicon, `x64` for Intel. `uname -m` tells you
+which one you are on.
+
+```bash
+tar -xzf etamil-macos-arm64.tar.gz
+./etamil-macos-arm64/install.sh
+xattr -dr com.apple.quarantine ~/.local/lib/etamil
+```
+
+That last line is not optional. These builds are not notarized, so macOS
+quarantines anything downloaded through a browser and Gatekeeper refuses to run
+it — "cannot be opened because the developer cannot be verified" — rather than
+asking. Clearing the flag once is enough.
+
 Open a *new* terminal afterwards — the installer edits `PATH`, and a shell that is
 already running does not see the change — then check it:
 
@@ -48,8 +64,8 @@ etamil --version
 ```
 
 Nothing is left behind that a plain delete cannot undo: the Windows installer puts
-everything under `%LOCALAPPDATA%\Programs\eTamil`, the Linux one under `~/.local`, and
-neither needs administrator rights.
+everything under `%LOCALAPPDATA%\Programs\eTamil`, the Linux and macOS one under
+`~/.local`, and none of them needs administrator rights.
 
 <div class="note" markdown="1">
 **Why no runtime to install.** The Windows binary links the C runtime statically,
@@ -57,13 +73,16 @@ so it does not need the Visual C++ Redistributable. The Linux binary is built
 against musl, so it is one fully static ELF that does not depend on the build
 machine's glibc.
 
-**macOS** has no prebuilt package yet — build from source below. Every archive is
-listed with its SHA-256 on the [releases page]({{ site.brand.releases_url }}).
+The packages carry the PostgreSQL and MySQL drivers, since a downloaded binary
+cannot have a cargo feature added to it later; the LLVM backend is not included,
+because it needs LLVM present on the machine that runs the compiler. Every
+archive is listed with its SHA-256 on the
+[releases page]({{ site.brand.releases_url }}).
 </div>
 
 ## Build from source
 
-Worth doing if you want the optional PostgreSQL and MySQL drivers, the LLVM
+Worth doing if you want the LLVM
 backend, or to work on the compiler itself.
 
 ### Prerequisites

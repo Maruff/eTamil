@@ -24,6 +24,8 @@ Rust தேவையில்லை, C கருவித்தொகுப்�
 <div class="hero-actions" markdown="0">
   <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Windows x64 &middot; .zip</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_linux }}" rel="noopener">Linux x64 &middot; .tar.gz</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_macos_arm64 }}" rel="noopener">macOS Apple Silicon &middot; .tar.gz</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_macos_x64 }}" rel="noopener">macOS Intel &middot; .tar.gz</a>
 </div>
 
 **Windows (PowerShell)**
@@ -39,6 +41,19 @@ Expand-Archive etamil-windows-x64.zip -DestinationPath .
 tar -xzf etamil-linux-x64.tar.gz
 ./etamil-linux-x64/install.sh
 ```
+
+**macOS** — Apple Silicon-க்கு `arm64`, Intel-க்கு `x64`. உங்கள் கணினி எது என்பதை
+`uname -m` சொல்லும்.
+
+```bash
+tar -xzf etamil-macos-arm64.tar.gz
+./etamil-macos-arm64/install.sh
+xattr -dr com.apple.quarantine ~/.local/lib/etamil
+```
+
+கடைசி வரி விருப்பத்தேர்வு அல்ல. இந்தக் கோப்புகள் notarize செய்யப்படவில்லை, எனவே
+உலாவி வழியாகப் பதிவிறக்கியதை macOS தனிமைப்படுத்துகிறது; Gatekeeper அதை இயக்க
+மறுக்கும். இந்தக் குறியை ஒருமுறை நீக்கினால் போதும்.
 
 பின்னர் ஒரு *புதிய* முனையத்தைத் திறக்கவும் — நிறுவி `PATH`-ஐ மாற்றுகிறது, ஏற்கனவே
 இயங்கிக்கொண்டிருக்கும் ஷெல் அந்த மாற்றத்தைக் காண்பதில்லை — பிறகு சரிபார்க்கவும்:
