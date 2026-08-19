@@ -23,6 +23,11 @@ brand:
   license_url: https://www.gnu.org/licenses/agpl-3.0.html
   compiler_repo: https://github.com/Maruff/etamil_compiler
   site_repo: https://github.com/Maruff/eTamil
+  releases_url: https://github.com/Maruff/etamil_compiler/releases/latest
+  # Deliberately unversioned asset names behind GitHub's /latest/ redirect, so
+  # these links keep working after every release without editing this file.
+  download_windows: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-windows-x64.zip
+  download_linux: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-linux-x64.tar.gz
   paper_url: https://github.com/Maruff/etamil_compiler/blob/main/eTamil%20-%20An%20Indian%20FinTech%20DSL.pdf
 
 # Read by jekyll-seo-tag.

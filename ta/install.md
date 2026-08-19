@@ -7,15 +7,66 @@ lang: ta
 key: install
 alt_url: /install/
 summary: >-
-  Linux, macOS அல்லது Windows-இல் மூலக்குறியீட்டிலிருந்து தொகுப்பியை உருவாக்கி,
-  PATH-இல் சேர்த்து, முதல் தமிழ் நிரலை இயக்குங்கள்.
+  Windows அல்லது Linux-க்கான தயார் நிலை தொகுப்பைப் பதிவிறக்கவும், அல்லது Cargo மூலம்
+  மூலக்குறியீட்டிலிருந்து உருவாக்கவும், பிறகு முதல் தமிழ் நிரலை இயக்குங்கள்.
 description: >-
-  இ-தமிழ் தொகுப்பியை எவ்வாறு நிறுவுவது — முன்நிபந்தனைகள், Cargo மூலம் Linux, macOS,
-  Windows-இல் மூலக்குறியீட்டிலிருந்து உருவாக்குதல், விருப்ப PostgreSQL, MySQL, LLVM
-  வசதிகள், மற்றும் உங்கள் முதல் நிரல்.
+  இ-தமிழ் தொகுப்பியை எவ்வாறு நிறுவுவது — Rust-ம் C கருவித்தொகுப்பும் தேவைப்படாத
+  Windows, Linux தயார் நிலை தொகுப்பு, Cargo மூலம் மூலக்குறியீட்டிலிருந்து உருவாக்குதல்,
+  விருப்ப PostgreSQL, MySQL, LLVM வசதிகள், மற்றும் உங்கள் முதல் நிரல்.
 ---
 
-## முன்நிபந்தனைகள்
+## பதிவிறக்கம் & நிறுவுதல்
+
+Rust தேவையில்லை, C கருவித்தொகுப்பு தேவையில்லை, உருவாக்கப் படியும் தேவையில்லை.
+காப்பகத்தில் தொகுப்பி, இ-தமிழ் நிலையான நூலகம், எடுத்துக்காட்டுகள் அடங்கியுள்ளன;
+ஸ்கிரிப்ட் அவற்றைச் சரியான இடத்தில் நகலெடுத்து, `etamil`-ஐ உங்கள் `PATH`-இல் சேர்க்கிறது.
+
+<div class="hero-actions" markdown="0">
+  <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Windows x64 &middot; .zip</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_linux }}" rel="noopener">Linux x64 &middot; .tar.gz</a>
+</div>
+
+**Windows (PowerShell)**
+
+```powershell
+Expand-Archive etamil-windows-x64.zip -DestinationPath .
+.\etamil-windows-x64\install.ps1
+```
+
+**Linux**
+
+```bash
+tar -xzf etamil-linux-x64.tar.gz
+./etamil-linux-x64/install.sh
+```
+
+பின்னர் ஒரு *புதிய* முனையத்தைத் திறக்கவும் — நிறுவி `PATH`-ஐ மாற்றுகிறது, ஏற்கனவே
+இயங்கிக்கொண்டிருக்கும் ஷெல் அந்த மாற்றத்தைக் காண்பதில்லை — பிறகு சரிபார்க்கவும்:
+
+```bash
+etamil --version
+```
+
+நீக்குவதும் எளிது: Windows நிறுவி அனைத்தையும் `%LOCALAPPDATA%\Programs\eTamil`-இல்,
+Linux நிறுவி `~/.local`-இல் வைக்கிறது; இரண்டுக்கும் நிர்வாகி உரிமை தேவையில்லை.
+
+<div class="note" markdown="1">
+**தனியாக இயக்க நேரம் (runtime) நிறுவ வேண்டியதில்லை — ஏன்.** Windows இருமம் C இயக்க
+நேரத்தை நிலையாக (statically) இணைக்கிறது, எனவே Visual C++ Redistributable தேவையில்லை.
+Linux இருமம் musl-உடன் உருவாக்கப்படுகிறது, எனவே அது முழுமையாக நிலையான ELF — உருவாக்கிய
+இயந்திரத்தின் glibc-ஐச் சார்ந்திருப்பதில்லை.
+
+**macOS**-க்கு இன்னும் முன்னுருவாக்கிய தொகுப்பு இல்லை — கீழே மூலக்குறியீட்டிலிருந்து
+உருவாக்குங்கள். ஒவ்வொரு காப்பகமும் அதன் SHA-256 உடன்
+[வெளியீட்டுப் பக்கத்தில்]({{ site.brand.releases_url }}) பட்டியலிடப்பட்டுள்ளது.
+</div>
+
+## மூலக்குறியீட்டிலிருந்து உருவாக்குதல்
+
+விருப்ப PostgreSQL, MySQL drivers, LLVM backend வேண்டுமெனில், அல்லது தொகுப்பியிலேயே
+பணியாற்ற வேண்டுமெனில், இது பயனுள்ளது.
+
+### முன்நிபந்தனைகள்
 
 **Rust 1.85+** (edition 2024) மற்றும் ஒரு C கருவித்தொகுப்பு — உள்ளடங்கிய SQLite மற்றும்
 கிரிப்டோ crate-கள் C-ஐத் தொகுக்கின்றன.
@@ -25,7 +76,7 @@ description: >-
   proc-macro crate-கள் DLL ஆக இணைக்கப்படுகின்றன.
 - **Linux / macOS** — இயங்கும் `cc` (`build-essential`, அல்லது Xcode command line tools).
 
-## மூலக்குறியீட்டிலிருந்து உருவாக்குதல்
+### Cargo மூலம்
 
 ```bash
 git clone https://github.com/Maruff/etamil_compiler.git

@@ -4,18 +4,69 @@ title: Install eTamil
 section: Getting started
 permalink: /install/
 summary: >-
-  Build the compiler from source on Linux, macOS or Windows, put it on your PATH,
-  and run your first Tamil program.
+  Download the installer for Windows or Linux, or build from source with Cargo,
+  then run your first Tamil program.
 description: >-
-  How to install the eTamil compiler — prerequisites, building from source with
-  Cargo on Linux, macOS and Windows, optional PostgreSQL, MySQL and LLVM features,
-  and your first program.
+  How to install the eTamil compiler — a prebuilt package for Windows and Linux
+  that needs neither Rust nor a C toolchain, building from source with Cargo,
+  optional PostgreSQL, MySQL and LLVM features, and your first program.
 lang: en
 key: install
 alt_url: /ta/install/
 ---
 
-## Prerequisites
+## Download and install
+
+No Rust, no C toolchain, no build step. The archive carries the compiler, the
+eTamil standard library and the examples; the script copies them into place and
+puts `etamil` on your `PATH`.
+
+<div class="hero-actions" markdown="0">
+  <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Windows x64 &middot; .zip</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_linux }}" rel="noopener">Linux x64 &middot; .tar.gz</a>
+</div>
+
+**Windows (PowerShell)**
+
+```powershell
+Expand-Archive etamil-windows-x64.zip -DestinationPath .
+.\etamil-windows-x64\install.ps1
+```
+
+**Linux**
+
+```bash
+tar -xzf etamil-linux-x64.tar.gz
+./etamil-linux-x64/install.sh
+```
+
+Open a *new* terminal afterwards — the installer edits `PATH`, and a shell that is
+already running does not see the change — then check it:
+
+```bash
+etamil --version
+```
+
+Nothing is left behind that a plain delete cannot undo: the Windows installer puts
+everything under `%LOCALAPPDATA%\Programs\eTamil`, the Linux one under `~/.local`, and
+neither needs administrator rights.
+
+<div class="note" markdown="1">
+**Why no runtime to install.** The Windows binary links the C runtime statically,
+so it does not need the Visual C++ Redistributable. The Linux binary is built
+against musl, so it is one fully static ELF that does not depend on the build
+machine's glibc.
+
+**macOS** has no prebuilt package yet — build from source below. Every archive is
+listed with its SHA-256 on the [releases page]({{ site.brand.releases_url }}).
+</div>
+
+## Build from source
+
+Worth doing if you want the optional PostgreSQL and MySQL drivers, the LLVM
+backend, or to work on the compiler itself.
+
+### Prerequisites
 
 **Rust 1.85+** (edition 2024) and a C toolchain — the bundled SQLite and the crypto
 crates compile C.
@@ -26,7 +77,7 @@ crates compile C.
 - **Linux / macOS** — a working `cc` (`build-essential`, or the Xcode command line
   tools).
 
-## Build from source
+### With Cargo
 
 ```bash
 git clone https://github.com/Maruff/etamil_compiler.git
@@ -120,7 +171,9 @@ python3 scripts/transliterate.py --check   # romanization audit
 ## Editor support
 
 A VS Code extension with syntax highlighting, snippets and language configuration
-lives in `eTamil_Code/` in the compiler repository.
+lives in `eTamil_Code/` in the compiler repository. If it cannot find the compiler
+it offers to fetch this package for you — **eTamil: Install the compiler** in the
+command palette.
 
 ## Where next
 
