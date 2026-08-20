@@ -15,6 +15,7 @@
   <div>
     <h2>{{ t.footer.language_heading }}</h2>
     <ul>
+      <li><a href="{{ p | append: '/manual/'   | relative_url }}">{{ t.footer.manual }}</a></li>
       <li><a href="{{ p | append: '/language/' | relative_url }}">{{ t.footer.tour }}</a></li>
       <li><a href="{{ p | append: '/keywords/' | relative_url }}">{{ t.footer.keywords }}</a></li>
       <li><a href="{{ p | append: '/finance/'  | relative_url }}">{{ t.footer.finance }}</a></li>

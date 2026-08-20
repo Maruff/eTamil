@@ -25,6 +25,7 @@ en:
   home_aria: "eTamil.in — home"
 
   nav:
+    manual: Manual
     language: Language
     finance: Finance
     backend: Backend
@@ -37,6 +38,7 @@ en:
   footer:
     language_heading: Language
     project_heading: Project
+    manual: User manual
     tour: Language tour
     keywords: Keyword reference
     finance: Finance &amp; accounting
@@ -79,6 +81,7 @@ ta:
   home_aria: "eTamil.in — முகப்பு"
 
   nav:
+    manual: கையேடு
     language: மொழி
     finance: நிதி
     backend: பின்தளம்
@@ -91,6 +94,7 @@ ta:
   footer:
     language_heading: மொழி
     project_heading: திட்டம்
+    manual: பயனர் கையேடு
     tour: மொழி அறிமுகம்
     keywords: திறவுச்சொல் பட்டியல்
     finance: நிதியும் கணக்கியலும்

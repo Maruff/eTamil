@@ -6,6 +6,12 @@ Jekyll, deployed to GitHub Pages from `main` by
 [`.github/workflows/jekyll-gh-pages.yml`](.github/workflows/jekyll-gh-pages.yml).
 The custom domain is set in [`CNAME`](CNAME).
 
+The site's largest page is the
+**[user manual](https://etamil.in/manual/)** (`manual.md`, and `ta/manual.md` in
+Tamil) — the complete guide from installation to a database-backed HTTP service.
+It is linked from the compiler README and from the VS Code extension, so it needs
+to keep working at that URL.
+
 ## Layout
 
 ```
