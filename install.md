@@ -162,16 +162,17 @@ cargo build --release --features llvm
 ```
 
 <div class="note" markdown="1">
-**The LLVM backend compiles far less than the VM** — no functions, iteration,
-collections or modules. It refuses what it cannot build rather than emitting IR
-that computes something else. Use `--vm` for real work.
+**The LLVM backend still compiles a subset of the VM**, though a growing one: it
+now handles numeric functions, arrays, records, array iteration, and imports
+resolved before codegen. Heterogeneous values and other unsupported constructs
+are rejected rather than emitted as incorrect IR. Use `--vm` for real work.
 </div>
 
 ## Running the tests
 
 ```bash
 cd etamil_compiler
-cargo test          # 176 language tests + 51 unit tests
+cargo test          # 196 language tests + 59 unit tests + 8 --check tests
 ```
 
 `tests/language_tests.rs` covers the front end end-to-end by asserting on
@@ -189,8 +190,12 @@ python3 scripts/transliterate.py --check   # romanization audit
 
 ## Editor support
 
-A VS Code extension with syntax highlighting, snippets and language configuration
-lives in `eTamil_Code/` in the compiler repository. If it cannot find the compiler
+A VS Code extension lives in `eTamil_Code/` in the compiler repository:
+highlighting for all 201 keywords in every spelling, completions for the 23
+builtins and 122 `nUlakam` functions, and errors from `--check` shown as you type.
+
+Its grammar and completion data are **generated from `lexer.rs`**, and CI fails if
+they drift — so the editor cannot fall behind the compiler. If it cannot find the compiler
 it offers to fetch this package for you — **eTamil: Install the compiler** in the
 command palette.
 

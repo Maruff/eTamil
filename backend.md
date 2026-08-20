@@ -70,6 +70,7 @@ Response headers are an ordinary record. Without one, the server answers
 | Flag | Effect |
 |---|---|
 | `--vm` | Run on the bytecode VM (default) |
+| `--check` | Lex, parse and type check only, then stop — reports every error and **never runs the program** |
 | `--server` | Start the synchronous HTTP server |
 | `--async` | Concurrent server: async accept, blocking handlers, Ctrl-C to stop |
 | `--llvm` | LLVM backend (requires `--features llvm`; Linux/macOS) |
@@ -97,7 +98,7 @@ Rows return as an array of records, so a result set iterates like any other tabl
 |---|---|---|
 | SQLite | <span class="pill pill-ok">Working</span> | Built in, no feature flag. Decimals cross as text, so no precision is lost |
 | PostgreSQL | <span class="pill pill-ok">Working</span> | `--features postgres`; verified against a live server. Money uses native `NUMERIC` |
-| MySQL / MariaDB | <span class="pill pill-part">Untested</span> | `--features mysql`; complete and compiling, never run against a live server |
+| MySQL / MariaDB | <span class="pill pill-ok">Live verified</span> | `--features mysql`; the live sample passes with `ETAMIL_TEST_MYSQL=1 ./scripts/run_examples.sh`. Setup is in `TESTING.md` |
 | MongoDB, Redis | <span class="pill pill-no">Not implemented</span> | Neither has SQL, so neither fits an `execute(sql, params)` trait. Needs a design first |
 
 </div>
@@ -118,9 +119,18 @@ text column stays text on the way back — where the SQLite backend, which store
 decimals as text, hands back a number. PostgreSQL also folds unquoted identifiers
 to lower case: write `"qokY"` if you want that column name back as you spelled it.
 
+### Connections are reused
+
+`தளம்_இணை` no longer reconnects on every request. It borrows from a process-wide
+idle cache, which is the difference between a handler that pays a TCP and TLS
+handshake each time and one that does not. Leases are exclusive, so a transaction
+still gets a connection to itself and cannot interleave with another request's
+work. `ETAMIL_DB_IDLE` caps how many stay warm.
+
 <div class="note" markdown="1">
-**Still to do.** Transactions, and more than one connection open at a time — the VM
-currently refuses the second rather than guessing which one you meant.
+**Still to do.** Transactions as a language construct, and more than one *distinct*
+database open at a time — the VM refuses the second rather than guessing which one
+you meant.
 </div>
 
 ## JSON
@@ -146,6 +156,62 @@ stable enough to assert on. `\uXXXX` escapes are not decoded.
 with `ஜேசான்_ஆக்கு` and send it with `பதில்`.
 </div>
 
+## Calling other services
+
+`வலை_பெறு`, `வலை_பதி` and `வலை_அனுப்பு` make outbound HTTP requests, behind
+`--features http-client`, which is on by default. A non-2xx response comes back as
+an ordinary result rather than a failure, so a 404 from a payment gateway is
+something you branch on, not something that unwinds your handler.
+
+```etamil
+ப = வலை_பெறு("https://api.example.in/rates");
+(சரியா(ப)) எனில் {
+    அச்சு மதிப்பு(ப).உடல்;
+}
+```
+
+## Signing and verifying webhooks
+
+`கையொப்பம்` produces an HMAC-SHA256 signature and `கையொப்பம்_சரியா` checks one.
+The comparison is constant-time, so it does not leak the expected signature one
+byte at a time to anything measuring how long the check took.
+
+```etamil
+வழி பதி, "/webhook" {
+    (கையொப்பம்_சரியா(request_body, headers["X-Signature"], ரகசியம்)) எனில் {
+        // …handle the event
+        பதில் 200, "ok";
+    }
+    பதில் 401, "bad signature";
+}
+```
+
+## Bytes, base64 and hex
+
+`பைட்டுகள்` turns text into bytes and `பைட்டுச்_சரம்` turns them back. A byte
+array is an ordinary array of numbers — deliberately **not** a new value type, so
+every array function in `nUlakam/aNi.qmz` already works on it.
+
+Encoding lives in `nUlakam/kuRiyAkkam.qmz`, written in eTamil like the rest:
+`அறுபத்துநான்கு_ஆக்கு` and `அறுபத்துநான்கு_படி` for base64,
+`பதினாறு_ஆக்கு` and `பதினாறு_படி` for hex.
+
+## Scheduled work
+
+`இடைவெளி` runs a block on a timer under either server — a reconciliation sweep, a
+retry queue, a nightly close.
+
+```etamil
+இடைவெளி 3600 {
+    அச்சு "hourly reconciliation";
+}
+```
+
+The number is the gap *between* runs, not a fixed period. If one run takes longer
+than the interval, the next starts late rather than starting on top of the one
+still going — which for a job that posts ledger entries is the difference between
+late and wrong.
+
 ## Authentication
 
 bcrypt and JWT live in the host, because hashing and HMAC-SHA256 need bytes and
@@ -164,12 +230,18 @@ etamil --server --port 8080 examples/backend/hello_server.qmz
 etamil --server --port 8080 examples/backend/user_server.qmz
 etamil --server --port 8080 examples/api/vari_cEvY.qmz
 etamil --vm examples/db_samples/kaNakku_qaLam.qmz
+etamil --server --port 8080 examples/kadai/kadai_cEvY.qmz
 ```
+
+`examples/kadai/` is the fullest thing in the repository: an eCommerce backend
+with a catalogue, per-line GST, atomic orders, a signed payment webhook, and the
+same orders posted through to the double-entry ledger.
 
 `examples/db_samples/mYcIkul_qaLam.qmz` checks what is worth checking on a real
 MySQL server — exact `DECIMAL` sums, an integer key bound from a number, dates as
-ISO text, `NULL` as `இன்மை`, and an injection payload staying inert. It needs a
-live database, so the example runner skips it unless you opt in:
+ISO text, `NULL` as `இன்மை`, and an injection payload staying inert. It now
+passes against a live server. It still needs a database, so the example runner
+skips it unless you opt in:
 
 ```bash
 ETAMIL_TEST_MYSQL=1 ./scripts/run_examples.sh

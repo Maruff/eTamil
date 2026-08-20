@@ -186,6 +186,20 @@ etamil --vm examples/finance/campaLam.qmz            # payroll
 etamil --vm examples/finance/niluvY_vayaqu.qmz       # receivables ageing
 ```
 
+## A full application
+
+`examples/kadai/` is an eCommerce backend written entirely in eTamil, and the
+largest program in the repository. It has a product catalogue, per-line GST, order
+placement that is atomic under concurrent requests, a payment webhook whose
+signature it verifies, and — the part that matters here — every order posted
+through to the same double-entry ledger described above.
+
+```bash
+etamil --server --port 8080 examples/kadai/kadai_cEvY.qmz
+```
+
+It is worth reading as the answer to "can you actually build something with this".
+
 ## What comes next
 
 The accounting and taxation framework is the foundation, not the finished set. Four

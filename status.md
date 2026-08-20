@@ -28,29 +28,37 @@ This table is the honest state of the code, not a wish list.
 | Area | Status | Notes |
 |---|---|---|
 | Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 201 tokens across ~500 spellings; errors carry line and column |
-| Variables, arithmetic, percentages, strings | <span class="pill pill-ok">Working</span> | |
-| Comparisons, `எனில்` / `இன்றேல்`, `சுற்று` loops | <span class="pill pill-ok">Working</span> | |
-| Logical `மற்றும்` / `அல்லது` / `இல்லை` | <span class="pill pill-ok">Working</span> | Both sides always evaluated — no short-circuiting |
-| File I/O and CSV row counting | <span class="pill pill-ok">Working</span> | In the VM (`--vm`) |
-| VM bytecode executor | <span class="pill pill-ok">Working</span> | |
-| Functions (`செயல்` / `திரும்பு`) | <span class="pill pill-ok">Working</span> | Parameters, returns, local scope, recursion |
-| Arrays (`[…]`) and records (`{…}`) | <span class="pill pill-ok">Working</span> | Indexing, field access, assignment |
-| Iteration (`ஒவ்வொரு … இல்`) | <span class="pill pill-ok">Working</span> | Arrays, records, strings |
+| Variables, arithmetic, percentages, strings | <span class="pill pill-ok">Working</span> |  |
+| Comparisons, `எனில்` / `இன்றேல்`, `சுற்று` loops | <span class="pill pill-ok">Working</span> |  |
+| Logical `மற்றும்` / `அல்லது` / `இல்லை` | <span class="pill pill-ok">Working</span> | both sides always evaluated — no short-circuiting |
+| File I/O and CSV row counting | <span class="pill pill-ok">Working</span> | in the VM (`--vm`) |
+| VM bytecode executor | <span class="pill pill-ok">Working</span> |  |
+| Functions (`செயல்` / `திரும்பு`) | <span class="pill pill-ok">Working</span> | parameters, returns, local scope, recursion |
+| Arrays (`[…]`) and records (`{…}`) | <span class="pill pill-ok">Working</span> | indexing, field access, assignment |
+| Iteration (`ஒவ்வொரு … இல்`) | <span class="pill pill-ok">Working</span> | arrays, records, strings |
 | Results (`சரி` / `தவறு` / `?`) | <span class="pill pill-ok">Working</span> | Rust semantics; failure is a value, not an exception |
-| Modules (`இறக்கு`) | <span class="pill pill-ok">Working</span> | Resolves beside the file, then `ETAMIL_PATH` |
-| Decimal arithmetic | <span class="pill pill-ok">Working</span> | Fixed point, not `f64` |
-| Standard library (`nUlakam/`) | <span class="pill pill-ok">Working</span> | Strings, math, arrays, money — **written in eTamil** |
-| Accounting framework | <span class="pill pill-ok">Working</span> | Double entry, GST, three statements — **written in eTamil** |
-| SQLite | <span class="pill pill-ok">Working</span> | Parameterised queries only; rows return as an array of records |
-| PostgreSQL | <span class="pill pill-ok">Working</span> | `--features postgres`; money as native `NUMERIC` |
-| HTTP server (`--server`) | <span class="pill pill-ok">Working</span> | Worker pool; `வழி` routes with `:id` path parameters, query params, headers, bodies |
-| Async HTTP server (`--async`) | <span class="pill pill-ok">Working</span> | tokio accept loop, handlers on the blocking pool; the VM stays synchronous |
-| Response headers | <span class="pill pill-ok">Working</span> | An ordinary record; defaults to JSON when omitted |
-| JSON (`nUlakam/jEcAZ.qmz`) | <span class="pill pill-ok">Working</span> | **Written in eTamil**; `\uXXXX` escapes are not decoded |
-| Authentication | <span class="pill pill-ok">Working</span> | bcrypt and JWT in the host; set `ETAMIL_JWT_SECRET` |
+| Modules (`இறக்கு`) | <span class="pill pill-ok">Working</span> | resolves beside the file, then `ETAMIL_PATH` |
+| Decimal arithmetic | <span class="pill pill-ok">Working</span> | fixed point, not `f64` |
+| Standard library (`nUlakam/`) | <span class="pill pill-ok">Working</span> | strings, math, arrays, money — **written in eTamil** |
+| Accounting framework | <span class="pill pill-ok">Working</span> | double entry, GST, three statements — **written in eTamil** |
+| SQLite (`தளம்_இணை` etc.) | <span class="pill pill-ok">Working</span> | parameterised queries only; rows return as an array of records |
+| Connection reuse | <span class="pill pill-ok">Working</span> | `தளம்_இணை` borrows from a process-wide idle cache instead of reconnecting per request; leases are exclusive, so transactions stay isolated. `ETAMIL_DB_IDLE` caps it |
+| PostgreSQL | <span class="pill pill-ok">Working</span> | `--features postgres`; money as native `NUMERIC`, so a text column stays text — unlike SQLite, where decimals are stored as text |
+| MySQL / MariaDB | <span class="pill pill-ok">Live verified</span> | `--features mysql`; the live sample passes with `ETAMIL_TEST_MYSQL=1 ./scripts/run_examples.sh`; setup details are in `TESTING.md` |
+| HTTP server (`--server`) | <span class="pill pill-ok">Working</span> | worker pool; `வழி` routes with `:id` path parameters, query params, headers and request bodies; `பதில்` responses |
+| Response headers | <span class="pill pill-ok">Working</span> | `பதில் 200, உடல், {"Content-Type": "text/html"}` — an ordinary record; defaults to JSON when omitted |
+| JSON (`nUlakam/jEcAZ.qmz`) | <span class="pill pill-ok">Working</span> | `ஜேசான்_ஆக்கு` / `ஜேசான்_படி` — **written in eTamil**; `\uXXXX` escapes are not decoded |
+| Scheduled blocks (`இடைவெளி`) | <span class="pill pill-ok">Working</span> | `இடைவெளி 3600 { … }` under either server; the number is the gap *between* runs, so a slow job runs late rather than twice at once |
+| Bytes | <span class="pill pill-ok">Working</span> | `பைட்டுகள்` / `பைட்டுச்_சரம்` — a byte array is an ordinary array of numbers, not a new value type |
+| base64 and hex (`nUlakam/kuRiyAkkam.qmz`) | <span class="pill pill-ok">Working</span> | `அறுபத்துநான்கு_ஆக்கு` `அறுபத்துநான்கு_படி` `பதினாறு_ஆக்கு` `பதினாறு_படி` — **written in eTamil** |
+| Signing (HMAC-SHA256) | <span class="pill pill-ok">Working</span> | `கையொப்பம்` / `கையொப்பம்_சரியா` — verify a signed webhook; the comparison is constant-time |
+| Outbound HTTP | <span class="pill pill-ok">Working</span> | `--features http-client` (on by default); `வலை_பெறு` `வலை_பதி` `வலை_அனுப்பு`. A non-2xx is a result, not a failure |
+| Authentication | <span class="pill pill-ok">Working</span> | bcrypt and JWT in the host; `கடவுச்சொல்_மறை` `கடவுச்சொல்_சரியா` `சீட்டு_ஆக்கு` `சீட்டு_சரிபார்`. Set `ETAMIL_JWT_SECRET` |
 | String escapes | <span class="pill pill-ok">Working</span> | `\n` `\t` `\r` `\"` `\\`; an unknown escape keeps both characters |
-| Parse error positions | <span class="pill pill-ok">Working</span> | Every error carries a line and column, bilingually |
-| Type checking | <span class="pill pill-ok">Working</span> | A declared type is enforced, with a position; deliberately narrow |
+| Async HTTP server (`--async`) | <span class="pill pill-ok">Working</span> | tokio accept loop, handlers on the blocking pool; the VM stays synchronous |
+| Parse error positions | <span class="pill pill-ok">Working</span> | every error carries a line and column, bilingually |
+| Type checking | <span class="pill pill-ok">Working</span> | a declared type is enforced, with a position; deliberately narrow — no rule the rest of the language does not follow |
+| VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 201 keywords in every spelling, completions for 23 builtins and 122 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
 
 </div>
 
@@ -60,12 +68,9 @@ This table is the honest state of the code, not a wish list.
 
 | Area | Status | Notes |
 |---|---|---|
-| MySQL / MariaDB | <span class="pill pill-part">Untested</span> | `--features mysql`; compiles and is complete, but never run against a live server |
-| LLVM backend (`--llvm`) | <span class="pill pill-part">Subset</span> | Linux/macOS, `--features llvm`. No functions, iteration, collections or modules — it refuses what it cannot build rather than emitting IR that computes something else |
-| `ஜேசான்_உரை` statement | <span class="pill pill-no">Not implemented</span> | Parses, but the VM refuses it — build the body with `ஜேசான்_ஆக்கு` and send it with `பதில்` |
-| MongoDB, Redis | <span class="pill pill-no">Not implemented</span> | Neither fits the SQL-shaped `Database` trait; both need a design first |
-| Transactions, multiple connections | <span class="pill pill-no">Not implemented</span> | The VM refuses a second connection rather than guessing |
-| A money type with a currency | <span class="pill pill-no">Not implemented</span> | `எண்` is the only numeric type, so the checker cannot reject rupees plus a count |
+| LLVM backend (`--llvm`) | <span class="pill pill-part">Subset; build and smoke verified</span> | Linux/macOS, `--features llvm`. Supports numeric functions, arrays, records, array iteration, and imports resolved before codegen; heterogeneous values and other unsupported constructs are rejected rather than emitted as incorrect IR |
+| `ஜேசான்_உரை` statement | <span class="pill pill-no">Not implemented</span> | parses but the VM refuses it — build the body with `ஜேசான்_ஆக்கு` and send it with `பதில்` |
+| MongoDB, Redis | <span class="pill pill-no">Not implemented</span> | they say so explicitly; neither fits the SQL-shaped `Database` trait, so both need a design first |
 
 </div>
 

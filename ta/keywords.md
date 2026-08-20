@@ -49,11 +49,11 @@ description: >-
 <a href="{{ site.brand.compiler_repo }}/blob/main/etamil_compiler/src/lexer.rs">
 <code>etamil_compiler/src/lexer.rs</code></a> இல் உள்ள லெக்சரிலிருந்து உருவாக்கப்பட்டது.</p>
 
-## மைய நிதி மற்றும் கணக்கியல்
+## Core Financial & Accounting
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | வரவு | `varavu` | — | `Credit` |
 | பற்று | `paRRu` | — | `Debit` |
@@ -105,11 +105,11 @@ description: >-
 
 </div>
 
-## பரிவர்த்தனைகளும் ஆவணங்களும்
+## Transactions & Documents
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | விற்பனை | `viRpaZY` | — | `Sales` |
 | கொள்முதல் | `koLmuqal` | — | `Purchase` |
@@ -122,11 +122,11 @@ description: >-
 
 </div>
 
-## பணப் பரிமாற்றம்
+## Money Movement
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | வைப்பு | `vYppu` | — | `Deposit` |
 | எடுப்பு | `etuppu` | — | `Withdrawal` |
@@ -138,11 +138,11 @@ description: >-
 
 </div>
 
-## வருமானமும் செலவுகளும்
+## Income & Costs
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | ஊதியம் | `Uqiyam` | — | `Salary` |
 | வாடகை | `vAtakY` | — | `Rent` |
@@ -156,11 +156,11 @@ description: >-
 
 </div>
 
-## கணக்குகள், அறிக்கை மற்றும் தணிக்கை
+## Accounts, Reporting & Audit
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | கணக்கு | `kaNakku` | — | `Account` |
 | தணிக்கை | `qaNikkY` | — | `Audit` |
@@ -171,11 +171,11 @@ description: >-
 
 </div>
 
-## இந்திய வரிவிதிப்பு
+## Indian Taxation
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | வரிப்பிடித்தம் | `varippitiqqam` | `_TDS` | `TDS` |
 | உள்ளீட்டுவரி | `uLLIttuvari` | `_ITC` | `InputTaxCredit` |
@@ -189,11 +189,11 @@ description: >-
 
 </div>
 
-## மாறிகளும் தரவு வகைகளும்
+## Variables & Data Types
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | எண் | `eN` | — | `IntegerType` |
 | பின்னம் | `piZZam` | — | `FloatType` |
@@ -212,11 +212,11 @@ description: >-
 
 </div>
 
-## கட்டுப்பாட்டு ஓட்டம்
+## Control Flow
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | எனில் | `eZil` | — | `If` |
 | இன்றேல் | `iZREl` | — | `Else` |
@@ -226,43 +226,43 @@ description: >-
 
 </div>
 
-## செயல்கள்
+## Functions
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | செயல் | `ceyal` | `_fn` | `Function` |
 | திரும்பு | `qirumpu` | `_return` | `Return` |
 
 </div>
 
-## சுழற்சி
+## Iteration
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | ஒவ்வொரு | `ovvoru` | `_each` | `ForEach` |
 | இல் | `il` | `_in` | `In` |
 
 </div>
 
-## தொகுதிகள்
+## Modules
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | இறக்கு | `iRakku` | `_import` | `Import` |
 
 </div>
 
-## கோப்பு உள்ளீடு/வெளியீடு
+## File I/O Operations
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | கோப்பு | `kOppu` | `_file` | `File` |
 | தரவுரை | `qaravurY` | `_CSV` | `CSV` |
@@ -280,11 +280,11 @@ description: >-
 
 </div>
 
-## தரவுத்தள இணைப்புச் செயல்பாடுகள்
+## Database Connectivity Operations
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | தரவுதளம் | `qaravuqaLam` | `_database` | `Database` |
 | தளம்_இணை | `qaLam_iNY` | `_dbConnect` | `DBConnect` |
@@ -298,11 +298,11 @@ description: >-
 
 </div>
 
-## தரவுத்தள வகைகள்
+## Database Types
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | கவி_மொழி | `kavi_mozi` | `_SQL` | `SQL` |
 | தேடு_மொழி | `qEtu_mozi` | `_NoSQL` | `NoSQL` |
@@ -315,11 +315,11 @@ description: >-
 
 </div>
 
-## தரவுத்தளச் செயல்பாடுகள்
+## Database Operations
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | அட்டை | `attY` | `_table` | `Table` |
 | தொகுப்பு | `toguippu` | `_collection` | `Collection` |
@@ -335,11 +335,11 @@ description: >-
 
 </div>
 
-## தரவுத்தள உட்பிரிவுகளும் திறவுச்சொற்களும்
+## Database Clauses & Keywords
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | தேர்வெடு | `qErvetu` | `_select` | `Select` |
 | இதனில் | `iqaZil` | `_from` | `From` |
@@ -357,15 +357,16 @@ description: >-
 
 </div>
 
-## REST API மற்றும் HTTP
+## REST API & HTTP
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | தள_இடை | `qaLa_itY` | `_api` | `API` |
 | இறுதி_புள்ளி | `iraqi_pulli` | `_endpoint` | `Endpoint` |
 | வழி | `vazhi` | `_route` | `Route` |
+| இடைவெளி | `itYveLi` | `_every` | `Every` |
 | கோரிக்கை | `kOrikkY` | `_request` | `Request` |
 | பதில் | `paDil` | `_response` | `Response` |
 | தலைப்பு | `talYppu` | `_header` | `Header` |
@@ -396,11 +397,11 @@ description: >-
 
 </div>
 
-## மறையாக்கமும் பாதுகாப்பும்
+## Encryption & Security
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | மறை | `maRY` | `_encrypt` | `Encrypt` |
 | வெளிப்படு | `veLippatu` | `_decrypt` | `Decrypt` |
@@ -409,11 +410,11 @@ description: >-
 
 </div>
 
-## தருக்கச் செயற்குறிகள்
+## Logical Operators
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 | மற்றும் | `maRRum` | `_and` | `And` |
 | அல்லது | `allaqu` | `_or` | `Or` |
@@ -421,34 +422,34 @@ description: >-
 
 </div>
 
-## மாறிலிகளும் அடையாளங்காட்டிகளும்
+## Literals & Identifiers
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 
 </div>
 
-## ஒப்பீட்டுச் செயற்குறிகள்
+## Comparison Operators
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 
 </div>
 
-## செயற்குறிகளும் குறியீடுகளும்
+## Operators & Symbols
 
 <div class="table-scroll" markdown="1">
 
-| தமிழ் | எழுத்துப்பெயர்ப்பு | ஆங்கிலப் பெயர் | டோக்கன் |
+| Tamil | Romanized | English alias | Token |
 |---|---|---|---|
 
 </div>
 
-## செயற்குறிகள்
+## Operators
 
 <div class="table-scroll" markdown="1">
 
@@ -480,7 +481,7 @@ description: >-
 
 </div>
 
-## மாறிலிகள்
+## Literals
 
 <div class="table-scroll" markdown="1">
 
