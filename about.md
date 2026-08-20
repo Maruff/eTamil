@@ -4,14 +4,15 @@ title: About eTamil and its author
 section: Project
 permalink: /about/
 summary: >-
-  eTamil is designed and built by Esan Maruff — twenty-five years in financial
-  software, doctoral scholar at Crescent Institute, and the engineer behind the
-  world's first robot camel jockey.
+  eTamil is designed and built by Esan Maruff — decades of industrial experience
+  in Finance, Banking and Audit, and the research that abolished child labour for
+  camel jockeys in the Middle East.
 description: >-
-  Esan Maruff has built financial software for twenty-five years across India,
-  Qatar and the UAE, and led the team that built the world's first robot camel
-  jockey. He is a doctoral scholar at B.S. Abdur Rahman Crescent Institute of
-  Science and Technology, Chennai, where eTamil is his research.
+  Esan Maruff holds a Master's degree in Computer Science, is UGC NET qualified
+  with 97 percentile, and has decades of industrial experience in Finance,
+  Banking, Audit, IT and Project Management. PhD Scholar and CTO of iGen Services
+  & Solutions, whose robot-jockey technology abolished child labour for camel
+  jockeys in the Middle East.
 lang: en
 key: about
 alt_url: /ta/about/
@@ -40,18 +41,26 @@ alt_url: /ta/about/
   </div>
 </div>
 
-Esan Maruff has spent twenty-five years building financial software across
-India, Qatar and the UAE. He has led the rollout of remittance and compliance
-platforms for regional exchange houses, integrated ERP and banking systems,
-migrated production databases without losing a record, and delivered custom
-software for clients on three continents. He is CTO and technology consultant
-at iGen Services & Solutions in Sharjah.
+Esan Maruff holds a Master's degree in Computer Science, is UGC NET qualified
+with 97 percentile, and boasts decades of industrial experience, coupled with 8
+years of dedicated research. Currently a PhD Scholar researching eTamil at
+B.S. Abdur Rahman Crescent Institute of Science and Technology, Chennai, he also
+serves as the Chief Technology Officer for iGen Services & Solutions. Maruff
+brings a wealth of expertise to the table, particularly in Finance, Banking, and
+Audit, in addition to Information Technology and Project Management.
 
-He holds an M.Sc. in Computer Science and qualified UGC NET in the 97th
-percentile. Since 2024 he has been a doctoral scholar at B.S. Abdur Rahman
-Crescent Institute of Science and Technology in Chennai, where eTamil is the
-subject of his research. He is a member of (ISC)² and of the Institute of
-Management Accountants, whose Qatar chapter board he served on.
+Maruff's contributions extend beyond the realm of corporate endeavors. Notably,
+his research efforts led to the abolition of child labor for camel jockeys in the
+Middle East through the introduction of 'robot-jockey' technology. This
+groundbreaking achievement has garnered international recognition, with features
+on platforms such as BBC,
+[RestOfWorld](https://restofworld.org/2020/qatar-camel-racing-robots/),
+The History Hour, etc.
+
+Beyond his professional pursuits, Maruff harbors a profound passion for language
+and engages in social and political platforms. His multifaceted background and
+commitment to leveraging technology for social good make him a notable figure in
+both academic and industry circles.
 
 ## Why eTamil exists
 
@@ -80,28 +89,6 @@ language, the DSL would not be sufficient for the thing it exists to do. The hos
 provides only what a language cannot express — decimal arithmetic, text
 measurement, file and socket access — and everything above that is readable and
 editable by the people who use it.
-
-## The world's first robot camel jockey
-
-From 2005 to 2009, Maruff led the robotics team at RAQBI in Doha, funded by the
-Qatar Development Bank. The team built the world's first robot camel jockey and
-ran the first camel race in history ridden by robots.
-
-Camel racing had depended on child jockeys for decades. Qatar and the UAE had
-outlawed the practice, but the bans could only hold once owners had something to
-put on the camel instead. Maruff's team gave them one. Working with the Swiss
-robotics firm K-Team, he cut an expensive prototype down to a light, rugged
-machine that any electronics workshop could build, and engineered its controls
-over GSM, WiFi, two-way radio and remote key fobs.
-
-Owners across the Gulf adopted the design within months of seeing it. Robot
-jockeys are now standard throughout the region's professional circuit, and the
-children who once rode those races are gone from it.
-
-The work has been covered by the BBC, *Rest of World*, Khalifa University and
-Wikipedia. Maruff calls it a lifetime achievement, and
-[Rest of World](https://restofworld.org/2020/qatar-camel-racing-robots/) tells
-the full story.
 
 ## Also published
 
