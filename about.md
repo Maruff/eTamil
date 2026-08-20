@@ -4,12 +4,14 @@ title: About eTamil and its author
 section: Project
 permalink: /about/
 summary: >-
-  eTamil is designed and built by Esan Maruff, PhD scholar at B.S. Abdur Rahman
-  Crescent Institute of Science and Technology, Chennai.
+  eTamil is designed and built by Esan Maruff — twenty-five years in financial
+  software, doctoral scholar at Crescent Institute, and the engineer behind the
+  world's first robot camel jockey.
 description: >-
-  About eTamil and its author Esan Maruff (Mohammed Maruff), PhD scholar at
-  B.S. Abdur Rahman Crescent Institute of Science and Technology, Chennai —
-  why the language exists, its licence, and how to get in touch.
+  Esan Maruff has built financial software for twenty-five years across India,
+  Qatar and the UAE, and led the team that built the world's first robot camel
+  jockey. He is a doctoral scholar at B.S. Abdur Rahman Crescent Institute of
+  Science and Technology, Chennai, where eTamil is his research.
 lang: en
 key: about
 alt_url: /ta/about/
@@ -38,9 +40,18 @@ alt_url: /ta/about/
   </div>
 </div>
 
-Twenty-five years building software in India, Qatar and the UAE — FinTech, ERP
-and banking systems, databases and consulting. Now a PhD scholar working on
-eTamil, and CTO at iGen Services & Solutions, Sharjah.
+Esan Maruff has spent twenty-five years building financial software across
+India, Qatar and the UAE. He has led the rollout of remittance and compliance
+platforms for regional exchange houses, integrated ERP and banking systems,
+migrated production databases without losing a record, and delivered custom
+software for clients on three continents. He is CTO and technology consultant
+at iGen Services & Solutions in Sharjah.
+
+He holds an M.Sc. in Computer Science and qualified UGC NET in the 97th
+percentile. Since 2024 he has been a doctoral scholar at B.S. Abdur Rahman
+Crescent Institute of Science and Technology in Chennai, where eTamil is the
+subject of his research. He is a member of (ISC)² and of the Institute of
+Management Accountants, whose Qatar chapter board he served on.
 
 ## Why eTamil exists
 
@@ -70,16 +81,27 @@ provides only what a language cannot express — decimal arithmetic, text
 measurement, file and socket access — and everything above that is readable and
 editable by the people who use it.
 
-## Earlier work
+## The world's first robot camel jockey
 
-From 2005 to 2009 Maruff led the robotics team at RAQBI in Doha, funded by the
-Qatar Development Bank, which built the world's first camel-racing robot jockey.
-The design was deliberately simple and cheap to copy, and versions of it spread
-across the Gulf within months. Robot jockeys replaced the child jockeys the sport
-had relied on until then, and are now standard across the region.
+From 2005 to 2009, Maruff led the robotics team at RAQBI in Doha, funded by the
+Qatar Development Bank. The team built the world's first robot camel jockey and
+ran the first camel race in history ridden by robots.
 
-*Rest of World* covered the project in
-[March 2020](https://restofworld.org/2020/qatar-camel-racing-robots/).
+Camel racing had depended on child jockeys for decades. Qatar and the UAE had
+outlawed the practice, but the bans could only hold once owners had something to
+put on the camel instead. Maruff's team gave them one. Working with the Swiss
+robotics firm K-Team, he cut an expensive prototype down to a light, rugged
+machine that any electronics workshop could build, and engineered its controls
+over GSM, WiFi, two-way radio and remote key fobs.
+
+Owners across the Gulf adopted the design within months of seeing it. Robot
+jockeys are now standard throughout the region's professional circuit, and the
+children who once rode those races are gone from it.
+
+The work has been covered by the BBC, *Rest of World*, Khalifa University and
+Wikipedia. Maruff calls it a lifetime achievement, and
+[Rest of World](https://restofworld.org/2020/qatar-camel-racing-robots/) tells
+the full story.
 
 ## Also published
 
@@ -87,7 +109,7 @@ had relied on until then, and are now standard across the region.
 - *Theory of Computation and Compilers, Vol. 1: An Introduction to Theory of Computation* — 2024, 104 pages
 - "Developing an Indian DSL (Programming Language) for Accounts, Commerce, Finance, and Fintech Professionals" — ICTETL 2025, 16 pages. [See the research]({{ '/research/' | relative_url }})
 
-## Honesty about scope
+## Where the work stands
 
 The [research]({{ '/research/' | relative_url }}) describes eTamil through five
 phases, ending in policy engagement with the MCA, RBI and GSTN. The compiler is
