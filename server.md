@@ -99,7 +99,8 @@ Rows return as an array of records, so a result set iterates like any other tabl
 | SQLite | <span class="pill pill-ok">Working</span> | Built in, no feature flag. Decimals cross as text, so no precision is lost |
 | PostgreSQL | <span class="pill pill-ok">Working</span> | `--features postgres`; verified against a live server. Money uses native `NUMERIC` |
 | MySQL / MariaDB | <span class="pill pill-ok">Live verified</span> | `--features mysql`; the live sample passes with `ETAMIL_TEST_MYSQL=1 ./scripts/run_examples.sh`. Setup is in `TESTING.md` |
-| MongoDB, Redis | <span class="pill pill-no">Not implemented</span> | Neither has SQL, so neither fits an `execute(sql, params)` trait. Needs a design first |
+| MongoDB | <span class="pill pill-ok">Working</span> | `--features mongodb`. It never went through the `Database` trait, and should not have: a document *is* a `பொருள்`, so the mapping needed care about numbers (`Decimal128`, not doubles) rather than invention |
+| Redis | <span class="pill pill-ok">Working</span> | Also outside the trait, for the same reason: Redis is a command and a reply, so the host offers exactly one generic `ரெடிஸ்_கட்டளை` and every command works — including ones invented after it |
 
 </div>
 

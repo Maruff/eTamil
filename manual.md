@@ -243,8 +243,8 @@ Precedence, loosest first: `or` → `and` → `not` → comparison → `+ -` →
 }
 ```
 
-**Both sides of a logical operator are always evaluated.** There is no
-short-circuiting, so do not rely on the left side guarding the right.
+**`மற்றும்` and `அல்லது` short-circuit.** The right side is not evaluated once the
+answer is known, so the left side can guard the right.
 
 ## 8. Conditionals and loops {: #8-conditionals-and-loops}
 
@@ -507,7 +507,8 @@ Rows come back as an array of records, so a result set iterates like any table.
 | SQLite | <span class="pill pill-ok">Working</span> | Built in. Decimals stored as text, so no precision is lost |
 | PostgreSQL | <span class="pill pill-ok">Working</span> | `--features postgres`. Money in native `NUMERIC`; placeholders are `$1, $2` |
 | MySQL / MariaDB | <span class="pill pill-ok">Live verified</span> | `--features mysql`. Placeholders are `?` |
-| MongoDB, Redis | <span class="pill pill-no">Not implemented</span> | Neither fits a SQL-shaped trait; both need a design first |
+| MongoDB | <span class="pill pill-ok">Working</span> | `--features mongodb`; a document *is* a `பொருள்`, with numbers as `Decimal128` |
+| Redis | <span class="pill pill-ok">Working</span> | One generic `ரெடிஸ்_கட்டளை`, so every command works; `nUlakam/qaLam/retis.qmz` names the common ones |
 
 </div>
 

@@ -111,7 +111,7 @@ backend, or to work on the compiler itself.
 
 ### Prerequisites
 
-**Rust 1.85+** (edition 2024) and a C toolchain — the bundled SQLite and the crypto
+**Rust 1.88+** (edition 2024) and a C toolchain — the bundled SQLite and the crypto
 crates compile C.
 
 - **Windows** — Visual Studio Build Tools with the *Desktop development with C++*

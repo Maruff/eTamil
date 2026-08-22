@@ -99,8 +99,9 @@ editable by the people who use it.
 ## Where the work stands
 
 The [research]({{ '/research/' | relative_url }}) describes eTamil through five
-phases, ending in policy engagement with the MCA, RBI and GSTN. The compiler is
-mid-Phase 1.
+phases, ending in policy engagement with the MCA, RBI and GSTN. The project is
+mid-Phase 2 and mid-Phase 3 at once: the compiler core is close to done, most of
+the domain modules are written, and policy engagement has not begun.
 
 The [status page]({{ '/status/' | relative_url }}) is a feature-by-feature account
 of what runs, what is partial, and what is not built. Anything unimplemented fails

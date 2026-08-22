@@ -141,8 +141,8 @@ Precedence, loosest first: `or` → `and` → `not` → comparison → `+ -` →
 }
 ```
 
-Both sides of a logical operator are always evaluated — there is no
-short-circuiting.
+`மற்றும்` and `அல்லது` short-circuit: the right side is not evaluated once the
+answer is known, so `(நீளம்(அ) > 0 மற்றும் அ[0] == 1)` is safe on an empty array.
 
 ## Functions
 

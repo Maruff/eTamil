@@ -16,8 +16,10 @@ alt_url: /ta/status/
 ---
 
 eTamil runs backend programs today: functions, collections, error handling,
-modules, a SQLite database layer, a concurrent HTTP server with routing, and an
-accounting framework written in the language itself.
+modules, SQL and document databases, a concurrent HTTP server with routing, and
+accounting, taxation, banking, insurance and customs frameworks written in the
+language itself. Since {{ site.brand.version }} it also runs in a browser — the
+compiler is built to WebAssembly, so the editor on this site is the real thing.
 
 This table is the honest state of the code, not a wish list.
 
@@ -30,7 +32,7 @@ This table is the honest state of the code, not a wish list.
 | Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 202 tokens across 505 spellings; errors carry line and column |
 | Variables, arithmetic, percentages, strings | <span class="pill pill-ok">Working</span> |  |
 | Comparisons, `எனில்` / `இன்றேல்`, `சுற்று` loops | <span class="pill pill-ok">Working</span> |  |
-| Logical `மற்றும்` / `அல்லது` / `இல்லை` | <span class="pill pill-ok">Working</span> | both sides always evaluated — no short-circuiting |
+| Logical `மற்றும்` / `அல்லது` / `இல்லை` | <span class="pill pill-ok">Working</span> | `மற்றும்` and `அல்லது` now stop as soon as the answer is known, so `(நீளம்(அ) > 0 மற்றும் அ[0] == 1)` is safe on an empty array |
 | File I/O and CSV row counting | <span class="pill pill-ok">Working</span> | in the VM (`--vm`) |
 | VM bytecode executor | <span class="pill pill-ok">Working</span> |  |
 | Functions (`செயல்` / `திரும்பு`) | <span class="pill pill-ok">Working</span> | parameters, returns, local scope, recursion |
@@ -59,6 +61,15 @@ This table is the honest state of the code, not a wish list.
 | Parse error positions | <span class="pill pill-ok">Working</span> | every error carries a line and column, bilingually |
 | Type checking | <span class="pill pill-ok">Working</span> | a declared type is enforced, with a position; deliberately narrow — no rule the rest of the language does not follow |
 | VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 202 keywords in every spelling, completions for 23 builtins and 122 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
+| Interactive shell (`--repl`) | <span class="pill pill-ok">Working</span> | `etamil --repl` — type an expression, see what it comes to, without a file |
+| Redis | <span class="pill pill-ok">Working</span> | The host offers one generic `ரெடிஸ்_கட்டளை` (a command name and its arguments), so every Redis command works, including ones invented later; `nUlakam/qaLam/retis.qmz` wraps the common ones by name |
+| MongoDB | <span class="pill pill-ok">Working</span> | `--features mongodb`; a document *is* a `பொருள்`, so the mapping needed no invention — numbers are stored as `Decimal128` rather than doubles |
+| Array and record equality | <span class="pill pill-ok">Working</span> | An array compares by position, a record by field. Both previously fell to a catch-all and were never equal, silently |
+| Client certificates (mTLS) | <span class="pill pill-ok">Working</span> | `--features http-client`; proves who the client is to a bank that will not talk to an unidentified caller |
+| ECDSA signatures (P-256) | <span class="pill pill-ok">Working</span> | `கையொப்பம்` over P-256, alongside the HMAC-SHA256 path; works in the browser build too |
+| Tests written in eTamil | <span class="pill pill-ok">Working</span> | `nUlakam/cOqaZY.qmz` — a library written in this language no longer has to be tested from Rust |
+| Money as whole paise | <span class="pill pill-ok">Working</span> | `nUlakam/kAcu.qmz` — two decimal places without decimal arithmetic; `ரூபாயும்_பைசாவும்(2, 5)` is ₹2.05 |
+| Depreciation and payroll | <span class="pill pill-ok">Working</span> | `nUlakam/kaNakkiyal/qEymAZam.qmz` and `Uqiyam.qmz`, posting into the same ledger — **written in eTamil** |
 | WebAssembly target | <span class="pill pill-ok">Working</span> | `cargo build --target wasm32-unknown-unknown --no-default-features`; lexer, parser, checker and VM all build for the browser. Native builds are unchanged |
 | Browser editor ([/start/]({{ '/start/' | relative_url }})) | <span class="pill pill-ok">Working</span> | The real compiler as WebAssembly: diagnostics, scope-aware completion and execution with no server and no upload. Highlighting is generated from `lexer.rs`, so it cannot drift from the language |
 | In-browser VM | <span class="pill pill-ok">Working</span> | Programs run client-side, capped at ten million instructions so a runaway `சுற்று` reports an endless loop instead of hanging the tab. File statements work against an in-memory filesystem cleared before every run |
@@ -72,9 +83,13 @@ This table is the honest state of the code, not a wish list.
 
 | Area | Status | Notes |
 |---|---|---|
-| LLVM backend (`--llvm`) | <span class="pill pill-part">Subset; build and smoke verified</span> | Linux/macOS, `--features llvm`. Supports numeric functions, arrays, records, array iteration, and imports resolved before codegen; heterogeneous values and other unsupported constructs are rejected rather than emitted as incorrect IR |
-| `ஜேசான்_உரை` statement | <span class="pill pill-no">Not implemented</span> | parses but the VM refuses it — build the body with `ஜேசான்_ஆக்கு` and send it with `பதில்` |
-| MongoDB, Redis | <span class="pill pill-no">Not implemented</span> | they say so explicitly; neither fits the SQL-shaped `Database` trait, so both need a design first |
+| LLVM backend (`--llvm`) | <span class="pill pill-part">Subset; not built on Windows</span> | Linux/macOS, `--features llvm`. Whole numbers are now `i64` and division is exact — the `f64` arithmetic is gone (`LLVMDoubleType` occurrences: 0, was 23). Arithmetic it would get wrong is refused rather than emitted as incorrect IR. `llvm-sys 180` needs LLVM 18 installed, so this has not been built on the machine it was written on |
+| Named database handles | <span class="pill pill-part">One at a time</span> | `தளம்_வினா` names no handle, so only one database can be open. A second connection through the same driver is now **refused by name** rather than silently swapping the first. Genuinely concurrent connections need the language to name one |
+| Declared function signatures | <span class="pill pill-no">Not implemented</span> | `செயல்` cannot declare parameter or return types, so a call makes no claim the type checker can hold you to |
+| Chained comparisons | <span class="pill pill-part">Parses oddly</span> | `a > b > c` becomes `(a > b) > c`, so `3 > 2 > 1` is `false` |
+| `ஜேசான்_உரை` statement | <span class="pill pill-no">Not implemented</span> | Parses but the VM refuses it — build the body with `ஜேசான்_ஆக்கு` and send it with `பதில்` |
+| File "encryption" | <span class="pill pill-no">Not real encryption</span> | `மறை` is a repeating-key XOR cipher with a default key, not an AEAD. Do not use it for anything that matters until it is one |
+| Romanization coverage | <span class="pill pill-part">20 of 202 off-scheme</span> | The ந/ன distinction is resolved; twenty keywords remain off-scheme for other letters |
 
 </div>
 
@@ -92,14 +107,14 @@ framework on the ledger that already exists.
 
 | Domain | Status | Scope |
 |---|---|---|
-| Accounting | <span class="pill pill-ok">Working</span> | Chart of accounts, double-entry ledger, trial balance, the three statements, year-end close |
-| Taxation | <span class="pill pill-ok">Working</span> | GST with CGST/SGST/IGST splitting, transaction types, ageing |
-| Banking | <span class="pill pill-no">Planned</span> | NEFT and UPI abstractions, RBI compliance, transaction limits, KYC/AML checks |
-| Insurance | <span class="pill pill-no">Planned</span> | Policy, premium and claim structures on the same exact-decimal arithmetic |
-| Customs &amp; trade | <span class="pill pill-no">Planned</span> | E-way bills, Customs Act code validation, duty calculation, declarations |
-| Blockchain | <span class="pill pill-no">Planned</span> | Hyperledger-backed audit trails for tamper-evident postings |
-| ITR and TDS | <span class="pill pill-no">Planned</span> | Direct-tax templates, deductions and exemptions |
-| GSTN / NPCI bindings | <span class="pill pill-no">Planned</span> | REST bindings to the government and payment portals |
+| Accounting | <span class="pill pill-ok">Working</span> | Chart of accounts, double-entry ledger, trial balance, the three statements, reporting periods, year-end close, clearing, depreciation and payroll |
+| Taxation | <span class="pill pill-ok">Working</span> | GST with CGST/SGST/IGST splitting, transaction types, ageing, tax-rate tables |
+| Banking | <span class="pill pill-ok">Working</span> | `nUlakam/vawki/` — interest, loan instalments and schedules, accounts. `nUlakam/upi/` — virtual payment addresses, `upi://` pay links, and the rule that pending is not failure |
+| Insurance | <span class="pill pill-ok">Working</span> | `nUlakam/kAppIttu/` — policy, premium and claim, including the average clause: under-insure a property and the insurer pays only the insured proportion, even on a partial loss |
+| Customs &amp; trade | <span class="pill pill-ok">Working</span> | `nUlakam/cuwkam/` — the duty cascade in the order duties are actually applied, and trade documents |
+| Blockchain | <span class="pill pill-ok">Working</span> | `nUlakam/cawkili/` — Hyperledger Fabric through a REST gateway. Fabric's own Gateway speaks gRPC, which eTamil does not; fronting a network with REST is an ordinary deployment |
+| ITR and TDS | <span class="pill pill-part">Partly</span> | Depreciation and payroll post into the ledger; direct-tax return templates and TDS schedules are not written |
+| GSTN / NPCI bindings | <span class="pill pill-part">Partly</span> | The UPI side is done as far as it can be without credentials — addresses and pay links are public and checkable. REST bindings to the GSTN portal are not written |
 
 </div>
 
@@ -113,19 +128,29 @@ entirely different things:
 | **Paper Phase 1–5** | The research roadmap: compiler core → domain modules → tooling/REPL → pilot projects → policy engagement |
 | **Backend milestone 1–4** | The repository's HTTP work: sync server → async → logging → auth |
 
-Backend milestones 1–4 being complete says nothing about paper Phase 2, which has
-not started. **Against the paper's scheme, the project is mid-Phase 1**: the
-compiler core exists, the domain modules do not.
+Backend milestones 1–4 being complete says nothing about the paper's phases.
+**Against the paper's scheme the project is mid-Phase 2 and mid-Phase 3, working
+on both at once**, with Phase 1 close enough to done that what remains in it are
+known defects rather than missing pieces.
 
-Concretely, that means the GSTN and NPCI API bindings, ITR and TDS templates,
-RBI/KYC syntax and the Hyperledger audit trail described in the
-[research]({{ '/research/' | relative_url }}) are design, not code.
+Phase 2's domain modules are largely written: accounting, taxation, banking,
+insurance, customs and a Fabric audit trail all exist as eTamil libraries on the
+ledger. Phase 3 has databases, the tooling, and now an interactive shell.
+Phase 4 is released but no pilot is deployed against a real product. Phase 5,
+policy engagement, has not started and depends on Phase 2 being recognisable to
+a regulator — a GST module that handles transactions is not that yet.
+
+What remains design rather than code from the
+[research]({{ '/research/' | relative_url }}): the GSTN portal bindings, ITR and
+TDS templates, and RBI/KYC syntax.
 
 ## Contributing
 
 The most useful contributions right now are the remaining roadmap items:
-transactions and multi-connection support, a money type carrying a currency, and
-the `ஜேசான்_உரை` statement the VM still refuses.
+a database handle `தளம்_இணை` can return and `தளம்_வினா` can take, so more than one
+database can be open at once; declared parameter and return types for `செயல்`; a
+real AEAD behind `மறை`, which is a repeating-key XOR today; and the twenty
+keywords still romanized off-scheme.
 
 Please add a test to `etamil_compiler/tests/language_tests.rs` for any language
 behaviour you change, and make sure `cargo test` passes on both Linux and Windows.

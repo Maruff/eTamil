@@ -107,7 +107,7 @@ Linux இருமம் musl-உடன் உருவாக்கப்பட�
 
 ### முன்நிபந்தனைகள்
 
-**Rust 1.85+** (edition 2024) மற்றும் ஒரு C கருவித்தொகுப்பு — உள்ளடங்கிய SQLite மற்றும்
+**Rust 1.88+** (edition 2024) மற்றும் ஒரு C கருவித்தொகுப்பு — உள்ளடங்கிய SQLite மற்றும்
 கிரிப்டோ crate-கள் C-ஐத் தொகுக்கின்றன.
 
 - **Windows** — Visual Studio Build Tools, *Desktop development with C++* பணிச்சுமையுடன்.

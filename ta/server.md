@@ -102,7 +102,8 @@ etamil --async  --port 8080 examples/backend/hello_server.qmz
 | SQLite | <span class="pill pill-ok">இயங்குகிறது</span> | உள்ளமைக்கப்பட்டது, வசதிக் கொடி தேவையில்லை. தசமங்கள் உரையாகக் கடக்கின்றன; எனவே துல்லியம் இழக்கப்படுவதில்லை |
 | PostgreSQL | <span class="pill pill-ok">இயங்குகிறது</span> | `--features postgres`; நேரடி சேவையகத்தில் சரிபார்க்கப்பட்டது. பணம் சொந்த `NUMERIC` வகையைப் பயன்படுத்துகிறது |
 | MySQL / MariaDB | <span class="pill pill-ok">நேரடியாகச் சரிபார்க்கப்பட்டது</span> | `--features mysql`; `ETAMIL_TEST_MYSQL=1 ./scripts/run_examples.sh` மூலம் நேரடி மாதிரி தேர்ச்சி பெறுகிறது. அமைவு விவரங்கள் `TESTING.md`-இல் |
-| MongoDB, Redis | <span class="pill pill-no">செயல்படுத்தப்படவில்லை</span> | இரண்டுக்கும் SQL இல்லை; எனவே `execute(sql, params)` வடிவ trait-க்கு எதுவும் பொருந்தாது. முதலில் வடிவமைப்பு தேவை |
+| MongoDB | <span class="pill pill-ok">இயங்குகிறது</span> | `--features mongodb`. இது `Database` trait வழியே செல்லவில்லை, செல்லவும் கூடாது: ஒரு ஆவணம் ஒரு `பொருள்`ஏ — எனவே எண்களில் கவனம் (`Decimal128`, double அல்ல) மட்டுமே தேவைப்பட்டது |
+| Redis | <span class="pill pill-ok">இயங்குகிறது</span> | இதுவும் trait-க்கு வெளியே, அதே காரணத்தால்: Redis ஒரு கட்டளையும் பதிலும் — எனவே ஹோஸ்ட் ஒரே பொதுவான `ரெடிஸ்_கட்டளை` தருகிறது, எல்லாக் கட்டளைகளும் இயங்குகின்றன |
 
 </div>
 
