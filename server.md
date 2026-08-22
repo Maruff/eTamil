@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Backend — HTTP server, databases and auth
+title: Server — HTTP, databases and auth
 section: Domain
-permalink: /backend/
+permalink: /server/
 summary: >-
   eTamil runs backend services: an HTTP server with routing, SQLite and PostgreSQL
   drivers with parameterised queries only, JSON, bcrypt and JWT.
@@ -11,8 +11,8 @@ description: >-
   a worker pool and an async accept loop, SQLite, PostgreSQL and MySQL drivers with
   parameterised queries, JSON encoding, bcrypt password hashing and JWT tokens.
 lang: en
-key: backend
-alt_url: /ta/backend/
+key: server
+alt_url: /ta/server/
 ---
 
 eTamil is a backend language. A program can serve HTTP, talk to a SQL database,

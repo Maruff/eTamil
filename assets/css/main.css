@@ -452,3 +452,21 @@ img { max-width: 100%; height: auto; }
 .ide-try { margin: 2rem 0 2.6rem; }
 .ide-try > h2 { margin-top: 0; padding-top: 0; border-top: 0; }
 .ide-try-foot { font-size: .9rem; color: var(--muted); margin: -1.6rem 0 0; }
+
+/* -------------------------------------------------------- section nav */
+/* One menu item covers the whole Language section, so its three pages need a
+   way to reach each other. Sits under the page heading, above the prose. */
+.section-nav {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: .4rem 1rem;
+  margin: 0 0 2.2rem; padding: .7rem 0 .9rem;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.section-nav-label {
+  font-size: .72rem; font-weight: 800; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--muted);
+}
+.section-nav ul { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; margin: 0; padding: 0; list-style: none; }
+.section-nav a { font-weight: 600; text-decoration: none; }
+.section-nav a:hover { text-decoration: underline; }
+.section-nav a[aria-current="page"] { color: var(--text); text-decoration: none; cursor: default; }
+@media (prefers-color-scheme: dark) { .section-nav-label { color: var(--muted); } }

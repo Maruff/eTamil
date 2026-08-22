@@ -1,0 +1,19 @@
+{%- comment -%}
+Sub-navigation for the Language section.
+
+The main menu carries one item for the whole section; this is how a reader moves
+between its three pages. Rendered on the tour, the manual and the keyword list,
+each of which sets `key` to language / manual / keywords.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.ui[lang] -%}
+{%- if lang == 'ta' -%}{%- assign p = '/ta' -%}{%- else -%}{%- assign p = '' -%}{%- endif -%}
+
+<nav class="section-nav full" aria-label="{{ t.langnav.heading }}">
+  <span class="section-nav-label">{{ t.langnav.heading }}</span>
+  <ul>
+    <li><a href="{{ p | append: '/language/'          | relative_url }}"{% if page.key == 'language' %} aria-current="page"{% endif %}>{{ t.langnav.tour }}</a></li>
+    <li><a href="{{ p | append: '/language/manual/'   | relative_url }}"{% if page.key == 'manual'   %} aria-current="page"{% endif %}>{{ t.langnav.manual }}</a></li>
+    <li><a href="{{ p | append: '/language/keywords/' | relative_url }}"{% if page.key == 'keywords' %} aria-current="page"{% endif %}>{{ t.langnav.keywords }}</a></li>
+  </ul>
+</nav>

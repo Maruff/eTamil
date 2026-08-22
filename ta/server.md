@@ -1,11 +1,11 @@
 ---
 layout: page
-title: பின்தளம் — HTTP சேவையகம், தரவுத்தளங்கள், அங்கீகாரம்
+title: சேவையகம் — HTTP, தரவுத்தளங்கள், அங்கீகாரம்
 section: துறை
-permalink: /ta/backend/
+permalink: /ta/server/
 lang: ta
-key: backend
-alt_url: /backend/
+key: server
+alt_url: /server/
 summary: >-
   இ-தமிழ் பின்தளச் சேவைகளை இயக்குகிறது: வழிச்செலுத்தலுடன் கூடிய HTTP சேவையகம்,
   அளபுரு வினாக்கள் மட்டுமே அனுமதிக்கும் SQLite மற்றும் PostgreSQL இயக்கிகள்,

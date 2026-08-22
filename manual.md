@@ -1,11 +1,11 @@
 ---
 layout: page
 title: eTamil user manual
-section: Documentation
-permalink: /manual/
+section: Language
+permalink: /language/manual/
 lang: en
 key: manual
-alt_url: /ta/manual/
+alt_url: /ta/language/manual/
 summary: >-
   The complete guide to writing, running and deploying eTamil programs — from your
   first line to a database-backed HTTP service.
@@ -16,12 +16,13 @@ description: >-
   server, authentication, signing and scheduled work.
 ---
 
+{% include language-nav.html %}
 This manual covers everything needed to write and run eTamil programs. It assumes
 you can use a terminal, and nothing else.
 
 If you only want a taste, the [language tour]({{ '/language/' | relative_url }})
 is shorter. If you want the full keyword list, that is the
-[keyword reference]({{ '/keywords/' | relative_url }}).
+[keyword reference]({{ '/language/keywords/' | relative_url }}).
 
 <div class="note" markdown="1">
 **Conventions.** Code is shown in Tamil script. Every keyword also has a
@@ -94,7 +95,7 @@ administrator rights.
 
 To build from source instead — needed for the PostgreSQL and MySQL drivers, the
 LLVM backend, or work on the compiler itself — see
-[the install page]({{ '/install/' | relative_url }}).
+[the install page]({{ '/start/' | relative_url }}).
 
 ## 2. Run a program {: #2-run-a-program}
 
@@ -652,7 +653,7 @@ wrong.
 ## 28. Editor support {: #28-editor-support}
 
 The VS Code extension is in `eTamil_Code/` in the compiler repository:
-highlighting for all 201 keywords in every spelling, completions for the 23
+highlighting for all 202 keywords in every spelling, completions for the 23
 builtins and 122 `nUlakam` functions, and `--check` errors shown as you type.
 
 Its grammar and completion data are generated from `lexer.rs`, and CI fails if
@@ -691,7 +692,7 @@ cover exited 0 while producing the wrong answer.
 
 <ul class="cards" markdown="0">
   <li class="card">
-    <h3><a href="{{ '/keywords/' | relative_url }}">Keyword reference</a></h3>
+    <h3><a href="{{ '/language/keywords/' | relative_url }}">Keyword reference</a></h3>
     <p>Every token in all three spellings, generated from the lexer.</p>
   </li>
   <li class="card">

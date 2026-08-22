@@ -30,13 +30,12 @@ alt_url: /
         மொழிகள் எதுவும் வழங்காத கணக்கியல், வரிக் கட்டமைப்புடன்.
       </p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ '/ta/install/' | relative_url }}">தொடங்குங்கள்</a>
-        <a class="btn btn-ghost" href="{{ '/ta/ide/' | relative_url }}">உலாவியில் முயற்சி</a>
+        <a class="btn btn-primary" href="{{ '/ta/start/' | relative_url }}">உலாவியில் முயற்சி</a>
         <a class="btn btn-ghost" href="{{ '/ta/language/' | relative_url }}">மொழியை அறிக</a>
         <a class="btn btn-ghost" href="{{ site.brand.compiler_repo }}" rel="noopener">GitHub-இல் மூலக்குறியீடு</a>
       </div>
       <p class="hero-note">
-        புதிதா? <a href="{{ '/ta/ide/' | relative_url }}">உலாவியிலேயே இ-தமிழ் இயக்குங்கள்</a> —
+        புதிதா? <a href="{{ '/ta/start/' | relative_url }}">உலாவியிலேயே இ-தமிழ் இயக்குங்கள்</a> —
         அது தொகுப்பியே, WebAssembly-ஆகத் தொகுக்கப்பட்டது. நிறுவ ஒன்றுமில்லை,
         பதிவேற்ற ஒன்றுமில்லை. <a href="{{ '/ta/language/' | relative_url }}">மொழிச்
         சுற்றுப்பயணத்தில்</a> உள்ள எடுத்துக்காட்டுகளை அங்கேயே மாற்றி இயக்கலாம்.
@@ -67,11 +66,12 @@ alt_url: /
     </div>
 
     <ul class="stat-row full" style="grid-column: 1 / -1;">
-      <li class="stat"><b>201</b><span>திறவுச்சொல் டோக்கன்கள்</span></li>
+      <li class="stat"><b>202</b><span>திறவுச்சொல் டோக்கன்கள்</span></li>
       <li class="stat"><b>3</b><span>ஒரு சொல்லுக்கு எழுத்து வடிவங்கள்</span></li>
-      <li class="stat"><b>263</b><span>சோதனைகள், Linux + Windows</span></li>
+      <li class="stat"><b>268</b><span>சோதனைகள் நிறைவு</span></li>
       <li class="stat"><b>0.1+0.2</b><span>சரியாக 0.3</span></li>
       <li class="stat"><b>Rust</b><span>விருப்ப LLVM பின்தளத்துடன்</span></li>
+      <li class="stat"><b>wasm</b><span>உலாவியில் இயங்கும்</span></li>
     </ul>
   </div>
 </section>
@@ -207,14 +207,14 @@ alt_url: /
       </li>
       <li class="card">
         <span class="glyph" aria-hidden="true">⇄</span>
-        <h3><a href="{{ '/ta/backend/' | relative_url }}">சேவையகமும் தரவுத்தளங்களும்</a></h3>
+        <h3><a href="{{ '/ta/server/' | relative_url }}">சேவையகமும் தரவுத்தளங்களும்</a></h3>
         <p>பாதை அளபுருக்களுடன் கூடிய HTTP வழிச்செலுத்தல், அளபுரு வினாக்கள் மட்டுமே
            அனுமதிக்கும் SQLite மற்றும் PostgreSQL இயக்கிகள், bcrypt, JWT.</p>
       </li>
       <li class="card">
         <span class="glyph" aria-hidden="true">◆</span>
-        <h3><a href="{{ '/ta/keywords/' | relative_url }}">திறவுச்சொல் பட்டியல்</a></h3>
-        <p>சுமார் 500 எழுத்து வடிவங்களில் 201 டோக்கன்கள் — நிதிச் சொல்லகராதி, கட்டுப்பாட்டு
+        <h3><a href="{{ '/ta/language/keywords/' | relative_url }}">திறவுச்சொல் பட்டியல்</a></h3>
+        <p>505 எழுத்து வடிவங்களில் 202 டோக்கன்கள் — நிதிச் சொல்லகராதி, கட்டுப்பாட்டு
            ஓட்டம், SQL உட்பிரிவுகள், நிலையான நூலகம்; மூன்று வடிவங்களும்.</p>
       </li>
       <li class="card">

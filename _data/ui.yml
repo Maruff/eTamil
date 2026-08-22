@@ -34,16 +34,20 @@ en:
     open_full: Open the full editor
 
   nav:
-    ide: Try it
-    manual: Manual
+    start: Get started
     language: Language
     finance: Finance
-    backend: Backend
-    keywords: Keywords
-    install: Install
+    server: Server
     research: Research
     about: About
     github: GitHub
+
+  # Sub-navigation inside the Language section.
+  langnav:
+    heading: In this section
+    tour: Tour
+    manual: Manual
+    keywords: Keywords
 
   footer:
     language_heading: Language
@@ -52,8 +56,8 @@ en:
     tour: Language tour
     keywords: Keyword reference
     finance: Finance &amp; accounting
-    backend: Backend &amp; databases
-    install: Install
+    server: Server &amp; databases
+    start: Get started
     status: Status &amp; roadmap
     research: Research
     about: About the author
@@ -100,16 +104,19 @@ ta:
     open_full: முழு எழுதுகளத்தைத் திற
 
   nav:
-    ide: முயற்சி
-    manual: கையேடு
+    start: தொடங்குதல்
     language: மொழி
     finance: நிதி
-    backend: பின்தளம்
-    keywords: திறவுச்சொற்கள்
-    install: நிறுவல்
+    server: சேவையகம்
     research: ஆய்வு
     about: பற்றி
     github: GitHub
+
+  langnav:
+    heading: இப்பகுதியில்
+    tour: சுற்றுப்பயணம்
+    manual: கையேடு
+    keywords: திறவுச்சொற்கள்
 
   footer:
     language_heading: மொழி
@@ -118,8 +125,8 @@ ta:
     tour: மொழி அறிமுகம்
     keywords: திறவுச்சொல் பட்டியல்
     finance: நிதியும் கணக்கியலும்
-    backend: பின்தளமும் தரவுத்தளங்களும்
-    install: நிறுவல்
+    server: சேவையகமும் தரவுத்தளங்களும்
+    start: தொடங்குதல்
     status: நிலையும் திட்டவரைபடமும்
     research: ஆய்வு
     about: ஆசிரியர் பற்றி

@@ -30,13 +30,12 @@ alt_url: /ta/
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Download for Windows</a>
-        <a class="btn btn-ghost" href="{{ '/ide/' | relative_url }}">Try it in your browser</a>
-        <a class="btn btn-ghost" href="{{ '/install/' | relative_url }}">Get started</a>
+        <a class="btn btn-ghost" href="{{ '/start/' | relative_url }}">Try it in your browser</a>
         <a class="btn btn-ghost" href="{{ '/language/' | relative_url }}">Tour the language</a>
         <a class="btn btn-ghost" href="{{ site.brand.compiler_repo }}" rel="noopener">Source on GitHub</a>
       </div>
       <p class="hero-note">
-        New here? <a href="{{ '/ide/' | relative_url }}">Run eTamil in your browser</a> —
+        New here? <a href="{{ '/start/' | relative_url }}">Run eTamil in your browser</a> —
         it is the compiler itself, compiled to WebAssembly. Nothing to install,
         nothing uploaded. The examples on the
         <a href="{{ '/language/' | relative_url }}">language tour</a> are editable
@@ -72,11 +71,12 @@ alt_url: /ta/
     </div>
 
     <ul class="stat-row full" style="grid-column: 1 / -1;">
-      <li class="stat"><b>201</b><span>keyword tokens</span></li>
+      <li class="stat"><b>202</b><span>keyword tokens</span></li>
       <li class="stat"><b>3</b><span>spellings per keyword</span></li>
-      <li class="stat"><b>263</b><span>tests, Linux + Windows</span></li>
+      <li class="stat"><b>268</b><span>tests passing</span></li>
       <li class="stat"><b>0.1+0.2</b><span>is exactly 0.3</span></li>
       <li class="stat"><b>Rust</b><span>with an optional LLVM backend</span></li>
+      <li class="stat"><b>wasm</b><span>runs in your browser</span></li>
     </ul>
   </div>
 </section>
@@ -210,14 +210,14 @@ alt_url: /ta/
       </li>
       <li class="card">
         <span class="glyph" aria-hidden="true">⇄</span>
-        <h3><a href="{{ '/backend/' | relative_url }}">Servers &amp; databases</a></h3>
+        <h3><a href="{{ '/server/' | relative_url }}">Servers &amp; databases</a></h3>
         <p>An HTTP server with routing and path parameters, SQLite and PostgreSQL drivers
            with parameterised queries only, bcrypt and JWT.</p>
       </li>
       <li class="card">
         <span class="glyph" aria-hidden="true">◆</span>
-        <h3><a href="{{ '/keywords/' | relative_url }}">Keyword reference</a></h3>
-        <p>201 tokens across roughly 500 spellings — financial vocabulary, control flow,
+        <h3><a href="{{ '/language/keywords/' | relative_url }}">Keyword reference</a></h3>
+        <p>202 tokens across 505 spellings — financial vocabulary, control flow,
            SQL clauses and the standard library, all three forms listed.</p>
       </li>
       <li class="card">

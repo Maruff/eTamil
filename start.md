@@ -1,19 +1,43 @@
 ---
 layout: page
-title: Install eTamil
+title: Get started
 section: Getting started
-permalink: /install/
-summary: >-
-  Download the installer for Windows, Linux or macOS, or build from source with
-  Cargo, then run your first Tamil program.
-description: >-
-  How to install the eTamil compiler — a prebuilt package for Windows, Linux and
-  macOS that needs neither Rust nor a C toolchain, building from source with Cargo,
-  optional PostgreSQL, MySQL and LLVM features, and your first program.
+permalink: /start/
 lang: en
-key: install
-alt_url: /ta/install/
+key: start
+alt_url: /ta/start/
+summary: >-
+  Run eTamil in your browser with nothing installed, or install the compiler —
+  a single binary that needs neither Rust nor a C toolchain.
+description: >-
+  Two ways to start with eTamil: an in-browser editor that is the real compiler
+  built to WebAssembly, and a prebuilt package for Windows, Linux and macOS that
+  needs neither Rust nor a C toolchain, plus building from source with Cargo.
 ---
+
+Two ways in. Run eTamil in your browser right now, or install the compiler and
+use it locally. The browser editor **is** the compiler — the same lexer, parser,
+type checker and VM, built to WebAssembly — so what works there works on your
+machine.
+
+## Try it now, nothing installed
+
+{% capture editor_seed %}// எளிய வட்டி — simple interest, exact to the paisa
+செயல் வட்டி_கணக்கு(அசல், வீதம், ஆண்டு) {
+    திரும்பு அசல் * வீதம் * ஆண்டு;
+}
+
+தொகை = 50000;
+அச்சு(வட்டி_கணக்கு(தொகை, 7.5%, 3));
+{% endcapture %}
+{% include editor.html seed=editor_seed name="வட்டி.qmz" %}
+
+Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to run. Nothing is uploaded and nothing is
+stored. Databases, the HTTP server and `உள்ளிடு` need a machine of their own and
+say so when you try them; everything else works here, including file statements
+against an in-memory filesystem.
+
+Ready for more than a scratchpad? Install it below.
 
 ## Download and install
 
@@ -191,7 +215,7 @@ python3 scripts/transliterate.py --check   # romanization audit
 ## Editor support
 
 A VS Code extension lives in `eTamil_Code/` in the compiler repository:
-highlighting for all 201 keywords in every spelling, completions for the 23
+highlighting for all 202 keywords in every spelling, completions for the 23
 builtins and 122 `nUlakam` functions, and errors from `--check` shown as you type.
 
 Its grammar and completion data are **generated from `lexer.rs`**, and CI fails if
@@ -211,7 +235,7 @@ command palette.
     <p>GST, double entry and the three statements.</p>
   </li>
   <li class="card">
-    <h3><a href="{{ '/backend/' | relative_url }}">Backend</a></h3>
+    <h3><a href="{{ '/server/' | relative_url }}">Backend</a></h3>
     <p>HTTP routes, SQL drivers, JSON and auth.</p>
   </li>
   <li class="card">

@@ -15,6 +15,7 @@ description: >-
   அணிகள், பதிவேடுகள், முடிவுகள், தொகுதிகள், வகைச் சரிபார்ப்பு, ezuqqu முறை.
 ---
 
+{% include language-nav.html %}
 இ-தமிழ் தமிழில் நிரல் எழுத அனுமதிக்கிறது. இது மொழிபெயர்க்கப்பட்ட திறவுச்சொற்களைக் கொண்ட
 ஆங்கில மொழி அல்ல: நிதி இதன் சொல்லகராதியிலேயே கட்டப்பட்டுள்ளது — `வரவு`, `பற்று`, `வரி`,
 `இருப்புநிலை` ஆகியவை மொழியின் அங்கமே.
@@ -30,7 +31,7 @@ description: >-
   <p>{{ site.data.ui[page.lang].editor.try_lede }}</p>
   {% include editor.html seed=editor_seed size="compact" name="வணிகவரி.qmz" %}
   <p class="ide-try-foot">
-    <a href="{{ '/ta/ide/' | relative_url }}">{{ site.data.ui[page.lang].editor.open_full }}</a>
+    <a href="{{ '/ta/start/' | relative_url }}">{{ site.data.ui[page.lang].editor.open_full }}</a>
   </p>
 </section>
 
@@ -46,7 +47,7 @@ eN varuvAy = 100000;       // எழுத்துப்பெயர்ப்�
 ```
 
 அதுவே அடிப்படைக் கருத்து: சாதாரண விசைப்பலகையில் தட்டச்சு செய்யக்கூடிய தமிழ்ப் பொருண்மை.
-முழுப் பட்டியல் [திறவுச்சொல் பட்டியலில்]({{ '/ta/keywords/' | relative_url }}) உள்ளது.
+முழுப் பட்டியல் [திறவுச்சொல் பட்டியலில்]({{ '/ta/language/keywords/' | relative_url }}) உள்ளது.
 
 ## மாறிகளும் வகைகளும்
 
@@ -331,19 +332,19 @@ eN varuvAy = 100000;       // எழுத்துப்பெயர்ப்�
 
 <ul class="cards" markdown="0">
   <li class="card">
-    <h3><a href="{{ '/ta/keywords/' | relative_url }}">திறவுச்சொல் பட்டியல்</a></h3>
-    <p>லெக்சர் தொகுக்கும் முறையிலேயே, அனைத்து 201 டோக்கன்களும் ஒவ்வொரு வடிவத்திலும்.</p>
+    <h3><a href="{{ '/ta/language/keywords/' | relative_url }}">திறவுச்சொல் பட்டியல்</a></h3>
+    <p>லெக்சர் தொகுக்கும் முறையிலேயே, அனைத்து 202 டோக்கன்களும் ஒவ்வொரு வடிவத்திலும்.</p>
   </li>
   <li class="card">
     <h3><a href="{{ '/ta/finance/' | relative_url }}">நிதியும் கணக்கியலும்</a></h3>
     <p>GST, இரட்டைப் பதிவு, மூன்று அறிக்கைகள் — இ-தமிழிலேயே எழுதப்பட்டவை.</p>
   </li>
   <li class="card">
-    <h3><a href="{{ '/ta/backend/' | relative_url }}">பின்தளம்</a></h3>
+    <h3><a href="{{ '/ta/server/' | relative_url }}">பின்தளம்</a></h3>
     <p>HTTP வழிச்செலுத்தல், SQL இயக்கிகள், JSON, bcrypt, JWT.</p>
   </li>
   <li class="card">
-    <h3><a href="{{ '/ta/install/' | relative_url }}">நிறுவல்</a></h3>
+    <h3><a href="{{ '/ta/start/' | relative_url }}">நிறுவல்</a></h3>
     <p>Linux, macOS, Windows-இல் உருவாக்கி முதல் நிரலை இயக்குங்கள்.</p>
   </li>
 </ul>

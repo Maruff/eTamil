@@ -27,7 +27,7 @@ This table is the honest state of the code, not a wish list.
 
 | Area | Status | Notes |
 |---|---|---|
-| Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 201 tokens across ~500 spellings; errors carry line and column |
+| Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 202 tokens across 505 spellings; errors carry line and column |
 | Variables, arithmetic, percentages, strings | <span class="pill pill-ok">Working</span> |  |
 | Comparisons, `எனில்` / `இன்றேல்`, `சுற்று` loops | <span class="pill pill-ok">Working</span> |  |
 | Logical `மற்றும்` / `அல்லது` / `இல்லை` | <span class="pill pill-ok">Working</span> | both sides always evaluated — no short-circuiting |
@@ -58,7 +58,11 @@ This table is the honest state of the code, not a wish list.
 | Async HTTP server (`--async`) | <span class="pill pill-ok">Working</span> | tokio accept loop, handlers on the blocking pool; the VM stays synchronous |
 | Parse error positions | <span class="pill pill-ok">Working</span> | every error carries a line and column, bilingually |
 | Type checking | <span class="pill pill-ok">Working</span> | a declared type is enforced, with a position; deliberately narrow — no rule the rest of the language does not follow |
-| VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 201 keywords in every spelling, completions for 23 builtins and 122 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
+| VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 202 keywords in every spelling, completions for 23 builtins and 122 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
+| WebAssembly target | <span class="pill pill-ok">Working</span> | `cargo build --target wasm32-unknown-unknown --no-default-features`; lexer, parser, checker and VM all build for the browser. Native builds are unchanged |
+| Browser editor ([/start/]({{ '/start/' | relative_url }})) | <span class="pill pill-ok">Working</span> | The real compiler as WebAssembly: diagnostics, scope-aware completion and execution with no server and no upload. Highlighting is generated from `lexer.rs`, so it cannot drift from the language |
+| In-browser VM | <span class="pill pill-ok">Working</span> | Programs run client-side, capped at ten million instructions so a runaway `சுற்று` reports an endless loop instead of hanging the tab. File statements work against an in-memory filesystem cleared before every run |
+| In the browser: databases, Redis, HTTP server, auth, `உள்ளிடு`, ODF packages | <span class="pill pill-no">Not available</span> | Each says so when tried, in both languages — all of them need a machine of their own. Everything else the language does with values works |
 
 </div>
 
@@ -120,8 +124,8 @@ RBI/KYC syntax and the Hyperledger audit trail described in the
 ## Contributing
 
 The most useful contributions right now are the remaining roadmap items:
-transactions and multi-connection support, the MySQL verification run, and a money
-type carrying a currency.
+transactions and multi-connection support, a money type carrying a currency, and
+the `ஜேசான்_உரை` statement the VM still refuses.
 
 Please add a test to `etamil_compiler/tests/language_tests.rs` for any language
 behaviour you change, and make sure `cargo test` passes on both Linux and Windows.

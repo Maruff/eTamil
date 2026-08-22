@@ -2,19 +2,20 @@
 layout: page
 title: eTamil keyword reference
 section: Language
-permalink: /keywords/
+permalink: /language/keywords/
 summary: >-
   Every keyword in the language — Tamil script, the romanized ezuqqu spelling, and
   the English alias where one exists. All forms are interchangeable in source.
 description: >-
-  The complete eTamil keyword reference: 201 tokens across roughly 500 spellings,
+  The complete eTamil keyword reference: 202 tokens across 505 spellings,
   grouped as the lexer groups them, covering financial and accounting vocabulary,
   control flow, collections, SQL clauses, HTTP and the standard library.
 lang: en
 key: keywords
-alt_url: /ta/keywords/
+alt_url: /ta/language/keywords/
 ---
 
+{% include language-nav.html %}
 Every keyword in eTamil, grouped as the lexer groups them.
 
 Each row lists the forms that produce the same token: **Tamil script**, the

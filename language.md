@@ -15,6 +15,7 @@ key: language
 alt_url: /ta/language/
 ---
 
+{% include language-nav.html %}
 eTamil lets you write programs in Tamil. It is not an English language with
 translated keywords: finance is built into the vocabulary, so `வரவு` (credit),
 `பற்று` (debit), `வரி` (tax) and `இருப்புநிலை` (balance sheet) are part of the
@@ -31,7 +32,7 @@ language itself.
   <p>{{ site.data.ui[page.lang].editor.try_lede }}</p>
   {% include editor.html seed=editor_seed size="compact" name="வணிகவரி.qmz" %}
   <p class="ide-try-foot">
-    <a href="{{ '/ide/' | relative_url }}">{{ site.data.ui[page.lang].editor.open_full }}</a>
+    <a href="{{ '/start/' | relative_url }}">{{ site.data.ui[page.lang].editor.open_full }}</a>
   </p>
 </section>
 
@@ -47,7 +48,7 @@ eN varuvAy = 100000;       // romanized (ezuqqu scheme)
 ```
 
 That is the core idea: Tamil semantics you can type on a plain keyboard.
-The full list is in the [keyword reference]({{ '/keywords/' | relative_url }}).
+The full list is in the [keyword reference]({{ '/language/keywords/' | relative_url }}).
 
 ## Variables and types
 
@@ -326,19 +327,19 @@ needs updating. Tamil-script source is unaffected.
 
 <ul class="cards" markdown="0">
   <li class="card">
-    <h3><a href="{{ '/keywords/' | relative_url }}">Keyword reference</a></h3>
-    <p>All 201 tokens in every spelling, grouped as the lexer groups them.</p>
+    <h3><a href="{{ '/language/keywords/' | relative_url }}">Keyword reference</a></h3>
+    <p>All 202 tokens in every spelling, grouped as the lexer groups them.</p>
   </li>
   <li class="card">
     <h3><a href="{{ '/finance/' | relative_url }}">Finance &amp; accounting</a></h3>
     <p>GST, double-entry, the three statements — written in eTamil.</p>
   </li>
   <li class="card">
-    <h3><a href="{{ '/backend/' | relative_url }}">Backend</a></h3>
+    <h3><a href="{{ '/server/' | relative_url }}">Backend</a></h3>
     <p>HTTP routing, SQL drivers, JSON, bcrypt and JWT.</p>
   </li>
   <li class="card">
-    <h3><a href="{{ '/install/' | relative_url }}">Install</a></h3>
+    <h3><a href="{{ '/start/' | relative_url }}">Install</a></h3>
     <p>Build from source on Linux, macOS or Windows and run your first program.</p>
   </li>
 </ul>

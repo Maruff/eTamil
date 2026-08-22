@@ -18,13 +18,14 @@
 
 <nav id="site-nav" class="nav" aria-label="{{ t.primary_nav }}">
   <ul>
-    <li><a href="{{ p | append: '/ide/'      | relative_url }}"{% if page.key == 'ide'      %} aria-current="page"{% endif %}>{{ t.nav.ide }}</a></li>
-    <li><a href="{{ p | append: '/language/' | relative_url }}"{% if page.key == 'language' %} aria-current="page"{% endif %}>{{ t.nav.language }}</a></li>
+    <li><a href="{{ p | append: '/start/'    | relative_url }}"{% if page.key == 'start'    %} aria-current="page"{% endif %}>{{ t.nav.start }}</a></li>
+{%- comment -%}
+  The Language item stays current on its sub-pages, so a reader inside the
+  manual or the keyword list can still see which section they are in.
+{%- endcomment -%}
+    <li><a href="{{ p | append: '/language/' | relative_url }}"{% if page.key == 'language' or page.key == 'manual' or page.key == 'keywords' %} aria-current="page"{% endif %}>{{ t.nav.language }}</a></li>
     <li><a href="{{ p | append: '/finance/'  | relative_url }}"{% if page.key == 'finance'  %} aria-current="page"{% endif %}>{{ t.nav.finance }}</a></li>
-    <li><a href="{{ p | append: '/backend/'  | relative_url }}"{% if page.key == 'backend'  %} aria-current="page"{% endif %}>{{ t.nav.backend }}</a></li>
-    <li><a href="{{ p | append: '/manual/'   | relative_url }}"{% if page.key == 'manual'   %} aria-current="page"{% endif %}>{{ t.nav.manual }}</a></li>
-    <li><a href="{{ p | append: '/keywords/' | relative_url }}"{% if page.key == 'keywords' %} aria-current="page"{% endif %}>{{ t.nav.keywords }}</a></li>
-    <li><a href="{{ p | append: '/install/'  | relative_url }}"{% if page.key == 'install'  %} aria-current="page"{% endif %}>{{ t.nav.install }}</a></li>
+    <li><a href="{{ p | append: '/server/'   | relative_url }}"{% if page.key == 'server'   %} aria-current="page"{% endif %}>{{ t.nav.server }}</a></li>
     <li><a href="{{ p | append: '/research/' | relative_url }}"{% if page.key == 'research' %} aria-current="page"{% endif %}>{{ t.nav.research }}</a></li>
     <li><a href="{{ p | append: '/about/'    | relative_url }}"{% if page.key == 'about'    %} aria-current="page"{% endif %}>{{ t.nav.about }}</a></li>
 {%- if page.alt_url %}

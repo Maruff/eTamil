@@ -1,0 +1,30 @@
+---
+---
+{%- comment -%}
+A stub that stands where a page used to be.
+
+This site's plugin list is what GitHub Pages allows, and jekyll-redirect-from is
+not on it, so a moved page leaves one of these behind by hand. Front matter
+needs `permalink` (the old address) and `redirect_to` (the new one).
+
+Belt and braces on purpose: the canonical link tells search engines which
+address won, the meta refresh moves a reader who has JavaScript off, and the
+script moves everyone else immediately with `replace` so the dead URL does not
+end up in their back button.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign target = page.redirect_to | relative_url -%}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title | default: 'Moved' }}</title>
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url={{ target }}">
+</head>
+<body>
+  <p>This page has moved to <a href="{{ target }}">{{ target }}</a>.</p>
+  <script>location.replace({{ target | jsonify }});</script>
+</body>
+</html>
