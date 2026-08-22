@@ -157,3 +157,44 @@ processed by Jekyll at all — they get served as raw Markdown — so never add 
 ## Licence
 
 Content and code: [AGPL-3.0-or-later](LICENSE), matching the compiler.
+
+## Previewing locally without Ruby
+
+GitHub Pages builds the published site. Jekyll needs Ruby, and on a machine
+without it you cannot render a single page — which makes it impossible to check
+the nav, a Liquid change, or the embedded editor before pushing.
+
+`tools/preview.py` renders the site with a real Liquid implementation and serves
+it, no Ruby involved:
+
+```bash
+py -m pip install -r tools/requirements.txt
+py tools/preview.py
+```
+
+Then open <http://localhost:4000/>. `--build-only` writes `_site_preview/` and
+exits; `--port N` changes the port.
+
+It covers front matter, `_config.yml` defaults, `_data`, nested layouts,
+`{% include %}` with parameters, `relative_url`, Jekyll's own filters, and
+Markdown. It does **not** cover Rouge highlighting (fenced blocks render plain),
+kramdown attribute lists, collections, or the sitemap and SEO plugins — `{% seo %}`
+is replaced with a plain title and description. If a page looks right here and
+wrong on Pages, suspect one of those.
+
+It also serves `.wasm` as `application/wasm`, which the editor needs and
+`python -m http.server` gets wrong.
+
+## The editor
+
+The eTamil compiler front end and VM are compiled to WebAssembly and run in the
+browser: see `ide/README.md`. The editor is embedded on the language tour via
+`_includes/editor.html`, and has a full-page version at `/ide/`.
+
+```liquid
+{% capture seed %}அச்சு("வணக்கம்");{% endcapture %}
+{% include editor.html seed=seed name="வணக்கம்.qmz" size="compact" %}
+```
+
+Rebuild it with `cd ide && npm run tokens && npm run wasm && npm run build`, and
+commit `assets/ide/`.

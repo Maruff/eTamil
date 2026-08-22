@@ -20,6 +20,21 @@ translated keywords: finance is built into the vocabulary, so `வரவு` (cr
 `பற்று` (debit), `வரி` (tax) and `இருப்புநிலை` (balance sheet) are part of the
 language itself.
 
+{% capture editor_seed %}// வணிகவரி — GST on an invoice, exact to the paisa
+விலை = 2500;
+வணிகவரி = விலை * 18%;
+அச்சு(வணிகவரி);
+அச்சு(விலை + வணிகவரி);
+{% endcapture %}
+<section class="ide-try">
+  <h2>{{ site.data.ui[page.lang].editor.try_heading }}</h2>
+  <p>{{ site.data.ui[page.lang].editor.try_lede }}</p>
+  {% include editor.html seed=editor_seed size="compact" name="வணிகவரி.qmz" %}
+  <p class="ide-try-foot">
+    <a href="{{ '/ide/' | relative_url }}">{{ site.data.ui[page.lang].editor.open_full }}</a>
+  </p>
+</section>
+
 ## Three spellings, one token
 
 Every keyword accepts up to three forms that mean exactly the same thing — Tamil

@@ -445,3 +445,10 @@ img { max-width: 100%; height: auto; }
   font-size: .875rem;
   line-height: 1.8;
 }
+
+/* An editor embedded in prose is shorter than the standalone one: the text
+   around it is the point, and a full-height editor would push it off screen. */
+.ide-compact .cm-editor { height: clamp(220px, 34vh, 380px); }
+.ide-try { margin: 2rem 0 2.6rem; }
+.ide-try > h2 { margin-top: 0; padding-top: 0; border-top: 0; }
+.ide-try-foot { font-size: .9rem; color: var(--muted); margin: -1.6rem 0 0; }

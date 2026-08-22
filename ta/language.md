@@ -19,6 +19,21 @@ description: >-
 ஆங்கில மொழி அல்ல: நிதி இதன் சொல்லகராதியிலேயே கட்டப்பட்டுள்ளது — `வரவு`, `பற்று`, `வரி`,
 `இருப்புநிலை` ஆகியவை மொழியின் அங்கமே.
 
+{% capture editor_seed %}// வணிகவரி — விலைப்பட்டியலில் GST, பைசா வரை துல்லியம்
+விலை = 2500;
+வணிகவரி = விலை * 18%;
+அச்சு(வணிகவரி);
+அச்சு(விலை + வணிகவரி);
+{% endcapture %}
+<section class="ide-try">
+  <h2>{{ site.data.ui[page.lang].editor.try_heading }}</h2>
+  <p>{{ site.data.ui[page.lang].editor.try_lede }}</p>
+  {% include editor.html seed=editor_seed size="compact" name="வணிகவரி.qmz" %}
+  <p class="ide-try-foot">
+    <a href="{{ '/ta/ide/' | relative_url }}">{{ site.data.ui[page.lang].editor.open_full }}</a>
+  </p>
+</section>
+
 ## மூன்று எழுத்து வடிவங்கள், ஒரே டோக்கன்
 
 ஒவ்வொரு திறவுச்சொல்லும் ஒரே பொருள் தரும் மூன்று வடிவங்கள் வரை ஏற்கிறது — தமிழ் எழுத்து,

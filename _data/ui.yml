@@ -24,6 +24,15 @@ en:
   lang_switch_to: View this page in Tamil
   home_aria: "eTamil.in — home"
 
+  editor:
+    bar_note: "in your browser · Ctrl-Enter to run"
+    try_heading: Try it here
+    try_lede: >-
+      This editor is the eTamil compiler itself, compiled to WebAssembly. Change
+      the program and press Ctrl-Enter. Nothing is installed and nothing is
+      uploaded.
+    open_full: Open the full editor
+
   nav:
     ide: Try it
     manual: Manual
@@ -80,6 +89,15 @@ ta:
   lang_switch_label: மொழி
   lang_switch_to: இப்பக்கத்தை ஆங்கிலத்தில் காண்க
   home_aria: "eTamil.in — முகப்பு"
+
+  editor:
+    bar_note: "உங்கள் உலாவியில் · இயக்க Ctrl-Enter"
+    try_heading: இங்கே முயற்சி செய்யுங்கள்
+    try_lede: >-
+      இந்த எழுதுகளம் இ-தமிழ் தொகுப்பியே — WebAssembly-ஆகத் தொகுக்கப்பட்டது.
+      நிரலை மாற்றி Ctrl-Enter அழுத்துங்கள். எதுவும் நிறுவப்படவில்லை, எதுவும்
+      பதிவேற்றப்படவில்லை.
+    open_full: முழு எழுதுகளத்தைத் திற
 
   nav:
     ide: முயற்சி

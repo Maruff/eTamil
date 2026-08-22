@@ -1,0 +1,5 @@
+# For tools/preview.py, which renders and serves this site without Ruby.
+#   py -m pip install -r tools/requirements.txt
+python-liquid>=2.3
+markdown>=3.7
+pyyaml>=6.0

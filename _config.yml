@@ -87,7 +87,12 @@ exclude:
   - Gemfile.lock
   - vendor
   # Editor sources. The built bundle lands in assets/ide/ and is committed;
-  # this directory holds the Vite project that produces it, and node_modules
-  # under it would otherwise be crawled on every build.
-  - ide
-  - tools
+  # these directories hold the Vite project that produces it and the build
+  # scripts, and node_modules under them would otherwise be crawled every build.
+  #
+  # The trailing slashes are required, not tidiness. Jekyll excludes an entry
+  # when `entry.start_with?(pattern)` is true as well as on a glob match, so a
+  # bare `ide` also excludes `ide.html` — the editor page — and /ide/ silently
+  # 404s while the nav link to it still renders.
+  - ide/
+  - tools/

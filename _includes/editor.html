@@ -1,0 +1,39 @@
+{%- comment -%}
+A live eTamil editor, embeddable anywhere on the site.
+
+  {% capture seed %}அச்சு("வணக்கம்");{% endcapture %}
+  {% include editor.html seed=seed name="வணக்கம்.qmz" size="compact" %}
+
+Parameters, all optional:
+  seed  program to open with; the built-in sample if omitted
+  name  filename shown in the title bar
+  size  "compact" inside prose, omitted for a full-height editor
+  note  right-hand text in the title bar
+
+The seed is escaped. eTamil uses `<` as a less-than operator, so an unescaped
+program containing `(i < 3)` would open an HTML tag and swallow the rest of the
+page. `escape` turns it into `&lt;`, and the browser hands it back to
+`el.textContent` as `<` again.
+
+The module script is emitted per-include on purpose: a browser fetches and
+evaluates a given module URL once no matter how many script tags name it, so
+several editors on one page cost one download and one mount pass.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: 'en' -%}
+{%- assign t = site.data.ui[lang] -%}
+{%- assign size = include.size | default: '' -%}
+
+<div class="full ide-frame{% if size == 'compact' %} ide-compact{% endif %}">
+  <div class="ide-bar">
+    <span class="dot" aria-hidden="true"></span>
+    <span class="dot" aria-hidden="true"></span>
+    <span class="dot" aria-hidden="true"></span>
+    <span class="name">{{ include.name | default: 'எடுத்துக்காட்டு.qmz' }}</span>
+    <span class="ide-bar-note">{{ include.note | default: t.editor.bar_note }}</span>
+  </div>
+  <div class="ide-shell">
+    <div data-etamil-editor>{{ include.seed | escape }}</div>
+  </div>
+</div>
+
+<script type="module" src="{{ '/assets/ide/etamil-ide.js' | relative_url }}"></script>
