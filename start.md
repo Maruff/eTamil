@@ -215,8 +215,8 @@ python3 scripts/transliterate.py --check   # romanization audit
 ## Editor support
 
 A VS Code extension lives in `eTamil_Code/` in the compiler repository:
-highlighting for all 202 keywords in every spelling, completions for the 23
-builtins and 122 `nUlakam` functions, and errors from `--check` shown as you type.
+highlighting for all 202 keywords in every spelling, completions for the 59
+builtins and 254 `nUlakam` functions, and errors from `--check` shown as you type.
 
 Its grammar and completion data are **generated from `lexer.rs`**, and CI fails if
 they drift — so the editor cannot fall behind the compiler. If it cannot find the compiler

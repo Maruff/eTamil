@@ -654,8 +654,8 @@ wrong.
 ## 28. Editor support {: #28-editor-support}
 
 The VS Code extension is in `eTamil_Code/` in the compiler repository:
-highlighting for all 202 keywords in every spelling, completions for the 23
-builtins and 122 `nUlakam` functions, and `--check` errors shown as you type.
+highlighting for all 202 keywords in every spelling, completions for the 59
+builtins and 254 `nUlakam` functions, and `--check` errors shown as you type.
 
 Its grammar and completion data are generated from `lexer.rs`, and CI fails if
 they drift, so the editor cannot fall behind the compiler.

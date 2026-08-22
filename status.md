@@ -60,7 +60,7 @@ This table is the honest state of the code, not a wish list.
 | Async HTTP server (`--async`) | <span class="pill pill-ok">Working</span> | tokio accept loop, handlers on the blocking pool; the VM stays synchronous |
 | Parse error positions | <span class="pill pill-ok">Working</span> | every error carries a line and column, bilingually |
 | Type checking | <span class="pill pill-ok">Working</span> | a declared type is enforced, with a position; deliberately narrow — no rule the rest of the language does not follow |
-| VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 202 keywords in every spelling, completions for 23 builtins and 122 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
+| VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 202 keywords in every spelling, completions for 59 builtins and 254 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
 | Interactive shell (`--repl`) | <span class="pill pill-ok">Working</span> | `etamil --repl` — type an expression, see what it comes to, without a file |
 | Redis | <span class="pill pill-ok">Working</span> | The host offers one generic `ரெடிஸ்_கட்டளை` (a command name and its arguments), so every Redis command works, including ones invented later; `nUlakam/qaLam/retis.qmz` wraps the common ones by name |
 | MongoDB | <span class="pill pill-ok">Working</span> | `--features mongodb`; a document *is* a `பொருள்`, so the mapping needed no invention — numbers are stored as `Decimal128` rather than doubles |
@@ -87,9 +87,11 @@ This table is the honest state of the code, not a wish list.
 | Named database handles | <span class="pill pill-part">One at a time</span> | `தளம்_வினா` names no handle, so only one database can be open. A second connection through the same driver is now **refused by name** rather than silently swapping the first. Genuinely concurrent connections need the language to name one |
 | Declared function signatures | <span class="pill pill-no">Not implemented</span> | `செயல்` cannot declare parameter or return types, so a call makes no claim the type checker can hold you to |
 | Chained comparisons | <span class="pill pill-part">Parses oddly</span> | `a > b > c` becomes `(a > b) > c`, so `3 > 2 > 1` is `false` |
+| `&` binds tighter than `இல்லை` | <span class="pill pill-part">Parses oddly</span> | `"a " & இல்லை f(x)` is a parse error, because `not` is looser than `+ - &`. Parenthesise it: `& (இல்லை f(x))` |
+| Adding a keyword can break a program | <span class="pill pill-part">By design, worth knowing</span> | 89 of the 202 keywords are deliberately usable as names, so a new keyword takes a word that existing code may already use as a variable |
 | `ஜேசான்_உரை` statement | <span class="pill pill-no">Not implemented</span> | Parses but the VM refuses it — build the body with `ஜேசான்_ஆக்கு` and send it with `பதில்` |
 | File "encryption" | <span class="pill pill-no">Not real encryption</span> | `மறை` is a repeating-key XOR cipher with a default key, not an AEAD. Do not use it for anything that matters until it is one |
-| Romanization coverage | <span class="pill pill-part">20 of 202 off-scheme</span> | The ந/ன distinction is resolved; twenty keywords remain off-scheme for other letters |
+| Romanization coverage | <span class="pill pill-part">19 of 202 off-scheme</span> | The ந/ன distinction is resolved; nineteen keywords remain off-scheme for other letters |
 
 </div>
 
@@ -149,7 +151,7 @@ TDS templates, and RBI/KYC syntax.
 The most useful contributions right now are the remaining roadmap items:
 a database handle `தளம்_இணை` can return and `தளம்_வினா` can take, so more than one
 database can be open at once; declared parameter and return types for `செயல்`; a
-real AEAD behind `மறை`, which is a repeating-key XOR today; and the twenty
+real AEAD behind `மறை`, which is a repeating-key XOR today; and the nineteen
 keywords still romanized off-scheme.
 
 Please add a test to `etamil_compiler/tests/language_tests.rs` for any language
