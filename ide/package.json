@@ -1,0 +1,26 @@
+{
+  "name": "etamil-ide",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "CodeMirror 6 editor for eTamil, built into ../assets/ide for the Jekyll site to serve.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "tokens": "py ../tools/gen_tokens.py --lexer ../../eTamil/etamil_compiler/src/lexer.rs --out ../assets/ide/etamil-tokens.json",
+    "wasm": "cargo build --release --target wasm32-unknown-unknown --no-default-features --lib --manifest-path ../../eTamil/etamil_compiler/Cargo.toml && wasm-bindgen --target web --no-typescript --out-dir wasm --out-name etamil_compiler ../../eTamil/etamil_compiler/target/wasm32-unknown-unknown/release/etamil_compiler.wasm"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.20.3",
+    "@codemirror/language": "^6.0.0",
+    "@codemirror/lint": "^6.9.7",
+    "@codemirror/state": "^6.0.0",
+    "@codemirror/view": "^6.0.0",
+    "@lezer/highlight": "^1.0.0",
+    "codemirror": "^6.0.0"
+  },
+  "devDependencies": {
+    "binaryen": "^132.0.0",
+    "vite": "^7.0.0"
+  }
+}

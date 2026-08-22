@@ -25,6 +25,7 @@ en:
   home_aria: "eTamil.in — home"
 
   nav:
+    ide: Try it
     manual: Manual
     language: Language
     finance: Finance
@@ -81,6 +82,7 @@ ta:
   home_aria: "eTamil.in — முகப்பு"
 
   nav:
+    ide: முயற்சி
     manual: கையேடு
     language: மொழி
     finance: நிதி

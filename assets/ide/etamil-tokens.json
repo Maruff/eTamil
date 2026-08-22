@@ -1,0 +1,1446 @@
+{
+ "_generated": "by tools/gen_tokens.py from etamil_compiler/src/lexer.rs -- do not edit by hand",
+ "words": {
+  "vazawki_toqotawku": "builtin",
+  "முத்திரைத்தீர்வை": "domain",
+  "மதிப்பீட்டாண்டு": "domain",
+  "வழங்கி_நிறுத்து": "builtin",
+  "vazawki_niRuqqu": "builtin",
+  "வருமான_அறிக்கை": "domain",
+  "varumAZ_aRikkY": "domain",
+  "விலைப்பட்டியல்": "domain",
+  "வரிப்பிடித்தம்": "domain",
+  "qaravurY_ezuqu": "builtin",
+  "_statusMessage": "builtin",
+  "வழங்கி_தொடங்கு": "builtin",
+  "_encryptionKey": "builtin",
+  "parivarttaZai": "domain",
+  "paNappuzakkam": "domain",
+  "vilYppattiyal": "domain",
+  "நிதித்திட்டம்": "domain",
+  "varippitiqqam": "domain",
+  "muqqirYqqIrvY": "domain",
+  "maqippIttANtu": "domain",
+  "qaravurY_pati": "builtin",
+  "_dbDisconnect": "builtin",
+  "தளம்_புதுப்பி": "builtin",
+  "qaLam_puquppi": "builtin",
+  "போச்குரசீகுல்": "type",
+  "நடப்பிலில்லா": "domain",
+  "natappilillA": "domain",
+  "கடன்தீர்ப்பு": "domain",
+  "kataZ_qIrppu": "domain",
+  "மதிப்புயர்வு": "domain",
+  "matippuyarvu": "domain",
+  "பணப்புழக்கம்": "domain",
+  "varumAZ_vari": "domain",
+  "சரக்கிருப்பு": "domain",
+  "carakkiruppu": "domain",
+  "உள்ளீட்டுவரி": "domain",
+  "கோப்பு_எழுது": "builtin",
+  "தரவுரை_எழுது": "builtin",
+  "qaLam_ceruka": "builtin",
+  "pOckuracIkul": "type",
+  "_createTable": "builtin",
+  "அட்டை_மாற்று": "builtin",
+  "அட்டை_நீக்கு": "builtin",
+  "இறுதி_புள்ளி": "builtin",
+  "viZA_aLavuru": "builtin",
+  "pAtY_aLavuru": "builtin",
+  "_bearerToken": "builtin",
+  "_contentType": "builtin",
+  "_startServer": "builtin",
+  "பரிவர்த்தனை": "domain",
+  "இருப்பாய்வு": "domain",
+  "இருப்புநிலை": "domain",
+  "variyaRikkY": "domain",
+  "niqiqqittam": "domain",
+  "uLLIttuvari": "domain",
+  "விதிவிலக்கு": "domain",
+  "viqivilakku": "domain",
+  "கோப்பு_மூடு": "builtin",
+  "kOppu_ezuqu": "builtin",
+  "கோப்பு_நிரை": "builtin",
+  "qaravuqaLam": "builtin",
+  "தளம்_நீக்கு": "builtin",
+  "qaLam_nIkku": "builtin",
+  "_PostgreSQL": "type",
+  "_collection": "builtin",
+  "_primaryKey": "builtin",
+  "_foreignKey": "builtin",
+  "அட்டை_ஆக்கு": "builtin",
+  "_alterTable": "builtin",
+  "iraqi_pulli": "builtin",
+  "வினா_அளவுரு": "builtin",
+  "_queryParam": "builtin",
+  "பாதை_அளவுரு": "builtin",
+  "_statusCode": "builtin",
+  "நிலை_செய்தி": "builtin",
+  "_stopServer": "builtin",
+  "கடன்_அட்டை": "domain",
+  "kataZ_attY": "domain",
+  "peRaqqakka": "domain",
+  "iruppunilY": "domain",
+  "வருமான_வரி": "domain",
+  "vaNikavari": "domain",
+  "வரியறிக்கை": "domain",
+  "பரிமாற்றம்": "domain",
+  "parimARRam": "domain",
+  "நிதியாண்டு": "domain",
+  "பங்குதாரர்": "domain",
+  "pawkuqArar": "domain",
+  "கோப்பு_திற": "builtin",
+  "kOppu_qiRa": "builtin",
+  "kOppu_mUtu": "builtin",
+  "_fileClose": "builtin",
+  "கோப்பு_படி": "builtin",
+  "kOppu_pati": "builtin",
+  "_fileWrite": "builtin",
+  "kOppu_nirY": "builtin",
+  "_fileLines": "builtin",
+  "தரவுரை_படி": "builtin",
+  "_dbConnect": "builtin",
+  "qaLam_piri": "builtin",
+  "qaLam_viZA": "builtin",
+  "_dbExecute": "builtin",
+  "qaLam_qEtu": "builtin",
+  "தளம்_செருக": "builtin",
+  "மாங்கோடிபி": "type",
+  "taZik_vicY": "builtin",
+  "attY_mARRu": "builtin",
+  "attY_nIkku": "builtin",
+  "_dropTable": "builtin",
+  "_pathParam": "builtin",
+  "ஜேசான்_உரை": "builtin",
+  "nilY_ceyqi": "builtin",
+  "குறிதாங்கி": "builtin",
+  "varumAZam": "domain",
+  "மதிப்பீடு": "domain",
+  "matippIDu": "domain",
+  "பெறத்தக்க": "domain",
+  "கொடுக்காத": "domain",
+  "kotukkAqa": "domain",
+  "வாங்குநர்": "domain",
+  "தேய்மானம்": "domain",
+  "mUlataZam": "domain",
+  "iruppAyvu": "domain",
+  "கொள்முதல்": "domain",
+  "ஒப்பந்தம்": "domain",
+  "qaLLupati": "domain",
+  "ஈவுத்தொகை": "domain",
+  "niqiyANtu": "domain",
+  "cuwkavari": "domain",
+  "kalAlvari": "domain",
+  "_fileOpen": "builtin",
+  "_fileRead": "builtin",
+  "_writeCSV": "builtin",
+  "_database": "builtin",
+  "qaLam_iNY": "builtin",
+  "தளம்_பிரி": "builtin",
+  "தளம்_வினா": "builtin",
+  "தளம்_செய்": "builtin",
+  "qaLam_cey": "builtin",
+  "தளம்_தேடு": "builtin",
+  "_dbSearch": "builtin",
+  "_dbInsert": "builtin",
+  "_dbUpdate": "builtin",
+  "_dbDelete": "builtin",
+  "kavi_mozi": "type",
+  "தேடு_மொழி": "type",
+  "qEtu_mozi": "type",
+  "mAwkOtipi": "type",
+  "தனிக_விசை": "builtin",
+  "வெளி_விசை": "builtin",
+  "veLi_vicY": "builtin",
+  "attY_Akku": "builtin",
+  "_distinct": "builtin",
+  "_endpoint": "builtin",
+  "_response": "builtin",
+  "jEcAZ_urY": "builtin",
+  "_jsonBody": "builtin",
+  "puravalaZ": "builtin",
+  "நிலை_குறி": "builtin",
+  "nilY_kuRi": "builtin",
+  "kuRiqAwki": "builtin",
+  "வெளிப்படு": "builtin",
+  "veLippatu": "builtin",
+  "_password": "builtin",
+  "maRY_vicY": "builtin",
+  "பொறுப்பு": "domain",
+  "வருமானம்": "domain",
+  "விற்பனர்": "domain",
+  "viRpaZar": "domain",
+  "vAwkunar": "domain",
+  "nilYyAZa": "domain",
+  "mukavari": "domain",
+  "qEymAZam": "domain",
+  "koLmuqal": "domain",
+  "oppanqam": "domain",
+  "முன்பணம்": "domain",
+  "muZpaNam": "domain",
+  "kattaNam": "domain",
+  "தள்ளுபடி": "domain",
+  "aparAqam": "domain",
+  "காப்பீடு": "domain",
+  "IvuqqokY": "domain",
+  "muqalItu": "domain",
+  "காலாண்டு": "domain",
+  "சுங்கவரி": "domain",
+  "கலால்வரி": "domain",
+  "திரும்பு": "control",
+  "qaravurY": "builtin",
+  "_readCSV": "builtin",
+  "தரவுதளம்": "builtin",
+  "தளம்_இணை": "builtin",
+  "_dbQuery": "builtin",
+  "கவி_மொழி": "type",
+  "சீகுலைட்": "type",
+  "மைசீகுல்": "type",
+  "_MongoDB": "type",
+  "தொகுப்பு": "builtin",
+  "toguippu": "builtin",
+  "குறியீடு": "builtin",
+  "kuRiyItu": "builtin",
+  "தேர்வெடு": "builtin",
+  "_orderBy": "builtin",
+  "_groupBy": "builtin",
+  "qaLa_itY": "builtin",
+  "கோரிக்கை": "builtin",
+  "_request": "builtin",
+  "_options": "builtin",
+  "urY_vakY": "builtin",
+  "_encrypt": "builtin",
+  "_decrypt": "builtin",
+  "குறிமுறை": "builtin",
+  "kuRimuRY": "builtin",
+  "மறை_விசை": "builtin",
+  "இருப்பு": "domain",
+  "poRuppu": "domain",
+  "வருவாய்": "domain",
+  "varuvAy": "domain",
+  "அறிக்கை": "domain",
+  "நிலையான": "domain",
+  "natappu": "domain",
+  "nANayam": "domain",
+  "மூலதனம்": "domain",
+  "வணிகவரி": "domain",
+  "விற்பனை": "domain",
+  "viRpaZY": "domain",
+  "carakku": "domain",
+  "எடுப்பு": "domain",
+  "கட்டணம்": "domain",
+  "அபராதம்": "domain",
+  "kAppItu": "domain",
+  "முதலீடு": "domain",
+  "kaNakku": "domain",
+  "தணிக்கை": "domain",
+  "qaNikkY": "domain",
+  "kAlANtu": "domain",
+  "விலக்கு": "domain",
+  "vilakku": "domain",
+  "அடுக்கு": "domain",
+  "பின்னம்": "type",
+  "இன்றேல்": "control",
+  "உள்ளிடு": "control",
+  "qirumpu": "control",
+  "_return": "control",
+  "ஒவ்வொரு": "control",
+  "_import": "control",
+  "cIkulYt": "type",
+  "_SQLite": "type",
+  "mYcIkul": "type",
+  "_column": "builtin",
+  "qErvetu": "builtin",
+  "_select": "builtin",
+  "varampu": "builtin",
+  "_offset": "builtin",
+  "இடைவெளி": "builtin",
+  "itYveLi": "builtin",
+  "kOrikkY": "builtin",
+  "தலைப்பு": "builtin",
+  "talYppu": "builtin",
+  "_header": "builtin",
+  "aLavuru": "builtin",
+  "புரவலன்": "builtin",
+  "_method": "builtin",
+  "_delete": "builtin",
+  "உரை_வகை": "builtin",
+  "மற்றும்": "opKeyword",
+  "varavu": "domain",
+  "iruppu": "domain",
+  "சொத்து": "domain",
+  "celavu": "domain",
+  "இழப்பு": "domain",
+  "izappu": "domain",
+  "nikara": "domain",
+  "பேரேடு": "domain",
+  "pErEtu": "domain",
+  "paqivu": "domain",
+  "aRikkY": "domain",
+  "நடப்பு": "domain",
+  "முகவரி": "domain",
+  "நாணயம்": "domain",
+  "racIqu": "domain",
+  "காசோலை": "domain",
+  "kAcOlY": "domain",
+  "சரக்கு": "domain",
+  "வைப்பு": "domain",
+  "etuppu": "domain",
+  "நிலுவை": "domain",
+  "niluvY": "domain",
+  "qavaNY": "domain",
+  "ஊதியம்": "domain",
+  "Uqiyam": "domain",
+  "vAtakY": "domain",
+  "கணக்கு": "domain",
+  "atukku": "domain",
+  "piZZam": "type",
+  "qaravu": "type",
+  "பொருள்": "type",
+  "சுற்று": "control",
+  "uLLitu": "control",
+  "ovvoru": "control",
+  "இறக்கு": "control",
+  "iRakku": "control",
+  "கோப்பு": "builtin",
+  "தரவுரை": "builtin",
+  "_write": "builtin",
+  "_close": "builtin",
+  "_NoSQL": "type",
+  "_MySQL": "type",
+  "ரெடிஸ்": "type",
+  "_Redis": "type",
+  "ஜேசான்": "type",
+  "_table": "builtin",
+  "_index": "builtin",
+  "இதனில்": "builtin",
+  "iqaZil": "builtin",
+  "_where": "builtin",
+  "varicY": "builtin",
+  "_right": "builtin",
+  "_inner": "builtin",
+  "_outer": "builtin",
+  "qaZika": "builtin",
+  "வரம்பு": "builtin",
+  "_limit": "builtin",
+  "தள_இடை": "builtin",
+  "_route": "builtin",
+  "_every": "builtin",
+  "அளவுரு": "builtin",
+  "_param": "builtin",
+  "_patch": "builtin",
+  "தெரிவு": "builtin",
+  "qerivu": "builtin",
+  "_serve": "builtin",
+  "maRRum": "opKeyword",
+  "அல்லது": "opKeyword",
+  "allaqu": "opKeyword",
+  "பற்று": "domain",
+  "paRRu": "domain",
+  "வீதம்": "domain",
+  "vIqam": "domain",
+  "soqqu": "domain",
+  "பங்கு": "domain",
+  "pawku": "domain",
+  "செலவு": "domain",
+  "payaZ": "domain",
+  "மொத்த": "domain",
+  "moqqa": "domain",
+  "வட்டி": "domain",
+  "vatti": "domain",
+  "பதிவு": "domain",
+  "kataZ": "domain",
+  "paNam": "domain",
+  "வங்கி": "domain",
+  "vawki": "domain",
+  "toqai": "domain",
+  "ரசீது": "domain",
+  "vYppu": "domain",
+  "வாடகை": "domain",
+  "poruL": "type",
+  "இன்மை": "null",
+  "எனில்": "control",
+  "iZREl": "control",
+  "cuRRu": "control",
+  "அச்சு": "control",
+  "செயல்": "control",
+  "ceyal": "control",
+  "_each": "control",
+  "kOppu": "builtin",
+  "_file": "builtin",
+  "_read": "builtin",
+  "எழுது": "builtin",
+  "ezuqu": "builtin",
+  "_open": "builtin",
+  "retis": "type",
+  "jEcAZ": "type",
+  "_JSON": "type",
+  "அட்டை": "builtin",
+  "பத்தி": "builtin",
+  "paqqi": "builtin",
+  "_from": "builtin",
+  "வரிசை": "builtin",
+  "_join": "builtin",
+  "_left": "builtin",
+  "valam": "builtin",
+  "vazhi": "builtin",
+  "பதில்": "builtin",
+  "paDil": "builtin",
+  "_body": "builtin",
+  "urali": "builtin",
+  "_host": "builtin",
+  "_port": "builtin",
+  "_post": "builtin",
+  "ஒட்டு": "builtin",
+  "_head": "builtin",
+  "உறுதி": "builtin",
+  "uRuqi": "builtin",
+  "_auth": "builtin",
+  "இல்லை": "opKeyword",
+  "வரவு": "domain",
+  "பயன்": "domain",
+  "vari": "domain",
+  "நிகர": "domain",
+  "கடன்": "domain",
+  "நிதி": "domain",
+  "niqi": "domain",
+  "பணம்": "domain",
+  "தொகை": "domain",
+  "_GST": "domain",
+  "_ITR": "domain",
+  "தவணை": "domain",
+  "அசல்": "domain",
+  "acal": "domain",
+  "விலை": "domain",
+  "vilY": "domain",
+  "_TDS": "domain",
+  "_ITC": "domain",
+  "சொல்": "type",
+  "ஈர்ம": "type",
+  "Irma": "type",
+  "தரவு": "type",
+  "தேதி": "type",
+  "qEqi": "type",
+  "மெய்": "bool",
+  "பொய்": "bool",
+  "iZmY": "null",
+  "மாறி": "keyword",
+  "mARi": "keyword",
+  "நிலை": "keyword",
+  "nilY": "keyword",
+  "eZil": "control",
+  "accu": "control",
+  "_CSV": "builtin",
+  "pati": "builtin",
+  "qiRa": "builtin",
+  "மூடு": "builtin",
+  "mUtu": "builtin",
+  "_SQL": "type",
+  "attY": "builtin",
+  "நிரை": "builtin",
+  "nirY": "builtin",
+  "_row": "builtin",
+  "விசை": "builtin",
+  "vicY": "builtin",
+  "_key": "builtin",
+  "விதி": "builtin",
+  "viqi": "builtin",
+  "குழு": "builtin",
+  "kuzu": "builtin",
+  "சேர்": "builtin",
+  "இடம்": "builtin",
+  "itam": "builtin",
+  "வலம்": "builtin",
+  "வெளி": "builtin",
+  "veLi": "builtin",
+  "தனிக": "builtin",
+  "_api": "builtin",
+  "உடல்": "builtin",
+  "uqal": "builtin",
+  "உரலி": "builtin",
+  "_url": "builtin",
+  "குதை": "builtin",
+  "kuqY": "builtin",
+  "முறை": "builtin",
+  "muRY": "builtin",
+  "பெறு": "builtin",
+  "peRu": "builtin",
+  "_get": "builtin",
+  "paqi": "builtin",
+  "_put": "builtin",
+  "ottu": "builtin",
+  "talY": "builtin",
+  "சேவை": "builtin",
+  "cEvY": "builtin",
+  "maRY": "builtin",
+  "_and": "opKeyword",
+  "illY": "opKeyword",
+  "_not": "opKeyword",
+  "வரி": "domain",
+  "எண்": "type",
+  "col": "type",
+  "உரை": "type",
+  "urY": "type",
+  "அணி": "type",
+  "aNi": "type",
+  "mey": "bool",
+  "poy": "bool",
+  "_fn": "control",
+  "இல்": "control",
+  "_in": "control",
+  "படி": "builtin",
+  "திற": "builtin",
+  "cEr": "builtin",
+  "உள்": "builtin",
+  "ஈடு": "builtin",
+  "Itu": "builtin",
+  "வழி": "builtin",
+  "பதி": "builtin",
+  "இடு": "builtin",
+  "itu": "builtin",
+  "அழி": "builtin",
+  "azi": "builtin",
+  "தலை": "builtin",
+  "மறை": "builtin",
+  "_or": "opKeyword",
+  "eN": "type",
+  "il": "control",
+  "uL": "builtin"
+ },
+ "operators": [
+  "==",
+  "<=",
+  "!=",
+  ">=",
+  ":",
+  "?",
+  "(",
+  ".",
+  ",",
+  "/",
+  "{",
+  "*",
+  ")",
+  "+",
+  "-",
+  ">",
+  "[",
+  "}",
+  "=",
+  ";",
+  "&",
+  "]",
+  "<"
+ ],
+ "variants": {
+  "Credit": [
+   "வரவு",
+   "varavu"
+  ],
+  "Debit": [
+   "பற்று",
+   "paRRu"
+  ],
+  "Balance": [
+   "இருப்பு",
+   "iruppu"
+  ],
+  "Rate": [
+   "வீதம்",
+   "vIqam"
+  ],
+  "Asset": [
+   "சொத்து",
+   "soqqu"
+  ],
+  "Liability": [
+   "பொறுப்பு",
+   "poRuppu"
+  ],
+  "Equity": [
+   "பங்கு",
+   "pawku"
+  ],
+  "Revenue": [
+   "வருவாய்",
+   "varuvAy"
+  ],
+  "Expense": [
+   "செலவு",
+   "celavu"
+  ],
+  "Income": [
+   "வருமானம்",
+   "varumAZam"
+  ],
+  "Profit": [
+   "பயன்",
+   "payaZ"
+  ],
+  "Loss": [
+   "இழப்பு",
+   "izappu"
+  ],
+  "Tax": [
+   "வரி",
+   "vari"
+  ],
+  "Net": [
+   "நிகர",
+   "nikara"
+  ],
+  "Gross": [
+   "மொத்த",
+   "moqqa"
+  ],
+  "Interest": [
+   "வட்டி",
+   "vatti"
+  ],
+  "Ledger": [
+   "பேரேடு",
+   "pErEtu"
+  ],
+  "Journal": [
+   "பதிவு",
+   "paqivu"
+  ],
+  "Loan": [
+   "கடன்",
+   "kataZ"
+  ],
+  "Finance": [
+   "நிதி",
+   "niqi"
+  ],
+  "Statement": [
+   "அறிக்கை",
+   "aRikkY"
+  ],
+  "Valuation": [
+   "மதிப்பீடு",
+   "matippIDu"
+  ],
+  "CreditCard": [
+   "கடன்_அட்டை",
+   "kataZ_attY"
+  ],
+  "Cash": [
+   "பணம்",
+   "paNam"
+  ],
+  "Bank": [
+   "வங்கி",
+   "vawki"
+  ],
+  "Receivable": [
+   "பெறத்தக்க",
+   "peRaqqakka"
+  ],
+  "Payable": [
+   "கொடுக்காத",
+   "kotukkAqa"
+  ],
+  "Vendor": [
+   "விற்பனர்",
+   "viRpaZar"
+  ],
+  "Customer": [
+   "வாங்குநர்",
+   "vAwkunar"
+  ],
+  "Fixed": [
+   "நிலையான",
+   "nilYyAZa"
+  ],
+  "Current": [
+   "நடப்பு",
+   "natappu"
+  ],
+  "NonCurrent": [
+   "நடப்பிலில்லா",
+   "natappilillA"
+  ],
+  "Address": [
+   "முகவரி",
+   "mukavari"
+  ],
+  "Amount": [
+   "தொகை",
+   "toqai"
+  ],
+  "Currency": [
+   "நாணயம்",
+   "nANayam"
+  ],
+  "Transaction": [
+   "பரிவர்த்தனை",
+   "parivarttaZai"
+  ],
+  "Depreciation": [
+   "தேய்மானம்",
+   "qEymAZam"
+  ],
+  "Amortization": [
+   "கடன்தீர்ப்பு",
+   "kataZ_qIrppu"
+  ],
+  "Appreciation": [
+   "மதிப்புயர்வு",
+   "matippuyarvu"
+  ],
+  "Capital": [
+   "மூலதனம்",
+   "mUlataZam"
+  ],
+  "TrialBalance": [
+   "இருப்பாய்வு",
+   "iruppAyvu"
+  ],
+  "BalanceSheet": [
+   "இருப்புநிலை",
+   "iruppunilY"
+  ],
+  "IncomeStatement": [
+   "வருமான_அறிக்கை",
+   "varumAZ_aRikkY"
+  ],
+  "CashFlow": [
+   "பணப்புழக்கம்",
+   "paNappuzakkam"
+  ],
+  "IncomeTax": [
+   "வருமான_வரி",
+   "varumAZ_vari"
+  ],
+  "GST": [
+   "வணிகவரி",
+   "vaNikavari",
+   "_GST"
+  ],
+  "ITR": [
+   "வரியறிக்கை",
+   "variyaRikkY",
+   "_ITR"
+  ],
+  "Sales": [
+   "விற்பனை",
+   "viRpaZY"
+  ],
+  "Purchase": [
+   "கொள்முதல்",
+   "koLmuqal"
+  ],
+  "Invoice": [
+   "விலைப்பட்டியல்",
+   "vilYppattiyal"
+  ],
+  "Receipt": [
+   "ரசீது",
+   "racIqu"
+  ],
+  "Cheque": [
+   "காசோலை",
+   "kAcOlY"
+  ],
+  "Contract": [
+   "ஒப்பந்தம்",
+   "oppanqam"
+  ],
+  "Goods": [
+   "சரக்கு",
+   "carakku"
+  ],
+  "Inventory": [
+   "சரக்கிருப்பு",
+   "carakkiruppu"
+  ],
+  "Deposit": [
+   "வைப்பு",
+   "vYppu"
+  ],
+  "Withdrawal": [
+   "எடுப்பு",
+   "etuppu"
+  ],
+  "Transfer": [
+   "பரிமாற்றம்",
+   "parimARRam"
+  ],
+  "Advance": [
+   "முன்பணம்",
+   "muZpaNam"
+  ],
+  "Outstanding": [
+   "நிலுவை",
+   "niluvY"
+  ],
+  "Installment": [
+   "தவணை",
+   "qavaNY"
+  ],
+  "Principal": [
+   "அசல்",
+   "acal"
+  ],
+  "Salary": [
+   "ஊதியம்",
+   "Uqiyam"
+  ],
+  "Rent": [
+   "வாடகை",
+   "vAtakY"
+  ],
+  "Fee": [
+   "கட்டணம்",
+   "kattaNam"
+  ],
+  "Discount": [
+   "தள்ளுபடி",
+   "qaLLupati"
+  ],
+  "Penalty": [
+   "அபராதம்",
+   "aparAqam"
+  ],
+  "Insurance": [
+   "காப்பீடு",
+   "kAppItu"
+  ],
+  "Dividend": [
+   "ஈவுத்தொகை",
+   "IvuqqokY"
+  ],
+  "Investment": [
+   "முதலீடு",
+   "muqalItu"
+  ],
+  "Price": [
+   "விலை",
+   "vilY"
+  ],
+  "Account": [
+   "கணக்கு",
+   "kaNakku"
+  ],
+  "Audit": [
+   "தணிக்கை",
+   "qaNikkY"
+  ],
+  "FiscalYear": [
+   "நிதியாண்டு",
+   "niqiyANtu"
+  ],
+  "Quarter": [
+   "காலாண்டு",
+   "kAlANtu"
+  ],
+  "Shareholder": [
+   "பங்குதாரர்",
+   "pawkuqArar"
+  ],
+  "Budget": [
+   "நிதித்திட்டம்",
+   "niqiqqittam"
+  ],
+  "TDS": [
+   "வரிப்பிடித்தம்",
+   "varippitiqqam",
+   "_TDS"
+  ],
+  "InputTaxCredit": [
+   "உள்ளீட்டுவரி",
+   "uLLIttuvari",
+   "_ITC"
+  ],
+  "Deduction": [
+   "விலக்கு",
+   "vilakku"
+  ],
+  "Exemption": [
+   "விதிவிலக்கு",
+   "viqivilakku"
+  ],
+  "Slab": [
+   "அடுக்கு",
+   "atukku"
+  ],
+  "CustomsDuty": [
+   "சுங்கவரி",
+   "cuwkavari"
+  ],
+  "ExciseDuty": [
+   "கலால்வரி",
+   "kalAlvari"
+  ],
+  "StampDuty": [
+   "முத்திரைத்தீர்வை",
+   "muqqirYqqIrvY"
+  ],
+  "AssessmentYear": [
+   "மதிப்பீட்டாண்டு",
+   "maqippIttANtu"
+  ],
+  "IntegerType": [
+   "எண்",
+   "eN"
+  ],
+  "FloatType": [
+   "பின்னம்",
+   "piZZam"
+  ],
+  "StringType": [
+   "சொல்",
+   "col"
+  ],
+  "BoolType": [
+   "ஈர்ம",
+   "Irma"
+  ],
+  "TextType": [
+   "உரை",
+   "urY"
+  ],
+  "ArrayType": [
+   "அணி",
+   "aNi"
+  ],
+  "DataType": [
+   "தரவு",
+   "qaravu"
+  ],
+  "ObjectType": [
+   "பொருள்",
+   "poruL"
+  ],
+  "DateType": [
+   "தேதி",
+   "qEqi"
+  ],
+  "True": [
+   "மெய்",
+   "mey"
+  ],
+  "False": [
+   "பொய்",
+   "poy"
+  ],
+  "Null": [
+   "இன்மை",
+   "iZmY"
+  ],
+  "Let": [
+   "மாறி",
+   "mARi"
+  ],
+  "Const": [
+   "நிலை",
+   "nilY"
+  ],
+  "If": [
+   "எனில்",
+   "eZil"
+  ],
+  "Else": [
+   "இன்றேல்",
+   "iZREl"
+  ],
+  "Loop": [
+   "சுற்று",
+   "cuRRu"
+  ],
+  "Print": [
+   "அச்சு",
+   "accu"
+  ],
+  "Input": [
+   "உள்ளிடு",
+   "uLLitu"
+  ],
+  "Function": [
+   "செயல்",
+   "ceyal",
+   "_fn"
+  ],
+  "Return": [
+   "திரும்பு",
+   "qirumpu",
+   "_return"
+  ],
+  "ForEach": [
+   "ஒவ்வொரு",
+   "ovvoru",
+   "_each"
+  ],
+  "In": [
+   "இல்",
+   "il",
+   "_in"
+  ],
+  "Import": [
+   "இறக்கு",
+   "iRakku",
+   "_import"
+  ],
+  "File": [
+   "கோப்பு",
+   "kOppu",
+   "_file"
+  ],
+  "CSV": [
+   "தரவுரை",
+   "qaravurY",
+   "_CSV"
+  ],
+  "Read": [
+   "படி",
+   "pati",
+   "_read"
+  ],
+  "Write": [
+   "எழுது",
+   "ezuqu",
+   "_write"
+  ],
+  "Open": [
+   "திற",
+   "qiRa",
+   "_open"
+  ],
+  "Close": [
+   "மூடு",
+   "mUtu",
+   "_close"
+  ],
+  "FileOpen": [
+   "கோப்பு_திற",
+   "kOppu_qiRa",
+   "_fileOpen"
+  ],
+  "FileClose": [
+   "கோப்பு_மூடு",
+   "kOppu_mUtu",
+   "_fileClose"
+  ],
+  "FileRead": [
+   "கோப்பு_படி",
+   "kOppu_pati",
+   "_fileRead"
+  ],
+  "FileWrite": [
+   "கோப்பு_எழுது",
+   "kOppu_ezuqu",
+   "_fileWrite"
+  ],
+  "FileLines": [
+   "கோப்பு_நிரை",
+   "kOppu_nirY",
+   "_fileLines"
+  ],
+  "ReadCSV": [
+   "தரவுரை_படி",
+   "qaravurY_pati",
+   "_readCSV"
+  ],
+  "WriteCSV": [
+   "தரவுரை_எழுது",
+   "qaravurY_ezuqu",
+   "_writeCSV"
+  ],
+  "Database": [
+   "தரவுதளம்",
+   "qaravuqaLam",
+   "_database"
+  ],
+  "DBConnect": [
+   "தளம்_இணை",
+   "qaLam_iNY",
+   "_dbConnect"
+  ],
+  "DBDisconnect": [
+   "தளம்_பிரி",
+   "qaLam_piri",
+   "_dbDisconnect"
+  ],
+  "DBQuery": [
+   "தளம்_வினா",
+   "qaLam_viZA",
+   "_dbQuery"
+  ],
+  "DBExecute": [
+   "தளம்_செய்",
+   "qaLam_cey",
+   "_dbExecute"
+  ],
+  "DBSearch": [
+   "தளம்_தேடு",
+   "qaLam_qEtu",
+   "_dbSearch"
+  ],
+  "DBInsert": [
+   "தளம்_செருக",
+   "qaLam_ceruka",
+   "_dbInsert"
+  ],
+  "DBUpdate": [
+   "தளம்_புதுப்பி",
+   "qaLam_puquppi",
+   "_dbUpdate"
+  ],
+  "DBDelete": [
+   "தளம்_நீக்கு",
+   "qaLam_nIkku",
+   "_dbDelete"
+  ],
+  "SQL": [
+   "கவி_மொழி",
+   "kavi_mozi",
+   "_SQL"
+  ],
+  "NoSQL": [
+   "தேடு_மொழி",
+   "qEtu_mozi",
+   "_NoSQL"
+  ],
+  "SQLite": [
+   "சீகுலைட்",
+   "cIkulYt",
+   "_SQLite"
+  ],
+  "MySQL": [
+   "மைசீகுல்",
+   "mYcIkul",
+   "_MySQL"
+  ],
+  "PostgreSQL": [
+   "போச்குரசீகுல்",
+   "pOckuracIkul",
+   "_PostgreSQL"
+  ],
+  "MongoDB": [
+   "மாங்கோடிபி",
+   "mAwkOtipi",
+   "_MongoDB"
+  ],
+  "Redis": [
+   "ரெடிஸ்",
+   "retis",
+   "_Redis"
+  ],
+  "JSONdb": [
+   "ஜேசான்",
+   "jEcAZ",
+   "_JSON"
+  ],
+  "Table": [
+   "அட்டை",
+   "attY",
+   "_table"
+  ],
+  "Collection": [
+   "தொகுப்பு",
+   "toguippu",
+   "_collection"
+  ],
+  "Row": [
+   "நிரை",
+   "nirY",
+   "_row"
+  ],
+  "Column": [
+   "பத்தி",
+   "paqqi",
+   "_column"
+  ],
+  "Key": [
+   "விசை",
+   "vicY",
+   "_key"
+  ],
+  "PrimaryKey": [
+   "தனிக_விசை",
+   "taZik_vicY",
+   "_primaryKey"
+  ],
+  "ForeignKey": [
+   "வெளி_விசை",
+   "veLi_vicY",
+   "_foreignKey"
+  ],
+  "Index": [
+   "குறியீடு",
+   "kuRiyItu",
+   "_index"
+  ],
+  "CreateTable": [
+   "அட்டை_ஆக்கு",
+   "attY_Akku",
+   "_createTable"
+  ],
+  "AlterTable": [
+   "அட்டை_மாற்று",
+   "attY_mARRu",
+   "_alterTable"
+  ],
+  "DropTable": [
+   "அட்டை_நீக்கு",
+   "attY_nIkku",
+   "_dropTable"
+  ],
+  "Select": [
+   "தேர்வெடு",
+   "qErvetu",
+   "_select"
+  ],
+  "From": [
+   "இதனில்",
+   "iqaZil",
+   "_from"
+  ],
+  "Where": [
+   "விதி",
+   "viqi",
+   "_where"
+  ],
+  "OrderBy": [
+   "வரிசை",
+   "varicY",
+   "_orderBy"
+  ],
+  "GroupBy": [
+   "குழு",
+   "kuzu",
+   "_groupBy"
+  ],
+  "Join": [
+   "சேர்",
+   "cEr",
+   "_join"
+  ],
+  "Left": [
+   "இடம்",
+   "itam",
+   "_left"
+  ],
+  "Right": [
+   "வலம்",
+   "valam",
+   "_right"
+  ],
+  "Inner": [
+   "உள்",
+   "uL",
+   "_inner"
+  ],
+  "Outer": [
+   "வெளி",
+   "veLi",
+   "_outer"
+  ],
+  "Distinct": [
+   "தனிக",
+   "qaZika",
+   "_distinct"
+  ],
+  "Limit": [
+   "வரம்பு",
+   "varampu",
+   "_limit"
+  ],
+  "Offset": [
+   "ஈடு",
+   "Itu",
+   "_offset"
+  ],
+  "API": [
+   "தள_இடை",
+   "qaLa_itY",
+   "_api"
+  ],
+  "Endpoint": [
+   "இறுதி_புள்ளி",
+   "iraqi_pulli",
+   "_endpoint"
+  ],
+  "Route": [
+   "வழி",
+   "vazhi",
+   "_route"
+  ],
+  "Every": [
+   "இடைவெளி",
+   "itYveLi",
+   "_every"
+  ],
+  "Request": [
+   "கோரிக்கை",
+   "kOrikkY",
+   "_request"
+  ],
+  "Response": [
+   "பதில்",
+   "paDil",
+   "_response"
+  ],
+  "Header": [
+   "தலைப்பு",
+   "talYppu",
+   "_header"
+  ],
+  "Body": [
+   "உடல்",
+   "uqal",
+   "_body"
+  ],
+  "Param": [
+   "அளவுரு",
+   "aLavuru",
+   "_param"
+  ],
+  "QueryParam": [
+   "வினா_அளவுரு",
+   "viZA_aLavuru",
+   "_queryParam"
+  ],
+  "PathParam": [
+   "பாதை_அளவுரு",
+   "pAtY_aLavuru",
+   "_pathParam"
+  ],
+  "JSONBody": [
+   "ஜேசான்_உரை",
+   "jEcAZ_urY",
+   "_jsonBody"
+  ],
+  "URL": [
+   "உரலி",
+   "urali",
+   "_url"
+  ],
+  "Host": [
+   "புரவலன்",
+   "puravalaZ",
+   "_host"
+  ],
+  "Port": [
+   "குதை",
+   "kuqY",
+   "_port"
+  ],
+  "Method": [
+   "முறை",
+   "muRY",
+   "_method"
+  ],
+  "HttpGet": [
+   "பெறு",
+   "peRu",
+   "_get"
+  ],
+  "HttpPost": [
+   "பதி",
+   "paqi",
+   "_post"
+  ],
+  "HttpPut": [
+   "இடு",
+   "itu",
+   "_put"
+  ],
+  "HttpDelete": [
+   "அழி",
+   "azi",
+   "_delete"
+  ],
+  "HttpPatch": [
+   "ஒட்டு",
+   "ottu",
+   "_patch"
+  ],
+  "HttpOptions": [
+   "தெரிவு",
+   "qerivu",
+   "_options"
+  ],
+  "HttpHead": [
+   "தலை",
+   "talY",
+   "_head"
+  ],
+  "StatusCode": [
+   "நிலை_குறி",
+   "nilY_kuRi",
+   "_statusCode"
+  ],
+  "StatusMessage": [
+   "நிலை_செய்தி",
+   "nilY_ceyqi",
+   "_statusMessage"
+  ],
+  "Auth": [
+   "உறுதி",
+   "uRuqi",
+   "_auth"
+  ],
+  "BearerToken": [
+   "குறிதாங்கி",
+   "kuRiqAwki",
+   "_bearerToken"
+  ],
+  "ContentType": [
+   "உரை_வகை",
+   "urY_vakY",
+   "_contentType"
+  ],
+  "Serve": [
+   "சேவை",
+   "cEvY",
+   "_serve"
+  ],
+  "StartServer": [
+   "வழங்கி_தொடங்கு",
+   "vazawki_toqotawku",
+   "_startServer"
+  ],
+  "StopServer": [
+   "வழங்கி_நிறுத்து",
+   "vazawki_niRuqqu",
+   "_stopServer"
+  ],
+  "Encrypt": [
+   "மறை",
+   "maRY",
+   "_encrypt"
+  ],
+  "Decrypt": [
+   "வெளிப்படு",
+   "veLippatu",
+   "_decrypt"
+  ],
+  "Password": [
+   "குறிமுறை",
+   "kuRimuRY",
+   "_password"
+  ],
+  "EncryptionKey": [
+   "மறை_விசை",
+   "maRY_vicY",
+   "_encryptionKey"
+  ],
+  "And": [
+   "மற்றும்",
+   "maRRum",
+   "_and"
+  ],
+  "Or": [
+   "அல்லது",
+   "allaqu",
+   "_or"
+  ],
+  "Not": [
+   "இல்லை",
+   "illY",
+   "_not"
+  ]
+ }
+}

@@ -18,6 +18,7 @@
 
 <nav id="site-nav" class="nav" aria-label="{{ t.primary_nav }}">
   <ul>
+    <li><a href="{{ p | append: '/ide/'      | relative_url }}"{% if page.key == 'ide'      %} aria-current="page"{% endif %}>{{ t.nav.ide }}</a></li>
     <li><a href="{{ p | append: '/language/' | relative_url }}"{% if page.key == 'language' %} aria-current="page"{% endif %}>{{ t.nav.language }}</a></li>
     <li><a href="{{ p | append: '/finance/'  | relative_url }}"{% if page.key == 'finance'  %} aria-current="page"{% endif %}>{{ t.nav.finance }}</a></li>
     <li><a href="{{ p | append: '/backend/'  | relative_url }}"{% if page.key == 'backend'  %} aria-current="page"{% endif %}>{{ t.nav.backend }}</a></li>

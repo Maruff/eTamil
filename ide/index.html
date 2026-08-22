@@ -1,0 +1,19 @@
+<!doctype html>
+<!-- Dev harness only: `npm run dev` serves this. The site itself loads the
+     built bundle from a Jekyll page; this file is not deployed. -->
+<html lang="ta">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>eTamil editor — dev</title>
+    <style>
+      body { margin: 0; font: 16px system-ui, sans-serif; }
+      .cm-editor { height: 100vh; }
+      .cm-scroller { font-family: "Noto Sans Tamil", "Cascadia Code", monospace; }
+    </style>
+  </head>
+  <body>
+    <div data-etamil-editor></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

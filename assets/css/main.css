@@ -363,3 +363,85 @@ html.ta .eyebrow { letter-spacing: .08em; }
 html.ta .stat b { line-height: 1.3; }
 img { max-width: 100%; height: auto; }
 .center { text-align: center; }
+
+/* --------------------------------------------------------------- editor */
+/* The editor is a code surface, so it takes the same navy plate the rest of
+   the site gives `pre` — in both colour schemes, the way `--code-bg` does.
+   The syntax colours below are the Rouge values used for static code blocks,
+   so a live editor and a printed example look like the same language. */
+.ide-frame {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--code-line);
+  box-shadow: var(--shadow);
+  background: var(--code-bg);
+  margin: 1.8rem 0 2.4rem;
+}
+
+.ide-bar {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .9rem;
+  background: rgba(255, 255, 255, .06);
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  font-family: var(--mono);
+  font-size: .76rem;
+  color: #9DBDE2;
+}
+.ide-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: #35507A; }
+.ide-bar .name { margin-left: .4rem; }
+.ide-bar-note { margin-left: auto; opacity: .75; }
+
+.ide-shell {
+  /* Rouge's palette, so the editor matches the static examples elsewhere. */
+  --ide-text:     #DCE9F8;
+  --ide-comment:  #6E93BC;
+  --ide-string:   #8FE0B4;
+  --ide-number:   #FFC08A;
+  --ide-bool:     #FFC08A;
+  --ide-control:  #7FC0FF;
+  --ide-operator: #9DB6D2;
+  --ide-invalid:  #FF8A8A;
+
+  /* Three colours Rouge has no equivalent for, because a static block never
+     needed to tell them apart. The finance vocabulary gets the warmest one:
+     it is the reason the language exists, and it should be the thing your eye
+     lands on. */
+  --ide-domain:   #FFD479;
+  --ide-builtin:  #C9A9FF;
+  --ide-type:     #5FD8C4;
+
+  /* Run pane and mobile key row. */
+  --ide-keyrow-bg:     rgba(255, 255, 255, .045);
+  --ide-keyrow-border: #10416B;
+  --ide-key-bg:        #0E3557;
+  --ide-key-active:    #17507F;
+}
+
+.ide-shell .cm-editor {
+  /* Tall enough to be worth typing in, short enough that the explanation
+     below stays on screen on a laptop. */
+  height: clamp(320px, 58vh, 620px);
+  background: transparent;
+}
+.ide-shell .cm-editor.cm-focused { outline: none; }
+.ide-shell .cm-gutters {
+  background: transparent;
+  border-right: 1px solid rgba(255, 255, 255, .08);
+  color: #5C7EA6;
+}
+.ide-shell .cm-activeLine,
+.ide-shell .cm-activeLineGutter { background: rgba(255, 255, 255, .04); }
+.ide-shell .cm-cursor { border-left-color: var(--azure-hi); }
+.ide-shell .cm-selectionBackground,
+.ide-shell .cm-content ::selection { background: rgba(0, 175, 240, .28); }
+
+/* Tamil has no widely installed monospace face, so `--mono` names Tamil
+   fallbacks and columns will not align the way they do for Latin. Slightly
+   looser than the Latin default, matching what the site does for `pre`. */
+.ide-shell .cm-scroller {
+  font-family: var(--mono);
+  font-size: .875rem;
+  line-height: 1.8;
+}

@@ -86,3 +86,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  # Editor sources. The built bundle lands in assets/ide/ and is committed;
+  # this directory holds the Vite project that produces it, and node_modules
+  # under it would otherwise be crawled on every build.
+  - ide
+  - tools
