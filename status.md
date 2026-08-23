@@ -29,13 +29,14 @@ This table is the honest state of the code, not a wish list.
 
 | Area | Status | Notes |
 |---|---|---|
-| Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 202 tokens across 505 spellings; errors carry line and column |
+| Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 202 tokens across 523 spellings; errors carry line and column |
 | Variables, arithmetic, percentages, strings | <span class="pill pill-ok">Working</span> |  |
 | Comparisons, `எனில்` / `இன்றேல்`, `சுற்று` loops | <span class="pill pill-ok">Working</span> |  |
 | Logical `மற்றும்` / `அல்லது` / `இல்லை` | <span class="pill pill-ok">Working</span> | `மற்றும்` and `அல்லது` now stop as soon as the answer is known, so `(நீளம்(அ) > 0 மற்றும் அ[0] == 1)` is safe on an empty array |
 | File I/O and CSV row counting | <span class="pill pill-ok">Working</span> | in the VM (`--vm`) |
 | VM bytecode executor | <span class="pill pill-ok">Working</span> |  |
 | Functions (`செயல்` / `திரும்பு`) | <span class="pill pill-ok">Working</span> | parameters, returns, local scope, recursion |
+| Declared function signatures | <span class="pill pill-ok">Working</span> | `செயல் வரி(எண் தொகை, சொல் பெயர்) எண் { … }` — the type before the name, as in `எண் வருவாய்;`, and the return type between the parameter list and the body. Every part is optional, so nothing written before this changes meaning; what is written is enforced. An argument that cannot be its parameter's type is an error, so is a `திரும்பு` that cannot be the declared return type, and a call now infers as what it promised — so `அணி அ = பெயர்();` is caught when `பெயர்` returns `சொல்` |
 | Arrays (`[…]`) and records (`{…}`) | <span class="pill pill-ok">Working</span> | indexing, field access, assignment |
 | Iteration (`ஒவ்வொரு … இல்`) | <span class="pill pill-ok">Working</span> | arrays, records, strings |
 | Results (`சரி` / `தவறு` / `?`) | <span class="pill pill-ok">Working</span> | Rust semantics; failure is a value, not an exception |
@@ -45,6 +46,7 @@ This table is the honest state of the code, not a wish list.
 | Accounting framework | <span class="pill pill-ok">Working</span> | double entry, GST, three statements — **written in eTamil** |
 | SQLite (`தளம்_இணை` etc.) | <span class="pill pill-ok">Working</span> | parameterised queries only; rows return as an array of records |
 | Connection reuse | <span class="pill pill-ok">Working</span> | `தளம்_இணை` borrows from a process-wide idle cache instead of reconnecting per request; leases are exclusive, so transactions stay isolated. `ETAMIL_DB_IDLE` caps it |
+| Named database handles | <span class="pill pill-ok">Working</span> | `தளம்_இணை SQL, "a.db", அ;` then `தளம்_வினா "SELECT …", [], வரிசைகள், அ;` — the name is an optional *trailing* operand, which the fixed-arity grammar makes unambiguous, so an unnamed connection still keys on its driver name exactly as before. Two SQLite files open at once, each query reaching its own, was previously impossible to express. An unnamed query with several open is still refused, and the message lists the open handles |
 | PostgreSQL | <span class="pill pill-ok">Working</span> | `--features postgres`; money as native `NUMERIC`, so a text column stays text — unlike SQLite, where decimals are stored as text |
 | MySQL / MariaDB | <span class="pill pill-ok">Live verified</span> | `--features mysql`; the live sample passes with `ETAMIL_TEST_MYSQL=1 ./scripts/run_examples.sh`; setup details are in `TESTING.md` |
 | HTTP server (`--server`) | <span class="pill pill-ok">Working</span> | worker pool; `வழி` routes with `:id` path parameters, query params, headers and request bodies; `பதில்` responses |
@@ -85,12 +87,10 @@ This table is the honest state of the code, not a wish list.
 | Area | Status | Notes |
 |---|---|---|
 | LLVM backend (`--llvm`) | <span class="pill pill-part">Expressions complete; I/O statements refused</span> | Linux/macOS, `--features llvm`. The IR no longer holds values: every one is a handle into an arena in `src/runtime.rs` and every operation on it is a call into the `cdylib` Cargo already builds. So decimals are **exact** — `1 / 3` prints all twenty-eight digits, as on the VM — formatting cannot drift because printing goes through the VM's own `to_string`, and all 59 builtins work at once because dispatch goes through the interpreter's own table. Strings, arrays, records, results, booleans and `இன்மை` all have a representation. What is still refused is *statements*: files, databases, HTTP, routes. The IR is therefore not self-contained — it links `-letamil_compiler`, and a compiled program ships with that library beside it. `llvm-sys 180` needs LLVM 18, so this is type-checked but not built on the machine it was written on; the last measured run, of the previous register-based design, was 7 of 68 examples matching the VM with none disagreeing |
-| Named database handles | <span class="pill pill-part">One at a time</span> | `தளம்_வினா` names no handle, so only one database can be open. A second connection through the same driver is now **refused by name** rather than silently swapping the first. Genuinely concurrent connections need the language to name one |
-| Declared function signatures | <span class="pill pill-no">Not implemented</span> | `செயல்` cannot declare parameter or return types, so a call makes no claim the type checker can hold you to |
 | Chained comparisons | <span class="pill pill-part">Refused, not chained</span> | `a > b > c` used to parse as `(a > b) > c` — a boolean compared against a number, so `3 > 2 > 1` was `false` and nothing said so. It is now an error naming what to write instead. Not chained, because chaining needs the middle operand evaluated once and there is no way to say "once" in this AST, so `f() > g() > h()` would call `g` twice. A slab still reads `(300000 < வ) மற்றும் (வ <= 700000)` |
 | Adding a keyword can break a program | <span class="pill pill-part">By design, worth knowing</span> | 89 of the 202 keywords are deliberately usable as names, so a new keyword takes a word that existing code may already use as a variable |
-| File "encryption" | <span class="pill pill-no">Not real encryption</span> | `மறை` is a repeating-key XOR cipher with a default key, not an AEAD. Do not use it for anything that matters until it is one |
-| Romanization coverage | <span class="pill pill-part">19 of 202 off-scheme</span> | The ந/ன distinction is resolved; nineteen keywords remain off-scheme for other letters |
+| File encryption | <span class="pill pill-no">Not implemented</span> | `மறை` is a **reserved word with no implementation**. There was a repeating-key XOR cipher in the Rust source, but no statement, builtin or bytecode ever reached it — an eTamil program could not encrypt anything and never could — so it is deleted rather than left looking like a feature. The three `_மறை` functions in `nUlakam` are not encryption either: `எழுத்து_மறை` escapes a character for JSON and `உரை_மறை` percent-encodes a UPI address. A real AEAD behind `மறை` is wanted; nothing depends on the shape it takes |
+| Romanization coverage | <span class="pill pill-part">1 of 202 off-scheme, on purpose</span> | Eighteen of the nineteen are fixed, and without the breaking rename it looked like it needed: a keyword may have several spellings, so the scheme form was made canonical and the old one kept — both lex. The cost is eighteen newly reserved romanized words (`utal`, `paqil`, `vazi` …), checked against every `.qmz` here first. `தொகை` keeps `toqai`: its scheme form `qokY` is a record field name in four examples, and a keyword used as a field is stored under its *token* name, so `பதிவு.qokY` would have started looking for `Amount` and found nothing. `transliterate.py` holds that exception with its reason, and CI gates on the check now |
 
 </div>
 
@@ -147,11 +147,24 @@ TDS templates, and RBI/KYC syntax.
 
 ## Contributing
 
-The most useful contributions right now are the remaining roadmap items:
-a database handle `தளம்_இணை` can return and `தளம்_வினா` can take, so more than one
-database can be open at once; declared parameter and return types for `செயல்`; a
-real AEAD behind `மறை`, which is a repeating-key XOR today; and the nineteen
-keywords still romanized off-scheme.
+The four items this section used to list are done: named database handles,
+declared parameter and return types for `செயல்`, the romanization sweep, and the
+`மறை` cipher — which turned out to be unreachable dead code rather than a weak
+implementation, so it was deleted instead of replaced.
+
+What is most useful now:
+
+- **A real AEAD behind `மறை`.** The keyword is reserved and nothing is behind it,
+  so the shape is still open. It needs a decision about randomness in the
+  WebAssembly build and about deriving a key from a passphrase.
+- **Chained comparisons.** `அ > ஆ > இ` is refused today rather than chained,
+  because chaining needs the middle operand evaluated exactly once and the AST
+  cannot express a temporary. Give it one and `(300000 < வ <= 700000)` — how a
+  tax slab actually reads — becomes writable.
+- **The LLVM backend's statements.** Expressions are complete; files, databases,
+  HTTP and routes are refused. `scripts/run_parity.sh` ranks them by how many
+  distinct reasons each program has left, so the next one to do is measured
+  rather than guessed.
 
 Please add a test to `etamil_compiler/tests/language_tests.rs` for any language
 behaviour you change, and make sure `cargo test` passes on both Linux and Windows.
