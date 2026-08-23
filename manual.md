@@ -164,8 +164,10 @@ Declaring a type is optional; assigning without one works and infers nothing.
 When you do declare, the compiler holds you to it, including on later
 assignments.
 
-The types are `எண்` (number), `சொல்` (string), `அணி` (array), `வரிசை` (record),
-and the boolean values `மெய்` and `பொய்`.
+The type keywords are `எண்` and `பின்னம்` (number), `சொல்` and `உரை` (string),
+`ஈர்ம` (boolean), `அணி` (array), `பொருள்` and `தரவு` (record), and `தேதி` (a
+date, held as ISO-8601 text because that sorts chronologically). `மெய்` and
+`பொய்` are the two boolean *values*, not types.
 
 ## 4. Numbers and money {: #4-numbers-and-money}
 
@@ -388,11 +390,45 @@ Two positions keep the canonical English name, because what they name belongs to
 the host rather than to you: the database type in `தளம்_இணை`, and the HTTP method
 in `வழி`.
 
-**Hard-reserved words** cannot be used as names at all — the type keywords and
-SQL clause keywords: `எண்`, `சொல்`, `அணி`, `வரிசை`, `விதி`, `இடம்`, `உள்`, `வெளி`,
-`குழு`, `சேர்`.
+**Two kinds of keyword.** Of the 202 keywords, **113 are reserved and 89 are
+not**, and the split follows one rule: the words the grammar needs are reserved,
+and the words programs are *about* are not.
 
-Financial keywords are *not* reserved: `தொகை` is a perfectly good variable name.
+*Reserved* — the language's own machinery. Types (`எண்`, `சொல்`, `பொருள்`,
+`தேதி`), literals (`மெய்`, `பொய்`, `இன்மை`), control flow (`எனில்`, `இன்றேல்`,
+`சுற்று`, `ஒவ்வொரு`), statements (`அச்சு`, `உள்ளிடு`, `செயல்`, `திரும்பு`), and
+the database, server and SQL words. Using one as a name is a parse error, not a
+surprise.
+
+*Not reserved* — the accountancy vocabulary. `வரவு` (credit), `பற்று` (debit),
+`இருப்பு` (balance), `சொத்து` (asset), `பொறுப்பு` (liability), `வருவாய்`
+(revenue), `செலவு` (expense), `வரி` (tax), `வட்டி` (interest), `பேரேடு`
+(ledger), `கடன்` (loan), `தொகை` (amount) — 89 in all, and every one is a
+perfectly good variable, parameter or field name.
+
+That second group exists because this is a language for accounting. If `வரி`
+were reserved you could not write a tax calculation using the word for tax, and
+`எண் வருவாய்;` — the first line of section 3 — would not compile.
+
+**Adding a keyword can break a program.** That is what the arrangement costs,
+and it is worth knowing rather than fixing. Because the language invites you to
+name things after the domain, your variables and its future keywords come from
+the same pool of words. Suppose a later version adds `மொத்தம்` ("total") with
+syntax of its own. Somewhere there is already a program containing:
+
+```etamil
+மொத்தம் = 0;
+```
+
+Nothing in that program changed, but the language did, and the line now either
+fails to parse or means something other than it did.
+
+No fix keeps what is good about the arrangement. Reserving all 202 takes the
+domain vocabulary away. Treating a word as a keyword only in keyword position is
+possible, but it makes the grammar harder to reason about and the error messages
+worse. So the rule is written down instead: **before a keyword is added, check
+whether the word is already in use** — and if a program stops parsing after an
+upgrade, this is the first thing to suspect.
 
 ## 16. Reading error messages {: #16-reading-error-messages}
 
