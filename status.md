@@ -78,7 +78,9 @@ This table is the honest state of the code, not a wish list.
 | WebAssembly target | <span class="pill pill-ok">Working</span> | `cargo build --target wasm32-unknown-unknown --no-default-features`; lexer, parser, checker and VM all build for the browser. Native builds are unchanged |
 | Browser editor ([/start/]({{ '/start/' | relative_url }})) | <span class="pill pill-ok">Working</span> | The real compiler as WebAssembly: diagnostics, scope-aware completion and execution with no server and no upload. Highlighting is generated from `lexer.rs`, so it cannot drift from the language |
 | In-browser VM | <span class="pill pill-ok">Working</span> | Programs run client-side, capped at ten million instructions so a runaway `சுற்று` reports an endless loop instead of hanging the tab. File statements work against an in-memory filesystem cleared before every run |
-| In the browser: databases, Redis, HTTP server, auth, `உள்ளிடு`, ODF packages | <span class="pill pill-no">Not available</span> | Each says so when tried, in both languages — all of them need a machine of their own. Everything else the language does with values works |
+| In the browser: databases, Redis, HTTP server | <span class="pill pill-no">Not available</span> | A page cannot open a TCP socket or listen on a port, so Postgres, MySQL, MongoDB, Redis and `சேவை` are out of reach for a reason no amount of work here would change. Each says so when tried, in both languages |
+| In the browser: auth, ODF packages | <span class="pill pill-part">Not built yet</span> | Not the browser's doing: bcrypt wants a random source wired to the page's, and the ODF writer still reads and writes through `std::fs` rather than the host it was given. Both say they are unavailable until someone does the work — which is work, not a different machine |
+| `உள்ளிடு` in the browser | <span class="pill pill-ok">Working</span> | The page hands the program its input before the run, through `run_with_input`, and `உள்ளிடு` reads it a line at a time. Up front because a page has nowhere to type during a run: the VM would have to block, and a blocked page is a hung tab. Asking for more lines than were given is the program's own error, like reading past the end of a file |
 
 </div>
 
@@ -90,7 +92,8 @@ This table is the honest state of the code, not a wish list.
 |---|---|---|
 | LLVM backend (`--llvm`) | <span class="pill pill-part">Expressions complete; I/O statements refused</span> | Linux/macOS, `--features llvm`. The IR no longer holds values: every one is a handle into an arena in `src/runtime.rs` and every operation on it is a call into the `cdylib` Cargo already builds. So decimals are **exact** — `1 / 3` prints all twenty-eight digits, as on the VM — formatting cannot drift because printing goes through the VM's own `to_string`, and all 59 builtins work at once because dispatch goes through the interpreter's own table. Strings, arrays, records, results, booleans and `இன்மை` all have a representation. What is still refused is *statements*: files, databases, HTTP, routes. The IR is therefore not self-contained — it links `-letamil_compiler`, and a compiled program ships with that library beside it. `llvm-sys 180` needs LLVM 18, so this is type-checked but not built on the machine it was written on; the last measured run, of the previous register-based design, was 7 of 68 examples matching the VM with none disagreeing |
 | Adding a keyword can break a program | <span class="pill pill-part">By design, worth knowing</span> | 89 of the 202 keywords are deliberately usable as names, so a new keyword takes a word that existing code may already use as a variable |
-| File encryption | <span class="pill pill-no">Not implemented</span> | `மறை` is a **reserved word with no implementation**. There was a repeating-key XOR cipher in the Rust source, but no statement, builtin or bytecode ever reached it — an eTamil program could not encrypt anything and never could — so it is deleted rather than left looking like a feature. The three `_மறை` functions in `nUlakam` are not encryption either: `எழுத்து_மறை` escapes a character for JSON and `உரை_மறை` percent-encodes a UPI address. A real AEAD behind `மறை` is wanted; nothing depends on the shape it takes |
+| File encryption | <span class="pill pill-ok">Working</span> | `மறை(text, passphrase)` seals to one base64 string; `வெளிப்படு(sealed, passphrase)` returns a **result**, so a wrong passphrase or a tampered byte is something a program handles with `இயல்பு` or `?` rather than something that stops it. XChaCha20-Poly1305 over an Argon2id key, with the format's version byte authenticated, so a file from a future version is refused instead of misread. `மறை_விசை()` mints a passphrase for a program that would rather store a strong one than ask a person to invent one. Works in the browser build too |
+
 
 </div>
 
@@ -148,15 +151,19 @@ TDS templates, and RBI/KYC syntax.
 ## Contributing
 
 The four items this section used to list are done: named database handles,
-declared parameter and return types for `செயல்`, the romanization sweep, and the
-`மறை` cipher — which turned out to be unreachable dead code rather than a weak
-implementation, so it was deleted instead of replaced.
+declared parameter and return types for `செயல்`, the romanization sweep, and
+encryption behind `மறை`. The cipher that used to sit there was unreachable dead
+code rather than a weak implementation, so it was deleted first and then replaced
+by a real one.
 
 What is most useful now:
 
-- **A real AEAD behind `மறை`.** The keyword is reserved and nothing is behind it,
-  so the shape is still open. It needs a decision about randomness in the
-  WebAssembly build and about deriving a key from a passphrase.
+- **Auth and ODF in the browser.** These are the two things the browser build
+  refuses that it would not have to. bcrypt needs its random source pointed at
+  the page's, and the ODF writer needs to go through `vm::host` like every other
+  file statement instead of reaching for `std::fs` — the host would need a way to
+  read bytes, which it has not needed until now. Databases, Redis and the HTTP
+  server are a different matter and will keep refusing: a page has no socket.
 - **The LLVM backend's statements.** Expressions are complete; files, databases,
   HTTP and routes are refused. `scripts/run_parity.sh` ranks them by how many
   distinct reasons each program has left, so the next one to do is measured
