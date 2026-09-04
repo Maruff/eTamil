@@ -43,4 +43,9 @@ several editors on one page cost one download and one mount pass.
   </div>
 </div>
 
-<script type="module" src="{{ '/assets/ide/etamil-ide.js' | relative_url }}"></script>
+{%- comment -%}
+Same per-deploy token as head.html. Liquid `assign` does not cross an include
+boundary, so it is recomputed here rather than inherited.
+{%- endcomment -%}
+{%- assign asset_v = site.github.build_revision | default: site.brand.version | slice: 0, 8 -%}
+<script type="module" src="{{ '/assets/ide/etamil-ide.js' | relative_url }}?v={{ asset_v }}"></script>

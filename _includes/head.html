@@ -29,7 +29,23 @@
 <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/etamil-icon-192.png' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
 <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{%- comment -%}
+Cache-busting token for asset URLs, computed once per page.
+
+Both main.css and the editor bundle are served from stable, unhashed paths and
+Cloudflare caches them for four hours (`Cache-Control: max-age=14400`). Twice
+now a deploy has gone out and readers -- and the author -- kept seeing the old
+stylesheet, because the origin had the new file and the edge did not. Appending
+a token that changes with the commit gives each deploy its own URL, so there is
+nothing stale to serve.
+
+`site.github.build_revision` is the commit GitHub Pages built. tools/preview.py
+builds `site` from _config.yml and _data only, so it has no github metadata and
+falls back to the declared version -- enough to keep the URL valid locally,
+where there is no CDN in front to go stale.
+{%- endcomment -%}
+{%- assign asset_v = site.github.build_revision | default: site.brand.version | slice: 0, 8 -%}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ asset_v }}">
 <link rel="sitemap" type="application/xml" href="{{ '/sitemap.xml' | relative_url }}">
 
 {%- comment -%}
