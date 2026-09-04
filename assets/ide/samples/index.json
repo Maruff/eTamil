@@ -1,0 +1,352 @@
+[
+  {
+    "id": "01-vanakkam",
+    "level": "adippadai",
+    "title_ta": "வணக்கம் உலகம்",
+    "title_en": "Hello, world",
+    "file": "01-vanakkam.qmz"
+  },
+  {
+    "id": "02-maarikal",
+    "level": "adippadai",
+    "title_ta": "மாறிகளும் வகைகளும்",
+    "title_en": "Variables and types",
+    "file": "02-maarikal.qmz"
+  },
+  {
+    "id": "03-kanitham",
+    "level": "adippadai",
+    "title_ta": "எண் கணிதம்",
+    "title_en": "Arithmetic",
+    "file": "03-kanitham.qmz"
+  },
+  {
+    "id": "04-saram",
+    "level": "adippadai",
+    "title_ta": "சரம் இணைப்பு",
+    "title_en": "String joining",
+    "file": "04-saram.qmz"
+  },
+  {
+    "id": "05-oppeedu",
+    "level": "adippadai",
+    "title_ta": "ஒப்பீடும் தருக்கமும்",
+    "title_en": "Comparison and logic",
+    "file": "05-oppeedu.qmz"
+  },
+  {
+    "id": "06-nibandhanai",
+    "level": "adippadai",
+    "title_ta": "நிபந்தனை",
+    "title_en": "If and else",
+    "file": "06-nibandhanai.qmz"
+  },
+  {
+    "id": "07-sutru",
+    "level": "adippadai",
+    "title_ta": "சுற்று",
+    "title_en": "While loop",
+    "file": "07-sutru.qmz"
+  },
+  {
+    "id": "08-pattiyal",
+    "level": "adippadai",
+    "title_ta": "பட்டியல்",
+    "title_en": "Lists",
+    "file": "08-pattiyal.qmz"
+  },
+  {
+    "id": "09-ovvoru",
+    "level": "adippadai",
+    "title_ta": "ஒவ்வொரு",
+    "title_en": "For each",
+    "file": "09-ovvoru.qmz"
+  },
+  {
+    "id": "10-seyal",
+    "level": "adippadai",
+    "title_ta": "செயல்",
+    "title_en": "Functions",
+    "file": "10-seyal.qmz"
+  },
+  {
+    "id": "11-irattai",
+    "level": "kattuppaadu",
+    "title_ta": "இரட்டையா ஒற்றையா",
+    "title_en": "Even or odd",
+    "file": "11-irattai.qmz"
+  },
+  {
+    "id": "12-moondru-aindhu",
+    "level": "kattuppaadu",
+    "title_ta": "மூன்று ஐந்து",
+    "title_en": "Fizz buzz",
+    "file": "12-moondru-aindhu.qmz"
+  },
+  {
+    "id": "13-kaaraneeyam",
+    "level": "kattuppaadu",
+    "title_ta": "காரணீயப் பெருக்கம்",
+    "title_en": "Factorial with a loop",
+    "file": "13-kaaraneeyam.qmz"
+  },
+  {
+    "id": "14-suyazhaippu",
+    "level": "kattuppaadu",
+    "title_ta": "சுய அழைப்பு",
+    "title_en": "Recursion",
+    "file": "14-suyazhaippu.qmz"
+  },
+  {
+    "id": "15-fibonacci",
+    "level": "kattuppaadu",
+    "title_ta": "பிபனாச்சி வரிசை",
+    "title_en": "Fibonacci",
+    "file": "15-fibonacci.qmz"
+  },
+  {
+    "id": "16-vaaippaadu",
+    "level": "kattuppaadu",
+    "title_ta": "வாய்ப்பாடு",
+    "title_en": "Times table",
+    "file": "16-vaaippaadu.qmz"
+  },
+  {
+    "id": "17-pakaa-enn",
+    "level": "kattuppaadu",
+    "title_ta": "பகா எண்ணா",
+    "title_en": "Prime check",
+    "file": "17-pakaa-enn.qmz"
+  },
+  {
+    "id": "18-periyathu",
+    "level": "kattuppaadu",
+    "title_ta": "பெரிய மதிப்பு",
+    "title_en": "Largest in a list",
+    "file": "18-periyathu.qmz"
+  },
+  {
+    "id": "19-ezhuthu",
+    "level": "saram",
+    "title_ta": "மேல் கீழ் எழுத்து",
+    "title_en": "Upper and lower case",
+    "file": "19-ezhuthu.qmz"
+  },
+  {
+    "id": "20-piri",
+    "level": "saram",
+    "title_ta": "பிரித்தல்",
+    "title_en": "Splitting",
+    "file": "20-piri.qmz"
+  },
+  {
+    "id": "21-onrinai",
+    "level": "saram",
+    "title_ta": "ஒன்றிணைத்தல்",
+    "title_en": "Joining",
+    "file": "21-onrinai.qmz"
+  },
+  {
+    "id": "22-maatru",
+    "level": "saram",
+    "title_ta": "மாற்றுதல்",
+    "title_en": "Replacing",
+    "file": "22-maatru.qmz"
+  },
+  {
+    "id": "23-thalaikeezh",
+    "level": "saram",
+    "title_ta": "தலைகீழ் வரிசை",
+    "title_en": "Reversing a list",
+    "file": "23-thalaikeezh.qmz"
+  },
+  {
+    "id": "24-marupakkam",
+    "level": "saram",
+    "title_ta": "மறுபக்கச் சொல்",
+    "title_en": "Palindrome",
+    "file": "24-marupakkam.qmz"
+  },
+  {
+    "id": "25-sorkal",
+    "level": "saram",
+    "title_ta": "சொல் எண்ணிக்கை",
+    "title_en": "Counting words",
+    "file": "25-sorkal.qmz"
+  },
+  {
+    "id": "26-vakai-maatram",
+    "level": "saram",
+    "title_ta": "வகை மாற்றம்",
+    "title_en": "Type conversion",
+    "file": "26-vakai-maatram.qmz"
+  },
+  {
+    "id": "27-motham",
+    "level": "pattiyal",
+    "title_ta": "கூட்டுத்தொகையும் சராசரியும்",
+    "title_en": "Sum and average",
+    "file": "27-motham.qmz"
+  },
+  {
+    "id": "28-inai",
+    "level": "pattiyal",
+    "title_ta": "இணைத்தல்",
+    "title_en": "Appending",
+    "file": "28-inai.qmz"
+  },
+  {
+    "id": "29-vadikattu",
+    "level": "pattiyal",
+    "title_ta": "வடிகட்டுதல்",
+    "title_en": "Filtering",
+    "file": "29-vadikattu.qmz"
+  },
+  {
+    "id": "30-siriyathu-periyathu",
+    "level": "pattiyal",
+    "title_ta": "சிறியதும் பெரியதும்",
+    "title_en": "Min and max",
+    "file": "30-siriyathu-periyathu.qmz"
+  },
+  {
+    "id": "31-varisai",
+    "level": "pattiyal",
+    "title_ta": "வரிசைப்படுத்தல்",
+    "title_en": "Bubble sort",
+    "file": "31-varisai.qmz"
+  },
+  {
+    "id": "32-thedu",
+    "level": "pattiyal",
+    "title_ta": "தேடுதல்",
+    "title_en": "Searching",
+    "file": "32-thedu.qmz"
+  },
+  {
+    "id": "33-thanitthavai",
+    "level": "pattiyal",
+    "title_ta": "தனித்த மதிப்புகள்",
+    "title_en": "Unique values",
+    "file": "33-thanitthavai.qmz"
+  },
+  {
+    "id": "34-elliya-vatti",
+    "level": "nithi",
+    "title_ta": "எளிய வட்டி",
+    "title_en": "Simple interest",
+    "file": "34-elliya-vatti.qmz"
+  },
+  {
+    "id": "35-kootu-vatti",
+    "level": "nithi",
+    "title_ta": "கூட்டு வட்டி",
+    "title_en": "Compound interest",
+    "file": "35-kootu-vatti.qmz"
+  },
+  {
+    "id": "36-thavanai",
+    "level": "nithi",
+    "title_ta": "மாதத் தவணை",
+    "title_en": "Loan instalment",
+    "file": "36-thavanai.qmz"
+  },
+  {
+    "id": "37-vanigavari",
+    "level": "nithi",
+    "title_ta": "வணிகவரி",
+    "title_en": "GST on a sale",
+    "file": "37-vanigavari.qmz"
+  },
+  {
+    "id": "38-mathiya-maanila",
+    "level": "nithi",
+    "title_ta": "மத்திய மாநில வரி",
+    "title_en": "CGST and SGST split",
+    "file": "38-mathiya-maanila.qmz"
+  },
+  {
+    "id": "39-varumaana-vari",
+    "level": "nithi",
+    "title_ta": "வருமான வரி",
+    "title_en": "Income tax slabs",
+    "file": "39-varumaana-vari.qmz"
+  },
+  {
+    "id": "40-thallubadi",
+    "level": "nithi",
+    "title_ta": "தள்ளுபடி",
+    "title_en": "Discount",
+    "file": "40-thallubadi.qmz"
+  },
+  {
+    "id": "41-laabam",
+    "level": "nithi",
+    "title_ta": "இலாப நட்டம்",
+    "title_en": "Profit and loss",
+    "file": "41-laabam.qmz"
+  },
+  {
+    "id": "42-samanilai",
+    "level": "nithi",
+    "title_ta": "சமநிலைப் புள்ளி",
+    "title_en": "Break-even point",
+    "file": "42-samanilai.qmz"
+  },
+  {
+    "id": "43-theymaanam",
+    "level": "nithi",
+    "title_ta": "தேய்மானம்",
+    "title_en": "Straight-line depreciation",
+    "file": "43-theymaanam.qmz"
+  },
+  {
+    "id": "44-vilaippattiyal",
+    "level": "nithi",
+    "title_ta": "விலைப்பட்டியல்",
+    "title_en": "Invoice total",
+    "file": "44-vilaippattiyal.qmz"
+  },
+  {
+    "id": "45-vilaivu",
+    "level": "mempattavai",
+    "title_ta": "சரி தவறு விளைவு",
+    "title_en": "Result values",
+    "file": "45-vilaivu.qmz"
+  },
+  {
+    "id": "46-vattamidu",
+    "level": "mempattavai",
+    "title_ta": "வட்டமிடுதல்",
+    "title_en": "Rounding",
+    "file": "46-vattamidu.qmz"
+  },
+  {
+    "id": "47-naatkal",
+    "level": "mempattavai",
+    "title_ta": "நாட்கள்",
+    "title_en": "Dates",
+    "file": "47-naatkal.qmz"
+  },
+  {
+    "id": "48-vakai",
+    "level": "mempattavai",
+    "title_ta": "வகை அறிதல்",
+    "title_en": "Inspecting types",
+    "file": "48-vakai.qmz"
+  },
+  {
+    "id": "49-serkkai",
+    "level": "mempattavai",
+    "title_ta": "செயல் சேர்க்கை",
+    "title_en": "Composing functions",
+    "file": "49-serkkai.qmz"
+  },
+  {
+    "id": "50-oothiyam",
+    "level": "mempattavai",
+    "title_ta": "ஊதியப் பட்டியல்",
+    "title_en": "Payroll",
+    "file": "50-oothiyam.qmz"
+  }
+]

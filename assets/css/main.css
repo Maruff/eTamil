@@ -470,3 +470,118 @@ img { max-width: 100%; height: auto; }
 .section-nav a:hover { text-decoration: underline; }
 .section-nav a[aria-current="page"] { color: var(--text); text-decoration: none; cursor: default; }
 @media (prefers-color-scheme: dark) { .section-nav-label { color: var(--muted); } }
+
+/* ---------- Playground: sample list beside the editor ---------- */
+
+/* The list and the editor share the one dark frame, so the page reads as a
+   single tool rather than a sidebar next to a widget. Grid rather than flex:
+   the column has a fixed comfortable measure and the editor takes the rest,
+   which is exactly what grid-template-columns says and what flex-basis only
+   approximates. */
+.etamil-playground {
+  display: grid;
+  grid-template-columns: minmax(12rem, 15rem) 1fr;
+  align-items: stretch;
+}
+
+.etamil-playground-side {
+  background: rgba(0, 0, 0, .18);
+  border-right: 1px solid var(--code-line);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.etamil-playground-main { min-width: 0; }
+
+/* One phone-width breakpoint. Below it the list goes above the editor and
+   gets a capped height of its own -- a fifty-item list with no ceiling would
+   push the editor entirely off the first screen. */
+@media (max-width: 640px) {
+  .etamil-playground { grid-template-columns: 1fr; }
+  .etamil-playground-side {
+    border-right: 0;
+    border-bottom: 1px solid var(--code-line);
+  }
+  /* Two classes deep on purpose: the base rule below sets max-height from a
+     clamp, and a single-class override here would lose on source order. */
+  .etamil-playground-side .etamil-samples-list { max-height: 12rem; }
+}
+
+.etamil-samples { display: flex; flex-direction: column; min-height: 0; }
+
+.etamil-samples-title {
+  padding: .55rem .7rem .4rem;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #9DBDE2;
+}
+
+.etamil-samples-filter {
+  margin: 0 .55rem .5rem;
+  padding: .35rem .5rem;
+  border: 1px solid var(--code-line);
+  border-radius: 6px;
+  background: #0E3557;
+  color: #DCE9F8;
+  font: inherit;
+  font-size: .82rem;
+  min-width: 0;
+}
+.etamil-samples-filter::placeholder { color: #6E93BC; }
+
+.etamil-samples-list {
+  overflow-y: auto;
+  /* Matches the editor's own height clamp so the two columns end level. */
+  max-height: clamp(320px, 58vh, 620px);
+  padding-bottom: .5rem;
+}
+
+.etamil-samples-group {
+  padding: .5rem .7rem .25rem;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #FFD479;
+}
+
+.etamil-samples-item {
+  display: block;
+  width: 100%;
+  padding: .3rem .7rem;
+  border: 0;
+  border-left: 3px solid transparent;
+  background: transparent;
+  color: #DCE9F8;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.etamil-samples-item:hover { background: rgba(255, 255, 255, .06); }
+.etamil-samples-item.is-current {
+  border-left-color: var(--azure);
+  background: rgba(0, 175, 240, .12);
+}
+.etamil-samples-item.is-error { color: #FF8A8A; }
+
+.etamil-samples-ta { display: block; font-size: .88rem; }
+.etamil-samples-en {
+  display: block;
+  font-size: .72rem;
+  color: #6E93BC;
+}
+
+.etamil-samples-empty {
+  margin: .6rem .7rem;
+  font-size: .8rem;
+  color: #6E93BC;
+}
+
+.etamil-playground-note {
+  margin: -1.6rem 0 2.4rem;
+  font-size: .85rem;
+  color: var(--muted);
+}

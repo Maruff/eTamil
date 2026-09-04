@@ -23,6 +23,7 @@
   The Language item stays current on its sub-pages, so a reader inside the
   manual or the keyword list can still see which section they are in.
 {%- endcomment -%}
+    <li><a href="{{ p | append: '/playground/' | relative_url }}"{% if page.key == 'playground' %} aria-current="page"{% endif %}>{{ t.nav.playground }}</a></li>
     <li><a href="{{ p | append: '/language/' | relative_url }}"{% if page.key == 'language' or page.key == 'manual' or page.key == 'keywords' %} aria-current="page"{% endif %}>{{ t.nav.language }}</a></li>
     <li><a href="{{ p | append: '/finance/'  | relative_url }}"{% if page.key == 'finance'  %} aria-current="page"{% endif %}>{{ t.nav.finance }}</a></li>
     <li><a href="{{ p | append: '/server/'   | relative_url }}"{% if page.key == 'server'   %} aria-current="page"{% endif %}>{{ t.nav.server }}</a></li>
