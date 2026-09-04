@@ -7,26 +7,24 @@
 // three controls it took to ask them where cost more attention than they
 // returned. A download is one button and no questions.
 //
+// It is also not a panel of its own any more. A second bar under the run bar
+// was a second row of chrome for one button; it goes in the run bar instead,
+// contributed through the toolbar facet so neither module imports the other.
+//
 // The filename follows the loaded sample, so a downloaded program arrives
 // called 44-vilaippattiyal.qmz rather than something anonymous.
 
-import { EditorView, showPanel } from '@codemirror/view'
+import { EditorView } from '@codemirror/view'
+import { toolbarControl } from './etamil-toolbar.js'
 
 const DEFAULT_NAME = 'en_niral.qmz'
 
-function downloadPanel(view) {
-  const dom = document.createElement('div')
-  dom.className = 'etamil-download'
-
+function downloadButton(view) {
   const button = document.createElement('button')
   button.type = 'button'
   button.className = 'etamil-download-button'
-  button.textContent = '⭳ பதிவிறக்கு / Download .qmz'
-
-  const status = document.createElement('span')
-  status.className = 'etamil-download-status'
-
-  dom.append(button, status)
+  button.textContent = '⭳ பதிவிறக்கு / Download'
+  button.title = '.qmz'
 
   let name = DEFAULT_NAME
 
@@ -44,7 +42,6 @@ function downloadPanel(view) {
     // Revoked on the next turn of the event loop: revoking synchronously can
     // beat the browser to the download in Safari.
     setTimeout(() => URL.revokeObjectURL(href), 0)
-    status.textContent = name
   })
 
   // A loaded sample renames the buffer. The event comes from the sample list,
@@ -53,25 +50,16 @@ function downloadPanel(view) {
     if (e.detail && e.detail.file) name = e.detail.file
   })
 
-  return { dom, bottom: true }
+  return button
 }
 
 // Colours are spelled out rather than left to var() fallbacks. The first
 // version used `background: transparent` with `color: var(--ide-text, …)`, and
 // the button came out invisible: the panel sits inside the editor's dark shell,
-// but the fallback in that var() is the light-theme ink, and anything that
-// stopped the variable from resolving painted dark text on a dark panel. The
-// Run button next to it does resolve, so the safe move is to match it exactly.
+// but the fallback in that var() is the light-theme ink, so anything that
+// stopped the variable resolving painted dark text on a dark bar. These match
+// the run button beside it, which does resolve.
 const downloadTheme = EditorView.theme({
-  '.etamil-download': {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-    padding: '6px 8px',
-    borderTop: '1px solid var(--ide-keyrow-border, #10416B)',
-    background: 'var(--ide-keyrow-bg, rgba(255, 255, 255, .045))',
-    font: 'inherit',
-  },
   '.etamil-download-button': {
     padding: '5px 12px',
     border: '1px solid var(--ide-keyrow-border, #10416B)',
@@ -81,17 +69,14 @@ const downloadTheme = EditorView.theme({
     font: 'inherit',
     fontSize: '14px',
     cursor: 'pointer',
+    whiteSpace: 'nowrap',
   },
   '.etamil-download-button:active': {
     background: 'var(--ide-key-active, #17507F)',
   },
-  '.etamil-download-status': {
-    fontSize: '12px',
-    color: 'var(--ide-comment, #6E93BC)',
-  },
 })
 
-/** A single download button, named after whichever sample is loaded. */
+/** A download button in the run bar, named after whichever sample is loaded. */
 export function etamilDownload() {
-  return [showPanel.of(downloadPanel), downloadTheme]
+  return [toolbarControl.of(downloadButton), downloadTheme]
 }

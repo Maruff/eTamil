@@ -481,6 +481,13 @@ img { max-width: 100%; height: auto; }
 .ide-workbench {
   display: grid;
   grid-template-columns: 1fr minmax(11rem, 15rem);
+  /* One row with one height, and both columns fill it. The previous version
+     gave the editor and the list the same clamp separately, which is not the
+     same thing: the list column also carries a heading and a filter box, so it
+     came out about 70px taller than the editor beside it. Sizing the row once
+     makes them equal by construction. Taller than the in-prose editor's clamp
+     because this is the one people actually work in. */
+  grid-template-rows: clamp(420px, 70vh, 760px);
   align-items: stretch;
 }
 
@@ -492,10 +499,13 @@ img { max-width: 100%; height: auto; }
   min-width: 0;
 }
 
-/* The editor is a grid item now, so it needs its own floor: without this a
-   long sample makes the list column tall and the editor follows, and a short
-   one lets both collapse. */
-.ide-workbench > [data-etamil-editor] { min-width: 0; }
+/* Grid items default to min-height:auto, which refuses to shrink below their
+   content and would let a long program push the row past its set height. */
+.ide-workbench > [data-etamil-editor] { min-width: 0; min-height: 0; }
+
+/* Fills the row rather than setting its own height. Same specificity as
+   `.ide-shell .cm-editor`'s clamp above and later in the file, so it wins. */
+.ide-workbench .cm-editor { height: 100%; }
 
 /* One phone-width breakpoint. Below it the list goes under the editor, which
    is the right order when the editor is the thing being used -- and it gets a
@@ -508,12 +518,14 @@ img { max-width: 100%; height: auto; }
     border-top: 1px solid var(--code-line);
     order: 2;
   }
-  /* Two classes deep on purpose: the base rule below sets max-height from a
-     clamp, and a single-class override here would lose on source order. */
-  .etamil-samples-side .etamil-samples-list { max-height: 14rem; }
+  /* Two rows now, each sized by its content. */
+  .ide-workbench { grid-template-rows: auto auto; }
+  .ide-workbench .cm-editor { height: clamp(320px, 58vh, 620px); }
+  /* Capped and no longer flexing, since there is no fixed row to fill. */
+  .etamil-samples-side .etamil-samples-list { flex: 0 0 auto; max-height: 14rem; }
 }
 
-.etamil-samples { display: flex; flex-direction: column; min-height: 0; }
+.etamil-samples { display: flex; flex-direction: column; min-height: 0; flex: 1 1 auto; }
 
 .etamil-samples-title {
   padding: .55rem .7rem .4rem;
@@ -537,10 +549,12 @@ img { max-width: 100%; height: auto; }
 }
 .etamil-samples-filter::placeholder { color: #6E93BC; }
 
+/* Takes whatever height the row has left after the heading and the filter,
+   and scrolls inside it. No max-height: the row is the ceiling. */
 .etamil-samples-list {
+  flex: 1 1 auto;
+  min-height: 0;
   overflow-y: auto;
-  /* Matches the editor's own height clamp so the two columns end level. */
-  max-height: clamp(320px, 58vh, 620px);
   padding-bottom: .5rem;
 }
 

@@ -14,6 +14,7 @@
 
 import { EditorView, showPanel, keymap } from '@codemirror/view'
 import { runProgram, ready } from './etamil-compiler.js'
+import { toolbarControl } from './etamil-toolbar.js'
 
 const STAGE_LABEL = {
   lex: 'சொல் பிழை / lexical error',
@@ -92,7 +93,13 @@ function runPanel(view) {
   output.className = 'etamil-run-output'
   output.textContent = '(இயக்கவில்லை / not run yet)'
 
-  bar.append(button, status, hint)
+  // Contributed controls sit between the status and the hint, so the hint
+  // keeps its margin-left:auto and stays pinned to the right edge.
+  bar.append(button, status)
+  for (const make of view.state.facet(toolbarControl)) {
+    bar.append(make(view))
+  }
+  bar.append(hint)
   dom.append(bar, output)
 
   // The button is useless until the wasm is there.
@@ -113,7 +120,12 @@ const runTheme = EditorView.theme({
   '.etamil-run-bar': {
     display: 'flex',
     alignItems: 'center',
-    gap: '10px',
+    // Wraps because the bar now holds contributed controls as well as the run
+    // button. On a phone the three of them do not fit on one line, and without
+    // this the run button gets squashed to fit and the keyboard hint is pushed
+    // past the right edge where it cannot be read.
+    flexWrap: 'wrap',
+    gap: '6px 10px',
     padding: '6px 8px',
   },
   '.etamil-run-button': {
