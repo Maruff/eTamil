@@ -2,9 +2,10 @@
 //
 // Deliberately not a CodeMirror panel. `showPanel` only places a panel above or
 // below the editor, and a list of fifty entries is unusable in a strip that
-// wide and that short. This mounts its own element next to the editor instead,
-// and talks to the view through a dispatch -- so the picker knows about
-// CodeMirror's API in exactly one place, the `load` function below.
+// wide and that short. This mounts its own element beside the editor instead,
+// inside the same frame, and talks to the view through a dispatch -- so the
+// picker knows about CodeMirror's API in exactly one place, the `load` function
+// below.
 //
 // The index is fetched rather than bundled. Fifty programs are ~30 kB of Tamil
 // source; inlining them would double the JS the editor needs before it can
@@ -129,8 +130,9 @@ export function mountSamples(host, view, base) {
                 load(view, code)
                 for (const row of rows) row.el.classList.remove('is-current')
                 item.classList.add('is-current')
-                // The filename travels with the program: the publish button
-                // needs a name, and a sample already has a good one.
+                // The filename travels with the program: a sample already
+                // has a good name, and the download button wants one. The
+                // event bubbles to the frame, where that button listens.
                 host.dispatchEvent(
                   new CustomEvent('etamil-sample', {
                     bubbles: true,

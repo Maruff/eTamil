@@ -33,21 +33,9 @@ en:
       uploaded.
     open_full: Open the full editor
 
-  playground:
-    heading: Playground
-    lede: >-
-      They run from a first print statement to a payroll run. Pick one from the
-      list, press Ctrl-Enter, change it, then publish your version to a
-      repository of your own. The compiler runs in this tab — nothing is
-      uploaded and nothing is installed.
-    publish_note: >-
-      Publishing opens GitHub's own editor with the program already in it. You
-      commit it yourself, signed in as yourself — this page never sees a
-      password or a token.
 
   nav:
     start: Get started
-    playground: Playground
     language: Language
     finance: Finance
     server: Server
@@ -116,22 +104,9 @@ ta:
       பதிவேற்றப்படவில்லை.
     open_full: முழு எழுதுகளத்தைத் திற
 
-  playground:
-    heading: பயிலகம்
-    lede: >-
-      முதல் அச்சு கட்டளையிலிருந்து ஊதியப் பட்டியல் வரை.
-      பட்டியலில் ஒன்றைத் தேர்ந்து Ctrl-Enter அழுத்துங்கள்,
-      மாற்றுங்கள், பிறகு உங்கள் சொந்தக் களஞ்சியத்தில்
-      வெளியிடுங்கள். தொகுப்பி இந்தத் தாவலிலேயே இயங்குகிறது —
-      எதுவும் பதிவேற்றப்படவில்லை, எதுவும் நிறுவப்படவில்லை.
-    publish_note: >-
-      வெளியிடும்போது GitHub-ன் சொந்த எழுதுகளம் நிரலுடன்
-      திறக்கும். நீங்களே உங்கள் கணக்கில் பதிவு செய்கிறீர்கள் —
-      இந்தப் பக்கம் கடவுச்சொல்லையோ சீட்டையோ காண்பதில்லை.
 
   nav:
     start: தொடங்குதல்
-    playground: பயிலகம்
     language: மொழி
     finance: நிதி
     server: சேவையகம்

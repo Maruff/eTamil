@@ -471,41 +471,46 @@ img { max-width: 100%; height: auto; }
 .section-nav a[aria-current="page"] { color: var(--text); text-decoration: none; cursor: default; }
 @media (prefers-color-scheme: dark) { .section-nav-label { color: var(--muted); } }
 
-/* ---------- Playground: sample list beside the editor ---------- */
+/* ---------- Workbench: the sample list beside the editor ---------- */
 
-/* The list and the editor share the one dark frame, so the page reads as a
-   single tool rather than a sidebar next to a widget. Grid rather than flex:
-   the column has a fixed comfortable measure and the editor takes the rest,
-   which is exactly what grid-template-columns says and what flex-basis only
-   approximates. */
-.etamil-playground {
+/* Editor first, list second: the code is what the reader came for, and it
+   keeps the left edge where the eye already is. `1fr` on the editor and a
+   bounded column for the list means the editor takes every pixel the list
+   does not need -- and the frame around them is `.full`, so on a wide screen
+   that is the whole 1140px wrap rather than the 74ch prose measure. */
+.ide-workbench {
   display: grid;
-  grid-template-columns: minmax(12rem, 15rem) 1fr;
+  grid-template-columns: 1fr minmax(11rem, 15rem);
   align-items: stretch;
 }
 
-.etamil-playground-side {
+.etamil-samples-side {
   background: rgba(0, 0, 0, .18);
-  border-right: 1px solid var(--code-line);
+  border-left: 1px solid var(--code-line);
   display: flex;
   flex-direction: column;
   min-width: 0;
 }
 
-.etamil-playground-main { min-width: 0; }
+/* The editor is a grid item now, so it needs its own floor: without this a
+   long sample makes the list column tall and the editor follows, and a short
+   one lets both collapse. */
+.ide-workbench > [data-etamil-editor] { min-width: 0; }
 
-/* One phone-width breakpoint. Below it the list goes above the editor and
-   gets a capped height of its own -- a fifty-item list with no ceiling would
-   push the editor entirely off the first screen. */
-@media (max-width: 640px) {
-  .etamil-playground { grid-template-columns: 1fr; }
-  .etamil-playground-side {
-    border-right: 0;
-    border-bottom: 1px solid var(--code-line);
+/* One phone-width breakpoint. Below it the list goes under the editor, which
+   is the right order when the editor is the thing being used -- and it gets a
+   height cap of its own, because fifty items with no ceiling would bury
+   everything after it on the page. */
+@media (max-width: 720px) {
+  .ide-workbench { grid-template-columns: 1fr; }
+  .etamil-samples-side {
+    border-left: 0;
+    border-top: 1px solid var(--code-line);
+    order: 2;
   }
   /* Two classes deep on purpose: the base rule below sets max-height from a
      clamp, and a single-class override here would lose on source order. */
-  .etamil-playground-side .etamil-samples-list { max-height: 12rem; }
+  .etamil-samples-side .etamil-samples-list { max-height: 14rem; }
 }
 
 .etamil-samples { display: flex; flex-direction: column; min-height: 0; }
@@ -578,10 +583,4 @@ img { max-width: 100%; height: auto; }
   margin: .6rem .7rem;
   font-size: .8rem;
   color: #6E93BC;
-}
-
-.etamil-playground-note {
-  margin: -1.6rem 0 2.4rem;
-  font-size: .85rem;
-  color: var(--muted);
 }

@@ -30,7 +30,7 @@ machine.
 தொகை = 50000;
 அச்சு(வட்டி_கணக்கு(தொகை, 7.5%, 3));
 {% endcapture %}
-{% include editor.html seed=editor_seed name="வட்டி.qmz" %}
+{% include editor.html seed=editor_seed name="வட்டி.qmz" samples=true %}
 
 Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to run. Nothing is uploaded and nothing is
 stored. Databases, the HTTP server and `உள்ளிடு` need a machine of their own and

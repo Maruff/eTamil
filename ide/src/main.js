@@ -8,7 +8,7 @@ import { etamil } from './etamil-language.js'
 import { etamilIntelligence } from './etamil-intelligence.js'
 import { etamilKeyRow } from './etamil-keyrow.js'
 import { etamilRunner } from './etamil-run.js'
-import { etamilPublish } from './etamil-publish.js'
+import { etamilDownload } from './etamil-download.js'
 import { mountSamples } from './etamil-samples.js'
 
 // Simple interest, which exercises every highlight category the generated
@@ -52,47 +52,35 @@ export function mount(parent, { doc = SAMPLE, extensions = [] } = {}) {
   })
 }
 
-// The playground: the same editor, plus the sample list and the publish bar.
-//
-// A second mount rather than an option on the first, because the two have
-// different jobs. An editor embedded in prose illustrates the paragraph above
-// it and should stay small and quiet; the playground is somewhere a reader
-// spends twenty minutes, and can afford the furniture.
-export function mountPlayground(parent, { base }) {
-  const editorHost = parent.querySelector('[data-etamil-playground-editor]') || parent
-  const listHost = parent.querySelector('[data-etamil-playground-samples]') || parent
-
-  const view = mount(editorHost, {
-    doc: SAMPLE,
-    extensions: [etamilPublish()],
-  })
-  mountSamples(listHost, view, base)
-  return view
-}
-
 // Auto-mount so a Jekyll page needs only the container div and a module
 // script tag -- no inline JavaScript, which keeps the site's CSP simple.
 function autoMount() {
   for (const el of document.querySelectorAll('[data-etamil-editor]')) {
     if (el.dataset.mounted) continue
     el.dataset.mounted = '1'
+
+    // An editor with a sample list beside it gets a download button too: the
+    // reader has been handed fifty programs and will want one of them on
+    // disk. An editor embedded in prose illustrates the paragraph above it
+    // and stays without the furniture.
+    const listHost = el.parentElement?.querySelector('[data-etamil-samples]')
+
     // Kept on the element so an embedding page (or a test) has a handle on the
     // editor without this module having to own a registry.
-    el.etamilView = mount(el, { doc: el.textContent.trim() || SAMPLE })
+    el.etamilView = mount(el, {
+      doc: el.textContent.trim() || SAMPLE,
+      extensions: listHost ? [etamilDownload()] : [],
+    })
     // The seed text lived in the element; CodeMirror has it now.
     for (const node of [...el.childNodes]) {
       if (node.nodeType === Node.TEXT_NODE) node.remove()
     }
-  }
 
-  for (const el of document.querySelectorAll('[data-etamil-playground]')) {
-    if (el.dataset.mounted) continue
-    el.dataset.mounted = '1'
-    // The page owns the URL: the bundle is built with a relative base and
-    // only shares a directory with the samples by convention.
-    el.etamilView = mountPlayground(el, {
-      base: el.dataset.samples || '/assets/ide/samples',
-    })
+    if (listHost) {
+      // The include owns the URL: the bundle is built with a relative base and
+      // only shares a directory with the samples by convention.
+      mountSamples(listHost, el.etamilView, listHost.dataset.etamilSamples)
+    }
   }
 }
 

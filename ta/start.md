@@ -30,7 +30,7 @@ description: >-
 தொகை = 50000;
 அச்சு(வட்டி_கணக்கு(தொகை, 7.5%, 3));
 {% endcapture %}
-{% include editor.html seed=editor_seed name="வட்டி.qmz" %}
+{% include editor.html seed=editor_seed name="வட்டி.qmz" samples=true %}
 
 இயக்க <kbd>Ctrl</kbd>+<kbd>Enter</kbd> அழுத்துங்கள். எதுவும் பதிவேற்றப்படுவதில்லை,
 எதுவும் சேமிக்கப்படுவதில்லை. தரவுதளங்கள், HTTP சேவையகம், `உள்ளிடு` ஆகியவற்றுக்குத் தனி
