@@ -390,7 +390,7 @@ Two positions keep the canonical English name, because what they name belongs to
 the host rather than to you: the database type in `தளம்_இணை`, and the HTTP method
 in `வழி`.
 
-**Two kinds of keyword.** Of the 202 keywords, **113 are reserved and 89 are
+**Two kinds of keyword.** Of the 202 keywords, **109 are reserved and 93 are
 not**, and the split follows one rule: the words the grammar needs are reserved,
 and the words programs are *about* are not.
 
@@ -700,7 +700,7 @@ wrong.
 ## 28. Editor support {: #28-editor-support}
 
 The VS Code extension is in `eTamil_Code/` in the compiler repository:
-highlighting for all 202 keywords in every spelling, completions for the 59
+highlighting for all 202 keywords in every spelling, completions for the 62
 builtins and 254 `nUlakam` functions, and `--check` errors shown as you type.
 
 Its grammar and completion data are generated from `lexer.rs`, and CI fails if
@@ -715,7 +715,7 @@ etamil --check my_program.qmz     # parse and type check, do not run
 In the compiler repository:
 
 ```bash
-cargo test                        # 196 language tests + 59 unit + 8 --check
+cargo test                        # 288 language + 113 unit + 10 host-capture + 8 --check
 ./scripts/run_examples.sh         # every example, with expected outcomes
 ```
 
