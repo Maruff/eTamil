@@ -610,8 +610,18 @@ blocking pool, which is what lets the blocking database drivers keep working.
 ```
 
 Fields serialize in sorted order, which makes a response body stable enough to
-assert on in tests. `\uXXXX` escapes are not decoded. The `ஜேசான்_உரை` statement
-parses but the VM refuses it — build the body with `ஜேசான்_ஆக்கு` instead.
+assert on in tests. `\uXXXX` escapes are not decoded.
+
+`ஜேசான்_உரை` sends a body with the JSON content type already on it, so you do not
+have to spell the header out:
+
+```etamil
+ஜேசான்_உரை ஜேசான்_ஆக்கு({நிலுவை: 1500}), 201;
+```
+
+Leave the status off and it answers 200. The body must already be text — it asks
+for `ஜேசான்_ஆக்கு` rather than rendering a record itself, because a second encoder
+would be a second answer to one question, and eTamil's record syntax is not JSON.
 
 ## 23. Authentication {: #23-authentication}
 

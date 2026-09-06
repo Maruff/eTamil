@@ -152,10 +152,16 @@ record whose field names come from the data, and the VM already allows that:
 guessed at. Record fields serialize in sorted order, which makes a response body
 stable enough to assert on. `\uXXXX` escapes are not decoded.
 
-<div class="note" markdown="1">
-**`ஜேசான்_உரை` is not implemented.** It parses, but the VM refuses it. Build the body
-with `ஜேசான்_ஆக்கு` and send it with `பதில்`.
-</div>
+`ஜேசான்_உரை` is `பதில்` with the JSON content type already on it:
+
+```etamil
+ஜேசான்_உரை ஜேசான்_ஆக்கு({நிலுவை: 1500}), 201;
+```
+
+Omit the status and it answers 200. The body must already be text: encoding a
+record here would need a second JSON encoder beside `ஜேசான்_ஆக்கு`, and two
+encoders are two answers to one question — so it asks for the one that exists
+rather than emitting eTamil's record syntax and calling it JSON.
 
 ## Calling other services
 
