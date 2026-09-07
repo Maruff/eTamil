@@ -25,6 +25,7 @@
 {%- endcomment -%}
     <li><a href="{{ p | append: '/language/' | relative_url }}"{% if page.key == 'language' or page.key == 'manual' or page.key == 'keywords' %} aria-current="page"{% endif %}>{{ t.nav.language }}</a></li>
     <li><a href="{{ p | append: '/finance/'  | relative_url }}"{% if page.key == 'finance'  %} aria-current="page"{% endif %}>{{ t.nav.finance }}</a></li>
+    <li><a href="{{ p | append: '/products/' | relative_url }}"{% if page.key == 'products' %} aria-current="page"{% endif %}>{{ t.nav.products }}</a></li>
     <li><a href="{{ p | append: '/server/'   | relative_url }}"{% if page.key == 'server'   %} aria-current="page"{% endif %}>{{ t.nav.server }}</a></li>
     <li><a href="{{ p | append: '/research/' | relative_url }}"{% if page.key == 'research' %} aria-current="page"{% endif %}>{{ t.nav.research }}</a></li>
     <li><a href="{{ p | append: '/about/'    | relative_url }}"{% if page.key == 'about'    %} aria-current="page"{% endif %}>{{ t.nav.about }}</a></li>

@@ -38,6 +38,7 @@ en:
     start: Get started
     language: Language
     finance: Finance
+    products: Products
     server: Server
     research: Research
     about: About
@@ -57,6 +58,7 @@ en:
     tour: Language tour
     keywords: Keyword reference
     finance: Finance &amp; accounting
+    products: Products built with eTamil
     server: Server &amp; databases
     start: Get started
     status: Status &amp; roadmap
@@ -109,6 +111,7 @@ ta:
     start: தொடங்குதல்
     language: மொழி
     finance: நிதி
+    products: தயாரிப்புகள்
     server: சேவையகம்
     research: ஆய்வு
     about: பற்றி
@@ -127,6 +130,7 @@ ta:
     tour: மொழி அறிமுகம்
     keywords: திறவுச்சொல் பட்டியல்
     finance: நிதியும் கணக்கியலும்
+    products: இ-தமிழில் கட்டப்பட்டவை
     server: சேவையகமும் தரவுத்தளங்களும்
     start: தொடங்குதல்
     status: நிலையும் திட்டவரைபடமும்
