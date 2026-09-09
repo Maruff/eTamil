@@ -121,3 +121,16 @@ written in it.
 
 More at [about](/about/), and the language itself at
 [Get started](/start/).
+
+## Support this work
+
+<p class="do-badge">
+  <a href="https://www.digitalocean.com/?refcode=b91dda0d10a8&amp;utm_campaign=Referral_Invite&amp;utm_medium=Referral_Program&amp;utm_source=badge" rel="noopener sponsored">
+    <img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean Referral Badge"
+         width="201" height="42" loading="lazy" decoding="async">
+  </a>
+</p>
+
+That badge is a referral link. Opening a DigitalOcean account through it earns
+this project hosting credit, which pays for the servers these applications and
+this site are tried out on.

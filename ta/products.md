@@ -124,3 +124,16 @@ description: >-
 
 மேலும் [ஆசிரியர் பற்றி](/ta/about/), மொழியைப் பற்றி
 [தொடங்குதல்](/ta/start/).
+
+## இந்தப் பணிக்கு ஆதரவு
+
+<p class="do-badge">
+  <a href="https://www.digitalocean.com/?refcode=b91dda0d10a8&amp;utm_campaign=Referral_Invite&amp;utm_medium=Referral_Program&amp;utm_source=badge" rel="noopener sponsored">
+    <img src="https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg" alt="DigitalOcean பரிந்துரைச் சின்னம்"
+         width="201" height="42" loading="lazy" decoding="async">
+  </a>
+</p>
+
+அது ஒரு பரிந்துரை இணைப்பு. அதன் வழியாக DigitalOcean கணக்கைத் தொடங்கினால், இந்தத்
+திட்டத்திற்கு ஹோஸ்டிங் வரவு கிடைக்கும் — இந்தப் பயன்பாடுகளும் இந்தத் தளமும்
+சோதிக்கப்படும் சேவையகங்களுக்கு அது செலவாகும்.
