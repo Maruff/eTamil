@@ -90,7 +90,6 @@ defaults:
 
 exclude:
   - README.md
-  - TRANSLATE.md
   - Gemfile
   - Gemfile.lock
   - vendor
