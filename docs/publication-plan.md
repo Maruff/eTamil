@@ -72,7 +72,7 @@ one-character-per-letter property identifiers need. Tamil's three nasals, ண, �
 and ன, which English collapses into a single `n`, are precisely where a lossy
 scheme stops round-tripping.
 
-*Evidence already in hand.* 202 keywords across 524 spellings, audited against
+*Evidence already in hand.* 202 keywords across 541 spellings, audited against
 the scheme as a gating step in continuous integration; a second gate covering
 module names, SQL tables and columns, and record keys, which no keyword audit
 reaches; and a worked failure — `viziqam` for விகிதம், which spread into a

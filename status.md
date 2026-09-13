@@ -29,7 +29,7 @@ This table is the honest state of the code, not a wish list.
 
 | Area | Status | Notes |
 |---|---|---|
-| Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 202 tokens across 524 spellings; errors carry line and column |
+| Lexer (Tamil / romanized / English keywords) | <span class="pill pill-ok">Working</span> | 202 tokens across 541 spellings; errors carry line and column |
 | Romanization coverage | <span class="pill pill-ok">Complete</span> | Every one of the 202 keywords romanizes on-scheme, and `scripts/transliterate.py --check` gates CI on it. Getting there needed no breaking rename: a keyword may carry several spellings, so the scheme's form was made canonical and the old one kept — both lex. 524 spellings across 202 tokens, up from 505 |
 | Variables, arithmetic, percentages, strings | <span class="pill pill-ok">Working</span> |  |
 | Comparisons, `எனில்` / `இன்றேல்`, `சுற்று` loops | <span class="pill pill-ok">Working</span> |  |
@@ -65,7 +65,7 @@ This table is the honest state of the code, not a wish list.
 | Async HTTP server (`--async`) | <span class="pill pill-ok">Working</span> | tokio accept loop, handlers on the blocking pool; the VM stays synchronous |
 | Parse error positions | <span class="pill pill-ok">Working</span> | every error carries a line and column, bilingually |
 | Type checking | <span class="pill pill-ok">Working</span> | a declared type is enforced, with a position; deliberately narrow — no rule the rest of the language does not follow |
-| VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 202 keywords in every spelling, completions for 62 builtins and 254 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
+| VS Code extension | <span class="pill pill-ok">Working</span> | `eTamil_Code/` — highlighting for all 202 keywords in every spelling, completions for 62 builtins and 681 `nUlakam` functions, and errors from `--check` as you type. Grammar and completion data are **generated** from `lexer.rs`; CI fails if they drift |
 | Interactive shell (`--repl`) | <span class="pill pill-ok">Working</span> | `etamil --repl` — type an expression, see what it comes to, without a file |
 | Redis | <span class="pill pill-ok">Working</span> | The host offers one generic `ரெடிஸ்_கட்டளை` (a command name and its arguments), so every Redis command works, including ones invented later; `nUlakam/qaLam/retis.qmz` wraps the common ones by name |
 | MongoDB | <span class="pill pill-ok">Working</span> | `--features mongodb`; a document *is* a `பொருள்`, so the mapping needed no invention — numbers are stored as `Decimal128` rather than doubles |

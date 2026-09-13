@@ -196,7 +196,7 @@ are rejected rather than emitted as incorrect IR. Use `--vm` for real work.
 
 ```bash
 cd etamil_compiler
-cargo test          # 288 language + 113 unit + 10 host-capture + 8 --check
+cargo test          # 290 language + 120 unit + 10 host-capture + 8 --check
 ```
 
 `tests/language_tests.rs` covers the front end end-to-end by asserting on
@@ -216,7 +216,7 @@ python3 scripts/transliterate.py --check   # romanization audit
 
 A VS Code extension lives in `eTamil_Code/` in the compiler repository:
 highlighting for all 202 keywords in every spelling, completions for the 62
-builtins and 254 `nUlakam` functions, and errors from `--check` shown as you type.
+builtins and 681 `nUlakam` functions, and errors from `--check` shown as you type.
 
 Its grammar and completion data are **generated from `lexer.rs`**, and CI fails if
 they drift — so the editor cannot fall behind the compiler. If it cannot find the compiler

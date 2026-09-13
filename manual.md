@@ -701,7 +701,7 @@ wrong.
 
 The VS Code extension is in `eTamil_Code/` in the compiler repository:
 highlighting for all 202 keywords in every spelling, completions for the 62
-builtins and 254 `nUlakam` functions, and `--check` errors shown as you type.
+builtins and 681 `nUlakam` functions, and `--check` errors shown as you type.
 
 Its grammar and completion data are generated from `lexer.rs`, and CI fails if
 they drift, so the editor cannot fall behind the compiler.
@@ -715,7 +715,7 @@ etamil --check my_program.qmz     # parse and type check, do not run
 In the compiler repository:
 
 ```bash
-cargo test                        # 288 language + 113 unit + 10 host-capture + 8 --check
+cargo test                        # 290 language + 120 unit + 10 host-capture + 8 --check
 ./scripts/run_examples.sh         # every example, with expected outcomes
 ```
 

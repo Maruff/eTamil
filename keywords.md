@@ -7,7 +7,7 @@ summary: >-
   Every keyword in the language — Tamil script, the romanized ezuqqu spelling, and
   the English alias where one exists. All forms are interchangeable in source.
 description: >-
-  The complete eTamil keyword reference: 202 tokens across 524 spellings,
+  The complete eTamil keyword reference: 202 tokens across 541 spellings,
   grouped as the lexer groups them, covering financial and accounting vocabulary,
   control flow, collections, SQL clauses, HTTP and the standard library.
 lang: en
