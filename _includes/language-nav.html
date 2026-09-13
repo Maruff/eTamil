@@ -15,5 +15,6 @@ each of which sets `key` to language / manual / keywords.
     <li><a href="{{ p | append: '/language/'          | relative_url }}"{% if page.key == 'language' %} aria-current="page"{% endif %}>{{ t.langnav.tour }}</a></li>
     <li><a href="{{ p | append: '/language/manual/'   | relative_url }}"{% if page.key == 'manual'   %} aria-current="page"{% endif %}>{{ t.langnav.manual }}</a></li>
     <li><a href="{{ p | append: '/language/keywords/' | relative_url }}"{% if page.key == 'keywords' %} aria-current="page"{% endif %}>{{ t.langnav.keywords }}</a></li>
+    <li><a href="{{ p | append: '/font/' | relative_url }}"{% if page.key == 'font' %} aria-current="page"{% endif %}>{{ t.langnav.font }}</a></li>
   </ul>
 </nav>

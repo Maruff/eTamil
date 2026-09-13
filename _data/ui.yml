@@ -50,6 +50,7 @@ en:
     tour: Tour
     manual: Manual
     keywords: Keywords
+    font: Font
 
   footer:
     language_heading: Language
@@ -122,6 +123,7 @@ ta:
     tour: சுற்றுப்பயணம்
     manual: கையேடு
     keywords: திறவுச்சொற்கள்
+    font: எழுத்துரு
 
   footer:
     language_heading: மொழி
