@@ -721,7 +721,7 @@ etamil --check my_program.qmz
 தொகுப்பிக் களஞ்சியத்தில்:
 
 ```bash
-cargo test                        # 290 மொழி + 120 அலகு + 10 host-capture + 8 --check
+cargo test                        # 295 மொழி + 126 அலகு + 10 host-capture + 8 --check
 ./scripts/run_examples.sh
 ```
 

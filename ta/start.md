@@ -189,7 +189,7 @@ cargo build --release --features llvm
 
 ```bash
 cd etamil_compiler
-cargo test          # 290 மொழி + 120 அலகு + 10 host-capture + 8 --check
+cargo test          # 295 மொழி + 126 அலகு + 10 host-capture + 8 --check
 ```
 
 `tests/language_tests.rs` முன்தளத்தை முழுமையாகச் சோதிக்கிறது — வெளியேறு நிலைக் குறியீடுகளை

@@ -750,7 +750,7 @@ etamil --check my_program.qmz     # parse and type check, do not run
 In the compiler repository:
 
 ```bash
-cargo test                        # 290 language + 120 unit + 10 host-capture + 8 --check
+cargo test                        # 295 language + 126 unit + 10 host-capture + 8 --check
 ./scripts/run_examples.sh         # every example, with expected outcomes
 ```
 

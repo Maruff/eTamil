@@ -45,7 +45,7 @@ const WORDS = tokens.words
 
 // The generated spelling -> tag map, exported so the completion source in
 // etamil-intelligence.js can give a keyword the same category the highlighter
-// gives it. 505 entries; see tools/gen_tokens.py.
+// gives it. 541 entries; see tools/gen_tokens.py.
 export const KEYWORD_TAGS = WORDS
 
 // Identifier charset from lexer.rs, with the range endpoints written as

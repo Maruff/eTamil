@@ -196,7 +196,7 @@ are rejected rather than emitted as incorrect IR. Use `--vm` for real work.
 
 ```bash
 cd etamil_compiler
-cargo test          # 290 language + 120 unit + 10 host-capture + 8 --check
+cargo test          # 295 language + 126 unit + 10 host-capture + 8 --check
 ```
 
 `tests/language_tests.rs` covers the front end end-to-end by asserting on

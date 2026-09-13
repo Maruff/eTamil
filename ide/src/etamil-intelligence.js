@@ -77,7 +77,7 @@ const ICON_FOR_KIND = {
   variable: 'variable',
 }
 
-// Built once: 505 spellings that never change at runtime.
+// Built once: 541 spellings that never change at runtime.
 const KEYWORD_OPTIONS = Object.entries(KEYWORD_TAGS).map(([label, tag]) => ({
   label,
   type: ICON_FOR_TAG[tag] ?? 'keyword',

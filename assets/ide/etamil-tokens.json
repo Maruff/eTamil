@@ -3,7 +3,9 @@
  "words": {
   "vazawki_toqotawku": "builtin",
   "முத்திரைத்தீர்வை": "domain",
+  "varumAZa_aRikkY": "domain",
   "மதிப்பீட்டாண்டு": "domain",
+  "vazawki_qotawku": "builtin",
   "வழங்கி_நிறுத்து": "builtin",
   "vazawki_niRuqqu": "builtin",
   "வருமான_அறிக்கை": "domain",
@@ -16,6 +18,7 @@
   "_encryptionKey": "builtin",
   "parivarttaZai": "domain",
   "paNappuzakkam": "domain",
+  "varumAZa_vari": "domain",
   "vilYppattiyal": "domain",
   "நிதித்திட்டம்": "domain",
   "varippitiqqam": "domain",
@@ -28,9 +31,11 @@
   "போச்குரசீகுல்": "type",
   "நடப்பிலில்லா": "domain",
   "natappilillA": "domain",
+  "parivarqqaZY": "domain",
   "கடன்தீர்ப்பு": "domain",
   "kataZ_qIrppu": "domain",
   "மதிப்புயர்வு": "domain",
+  "maqippuyarvu": "domain",
   "matippuyarvu": "domain",
   "பணப்புழக்கம்": "domain",
   "varumAZ_vari": "domain",
@@ -46,11 +51,13 @@
   "அட்டை_நீக்கு": "builtin",
   "இறுதி_புள்ளி": "builtin",
   "viZA_aLavuru": "builtin",
+  "pAqY_aLavuru": "builtin",
   "pAtY_aLavuru": "builtin",
   "_bearerToken": "builtin",
   "_contentType": "builtin",
   "_startServer": "builtin",
   "பரிவர்த்தனை": "domain",
+  "kataZqIrppu": "domain",
   "இருப்பாய்வு": "domain",
   "இருப்புநிலை": "domain",
   "variyaRikkY": "domain",
@@ -66,10 +73,12 @@
   "qaLam_nIkku": "builtin",
   "_PostgreSQL": "type",
   "_collection": "builtin",
+  "qaZika_vicY": "builtin",
   "_primaryKey": "builtin",
   "_foreignKey": "builtin",
   "அட்டை_ஆக்கு": "builtin",
   "_alterTable": "builtin",
+  "iRuqi_puLLi": "builtin",
   "iraqi_pulli": "builtin",
   "வினா_அளவுரு": "builtin",
   "_queryParam": "builtin",
@@ -116,12 +125,14 @@
   "குறிதாங்கி": "builtin",
   "varumAZam": "domain",
   "மதிப்பீடு": "domain",
+  "maqippItu": "domain",
   "matippIDu": "domain",
   "பெறத்தக்க": "domain",
   "கொடுக்காத": "domain",
   "kotukkAqa": "domain",
   "வாங்குநர்": "domain",
   "தேய்மானம்": "domain",
+  "mUlaqaZam": "domain",
   "mUlataZam": "domain",
   "iruppAyvu": "domain",
   "கொள்முதல்": "domain",
@@ -240,6 +251,8 @@
   "vilakku": "domain",
   "அடுக்கு": "domain",
   "பின்னம்": "type",
+  "_string": "type",
+  "_object": "type",
   "இன்றேல்": "control",
   "உள்ளிடு": "control",
   "qirumpu": "control",
@@ -249,6 +262,7 @@
   "cIkulYt": "type",
   "_SQLite": "type",
   "mYcIkul": "type",
+  "qokuppu": "builtin",
   "_column": "builtin",
   "qErvetu": "builtin",
   "_select": "builtin",
@@ -258,6 +272,7 @@
   "itYveLi": "builtin",
   "kOrikkY": "builtin",
   "தலைப்பு": "builtin",
+  "qalYppu": "builtin",
   "talYppu": "builtin",
   "_header": "builtin",
   "aLavuru": "builtin",
@@ -295,10 +310,15 @@
   "கணக்கு": "domain",
   "atukku": "domain",
   "piZZam": "type",
+  "_float": "type",
+  "_array": "type",
   "qaravu": "type",
   "பொருள்": "type",
+  "_false": "bool",
   "சுற்று": "control",
+  "_print": "control",
   "uLLitu": "control",
+  "_input": "control",
   "ovvoru": "control",
   "இறக்கு": "control",
   "iRakku": "control",
@@ -339,6 +359,7 @@
   "paRRu": "domain",
   "வீதம்": "domain",
   "vIqam": "domain",
+  "coqqu": "domain",
   "soqqu": "domain",
   "பங்கு": "domain",
   "pawku": "domain",
@@ -357,11 +378,19 @@
   "ரசீது": "domain",
   "vYppu": "domain",
   "வாடகை": "domain",
+  "_bool": "type",
+  "_text": "type",
+  "_data": "type",
   "poruL": "type",
+  "_date": "type",
+  "_true": "bool",
   "இன்மை": "null",
+  "_null": "null",
   "எனில்": "control",
   "iZREl": "control",
+  "_else": "control",
   "cuRRu": "control",
+  "_loop": "control",
   "அச்சு": "control",
   "செயல்": "control",
   "ceyal": "control",
@@ -385,6 +414,7 @@
   "valam": "builtin",
   "vazhi": "builtin",
   "பதில்": "builtin",
+  "paqil": "builtin",
   "paDil": "builtin",
   "_body": "builtin",
   "urali": "builtin",
@@ -406,6 +436,7 @@
   "niqi": "domain",
   "பணம்": "domain",
   "தொகை": "domain",
+  "qokY": "domain",
   "_GST": "domain",
   "_ITR": "domain",
   "தவணை": "domain",
@@ -415,6 +446,7 @@
   "vilY": "domain",
   "_TDS": "domain",
   "_ITC": "domain",
+  "_int": "type",
   "சொல்": "type",
   "ஈர்ம": "type",
   "Irma": "type",
@@ -455,7 +487,9 @@
   "veLi": "builtin",
   "தனிக": "builtin",
   "_api": "builtin",
+  "vazi": "builtin",
   "உடல்": "builtin",
+  "utal": "builtin",
   "uqal": "builtin",
   "உரலி": "builtin",
   "_url": "builtin",
@@ -469,6 +503,7 @@
   "paqi": "builtin",
   "_put": "builtin",
   "ottu": "builtin",
+  "qalY": "builtin",
   "talY": "builtin",
   "சேவை": "builtin",
   "cEvY": "builtin",
@@ -485,6 +520,7 @@
   "aNi": "type",
   "mey": "bool",
   "poy": "bool",
+  "_if": "control",
   "_fn": "control",
   "இல்": "control",
   "_in": "control",
@@ -508,29 +544,29 @@
   "uL": "builtin"
  },
  "operators": [
-  "==",
   "<=",
   "!=",
+  "==",
   ">=",
-  ":",
-  "?",
-  "(",
-  ".",
-  ",",
-  "/",
-  "{",
-  "*",
-  ")",
-  "+",
-  "-",
-  ">",
-  "[",
   "}",
-  "=",
+  "*",
+  ".",
   ";",
+  ">",
+  "{",
+  "=",
+  "?",
+  "[",
+  "+",
+  ":",
+  ")",
+  "/",
   "&",
-  "]",
-  "<"
+  ",",
+  "<",
+  "(",
+  "-",
+  "]"
  ],
  "variants": {
   "Credit": [
@@ -551,6 +587,7 @@
   ],
   "Asset": [
    "சொத்து",
+   "coqqu",
    "soqqu"
   ],
   "Liability": [
@@ -619,6 +656,7 @@
   ],
   "Valuation": [
    "மதிப்பீடு",
+   "maqippItu",
    "matippIDu"
   ],
   "CreditCard": [
@@ -667,6 +705,7 @@
   ],
   "Amount": [
    "தொகை",
+   "qokY",
    "toqai"
   ],
   "Currency": [
@@ -675,6 +714,7 @@
   ],
   "Transaction": [
    "பரிவர்த்தனை",
+   "parivarqqaZY",
    "parivarttaZai"
   ],
   "Depreciation": [
@@ -683,14 +723,17 @@
   ],
   "Amortization": [
    "கடன்தீர்ப்பு",
+   "kataZqIrppu",
    "kataZ_qIrppu"
   ],
   "Appreciation": [
    "மதிப்புயர்வு",
+   "maqippuyarvu",
    "matippuyarvu"
   ],
   "Capital": [
    "மூலதனம்",
+   "mUlaqaZam",
    "mUlataZam"
   ],
   "TrialBalance": [
@@ -703,6 +746,7 @@
   ],
   "IncomeStatement": [
    "வருமான_அறிக்கை",
+   "varumAZa_aRikkY",
    "varumAZ_aRikkY"
   ],
   "CashFlow": [
@@ -711,6 +755,7 @@
   ],
   "IncomeTax": [
    "வருமான_வரி",
+   "varumAZa_vari",
    "varumAZ_vari"
   ],
   "GST": [
@@ -883,51 +928,63 @@
   ],
   "IntegerType": [
    "எண்",
-   "eN"
+   "eN",
+   "_int"
   ],
   "FloatType": [
    "பின்னம்",
-   "piZZam"
+   "piZZam",
+   "_float"
   ],
   "StringType": [
    "சொல்",
-   "col"
+   "col",
+   "_string"
   ],
   "BoolType": [
    "ஈர்ம",
-   "Irma"
+   "Irma",
+   "_bool"
   ],
   "TextType": [
    "உரை",
-   "urY"
+   "urY",
+   "_text"
   ],
   "ArrayType": [
    "அணி",
-   "aNi"
+   "aNi",
+   "_array"
   ],
   "DataType": [
    "தரவு",
-   "qaravu"
+   "qaravu",
+   "_data"
   ],
   "ObjectType": [
    "பொருள்",
-   "poruL"
+   "poruL",
+   "_object"
   ],
   "DateType": [
    "தேதி",
-   "qEqi"
+   "qEqi",
+   "_date"
   ],
   "True": [
    "மெய்",
-   "mey"
+   "mey",
+   "_true"
   ],
   "False": [
    "பொய்",
-   "poy"
+   "poy",
+   "_false"
   ],
   "Null": [
    "இன்மை",
-   "iZmY"
+   "iZmY",
+   "_null"
   ],
   "Let": [
    "மாறி",
@@ -939,23 +996,28 @@
   ],
   "If": [
    "எனில்",
-   "eZil"
+   "eZil",
+   "_if"
   ],
   "Else": [
    "இன்றேல்",
-   "iZREl"
+   "iZREl",
+   "_else"
   ],
   "Loop": [
    "சுற்று",
-   "cuRRu"
+   "cuRRu",
+   "_loop"
   ],
   "Print": [
    "அச்சு",
-   "accu"
+   "accu",
+   "_print"
   ],
   "Input": [
    "உள்ளிடு",
-   "uLLitu"
+   "uLLitu",
+   "_input"
   ],
   "Function": [
    "செயல்",
@@ -1139,6 +1201,7 @@
   ],
   "Collection": [
    "தொகுப்பு",
+   "qokuppu",
    "toguippu",
    "_collection"
   ],
@@ -1159,6 +1222,7 @@
   ],
   "PrimaryKey": [
    "தனிக_விசை",
+   "qaZika_vicY",
    "taZik_vicY",
    "_primaryKey"
   ],
@@ -1259,11 +1323,13 @@
   ],
   "Endpoint": [
    "இறுதி_புள்ளி",
+   "iRuqi_puLLi",
    "iraqi_pulli",
    "_endpoint"
   ],
   "Route": [
    "வழி",
+   "vazi",
    "vazhi",
    "_route"
   ],
@@ -1279,16 +1345,19 @@
   ],
   "Response": [
    "பதில்",
+   "paqil",
    "paDil",
    "_response"
   ],
   "Header": [
    "தலைப்பு",
+   "qalYppu",
    "talYppu",
    "_header"
   ],
   "Body": [
    "உடல்",
+   "utal",
    "uqal",
    "_body"
   ],
@@ -1304,6 +1373,7 @@
   ],
   "PathParam": [
    "பாதை_அளவுரு",
+   "pAqY_aLavuru",
    "pAtY_aLavuru",
    "_pathParam"
   ],
@@ -1364,6 +1434,7 @@
   ],
   "HttpHead": [
    "தலை",
+   "qalY",
    "talY",
    "_head"
   ],
@@ -1399,6 +1470,7 @@
   ],
   "StartServer": [
    "வழங்கி_தொடங்கு",
+   "vazawki_qotawku",
    "vazawki_toqotawku",
    "_startServer"
   ],
