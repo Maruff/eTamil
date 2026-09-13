@@ -24,14 +24,14 @@ description: >-
 செய்து, தமிழாகவே படிக்கிறார்; வட்டில் சேமிக்கப்படுவது ASCII-ஆகவே இருக்கும்.
 
 <div class="hero-actions" markdown="0">
-  <a class="btn btn-primary" href="{{ '/assets/fonts/ican_qamiz-Regular.ttf' | relative_url }}" download>ican qamiz பதிவிறக்கம் &middot; .ttf</a>
+  <a class="btn btn-primary" href="{{ '/assets/fonts/ican_qamiz-Regular-2.1.1.ttf' | relative_url }}" download>ican qamiz பதிவிறக்கம் &middot; .ttf</a>
   <a class="btn btn-ghost" href="{{ '/assets/fonts/OFL.txt' | relative_url }}">உரிமம் &middot; SIL OFL 1.1</a>
 </div>
 
 | | |
 |---|---|
 | குடும்பம் | `ican qamiz` |
-| பதிப்பு | 2.1.0 |
+| பதிப்பு | 2.1.1 |
 | உரிமம் | SIL Open Font License 1.1 |
 | வடிவமைப்பு | Esan Maruff |
 | உள்ளடக்கம் | ASCII மற்றும் Latin-1; தமிழ் தொகுதி இல்லை |

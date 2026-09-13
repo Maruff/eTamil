@@ -25,14 +25,14 @@ A developer who installs it types Tamil upon an ordinary keyboard and reads it
 back as Tamil, while what is stored upon disk remains ASCII.
 
 <div class="hero-actions" markdown="0">
-  <a class="btn btn-primary" href="{{ '/assets/fonts/ican_qamiz-Regular.ttf' | relative_url }}" download>Download ican qamiz &middot; .ttf</a>
+  <a class="btn btn-primary" href="{{ '/assets/fonts/ican_qamiz-Regular-2.1.1.ttf' | relative_url }}" download>Download ican qamiz &middot; .ttf</a>
   <a class="btn btn-ghost" href="{{ '/assets/fonts/OFL.txt' | relative_url }}">Licence &middot; SIL OFL 1.1</a>
 </div>
 
 | | |
 |---|---|
 | Family | `ican qamiz` |
-| Version | 2.1.0 |
+| Version | 2.1.1 |
 | Licence | SIL Open Font License 1.1 |
 | Designer | Esan Maruff |
 | Coverage | ASCII and Latin-1; the Tamil block is not covered |
