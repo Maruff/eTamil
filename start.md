@@ -214,14 +214,18 @@ python3 scripts/transliterate.py --check   # romanization audit
 
 ## Editor support
 
-A VS Code extension lives in `eTamil_Code/` in the compiler repository:
-highlighting for all 202 keywords in every spelling, completions for the 62
-builtins and 681 `nUlakam` functions, and errors from `--check` shown as you type.
+[**eTamil**]({{ site.brand.vscode_url }}) on the VS Code Marketplace is the
+shortest way to start: it carries the compiler, the `nUlakam` standard library,
+the example programs and the eTamil font, so there is nothing on this page left
+to do. Highlighting for all 202 keywords in every spelling, completions for the
+62 builtins and 681 `nUlakam` functions, errors from `--check` as you type, and
+**eTamil: Open an example** for one of twenty-nine working programs.
 
-Its grammar and completion data are **generated from `lexer.rs`**, and CI fails if
-they drift — so the editor cannot fall behind the compiler. If it cannot find the compiler
-it offers to fetch this package for you — **eTamil: Install the compiler** in the
-command palette.
+Its grammar and completion data are **generated from `lexer.rs`**, and CI fails
+if they drift — so the editor cannot fall behind the compiler. To run a compiler
+of your own instead, point `etamil.compilerPath` at it; to use `etamil` at a
+terminal as well, run **eTamil: Install the compiler for use outside the
+editor**.
 
 ## Where next
 

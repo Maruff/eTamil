@@ -47,7 +47,15 @@ environment variable, it says so.
 
 ## 1. Install {: #1-install}
 
-The quickest route needs no Rust and no C toolchain.
+**If you use VS Code, install the extension and stop here.**
+[eTamil]({{ site.brand.vscode_url }}) carries the compiler, the whole `nUlakam`
+standard library, the example programs and the eTamil font inside it, so
+installing it is the whole installation — no download, no `PATH`, nothing to
+build. Everything below is for using `etamil` at a terminal, which the extension
+will set up for you too: **eTamil: Install the compiler for use outside the
+editor**.
+
+Otherwise the quickest route needs no Rust and no C toolchain.
 
 <div class="hero-actions" markdown="0">
   <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Windows x64 &middot; .zip</a>
@@ -699,9 +707,36 @@ wrong.
 
 ## 28. Editor support {: #28-editor-support}
 
-The VS Code extension is in `eTamil_Code/` in the compiler repository:
-highlighting for all 202 keywords in every spelling, completions for the 62
-builtins and 681 `nUlakam` functions, and `--check` errors shown as you type.
+The extension is [**eTamil**]({{ site.brand.vscode_url }}) on the Marketplace, and
+`eTamil_Code/` in the compiler repository.
+
+**It carries its own toolchain.** The `etamil` binary for your platform, the
+whole `nUlakam` standard library and the repository's twenty-nine example
+programs travel inside it, so error checking, running a file and Go to
+Definition into the library all work the moment it finishes installing. Point
+`etamil.compilerPath` at a build of your own and that wins instead.
+
+What you get:
+
+- highlighting for all 202 keywords in every spelling
+- completions for the 62 builtins and 681 `nUlakam` functions
+- errors from `--check` as you type — which stops after the type checker, so
+  opening a file never runs it
+- hover with every spelling of a word, signature help, Go to Definition and an
+  outline of the file
+- **eTamil: Open an example** — a copy of one of the carried programs, to edit
+  and run
+- **eTamil: Documentation…** — this manual, the playground and the reference
+
+**It also carries the eTamil font.** `ican qamiz` is the face in which the
+ASCII letters carry Tamil glyphs: `c` draws ச, `q` draws த, `Z` draws ன.
+**eTamil: Install the eTamil font** puts it on the machine — per-user, no
+administrator rights — and `etamil.eTamilFont` then draws the ASCII that is
+eTamil in it while English stays Latin: a name marked with a leading `_`, a
+comment wrapped in `__ … __`, every string literal and the licence header. Those
+two marks are the language's, not the editor's; they are specified in
+[SCRIPT_RULES.md]({{ site.brand.script_rules_url }}) and a gate in CI holds the
+library to them.
 
 Its grammar and completion data are generated from `lexer.rs`, and CI fails if
 they drift, so the editor cannot fall behind the compiler.

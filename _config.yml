@@ -33,6 +33,13 @@ brand:
   download_macos_arm64: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-macos-arm64.tar.gz
   download_macos_x64: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-macos-x64.tar.gz
   paper_url: https://github.com/Maruff/etamil_compiler/blob/main/eTamil%20-%20An%20Indian%20FinTech%20DSL.pdf
+  # The Marketplace listing. The extension carries the compiler, the
+  # standard library, the examples and the eTamil font, so this is the
+  # shortest install route there is for anyone already in VS Code.
+  vscode_url: https://marketplace.visualstudio.com/items?itemName=etamil.etamil-support
+  # The `_` and `__` marks that say which ASCII is English and which is
+  # Tamil spelled in ASCII, which is what the eTamil font needs to know.
+  script_rules_url: https://github.com/Maruff/etamil_compiler/blob/main/docs/reference/SCRIPT_RULES.md
 
 # Read by jekyll-seo-tag.
 logo: /assets/img/etamil-icon-512.png
@@ -83,6 +90,7 @@ defaults:
 
 exclude:
   - README.md
+  - TRANSLATE.md
   - Gemfile
   - Gemfile.lock
   - vendor
