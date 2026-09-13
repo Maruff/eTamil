@@ -29,9 +29,11 @@ import functools
 import html as html_lib
 import http.server
 import json
+import os
 import re
 import shutil
 import socketserver
+import stat
 import sys
 from pathlib import Path
 
@@ -252,11 +254,28 @@ def render_page(env: Environment, site: dict, source: Path) -> tuple[Path, str] 
     return out_path_for(page, relative), content
 
 
+def remove_output() -> None:
+    """Delete `_site_preview/`, on Windows too.
+
+    `copytree` copies permission bits, so a read-only file under `assets/`
+    arrives read-only here and Windows will not remove it -- reporting "Access
+    is denied" rather than naming the attribute. Without this the tool builds
+    once and then refuses to run again, which is the opposite of a preview
+    loop. Clearing the bit only in the error path keeps the common case a plain
+    rmtree.
+    """
+    def retry(function, path, _excinfo):
+        os.chmod(path, stat.S_IWRITE)
+        function(path)
+
+    if OUT.exists():
+        shutil.rmtree(OUT, onexc=retry)
+
+
 def build() -> int:
     site = build_site_object()
 
-    if OUT.exists():
-        shutil.rmtree(OUT)
+    remove_output()
     OUT.mkdir(parents=True)
 
     env = make_env(site, stage_includes(OUT / ".includes"))
