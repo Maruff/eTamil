@@ -218,7 +218,7 @@ python3 scripts/transliterate.py --check   # romanization audit
 shortest way to start: it carries the compiler, the `nUlakam` standard library,
 the example programs and the eTamil font, so there is nothing on this page left
 to do. Highlighting for all 202 keywords in every spelling, completions for the
-62 builtins and 681 `nUlakam` functions, errors from `--check` as you type, and
+62 builtins and 691 `nUlakam` functions, errors from `--check` as you type, and
 **eTamil: Open an example** for one of twenty-nine working programs.
 
 Its grammar and completion data are **generated from `lexer.rs`**, and CI fails
