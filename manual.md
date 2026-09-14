@@ -728,10 +728,15 @@ What you get:
   and run
 - **eTamil: Documentation…** — this manual, the playground and the reference
 
-**It also carries the eTamil font.** `ican qamiz` is the face in which the
+**It also carries the eTamil fonts.** `ican qamiz` is the face in which the
 ASCII letters carry Tamil glyphs: `c` draws ச, `q` draws த, `Z` draws ன.
-**eTamil: Install the eTamil font** puts it on the machine — per-user, no
-administrator rights — and `etamil.eTamilFont` then draws the ASCII that is
+`ican qamiz Smart` does the same and adds the Tamil block and three contextual
+rules, so that one face sets both a program and the prose about it; those rules
+are the font's own and the compiler does not accept them, as
+[the font page]({{ '/font/' | relative_url }}) sets out.
+**eTamil: Install the eTamil font** puts both on the machine — per-user, no
+administrator rights — and offers to set `etamil.eTamilFont` to `ican qamiz
+Smart`. It then draws the ASCII that is
 eTamil in it while English stays Latin: a name marked with a leading `_`, a
 comment wrapped in `__ … __`, every string literal and the licence header. Those
 two marks are the language's, not the editor's; they are specified in
