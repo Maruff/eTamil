@@ -32,6 +32,14 @@ brand:
   # for whichever half of the users it did not match.
   download_macos_arm64: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-macos-arm64.tar.gz
   download_macos_x64: https://github.com/Maruff/etamil_compiler/releases/latest/download/etamil-macos-x64.tar.gz
+  # kElir's APK rides on a release of THIS repository, not of kElir's own:
+  # kElir is private, so a release asset there would need a login. The APK is
+  # ~34 MB and would be committed whole on every build, so it is a release
+  # asset rather than a file in assets/ — git keeps every copy of a binary
+  # for ever. Unversioned name behind /latest/, like the links above.
+  # Every release of this repository must therefore carry an asset of this
+  # name, or the link goes dead.
+  download_kelir_apk: https://github.com/Maruff/eTamil/releases/latest/download/kelir-android.apk
   paper_url: https://github.com/Maruff/etamil_compiler/blob/main/eTamil%20-%20An%20Indian%20FinTech%20DSL.pdf
   # The Marketplace listing. The extension carries the compiler, the
   # standard library, the examples and the eTamil font, so this is the

@@ -46,9 +46,8 @@ safeguard.
 already here, the app sends two characters of a cryptographic digest — never a
 name, never a number, never the digest itself. The server answers with everyone
 in that range and your phone does the matching. The code that does this
-[documents its own limits](https://github.com/Maruff/kElir/blob/main/src/privacy/hash.ts),
-including the fact that a hash of a phone number is not anonymous, which is why
-none is ever sent.
+documents its own limits, including the fact that a hash of a phone number is
+not anonymous, which is why none is ever sent.
 
 **Nobody can find out how close you have placed them.** kElir lets you sort
 people into layers and choose what each layer sees of you. Which layer someone
@@ -57,12 +56,21 @@ request that would carry it.
 
 ### Getting it
 
-The source is public now. **The Android APK is published as a
-[GitHub Release](https://github.com/Maruff/kElir/releases)** as soon as the
-first version is tagged; if that page is empty, the release has not been cut
-yet.
+<div class="hero-actions" markdown="0">
+  <a class="btn btn-primary" href="{{ site.brand.download_kelir_apk }}">kElir 1.1 for Android &middot; .apk</a>
+</div>
 
-Two honest notes for anyone trying an early build:
+It speaks English and Tamil, and opens in whichever of the two your phone is
+set to.
+
+Three honest notes for anyone trying an early build:
+
+- **This is a test build, not a Play Store release.** It is signed with
+  Android's standard debug key, so it cannot be updated in place to the Play
+  Store version when that arrives — that one is signed with a different key,
+  and Android will make you uninstall this first. Uninstalling takes your
+  layers and your profile with it, because kElir keeps them on your phone and
+  nowhere else.
 
 - **The server is not live yet.** Importing contacts, layers and your profile
   all work on the phone. *Find people I know* and invitations need a backend
@@ -85,11 +93,13 @@ Two honest notes for anyone trying an early build:
 
 The backend is roughly 700 lines of eTamil — the HTTP API and the PostgreSQL
 schema — and the client's discovery hashing is
-[pinned to the same published test vector](https://github.com/Maruff/kElir/blob/main/__tests__/hash.test.ts)
-as the compiler's `கையொப்பம்` builtin, because if the two ever disagreed,
-contact matching would silently return nothing and raise no error anywhere.
+pinned to the same published test vector as the compiler's `கையொப்பம்`
+builtin, because if the two ever disagreed, contact matching would silently
+return nothing and raise no error anywhere.
 
-**Repository:** [github.com/Maruff/kElir](https://github.com/Maruff/kElir)
+**Source.** kElir's repository is not public yet, so there is nothing to link
+to here; the app is the APK above. The eTamil compiler it is built on is open,
+and so is this site.
 
 ## eTamil Tax — வரி
 
