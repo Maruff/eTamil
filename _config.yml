@@ -40,6 +40,10 @@ brand:
   # Every release of this repository must therefore carry an asset of this
   # name, or the link goes dead.
   download_kelir_apk: https://github.com/Maruff/eTamil/releases/latest/download/kelir-android.apk
+  # The version that link currently serves. Written by kElir's release
+  # workflow, not by hand — the page said 1.1 while the link served 1.2 for
+  # exactly as long as this was a number somebody had to remember to change.
+  kelir_version: "1.2"
   paper_url: https://github.com/Maruff/etamil_compiler/blob/main/eTamil%20-%20An%20Indian%20FinTech%20DSL.pdf
   # The Marketplace listing. The extension carries the compiler, the
   # standard library, the examples and the eTamil font, so this is the

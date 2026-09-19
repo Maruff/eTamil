@@ -57,7 +57,7 @@ request that would carry it.
 ### Getting it
 
 <div class="hero-actions" markdown="0">
-  <a class="btn btn-primary" href="{{ site.brand.download_kelir_apk }}">kElir for Android &middot; .apk</a>
+  <a class="btn btn-primary" href="{{ site.brand.download_kelir_apk }}">kElir {{ site.brand.kelir_version }} for Android &middot; .apk</a>
 </div>
 
 It speaks English and Tamil, and opens in whichever of the two your phone is
