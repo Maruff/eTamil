@@ -57,7 +57,7 @@ description: >-
 ### பெறுவது எப்படி
 
 <div class="hero-actions" markdown="0">
-  <a class="btn btn-primary" href="{{ site.brand.download_kelir_apk }}">ஆண்ட்ராய்டுக்கான kElir 1.1 &middot; .apk</a>
+  <a class="btn btn-primary" href="{{ site.brand.download_kelir_apk }}">ஆண்ட்ராய்டுக்கான kElir &middot; .apk</a>
 </div>
 
 இது தமிழிலும் ஆங்கிலத்திலும் பேசுகிறது; உங்கள் தொலைபேசி எந்த மொழியில்
