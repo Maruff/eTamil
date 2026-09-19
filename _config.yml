@@ -43,7 +43,7 @@ brand:
   # The version that link currently serves. Written by kElir's release
   # workflow, not by hand — the page said 1.1 while the link served 1.2 for
   # exactly as long as this was a number somebody had to remember to change.
-  kelir_version: "1.3"
+  kelir_version: "2.0"
   paper_url: https://github.com/Maruff/etamil_compiler/blob/main/eTamil%20-%20An%20Indian%20FinTech%20DSL.pdf
   # The Marketplace listing. The extension carries the compiler, the
   # standard library, the examples and the eTamil font, so this is the
