@@ -72,7 +72,7 @@ one-character-per-letter property identifiers need. Tamil's three nasals, ண, �
 and ன, which English collapses into a single `n`, are precisely where a lossy
 scheme stops round-tripping.
 
-*Evidence already in hand.* 202 keywords across 541 spellings, audited against
+*Evidence already in hand.* 203 keywords across 545 spellings, audited against
 the scheme as a gating step in continuous integration; a second gate covering
 module names, SQL tables and columns, and record keys, which no keyword audit
 reaches; and a worked failure — `viziqam` for விகிதம், which spread into a
@@ -104,7 +104,7 @@ read — at a cost in reserved words that can be measured rather than asserted.
 
 Conventional wisdom holds that a domain belongs in a library, and that reserved
 words are a cost to be minimised. eTamil does the opposite and already pays the
-price in a form that can be quantified: 109 of 202 keywords cannot be used as
+price in a form that can be quantified: 109 of 203 keywords cannot be used as
 names. The insurance module's own header records that காப்பீடு, இழப்பு, விலக்கு
 and பங்கு are all keywords, so the words it most wants are unavailable to it and
 it uses compounds instead.

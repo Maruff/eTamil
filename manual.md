@@ -398,7 +398,7 @@ Two positions keep the canonical English name, because what they name belongs to
 the host rather than to you: the database type in `தளம்_இணை`, and the HTTP method
 in `வழி`.
 
-**Two kinds of keyword.** Of the 202 keywords, **109 are reserved and 93 are
+**Two kinds of keyword.** Of the 203 keywords, **109 are reserved and 94 are
 not**, and the split follows one rule: the words the grammar needs are reserved,
 and the words programs are *about* are not.
 
@@ -431,7 +431,7 @@ syntax of its own. Somewhere there is already a program containing:
 Nothing in that program changed, but the language did, and the line now either
 fails to parse or means something other than it did.
 
-No fix keeps what is good about the arrangement. Reserving all 202 takes the
+No fix keeps what is good about the arrangement. Reserving all 203 takes the
 domain vocabulary away. Treating a word as a keyword only in keyword position is
 possible, but it makes the grammar harder to reason about and the error messages
 worse. So the rule is written down instead: **before a keyword is added, check
@@ -718,8 +718,8 @@ Definition into the library all work the moment it finishes installing. Point
 
 What you get:
 
-- highlighting for all 202 keywords in every spelling
-- completions for the 62 builtins and 691 `nUlakam` functions
+- highlighting for all 203 keywords in every spelling
+- completions for the 62 builtins and 696 `nUlakam` functions
 - errors from `--check` as you type — which stops after the type checker, so
   opening a file never runs it
 - hover with every spelling of a word, signature help, Go to Definition and an
