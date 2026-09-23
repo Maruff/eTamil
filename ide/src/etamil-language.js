@@ -27,6 +27,9 @@ import tokens from '../../assets/ide/etamil-tokens.json'
 export const etamilTags = {
   domain: Tag.define(),
   builtin: Tag.define(),
+  // Comment text between `__` and `__`: English, not ezuqqu. The VS Code
+  // grammar names the same region `meta.english.comment.etamil`.
+  englishComment: Tag.define(),
 }
 
 // gen_tokens.py emits these tag names; map each to a lezer tag.
@@ -104,10 +107,27 @@ function consumeString(stream) {
 export const etamilStreamParser = {
   name: 'etamil',
 
-  startState: () => ({ inString: false, depth: 0 }),
-  copyState: (s) => ({ inString: s.inString, depth: s.depth }),
+  startState: () => ({ inString: false, inComment: false, inEnglish: false, depth: 0 }),
+  copyState: (s) => ({
+    inString: s.inString,
+    inComment: s.inComment,
+    inEnglish: s.inEnglish,
+    depth: s.depth,
+  }),
 
   token(stream, state) {
+    if (stream.sol()) {
+      // `inComment` is per line; `inEnglish` is not, because Rule 2's marks go
+      // at the ends of the sentence rather than of each line — `__` on the
+      // first comment line and `__` on the last.
+      // docs/reference/SCRIPT_RULES.md.
+      state.inComment = false
+      // A block is contiguous `//` lines, so a line that is not a comment ends
+      // any open region. Without this one unclosed `__` would turn the rest of
+      // the file English.
+      if (!/^[ 	]*\/\//.test(stream.string)) state.inEnglish = false
+    }
+
     // An unterminated string from a previous line continues here.
     if (state.inString) {
       state.inString = !consumeString(stream)
@@ -116,10 +136,20 @@ export const etamilStreamParser = {
 
     if (stream.eatSpace()) return null
 
-    // Line comment: `//` to end of line.
-    if (stream.match('//')) {
-      stream.skipToEnd()
-      return 'comment'
+    // Line comment: `//` to end of line, in pieces rather than one token,
+    // because `__ … __` inside it is English and is coloured differently.
+    if (state.inComment || stream.match('//')) {
+      state.inComment = true
+
+      // The mark delimits the region and belongs to neither side of it.
+      if (stream.match('__')) {
+        state.inEnglish = !state.inEnglish
+        return 'comment'
+      }
+
+      // Everything up to the next mark, or the end of the line.
+      while (!stream.eol() && !stream.string.startsWith('__', stream.pos)) stream.next()
+      return state.inEnglish ? 'englishComment' : 'comment'
     }
 
     if (stream.match('"')) {
@@ -175,6 +205,7 @@ export const etamilStreamParser = {
     operator: t.operator,
     bracket: t.bracket,
     comment: t.lineComment,
+    englishComment: etamilTags.englishComment,
     string: t.string,
     number: t.number,
     invalid: t.invalid,
@@ -189,6 +220,9 @@ export const etamilLanguage = StreamLanguage.define(etamilStreamParser)
 // Each var carries a fallback so the editor is legible before any theme loads.
 export const etamilHighlight = HighlightStyle.define([
   { tag: t.lineComment, color: 'var(--ide-comment, #6a737d)', fontStyle: 'italic' },
+  // Same colour, upright: it is still a comment, but the ASCII in it is
+  // English and should not be read as ezuqqu.
+  { tag: etamilTags.englishComment, color: 'var(--ide-comment, #6a737d)' },
   { tag: t.string, color: 'var(--ide-string, #032f62)' },
   { tag: t.number, color: 'var(--ide-number, #005cc5)' },
   { tag: t.bool, color: 'var(--ide-bool, #005cc5)', fontWeight: '600' },

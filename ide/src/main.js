@@ -5,8 +5,10 @@
 import { EditorView, basicSetup } from 'codemirror'
 import { EditorState } from '@codemirror/state'
 import { etamil } from './etamil-language.js'
+import { etamilFont } from './etamil-font.js'
 import { etamilIntelligence } from './etamil-intelligence.js'
 import { etamilKeyRow } from './etamil-keyrow.js'
+import { etamilScriptSwitch } from './etamil-script-switch.js'
 import { etamilRunner } from './etamil-run.js'
 import { etamilDownload } from './etamil-download.js'
 import { mountSamples } from './etamil-samples.js'
@@ -20,7 +22,7 @@ import { mountSamples } from './etamil-samples.js'
 // Note there is no binding keyword: eTamil assigns with a bare `name = value`.
 // `மாறி` (Let) exists as a token but the parser does not accept it as a
 // statement prefix, so `மாறி தொகை = 50000;` is a parse error.
-const SAMPLE = `// எளிய வட்டி — simple interest
+const SAMPLE = `// __எளிய வட்டி — simple interest__
 செயல் வட்டி_கணக்கு(அசல், வீதம், ஆண்டு) {
     வட்டி = அசல் * வீதம் * ஆண்டு;
     (வட்டி > 10000) எனில் {
@@ -41,10 +43,15 @@ export function mount(parent, { doc = SAMPLE, extensions = [] } = {}) {
       extensions: [
         basicSetup,
         etamil(),
+        // After the language, so its decorations sit over the colouring the
+        // highlighter applies rather than under it.
+        etamilFont(),
         etamilIntelligence(),
         // Before the key row, so the output pane sits above it: on a phone the
         // keys belong closest to the thumbs.
         etamilRunner(),
+        // After the runner, which owns the bar this contributes its button to.
+        etamilScriptSwitch(),
         etamilKeyRow(),
         ...extensions,
       ],
