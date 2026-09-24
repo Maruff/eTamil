@@ -484,7 +484,7 @@ systems language, the DSL would not be sufficient for what it exists to do.
 |---|---|
 | `col.qmz` | strings — `துண்டு` `தேடு` `பிரி` `ஒன்றிணை` `ஒழுங்கு` `தொடங்குகிறதா` `முடிகிறதா` `இடமிருந்து_நிரப்பு` |
 | `kaNiqam.qmz` | math — `முழுமதிப்பு` `சிறியது` `பெரியது` `கூட்டு` `சராசரி` `சதவீதம்` |
-| `aNi.qmz` | arrays — `உள்ளதா` `இடம்_காண்` `தலைகீழ்` `வெட்டு` `புலம்_எடு` `காலியா` |
+| `aNi.qmz` | arrays — `உள்ளதா` `இடம்_காண்` `தலைகீழ்` `வெட்டு` `புலம்_எடு` `காலியா` `புலத்தால்_வடிகட்டு` `ஒவ்வொன்றுக்கும்` `வடிகட்டு` `மடி` |
 | `paNam.qmz` | money — `ரூபாய்` `காசு_வடிவம்` `காசாக` `லட்சம்` `கோடி` |
 | `jEcAZ.qmz` | JSON — `ஜேசான்_ஆக்கு` `ஜேசான்_படி` |
 | `kuRiyAkkam.qmz` | encoding — `அறுபத்துநான்கு_ஆக்கு` `அறுபத்துநான்கு_படி` `பதினாறு_ஆக்கு` `பதினாறு_படி` |
@@ -505,6 +505,36 @@ systems language, the DSL would not be sufficient for what it exists to do.
 `வலை_அனுப்பு` · `பைட்டுகள்` `பைட்டுச்_சரம்`.
 
 Everything else is built from those.
+
+**Three of the array helpers take a `செயல்` as an argument.**
+`ஒவ்வொன்றுக்கும்`, `வடிகட்டு` and `மடி` — map, filter and fold — became
+writable when functions became values. Before that the rule each one applies had
+to be spelled out again by every caller, as a loop; now it is an argument.
+
+```etamil
+இறக்கு "nUlakam/aNi.qmz";
+
+செயல் இரட்டி(ம) { திரும்பு ம * 2; }
+செயல் பெரியது(ம) { திரும்பு ம > 10; }
+செயல் கூட்டல்(திரட்டு, ம) { திரும்பு திரட்டு + ம; }
+
+விலைகள் = [5, 12, 30];
+
+அச்சு ஒவ்வொன்றுக்கும்(விலைகள், இரட்டி);   // [10, 24, 60]
+அச்சு வடிகட்டு(விலைகள், பெரியது);          // [12, 30]
+அச்சு மடி(விலைகள், 0, கூட்டல்);            // 47
+```
+
+`மடி` takes a starting value as well as the array: the `செயல்` it is given
+receives what has been gathered so far and the next item, and is applied left to
+right. `ஒவ்வொன்றுக்கும்` and `வடிகட்டு` both answer with a new array and leave
+the one they were given alone.
+
+`புலத்தால்_வடிகட்டு` is the same idea for records, from before there were
+function values: it keeps the rows whose named field equals a value. The field is
+named as **text** rather than reached with a dot, which is what lets one function
+serve every caller — `பதிவு.கணக்கு_குறி` could only ever filter on
+`கணக்கு_குறி`.
 
 ## 19. Accounting and GST {: #19-accounting-and-gst}
 
