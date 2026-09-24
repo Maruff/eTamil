@@ -398,7 +398,7 @@ Two positions keep the canonical English name, because what they name belongs to
 the host rather than to you: the database type in `தளம்_இணை`, and the HTTP method
 in `வழி`.
 
-**Two kinds of keyword.** Of the 202 keywords, **109 are reserved and 93 are
+**Two kinds of keyword.** Of the 203 keywords, **109 are reserved and 94 are
 not**, and the split follows one rule: the words the grammar needs are reserved,
 and the words programs are *about* are not.
 
@@ -431,7 +431,7 @@ syntax of its own. Somewhere there is already a program containing:
 Nothing in that program changed, but the language did, and the line now either
 fails to parse or means something other than it did.
 
-No fix keeps what is good about the arrangement. Reserving all 202 takes the
+No fix keeps what is good about the arrangement. Reserving all 203 takes the
 domain vocabulary away. Treating a word as a keyword only in keyword position is
 possible, but it makes the grammar harder to reason about and the error messages
 worse. So the rule is written down instead: **before a keyword is added, check
@@ -718,8 +718,8 @@ Definition into the library all work the moment it finishes installing. Point
 
 What you get:
 
-- highlighting for all 202 keywords in every spelling
-- completions for the 62 builtins and 691 `nUlakam` functions
+- highlighting for all 203 keywords in every spelling
+- completions for the 62 builtins and 696 `nUlakam` functions
 - errors from `--check` as you type — which stops after the type checker, so
   opening a file never runs it
 - hover with every spelling of a word, signature help, Go to Definition and an
@@ -728,10 +728,15 @@ What you get:
   and run
 - **eTamil: Documentation…** — this manual, the playground and the reference
 
-**It also carries the eTamil font.** `ican qamiz` is the face in which the
+**It also carries the eTamil fonts.** `ican qamiz` is the face in which the
 ASCII letters carry Tamil glyphs: `c` draws ச, `q` draws த, `Z` draws ன.
-**eTamil: Install the eTamil font** puts it on the machine — per-user, no
-administrator rights — and `etamil.eTamilFont` then draws the ASCII that is
+`ican qamiz Smart` does the same and adds the Tamil block and three contextual
+rules, so that one face sets both a program and the prose about it; those rules
+are the font's own and the compiler does not accept them, as
+[the font page]({{ '/font/' | relative_url }}) sets out.
+**eTamil: Install the eTamil font** puts both on the machine — per-user, no
+administrator rights — and offers to set `etamil.eTamilFont` to `ican qamiz
+Smart`. It then draws the ASCII that is
 eTamil in it while English stays Latin: a name marked with a leading `_`, a
 comment wrapped in `__ … __`, every string literal and the licence header. Those
 two marks are the language's, not the editor's; they are specified in

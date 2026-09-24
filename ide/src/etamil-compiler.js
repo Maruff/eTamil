@@ -15,6 +15,7 @@ import init, {
   diagnostics as wasmDiagnostics,
   symbols as wasmSymbols,
   symbols_at as wasmSymbolsAt,
+  script_spans as wasmScriptSpans,
   run as wasmRun,
   version as wasmVersion,
 } from '../wasm/etamil_compiler.js'
@@ -120,4 +121,27 @@ export function runProgram(source) {
 /** Version of the compiler this wasm was built from, or null before load. */
 export function compilerVersion() {
   return loaded ? wasmVersion() : null
+}
+
+/**
+ * Every span of ASCII that should be drawn in the eTamil font.
+ *
+ * Each entry is `{ line, start, end }` with a 0-based line and UTF-16 offsets
+ * into it, which is what a CodeMirror document counts in.
+ *
+ * The rules are normative -- `docs/reference/SCRIPT_RULES.md` -- and this is
+ * the compiler reading them, so the browser editor and the VS Code extension
+ * cannot drift apart on which ASCII is eTamil and which is English.
+ *
+ * Returns an empty array before the module has loaded, as the others do: no
+ * spans means everything draws in the editor's own font, which is the ordinary
+ * view of the file rather than a broken one.
+ */
+export function scriptSpans(source) {
+  if (!loaded) return []
+  try {
+    return JSON.parse(wasmScriptSpans(source))
+  } catch {
+    return []
+  }
 }

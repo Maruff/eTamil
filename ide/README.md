@@ -9,7 +9,7 @@ committed**. Nothing here runs in CI; the build is a local step before a commit.
 
 ## The two generated inputs
 
-**Keywords.** `etamil_compiler/src/lexer.rs` defines 202 keywords, most with two
+**Keywords.** `etamil_compiler/src/lexer.rs` defines 203 keywords, most with two
 or three spellings -- Tamil script, a romanization, and sometimes an English
 abbreviation. That is 541 strings. Hand-copying them into a highlighter would
 drift the moment a keyword is added, and the drift would be silent: the editor

@@ -22,7 +22,7 @@ description: >-
 
 ## இப்போதே முயற்சி, நிறுவல் இல்லாமல்
 
-{% capture editor_seed %}// எளிய வட்டி — simple interest, exact to the paisa
+{% capture editor_seed %}// __எளிய வட்டி — simple interest, exact to the paisa__
 செயல் வட்டி_கணக்கு(அசல், வீதம், ஆண்டு) {
     திரும்பு அசல் * வீதம் * ஆண்டு;
 }

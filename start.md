@@ -22,7 +22,7 @@ machine.
 
 ## Try it now, nothing installed
 
-{% capture editor_seed %}// எளிய வட்டி — simple interest, exact to the paisa
+{% capture editor_seed %}// __எளிய வட்டி — simple interest, exact to the paisa__
 செயல் வட்டி_கணக்கு(அசல், வீதம், ஆண்டு) {
     திரும்பு அசல் * வீதம் * ஆண்டு;
 }
@@ -217,8 +217,8 @@ python3 scripts/transliterate.py --check   # romanization audit
 [**eTamil**]({{ site.brand.vscode_url }}) on the VS Code Marketplace is the
 shortest way to start: it carries the compiler, the `nUlakam` standard library,
 the example programs and the eTamil font, so there is nothing on this page left
-to do. Highlighting for all 202 keywords in every spelling, completions for the
-62 builtins and 691 `nUlakam` functions, errors from `--check` as you type, and
+to do. Highlighting for all 203 keywords in every spelling, completions for the
+62 builtins and 696 `nUlakam` functions, errors from `--check` as you type, and
 **eTamil: Open an example** for one of twenty-nine working programs.
 
 Its grammar and completion data are **generated from `lexer.rs`**, and CI fails

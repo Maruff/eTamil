@@ -21,7 +21,7 @@ translated keywords: finance is built into the vocabulary, so `வரவு` (cr
 `பற்று` (debit), `வரி` (tax) and `இருப்புநிலை` (balance sheet) are part of the
 language itself.
 
-{% capture editor_seed %}// வணிகவரி — GST on an invoice, exact to the paisa
+{% capture editor_seed %}// __வணிகவரி — GST on an invoice, exact to the paisa__
 விலை = 2500;
 வணிகவரி = விலை * 18%;
 அச்சு(வணிகவரி);
@@ -43,8 +43,8 @@ script, the romanized *ezuqqu* spelling, and where one exists an English alias.
 All are interchangeable in source.
 
 ```etamil
-எண் வருவாய் = 100000;     // Tamil script
-eN varuvAy = 100000;       // romanized (ezuqqu scheme)
+எண் வருவாய் = 100000;     // __Tamil script__
+eN varuvAy = 100000;       // __romanized (ezuqqu scheme)__
 ```
 
 That is the core idea: Tamil semantics you can type on a plain keyboard.
@@ -53,10 +53,10 @@ The full list is in the [keyword reference]({{ '/language/keywords/' | relative_
 ## Variables and types
 
 ```etamil
-எண் age = 25;          // number
-எண் price = 99.99;     // fixed-point decimal; no separate int/float yet
-எண் rate = 15%;        // percentage literal -> exactly 0.15
-சொல் name = "Ravi";    // string
+எண் age = 25;          // __number__
+எண் price = 99.99;     // __fixed-point decimal; no separate int/float yet__
+எண் rate = 15%;        // __percentage literal -> exactly 0.15__
+சொல் name = "Ravi";    // __string__
 ```
 
 A declared type is **enforced**, and a later assignment is held to it too:
@@ -80,9 +80,9 @@ Every number is a fixed-point decimal, from the lexer through the AST to the VM'
 value type. There is no `f64` in the arithmetic path.
 
 ```etamil
-அச்சு 0.1 + 0.2;      // 0.3        — not 0.30000000000000004
-அச்சு 99.99 * 3;      // 299.97     — not 299.96999999999997
-அச்சு 18%;            // 0.18       exactly
+அச்சு 0.1 + 0.2;      // __0.3        — not 0.30000000000000004__
+அச்சு 99.99 * 3;      // __299.97     — not 299.96999999999997__
+அச்சு 18%;            // __0.18       exactly__
 ```
 
 Equality is exact too. Division keeps full precision rather than rounding at each
@@ -102,7 +102,7 @@ nonsense like adding rupees to a count. See the [roadmap]({{ '/status/' | relati
 எண் வருவாய்;
 அச்சு "Enter income: ";
 உள்ளிடு வருவாய்;
-அச்சு "Income: " & வருவாய்;   // & concatenates
+அச்சு "Income: " & வருவாய்;   // __& concatenates__
 ```
 
 Input always arrives as text and is converted when compared or used in arithmetic.
@@ -187,7 +187,7 @@ exactly why the JSON parser could be written in eTamil rather than in the host.
 semantics. Failure is a value, not an exception.
 
 ```etamil
-ப = மதிப்பு(ஜேசான்_படி(request_body));   // மதிப்பு unwraps; இயல்பு supplies a default
+ப = மதிப்பு(ஜேசான்_படி(request_body));   // __மதிப்பு unwraps; இயல்பு supplies a default__
 ```
 
 `சரியா` and `தவறா` test which one you have, `மதிப்பு` unwraps, and `இயல்பு` gives
@@ -237,11 +237,11 @@ the same reason string length counts letters: `நீளம்("வணக்க�
 ## File I/O
 
 ```etamil
-கோப்பு_திற "output.txt", "write";     // opening for write truncates
-கோப்பு_எழுது "output.txt", "வணக்கம்";  // subsequent writes append
+கோப்பு_திற "output.txt", "write";     // __opening for write truncates__
+கோப்பு_எழுது "output.txt", "வணக்கம்";  // __subsequent writes append__
 கோப்பு_மூடு "output.txt";
 
-கோப்பு_படி "output.txt", data;        // read whole file into a variable
+கோப்பு_படி "output.txt", data;        // __read whole file into a variable__
 அச்சு data;
 ```
 
@@ -328,7 +328,7 @@ needs updating. Tamil-script source is unaffected.
 <ul class="cards" markdown="0">
   <li class="card">
     <h3><a href="{{ '/language/keywords/' | relative_url }}">Keyword reference</a></h3>
-    <p>All 202 tokens in every spelling, grouped as the lexer groups them.</p>
+    <p>All 203 tokens in every spelling, grouped as the lexer groups them.</p>
   </li>
   <li class="card">
     <h3><a href="{{ '/finance/' | relative_url }}">Finance &amp; accounting</a></h3>
