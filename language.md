@@ -147,12 +147,33 @@ answer is known, so `(நீளம்(அ) > 0 மற்றும் அ[0] == 1
 ## Functions
 
 `செயல்` declares, `திரும்பு` returns. Parameters, local scope and recursion all work.
+A parameter may declare a type and is held to it; a return type goes after the
+list.
 
 ```etamil
 செயல் வரிசை_மதிப்பு(உருப்படி) {
     திரும்பு உருப்படி.அளவு * உருப்படி.விலை;
 }
 ```
+
+**A function is a value.** It can be held in a variable, passed, returned, and
+kept in an array. Written without a name, `செயல்(ம) { … }` is a function
+where a value goes, and `செயல்` is also the parameter type that says an
+argument must be one.
+
+```etamil
+மும்மடி = செயல்(ம) { திரும்பு ம * 3; };
+அச்சு மும்மடி(5);                            // 15
+
+செயல் கூட்டுபவன்(எண் எத்தனை) செயல் {
+    திரும்பு செயல்(ம) { திரும்பு ம + எத்தனை; };
+}
+அச்சு கூட்டுபவன்(10)(5);                     // 15
+```
+
+A returned function keeps what it closed over: the one above still knows
+`எத்தனை` after the call that supplied it has returned. `nUlakam/aNi.qmz`'s
+map, filter and fold are built on this.
 
 ## Arrays and records
 

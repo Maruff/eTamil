@@ -278,8 +278,27 @@ The condition comes first and is parenthesised; `எனில்` follows it.
 ## 9. Functions {: #9-functions}
 
 `செயல்` declares, `திரும்பு` returns. Parameters, local scope and recursion all
-work. Functions have no declared signatures yet, so parameter types are not
-checked.
+work.
+
+**A parameter may declare a type, and is held to it.** Types are per parameter,
+so some may be declared and others left open, and a return type goes after the
+list. Giving one the wrong thing is a checked error, not a surprise at runtime:
+
+```etamil
+செயல் இரட்டி(எண் ம) எண் { திரும்பு ம * 2; }
+
+அச்சு இரட்டி("சொல்");
+```
+
+```text
+✗ வரி 1, நெடுவரிசை 18: 'ம' எண் (eN, a number) என அறிவிக்கப்பட்டது,
+  ஆனால் ஒரு சொல் (a string) வழங்கப்பட்டது
+  (line 1, column 18: 'ம' is declared எண் (eN, a number),
+   but was given ஒரு சொல் (a string))
+```
+
+The position is the **parameter**, on line 1, rather than the call on line 3:
+the declaration is what was broken, and it is where the fix goes.
 
 ```etamil
 செயல் வரிசை_மதிப்பு(உருப்படி) {
@@ -289,8 +308,48 @@ checked.
 அச்சு வரிசை_மதிப்பு({அளவு: 3, விலை: 54999});
 ```
 
-There are no first-class functions — you cannot pass a function as a value yet,
-which is why the standard library has no `map` or `filter`.
+### Functions are values
+
+A `செயல்` can be held in a variable, passed to another function, returned from
+one, and kept in an array — the same as a number or a string.
+
+Written **without a name**, `செயல்(ம) { … }` is a function where a value goes.
+It takes the same signature as a named one.
+
+```etamil
+செயல் இரட்டி(ம) { திரும்பு ம * 2; }
+
+ச = இரட்டி;
+அச்சு ச(21);                                  // 42
+
+மும்மடி = செயல்(ம) { திரும்பு ம * 3; };
+அச்சு மும்மடி(5);                            // 15
+
+செயல் பயன்படுத்து(அளவு, செயல் மாற்றம்) { திரும்பு மாற்றம்(அளவு); }
+அச்சு பயன்படுத்து(7, செயல்(ம) { திரும்பு ம + 1; });   // 8
+
+பட்டியல் = [இரட்டி, மும்மடி];
+அச்சு பட்டியல்[0](6);                       // 12
+```
+
+`செயல்` is also a parameter type, as `பயன்படுத்து` uses it above: it says
+this argument must be a function.
+
+**A returned function keeps what it closed over.** `கூட்டுபவன்` below is
+called once and answers with a function; that function still knows `எத்தனை`
+afterwards, although the call that supplied it has returned.
+
+```etamil
+செயல் கூட்டுபவன்(எண் எத்தனை) செயல் {
+    திரும்பு செயல்(ம) { திரும்பு ம + எத்தனை; };
+}
+
+கூட்டு_பத்து = கூட்டுபவன்(10);
+அச்சு கூட்டு_பத்து(5);                        // 15
+```
+
+This is what `nUlakam/aNi.qmz`'s `ஒவ்வொன்றுக்கும்`, `வடிகட்டு` and `மடி`
+— map, filter and fold — are built on. See section 18.
 
 ## 10. Arrays and records {: #10-arrays-and-records}
 
