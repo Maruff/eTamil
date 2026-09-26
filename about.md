@@ -90,6 +90,15 @@ provides only what a language cannot express — decimal arithmetic, text
 measurement, file and socket access — and everything above that is readable and
 editable by the people who use it.
 
+## Influences
+
+The syntax — `{ }` for blocks, `;` to end a statement, and much of the rest — was
+evaluated against C, C++ and Rust before it was finalised. Rust shaped the
+semantics as well: a failure is a value (`சரி` / `தவறு`, with `?`) rather than an
+exception, and a method cannot change the record it is called on, as Rust's
+`&self` cannot. A few keywords were adopted from **Ezhil**, the earlier Tamil
+programming language.
+
 ## Also published
 
 - *From Caves to Code: The Enduring Journey of Tamil Script* — eTamil India, 2025, 118 pages
