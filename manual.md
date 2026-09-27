@@ -60,6 +60,7 @@ Otherwise the quickest route needs no Rust and no C toolchain.
 <div class="hero-actions" markdown="0">
   <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Windows x64 &middot; .zip</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_linux }}" rel="noopener">Linux x64 &middot; .tar.gz</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_linux_arm64 }}" rel="noopener">Linux arm64 (Raspberry Pi) &middot; .tar.gz</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_macos_arm64 }}" rel="noopener">macOS Apple Silicon</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_macos_x64 }}" rel="noopener">macOS Intel</a>
 </div>
@@ -71,7 +72,9 @@ Expand-Archive etamil-windows-x64.zip -DestinationPath .
 .\etamil-windows-x64\install.ps1
 ```
 
-**Linux**
+**Linux** — `arm64` for a Raspberry Pi 4 or 5 on 64-bit Raspberry Pi OS (or any other
+aarch64 machine), `x64` otherwise. `uname -m` tells you which: `aarch64` or `x86_64`.
+A 32-bit Raspberry Pi OS reports `armv7l`, and there is no package for it.
 
 ```bash
 tar -xzf etamil-linux-x64.tar.gz
