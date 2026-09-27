@@ -48,6 +48,7 @@ Rust தேவையில்லை, C கருவித்தொகுப்�
 <div class="hero-actions" markdown="0">
   <a class="btn btn-primary" href="{{ site.brand.download_windows }}" rel="noopener">Windows x64 &middot; .zip</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_linux }}" rel="noopener">Linux x64 &middot; .tar.gz</a>
+  <a class="btn btn-ghost" href="{{ site.brand.download_linux_arm64 }}" rel="noopener">Linux arm64 (Raspberry Pi) &middot; .tar.gz</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_macos_arm64 }}" rel="noopener">macOS Apple Silicon &middot; .tar.gz</a>
   <a class="btn btn-ghost" href="{{ site.brand.download_macos_x64 }}" rel="noopener">macOS Intel &middot; .tar.gz</a>
 </div>
@@ -59,7 +60,9 @@ Expand-Archive etamil-windows-x64.zip -DestinationPath .
 .\etamil-windows-x64\install.ps1
 ```
 
-**Linux**
+**Linux** — 64-bit Raspberry Pi OS இயங்கும் Raspberry Pi 4, 5-க்கும் (அல்லது வேறு
+aarch64 கணினிக்கும்) `arm64`; மற்றவற்றுக்கு `x64`. `uname -m` எது என்பதைச் சொல்லும்:
+`aarch64` அல்லது `x86_64`. 32-bit Raspberry Pi OS `armv7l` எனக் காட்டும்; அதற்குத் தொகுப்பு இல்லை.
 
 ```bash
 tar -xzf etamil-linux-x64.tar.gz
