@@ -42,7 +42,7 @@ This table is the honest state of the code, not a wish list.
 | Arrays (`[…]`) and records (`{…}`) | <span class="pill pill-ok">Working</span> | indexing, field access, assignment |
 | Iteration (`ஒவ்வொரு … இல்`) | <span class="pill pill-ok">Working</span> | arrays, records, strings |
 | Results (`சரி` / `தவறு` / `?`) | <span class="pill pill-ok">Working</span> | Rust semantics; failure is a value, not an exception |
-| Modules (`இறக்கு`) | <span class="pill pill-ok">Working</span> | resolves beside the file, then `ETAMIL_PATH` |
+| Modules (`இறக்கு`) | <span class="pill pill-ok">Working</span> | resolves beside the file, then `ETAMIL_PATH`. Two imported modules that define the same name are refused, and the error names both files. Imports are flattened, so one would otherwise quietly replace the other. A program's own definition may still replace a library's. Namespaced imports are not written yet |
 | Decimal arithmetic | <span class="pill pill-ok">Working</span> | fixed point, not `f64` |
 | Standard library (`nUlakam/`) | <span class="pill pill-ok">Working</span> | strings, math, arrays, money — **written in eTamil** |
 | Accounting framework | <span class="pill pill-ok">Working</span> | double entry, GST, three statements — **written in eTamil** |
@@ -54,7 +54,7 @@ This table is the honest state of the code, not a wish list.
 | HTTP server (`--server`) | <span class="pill pill-ok">Working</span> | worker pool; `வழி` routes with `:id` path parameters, query params, headers and request bodies; `பதில்` responses |
 | Response headers | <span class="pill pill-ok">Working</span> | `பதில் 200, உடல், {"Content-Type": "text/html"}` — an ordinary record; defaults to JSON when omitted |
 | JSON responses (`ஜேசான்_உரை`) | <span class="pill pill-ok">Working</span> | `ஜேசான்_உரை உடல், 201` — sets the JSON content type for you and defaults to 200. The body must already be text: encoding a record here would need a second JSON encoder beside `ஜேசான்_ஆக்கு`, and eTamil's record syntax is not JSON, so it asks for the encoder that exists rather than emitting something that only looks right |
-| JSON (`nUlakam/jEcAZ.qmz`) | <span class="pill pill-ok">Working</span> | `ஜேசான்_ஆக்கு` / `ஜேசான்_படி` — **written in eTamil**; `\uXXXX` escapes are not decoded |
+| JSON (`ஜேசான்_படி` / `ஜேசான்_ஆக்கு`) | <span class="pill pill-ok">Working</span> | Builtins since 1.4.0. They replace a parser written in eTamil, which could not read 624 KB in ten minutes; that takes 1.31 s now. `\uXXXX` escapes are decoded. A number is read and written as its exact decimal text, never through a binary float. Before 1.4.1, reading rounded one with more than about 17 significant digits |
 | Scheduled blocks (`இடைவெளி`) | <span class="pill pill-ok">Working</span> | `இடைவெளி 3600 { … }` under either server; the number is the gap *between* runs, so a slow job runs late rather than twice at once |
 | Bytes | <span class="pill pill-ok">Working</span> | `பைட்டுகள்` / `பைட்டுச்_சரம்` — a byte array is an ordinary array of numbers, not a new value type |
 | base64 and hex (`nUlakam/kuRiyAkkam.qmz`) | <span class="pill pill-ok">Working</span> | `அறுபத்துநான்கு_ஆக்கு` `அறுபத்துநான்கு_படி` `பதினாறு_ஆக்கு` `பதினாறு_படி` — **written in eTamil** |
@@ -73,6 +73,11 @@ This table is the honest state of the code, not a wish list.
 | Client certificates (mTLS) | <span class="pill pill-ok">Working</span> | `--features http-client`; proves who the client is to a bank that will not talk to an unidentified caller |
 | ECDSA signatures (P-256) | <span class="pill pill-ok">Working</span> | `கையொப்பம்` over P-256, alongside the HMAC-SHA256 path; works in the browser build too |
 | Tests written in eTamil | <span class="pill pill-ok">Working</span> | `nUlakam/cOqaZY.qmz` — a library written in this language no longer has to be tested from Rust |
+| Records as maps | <span class="pill pill-ok">Working</span> | `புலம்_உள்ளதா(ப, "சாவி")` and `புலம்_அல்லது(ப, "சாவி", இயல்பு)` are one hash lookup each, so a record can be a table of counts. Reading an absent field directly is still an error |
+| Roots, logarithms and powers | <span class="pill pill-ok">Working</span> | `வர்க்கமூலம்` `இயற்கை_மடக்கை` `இயற்கை_அடுக்கு` `அடுக்கேற்று` `பத்தின்_மடக்கை` — computed on the decimal, not on `f64`, so √25 is exactly 5 and log10(1000) is exactly 3 |
+| Sorting | <span class="pill pill-ok">Working</span> | `வரிசையாக்கு` sorts an array, and `புலத்தால்_வரிசையாக்கு` sorts records by one field |
+| File system (`nUlakam/kOppumuRY.qmz`) | <span class="pill pill-ok">Working</span> | Join and split paths, list a directory, walk a tree, find files by extension — **written in eTamil** on three builtins. A path uses `/` on every platform, and listings are sorted. In the browser a directory is inferred from the in-memory files, and there is no modification time |
+| Retrieval and language models (`nUlakam/nuNNaRivu/`) | <span class="pill pill-ok">Working</span> | Search by shared words (BM25) and by meaning (vectors), merged by rank, then optionally ask a model to phrase the answer — **written in eTamil**. The model is on the machine itself by default; another provider takes a key from whoever runs the program |
 | Money as whole paise | <span class="pill pill-ok">Working</span> | `nUlakam/kAcu.qmz` — two decimal places without decimal arithmetic; `ரூபாயும்_பைசாவும்(2, 5)` is ₹2.05 |
 | Depreciation and payroll | <span class="pill pill-ok">Working</span> | `nUlakam/kaNakkiyal/qEymAZam.qmz` and `Uqiyam.qmz`, posting into the same ledger — **written in eTamil** |
 | WebAssembly target | <span class="pill pill-ok">Working</span> | `cargo build --target wasm32-unknown-unknown --no-default-features`; lexer, parser, checker and VM all build for the browser. Native builds are unchanged |
