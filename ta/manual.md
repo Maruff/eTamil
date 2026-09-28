@@ -352,8 +352,8 @@ int income = 100000;       // ஆங்கிலப் பெயர்
 தீர்க்கப்படுகின்றன.
 
 ```etamil
-இறக்கு "nUlakam/paNam.qmz";
-இறக்கு "../../nUlakam/kaNiqam.qmz";
+இறக்கு "nUlakam/paNam/paNam.qmz";
+இறக்கு "../../nUlakam/atippatY/kaNiqam.qmz";
 ```
 
 எங்கிருந்தும் நிலையான நூலகத்தைப் பயன்படுத்த:
@@ -491,7 +491,7 @@ etamil --check my_program.qmz
 </div>
 
 ```etamil
-இறக்கு "nUlakam/paNam.qmz";
+இறக்கு "nUlakam/paNam/paNam.qmz";
 
 அச்சு ரூபாய்(12345678.5);      // ₹1,23,45,678.50 — லட்சம், கோடி
 ```
@@ -599,7 +599,7 @@ etamil --async  --port 8080 my_service.qmz
 <h2 id="22">22. JSON</h2>
 
 ```etamil
-இறக்கு "nUlakam/jEcAZ.qmz";
+இறக்கு "nUlakam/vativam/jEcAZ.qmz";
 
 ப = மதிப்பு(ஜேசான்_படி(request_body));
 அச்சு ப["qokY"] + 1;                       // எண், உரை அல்ல
@@ -645,7 +645,7 @@ bcrypt-ம் JWT-ம் ஹோஸ்டில் உள்ளன; மறைய�
 அணி என்பது எண்களின் சாதாரண அணி — வேண்டுமென்றே **புதிய மதிப்பு வகை அல்ல**.
 
 ```etamil
-இறக்கு "nUlakam/kuRiyAkkam.qmz";
+இறக்கு "nUlakam/vativam/kuRiyAkkam.qmz";
 
 க = அறுபத்துநான்கு_ஆக்கு(பைட்டுகள்("வணக்கம்"));
 அச்சு பைட்டுச்_சரம்(அறுபத்துநான்கு_படி(க));

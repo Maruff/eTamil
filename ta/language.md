@@ -203,8 +203,8 @@ eN varuvAy = 100000;       // __எழுத்துப்பெயர்ப்
 `ETAMIL_PATH` வழியே தீர்க்கப்படுகின்றன.
 
 ```etamil
-இறக்கு "nUlakam/paNam.qmz";
-இறக்கு "../../nUlakam/kaNiqam.qmz";
+இறக்கு "nUlakam/paNam/paNam.qmz";
+இறக்கு "../../nUlakam/atippatY/kaNiqam.qmz";
 ```
 
 ## பெயர்கள் நீங்கள் எழுதியபடியே சேமிக்கப்படுகின்றன

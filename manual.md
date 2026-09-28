@@ -351,7 +351,7 @@ afterwards, although the call that supplied it has returned.
 அச்சு கூட்டு_பத்து(5);                        // 15
 ```
 
-This is what `nUlakam/aNi.qmz`'s `ஒவ்வொன்றுக்கும்`, `வடிகட்டு` and `மடி`
+This is what `nUlakam/atippatY/aNi.qmz`'s `ஒவ்வொன்றுக்கும்`, `வடிகட்டு` and `மடி`
 — map, filter and fold — are built on. See section 18.
 
 ## 10. Arrays and records {: #10-arrays-and-records}
@@ -414,8 +414,8 @@ than something that crashes the handler.
 then along `ETAMIL_PATH`, then next to the compiler binary.
 
 ```etamil
-இறக்கு "nUlakam/paNam.qmz";
-இறக்கு "../../nUlakam/kaNiqam.qmz";
+இறக்கு "nUlakam/paNam/paNam.qmz";
+இறக்கு "../../nUlakam/atippatY/kaNiqam.qmz";
 ```
 
 To use the standard library from anywhere:
@@ -554,7 +554,7 @@ systems language, the DSL would not be sufficient for what it exists to do.
 </div>
 
 ```etamil
-இறக்கு "nUlakam/paNam.qmz";
+இறக்கு "nUlakam/paNam/paNam.qmz";
 
 அச்சு ரூபாய்(12345678.5);      // ₹1,23,45,678.50 — lakh and crore
 ```
@@ -574,7 +574,7 @@ writable when functions became values. Before that the rule each one applies had
 to be spelled out again by every caller, as a loop; now it is an argument.
 
 ```etamil
-இறக்கு "nUlakam/aNi.qmz";
+இறக்கு "nUlakam/atippatY/aNi.qmz";
 
 செயல் இரட்டி(ம) { திரும்பு ம * 2; }
 செயல் பெரியது(ம) { திரும்பு ம > 10; }
@@ -702,7 +702,7 @@ blocking pool, which is what lets the blocking database drivers keep working.
 ## 22. JSON {: #22-json}
 
 ```etamil
-இறக்கு "nUlakam/jEcAZ.qmz";
+இறக்கு "nUlakam/vativam/jEcAZ.qmz";
 
 ப = மதிப்பு(ஜேசான்_படி(request_body));
 அச்சு ப["qokY"] + 1;                       // a number, not text
@@ -761,7 +761,7 @@ is an ordinary array of numbers — deliberately **not** a new value type, so ev
 array helper already works on it.
 
 ```etamil
-இறக்கு "nUlakam/kuRiyAkkam.qmz";
+இறக்கு "nUlakam/vativam/kuRiyAkkam.qmz";
 
 க = அறுபத்துநான்கு_ஆக்கு(பைட்டுகள்("வணக்கம்"));
 அச்சு பைட்டுச்_சரம்(அறுபத்துநான்கு_படி(க));

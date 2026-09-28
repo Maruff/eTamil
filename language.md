@@ -172,7 +172,7 @@ argument must be one.
 ```
 
 A returned function keeps what it closed over: the one above still knows
-`எத்தனை` after the call that supplied it has returned. `nUlakam/aNi.qmz`'s
+`எத்தனை` after the call that supplied it has returned. `nUlakam/atippatY/aNi.qmz`'s
 map, filter and fold are built on this.
 
 ## Arrays and records
@@ -221,8 +221,8 @@ rather than guessed at.
 `ETAMIL_PATH`.
 
 ```etamil
-இறக்கு "nUlakam/paNam.qmz";
-இறக்கு "../../nUlakam/kaNiqam.qmz";
+இறக்கு "nUlakam/paNam/paNam.qmz";
+இறக்கு "../../nUlakam/atippatY/kaNiqam.qmz";
 ```
 
 ## Names are stored exactly as you wrote them
