@@ -141,7 +141,7 @@ record whose field names come from the data, and the VM already allows that:
 `பொருள்[சாவி] = மதிப்பு` computes the key at runtime.
 
 ```etamil
-இறக்கு "nUlakam/jEcAZ.qmz";
+இறக்கு "nUlakam/vativam/jEcAZ.qmz";
 
 ப = மதிப்பு(ஜேசான்_படி(request_body));
 அச்சு ப["qokY"] + 1;                       // a number, not text
@@ -197,9 +197,9 @@ byte at a time to anything measuring how long the check took.
 
 `பைட்டுகள்` turns text into bytes and `பைட்டுச்_சரம்` turns them back. A byte
 array is an ordinary array of numbers — deliberately **not** a new value type, so
-every array function in `nUlakam/aNi.qmz` already works on it.
+every array function in `nUlakam/atippatY/aNi.qmz` already works on it.
 
-Encoding lives in `nUlakam/kuRiyAkkam.qmz`, written in eTamil like the rest:
+Encoding lives in `nUlakam/vativam/kuRiyAkkam.qmz`, written in eTamil like the rest:
 `அறுபத்துநான்கு_ஆக்கு` and `அறுபத்துநான்கு_படி` for base64,
 `பதினாறு_ஆக்கு` and `பதினாறு_படி` for hex.
 
