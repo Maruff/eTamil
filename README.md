@@ -1,6 +1,6 @@
 # etamil.in
 
-The website for the [eTamil programming language](https://github.com/Maruff/etamil_compiler).
+The website for the [eTamil programming language](https://github.com/Maruff/eTamil_lang).
 
 Jekyll, deployed to GitHub Pages from `main` by
 [`.github/workflows/jekyll-gh-pages.yml`](.github/workflows/jekyll-gh-pages.yml).

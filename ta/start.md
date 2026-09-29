@@ -121,7 +121,7 @@ Linux இருமம் musl-உடன் உருவாக்கப்பட�
 ### Cargo மூலம்
 
 ```bash
-git clone https://github.com/Maruff/etamil_compiler.git
+git clone https://github.com/Maruff/eTamil_lang.git
 cd etamil_compiler/etamil_compiler
 cargo build --release
 ```
